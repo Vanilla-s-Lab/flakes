@@ -11,7 +11,8 @@
       packages.nixosConfigurations."NixOS-RoT" = nixos.lib.nixosSystem rec {
         inherit system; specialArgs = { inherit inputs; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
-          ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }];
+          ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
+          ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }];
       };
     });
 }
