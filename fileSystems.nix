@@ -1,17 +1,9 @@
 { ... }:
 {
-  fileSystems."/" =
-    {
-      device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=2G" "mode=755" ];
-    };
-
-  fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-uuid/2F71-8FE8";
-      fsType = "vfat";
-    };
+  fileSystems = {
+    "/" = { fsType = "tmpfs"; options = [ "defaults" "size=2G" "mode=755" ]; };
+    "/boot" = { device = "/dev/disk/by-uuid/2F71-8FE8"; fsType = "vfat"; };
+  };
 
   fileSystems."/nix" =
     {
