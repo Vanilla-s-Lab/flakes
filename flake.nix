@@ -4,6 +4,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
     home-manager.url = "github:nix-community/home-manager";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -12,7 +13,9 @@
         inherit system; specialArgs = { inherit inputs; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-          ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }];
+          ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }]
+          ++ [{ home-manager.useGlobalPkgs = true; }]
+          ++ [{ nixpkgs.overlays = [ nur.overlay ]; }];
       };
     });
 }
