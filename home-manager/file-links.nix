@@ -15,4 +15,8 @@
   home.file.".config/nixpkgs".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Projects/flakes/home-manager";
+
+  home.file."Downloads".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Downloads";
 }
