@@ -11,8 +11,7 @@
     ./hardware/fileSystems.nix
     ./hardware/nvidia.nix
 
-    ./users-immutable.nix
-
+    ./users.nix
     ./boot.nix
     ./time.nix
 
