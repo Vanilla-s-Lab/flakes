@@ -5,22 +5,21 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware/configuration.nix
-      ./hardware/fileSystems.nix
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware/configuration.nix
+    ./hardware/fileSystems.nix
 
-      ./users-immutable.nix
+    ./users-immutable.nix
 
-      ./boot.nix
-      ./time.nix
+    ./boot.nix
+    ./time.nix
 
-      ./networking/hostName-domain.nix
-      ./networking/networkmanager.nix
+    ./networking/hostName-domain.nix
+    ./networking/networkmanager.nix
 
-      ./xserver.nix
-    ];
+    ./xserver.nix
+  ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
