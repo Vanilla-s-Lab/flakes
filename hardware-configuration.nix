@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "rtsx_pci_sdmmc" ];
@@ -14,30 +15,33 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "none";
+    {
+      device = "none";
       fsType = "tmpfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2F71-8FE8";
+    {
+      device = "/dev/disk/by-uuid/2F71-8FE8";
       fsType = "vfat";
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/49a55786-a043-400f-a6cb-3444ddda7975";
+    {
+      device = "/dev/disk/by-uuid/49a55786-a043-400f-a6cb-3444ddda7975";
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
 
   fileSystems."/persistent" =
-    { device = "/dev/disk/by-uuid/49a55786-a043-400f-a6cb-3444ddda7975";
+    {
+      device = "/dev/disk/by-uuid/49a55786-a043-400f-a6cb-3444ddda7975";
       fsType = "btrfs";
       options = [ "subvol=persistent" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/1b07ef58-fa1b-4e5e-a394-7a07a9229f07"; }
-    ];
+    [{ device = "/dev/disk/by-uuid/1b07ef58-fa1b-4e5e-a394-7a07a9229f07"; }];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
