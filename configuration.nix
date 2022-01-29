@@ -14,16 +14,13 @@
       ./users-immutable.nix
 
       ./boot.nix
+      ./time.nix
 
       ./networking/hostName-domain.nix
       ./networking/networkmanager.nix
 
       ./xserver.nix
     ];
-
-  # Set your time zone.
-  time.timeZone = "Asia/Shanghai";
-  time.hardwareClockInLocalTime = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
