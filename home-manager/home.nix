@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [ ./programs/chromium.nix ]
     ++ [ ./dconf.nix ./file-links.nix ]
@@ -9,5 +9,6 @@
     ++ [ ./gnome.nix ]
     ++ [ ./programs/albert.nix ];
 
+  home.packages = [ pkgs.nixpkgs-fmt ];
   home.stateVersion = "21.11";
 }
