@@ -4,10 +4,11 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, ... }@inputs: with inputs; {
-    nixosConfigurations."NixOS-RoT" = nixos.lib.nixosSystem rec {
-      system = "x86_64-linux";
-      modules = [ ./configuration.nix ];
-    };
-  };
+  outputs = { self, ... }@inputs: with inputs;
+    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: {
+      packages.nixosConfigurations."NixOS-RoT" = nixos.lib.nixosSystem rec {
+        inherit system;
+        modules = [ ./configuration.nix ];
+      };
+    });
 }
