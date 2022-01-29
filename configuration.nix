@@ -10,6 +10,8 @@
       # Include the results of the hardware scan.
       ./hardware/configuration.nix
       ./hardware/fileSystems.nix
+
+      ./users-immutable.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
