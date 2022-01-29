@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware/configuration.nix
     ./hardware/fileSystems.nix
+    ./hardware/nvidia.nix
 
     ./users-immutable.nix
 
