@@ -7,4 +7,7 @@
     "${inputs.Vanilla}/enableGNOME.nix"
     "${inputs.Vanilla}/minimalGNOME.nix"
   ];
+
+  systemd.services."display-manager".preStart =
+    "cp /persistent/dot/config/monitors.xml /run/gdm/.config/monitors.xml";
 }
