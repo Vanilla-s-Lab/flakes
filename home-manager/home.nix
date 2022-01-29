@@ -4,7 +4,8 @@
     ++ [ ./dconf.nix ./file-links.nix ]
     ++ [ ./programs/alacritty.nix ]
     ++ [ ./fonts.nix ]
-    ++ [ ./programs/qv2ray.nix ];
+    ++ [ ./programs/qv2ray.nix ]
+    ++ [ ./programs/git.nix ];
 
   home.stateVersion = "21.11";
 }
