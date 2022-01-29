@@ -1,6 +1,13 @@
 { pkgs, inputs, config, ... }:
 {
-  home.packages = [ pkgs.qv2ray ];
+  home.packages = [
+    pkgs.qv2ray
+    (pkgs.makeAutostartItem {
+      name = "qv2ray";
+      package = pkgs.qv2ray;
+    })
+  ];
+
   imports = [ "${inputs.Vanilla}/prepareVCore.nix" ];
 
   home.file.".config/qv2ray".source =
