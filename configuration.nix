@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -20,6 +20,8 @@
     ./networking/networkmanager.nix
 
     ./xserver.nix
+
+    "${inputs.Vanilla}/nixFlakes.nix"
   ];
 
   environment.etc."nixos".source =
