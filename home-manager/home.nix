@@ -5,7 +5,8 @@
     ++ [ ./programs/alacritty.nix ]
     ++ [ ./fonts.nix ]
     ++ [ ./programs/qv2ray.nix ]
-    ++ [ ./programs/git.nix ];
+    ++ [ ./programs/git.nix ]
+    ++ [ ./gnome.nix ];
 
   home.stateVersion = "21.11";
 }
