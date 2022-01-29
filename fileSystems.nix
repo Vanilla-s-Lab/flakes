@@ -25,7 +25,4 @@
       fsType = "btrfs";
       options = [ "subvol=persistent" ];
     };
-
-  swapDevices =
-    [{ device = "/dev/disk/by-uuid/1b07ef58-fa1b-4e5e-a394-7a07a9229f07"; }];
 }
