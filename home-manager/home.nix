@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [ ./programs/chromium.nix ]
-    ++ [ ./dconf.nix ./nix-cache.nix ]
+    ++ [ ./dconf.nix ./file-links.nix ]
     ++ [ ./programs/alacritty.nix ]
     ++ [ ./fonts.nix ];
 
