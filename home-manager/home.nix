@@ -10,6 +10,9 @@
     ./programs/fish.nix
     ./programs/starship.nix
 
+    ./programs/gpg.nix
+    ./services/gpg-agent.nix
+
     ./dconf.nix
     ./file-links.nix
     ./fonts.nix
