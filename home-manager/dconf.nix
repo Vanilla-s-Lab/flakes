@@ -1,9 +1,5 @@
-{ inputs, ... }:
+{ ... }:
 {
-  imports = [
-    "${inputs.Vanilla}/gnomeNoWelcome.nix"
-  ];
-
   dconf.settings = {
     "org/gnome/shell".enabled-extensions = [
       "apps-menu@gnome-shell-extensions.gcampax.github.com"

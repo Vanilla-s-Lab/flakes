@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./programs/chromium.nix
@@ -16,6 +16,8 @@
     ./programs/ssh.nix
 
     ./dconf.nix
+    "${inputs.Vanilla}/gnomeNoWelcome.nix"
+
     ./file-links.nix
     ./fonts.nix
 
