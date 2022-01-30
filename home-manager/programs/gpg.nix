@@ -6,9 +6,9 @@
 
   programs.gpg.publicKeys = [{
     text = lib.readFile (pkgs.fetchurl rec {
-      name = "0x3750028ed04fa42e";
-      url = "https://keyserver.ubuntu.com/pks/lookup?op=get&search=${name}";
-      hash = "sha256-l1KtfiS4p2SQYn/NN4BUXrzdtjgdIvT6G53LMxxlg0g=";
+      name = "2649340CC909F821D25167143750028ED04FA42E";
+      url = "https://keys.openpgp.org/vks/v1/by-fingerprint/${name}";
+      hash = "sha256-+Fvo5r2VwM2nrSmdyqkmY7isWgnDJgyRt2teFQ+veqg=";
     });
 
     trust = "ultimate";
