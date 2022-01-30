@@ -6,6 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
     sops-nix.url = "github:Mic92/sops-nix";
+    nixos-cn.url = "github:nixos-cn/flakes";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -17,7 +18,8 @@
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
           ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
-          ++ [ sops-nix.nixosModules.sops ];
+          ++ [ sops-nix.nixosModules.sops ]
+          ++ [ nixos-cn.nixosModules.nixos-cn ];
       };
     });
 }
