@@ -20,6 +20,7 @@
     ./fonts.nix
 
     ./gnome/tweaks.nix
+    ./gnome/system-monitor.nix
 
     ./config/fcitx5.nix
   ];
