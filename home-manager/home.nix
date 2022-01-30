@@ -7,6 +7,9 @@
     ./programs/git.nix
     ./programs/albert.nix
 
+    ./programs/fish.nix
+    ./programs/starship.nix
+
     ./dconf.nix
     ./file-links.nix
     ./fonts.nix
