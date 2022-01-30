@@ -2,6 +2,7 @@
 {
   home.packages = [
     pkgs.gnome.gnome-tweaks
+    pkgs.gnome.gnome-system-monitor
 
     pkgs.layan-gtk-theme
     pkgs.breeze-gtk
