@@ -15,12 +15,12 @@
     ./services/gpg-agent.nix
     ./programs/ssh.nix
 
-    ./dconf.nix
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
 
     ./file-links.nix
     ./fonts.nix
 
+    ./gnome/bundled-ext.nix
     ./gnome/tweaks.nix
     ./gnome/system-monitor.nix
 
