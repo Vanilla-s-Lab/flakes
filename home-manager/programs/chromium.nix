@@ -6,4 +6,8 @@
   home.file.".config/chromium".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/chromium";
+
+  home.file.".cache/chromium".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/chromium";
 }
