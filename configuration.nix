@@ -21,6 +21,9 @@
 
     ./xserver.nix
 
+    "${inputs.Vanilla}/fcitx5Chinese.nix"
+    "${inputs.Vanilla}/enLocalMap.nix"
+
     "${inputs.Vanilla}/nixFlakes.nix"
     "${inputs.Vanilla}/nixOfficialCache.nix"
     "${inputs.Vanilla}/nixIlyaFedinCache.nix"
@@ -28,13 +31,6 @@
 
   environment.etc."nixos".source =
     "/persistent/Projects/flakes";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  # };
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
