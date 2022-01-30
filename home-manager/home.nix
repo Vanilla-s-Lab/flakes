@@ -18,7 +18,8 @@
     ./dconf.nix
     ./file-links.nix
     ./fonts.nix
-    ./gnome.nix
+
+    ./gnome/tweaks.nix
 
     ./config/fcitx5.nix
   ];
