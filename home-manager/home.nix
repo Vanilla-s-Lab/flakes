@@ -12,6 +12,7 @@
 
     ./programs/gpg.nix
     ./services/gpg-agent.nix
+    ./programs/ssh.nix
 
     ./dconf.nix
     ./file-links.nix
