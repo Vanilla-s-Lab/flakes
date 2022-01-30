@@ -39,6 +39,9 @@
   environment.etc."nixos".source =
     "/persistent/Projects/flakes";
 
+  sops.defaultSopsFile = ./secrets/default.yaml;
+  sops.secrets."pxder/token" = { };
+
   # Configure keymap in X11
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
