@@ -27,10 +27,22 @@
     "${inputs.Vanilla}/nixFlakes.nix"
     "${inputs.Vanilla}/nixOfficialCache.nix"
     "${inputs.Vanilla}/nixIlyaFedinCache.nix"
+
+    "${inputs.Vanilla}/useOpenSSH.nix"
+    "${inputs.Vanilla}/useFail2ban.nix"
   ];
 
   environment.etc."nixos".source =
     "/persistent/Projects/flakes";
+
+  environment.etc."ssh/ssh_host_ed25519_key".source =
+    "/persistent/etc/ssh/ssh_host_ed25519_key";
+  environment.etc."ssh/ssh_host_ed25519_key.pub".source =
+    "/persistent/etc/ssh/ssh_host_ed25519_key.pub";
+  environment.etc."ssh/ssh_host_rsa_key".source =
+    "/persistent/etc/ssh/ssh_host_rsa_key";
+  environment.etc."ssh/ssh_host_rsa_key.pub".source =
+    "/persistent/etc/ssh/ssh_host_rsa_key.pub";
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
