@@ -24,6 +24,7 @@
 
     ./config/fcitx5.nix
     ./config/ssh.nix
+    ./config/sops.nix
   ];
 
   home.packages = [ pkgs.nixpkgs-fmt ];
