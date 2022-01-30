@@ -5,6 +5,7 @@
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -15,7 +16,8 @@
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
-          ++ [{ nixpkgs.overlays = [ nur.overlay ]; }];
+          ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
+          ++ [ sops-nix.nixosModules.sops ];
       };
     });
 }
