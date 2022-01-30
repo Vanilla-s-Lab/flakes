@@ -19,6 +19,8 @@
     ./file-links.nix
     ./fonts.nix
     ./gnome.nix
+
+    ./config/fcitx5.nix
   ];
 
   home.packages = [ pkgs.nixpkgs-fmt ];
