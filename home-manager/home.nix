@@ -25,8 +25,9 @@
     ./gnome/system-monitor.nix
 
     ./config/fcitx5.nix
-    ./config/ssh.nix
     ./config/sops.nix
+
+    "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
 
   home.packages = [ pkgs.nixpkgs-fmt ];
