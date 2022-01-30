@@ -13,6 +13,8 @@
 
     ./users.nix
     { boot.loader.systemd-boot.enable = true; }
+    "${inputs.Vanilla}/xanmodKernel.nix"
+    "${inputs.Vanilla}/enableSysRq.nix"
     ./time.nix
 
     ./networking/hostName-domain.nix
