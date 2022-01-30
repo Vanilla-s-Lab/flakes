@@ -15,7 +15,9 @@
     { boot.loader.systemd-boot.enable = true; }
     "${inputs.Vanilla}/xanmodKernel.nix"
     "${inputs.Vanilla}/enableSysRq.nix"
-    ./time.nix
+
+    { time.timeZone = "Asia/Shanghai"; }
+    "${inputs.Vanilla}/dualBootWindows.nix"
 
     ./networking/hostName-domain.nix
     ./networking/networkmanager.nix
