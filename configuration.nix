@@ -12,7 +12,7 @@
     ./hardware/nvidia.nix
 
     ./users.nix
-    ./boot.nix
+    { boot.loader.systemd-boot.enable = true; }
     ./time.nix
 
     ./networking/hostName-domain.nix
