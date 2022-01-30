@@ -26,6 +26,7 @@
 
     ./config/fcitx5.nix
     ./config/sops.nix
+    ./config/pxder.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
   ];

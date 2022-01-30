@@ -19,4 +19,8 @@
   home.file."Downloads".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Downloads";
+
+  home.file."Pictures".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Pictures";
 }

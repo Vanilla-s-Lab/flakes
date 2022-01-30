@@ -34,13 +34,12 @@
     "${inputs.Vanilla}/useFail2ban.nix"
 
     "${inputs.Vanilla}/persistEtcSsh.nix"
+
+    ./sops-config/pxder.nix
   ];
 
   environment.etc."nixos".source =
     "/persistent/Projects/flakes";
-
-  sops.defaultSopsFile = ./secrets/default.yaml;
-  sops.secrets."pxder/token" = { };
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
