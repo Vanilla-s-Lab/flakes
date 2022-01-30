@@ -7,4 +7,9 @@
     "Groups/0/Items/0" = { Layout = ""; Name = "keyboard-us"; };
     "Groups/0/Items/1" = { Layout = ""; Name = "pinyin"; };
   };
+
+  home.file.".config/fcitx5/conf/pinyin.conf".text = ''
+    CloudPinyinEnabled=True
+    PageSize=10
+  '';
 }
