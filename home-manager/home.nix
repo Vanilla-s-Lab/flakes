@@ -6,6 +6,7 @@
     ./programs/qv2ray.nix
     ./programs/git.nix
     ./programs/albert.nix
+    ./programs/kotatogram.nix
 
     ./programs/fish.nix
     ./programs/starship.nix

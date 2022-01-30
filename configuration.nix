@@ -22,6 +22,8 @@
     ./xserver.nix
 
     "${inputs.Vanilla}/nixFlakes.nix"
+    "${inputs.Vanilla}/nixOfficialCache.nix"
+    "${inputs.Vanilla}/nixIlyaFedinCache.nix"
   ];
 
   environment.etc."nixos".source =
