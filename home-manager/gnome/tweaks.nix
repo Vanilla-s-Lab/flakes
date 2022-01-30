@@ -24,6 +24,20 @@
 
     # Appearance - [ Background | Lock Screen ] - Image
     "org/gnome/desktop/background".picture-uri = "file:///home/vanilla/Pictures/bg.jpg";
-    "org/gnome/desktop/screensaver"picture-uri = "file:///home/vanilla/Pictures/bg.jpg";
+    "org/gnome/desktop/screensaver".picture-uri = "file:///home/vanilla/Pictures/bg.jpg";
+
+    # Fonts - Interface Text
+    "org/gnome/desktop/interface".font-name = "SF Compact Display 11";
+
+    # Top Bar - Battery Percentage
+    "org/gnome/desktop/interface".show-battery-percentage = true;
+    # Top Bar - Clock - [ Weekday | Seconds ]
+    "org/gnome/desktop/interface".clock-show-weekday = true;
+    "org/gnome/desktop/interface".clock-show-seconds = true;
+
+    # Window Titlebars - Titlebar Actions - Middle-Click - Minimize
+    "org/gnome/desktop/wm/preferences".action-middle-click-titlebar = "minimize";
+    # Window Titlebars - Titlebar Buttons - [ Maximize | Minimize ] - ON
+    "org/gnome/desktop/wm/preferences".button-layout = "appmenu:minimize,maximize,close";
   };
 }
