@@ -20,9 +20,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.lm_sensors
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
+    pkgs.gnomeExtensions.status-area-horizontal-spacing
 
     pkgs.gnomeExtensions.unite
-    pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
     pkgs.gnomeExtensions.vitals
   ];
@@ -43,6 +43,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "sensory-perception@HarlemSquirrel.github.io"
       "simplenetspeed@biji.extension"
       "sound-output-device-chooser@kgshank.net"
+      "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
