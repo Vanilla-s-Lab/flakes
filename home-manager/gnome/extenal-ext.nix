@@ -23,7 +23,6 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
-
     pkgs.gnomeExtensions.window-is-ready-remover
   ];
 
@@ -46,6 +45,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
+      "windowIsReady_Remover@nunofarruca@gmail.com"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
