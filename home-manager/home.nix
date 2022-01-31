@@ -3,8 +3,9 @@
   imports = [
     ./programs/chromium.nix
     ./programs/alacritty.nix
-    ./programs/qv2ray.nix
     ./programs/git.nix
+
+    ./programs/qv2ray.nix
     ./programs/albert.nix
     ./programs/kotatogram.nix
 
