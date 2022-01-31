@@ -7,6 +7,7 @@
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
+    pkgs.gnomeExtensions.kimpanel
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
@@ -20,7 +21,6 @@
     pkgs.gnomeExtensions.lock-keys
     pkgs.gnomeExtensions.sensory-perception
     pkgs.gnomeExtensions.vitals
-    pkgs.gnomeExtensions.kimpanel
   ];
 
   dconf.settings = {
@@ -31,6 +31,7 @@
       "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
       "dash-to-dock@micxgx.gmail.com"
       "espresso@coadmunkee.github.com"
+      "kimpanel@kde.org"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
