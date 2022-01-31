@@ -13,6 +13,7 @@
     ./hardware/nvidia.nix
 
     "${inputs.Vanilla}/enableBluetooth.nix"
+    "${inputs.Vanilla}/persistBluetooth.nix"
     "${inputs.Vanilla}/bluetoothExperimental.nix"
 
     ./users.nix
