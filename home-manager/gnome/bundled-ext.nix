@@ -9,7 +9,6 @@
       "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
       "user-theme@gnome-shell-extensions.gcampax.github.com"
       "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
-      "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
     ];
   };
 }
