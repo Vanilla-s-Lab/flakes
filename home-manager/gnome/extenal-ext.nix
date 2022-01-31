@@ -8,6 +8,7 @@
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.kimpanel
+    pkgs.gnomeExtensions.lock-keys
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
@@ -18,7 +19,6 @@
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
-    pkgs.gnomeExtensions.lock-keys
     pkgs.gnomeExtensions.sensory-perception
     pkgs.gnomeExtensions.vitals
   ];
@@ -32,6 +32,7 @@
       "dash-to-dock@micxgx.gmail.com"
       "espresso@coadmunkee.github.com"
       "kimpanel@kde.org"
+      "lockkeys@vaina.lt"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
