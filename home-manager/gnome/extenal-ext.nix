@@ -19,9 +19,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.sensory-perception
     pkgs.lm_sensors
     pkgs.gnomeExtensions.simple-net-speed
+    pkgs.gnomeExtensions.sound-output-device-chooser
 
     pkgs.gnomeExtensions.unite
-    pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
     pkgs.gnomeExtensions.vitals
@@ -42,6 +42,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "gnome-shell-screenshot@ttll.de"
       "sensory-perception@HarlemSquirrel.github.io"
       "simplenetspeed@biji.extension"
+      "sound-output-device-chooser@kgshank.net"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -97,5 +98,10 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
 
     # Simple net speed - [ click once to show B/s ]
     "org/gnome/shell/extensions/simplenetspeed".mode = 1;
+
+    # Sound IO Device Chooser - General Settings - Display audio profiles for selection - OFF
+    "org/gnome/shell/extensions/sound-output-device-chooser".show-profiles = false;
+    # Sound IO Device Chooser - Icons - Icon Theme - None
+    "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
   };
 }
