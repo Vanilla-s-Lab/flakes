@@ -31,6 +31,7 @@
 
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
     "${inputs.Vanilla}/gnomeDefApps.nix"
+    "${inputs.Vanilla}/gnomeEnableNumLock.nix"
 
     ./config/fcitx5.nix
     ./config/sops.nix
