@@ -27,6 +27,7 @@
     ./gnome/extenal-ext.nix
     ./gnome/tweaks.nix
     ./gnome/system-monitor.nix
+    ./gnome/folders.nix
 
     ./config/fcitx5.nix
     ./config/sops.nix
