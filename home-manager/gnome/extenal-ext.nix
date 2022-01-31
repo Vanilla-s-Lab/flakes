@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let forceG41 = ext: (ext.overrideAttrs (old: {
+  patchPhase = ''sed -i 's/"40"/"40", "41"/g' metadata.json'';
+})); in
 {
   home.packages = [
     pkgs.gnomeExtensions.arcmenu
@@ -9,10 +12,10 @@
     pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
+    (forceG41 pkgs.gnomeExtensions.openweather)
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
-    pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.proxy-switcher
     pkgs.gnomeExtensions.screenshot-tool
@@ -33,6 +36,7 @@
       "espresso@coadmunkee.github.com"
       "kimpanel@kde.org"
       "lockkeys@vaina.lt"
+      "openweather-extension@jenslody.de"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -72,5 +76,12 @@
     # Espresso - Restore state across reboots - ON
     "org/gnome/shell/extensions/espresso".restore-state = true;
     "org/gnome/shell/extensions/espresso".user-enabled = true;
+
+    # OpenWeather - Locations - [ Location + Provider ]
+    "org/gnome/shell/extensions/openweather".city =
+      "35.2791075,113.8452766>卫滨区, 新乡市, 河南省, 中国 >-2" + " && "
+      + "28.6851715,115.9572763>青山湖区, 南昌市, 江西省, 中国 >-2";
+    # OpenWeather - Units - Temperature Unit - °C
+    "org/gnome/shell/extensions/openweather".unit = "celsius";
   };
 }
