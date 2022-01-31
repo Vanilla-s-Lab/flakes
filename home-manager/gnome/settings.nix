@@ -12,7 +12,7 @@
     "org/gnome/desktop/privacy".disable-microphone = true;
 
     # Settings - Displays - Night Light - ON
-    "settings-daemon/plugins/color".night-light-enabled = true;
+    "org/gnome/settings-daemon/plugins/color".night-light-enabled = true;
 
     # Settings - Mouse & Touchpad - Tap to click - ON
     "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
