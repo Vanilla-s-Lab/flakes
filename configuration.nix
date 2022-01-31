@@ -48,6 +48,7 @@
     ./sops-config/pxder.nix
 
     "${inputs.Vanilla}/sudoNoLecture.nix"
+    "${inputs.Vanilla}/enableSteam.nix"
   ];
 
   environment.etc."nixos".source =

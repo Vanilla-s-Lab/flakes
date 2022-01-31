@@ -23,4 +23,12 @@
   home.file."Pictures".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Pictures";
+
+  home.file.".steam".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/steam";
+
+  home.file.".local/share/Steam".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/Steam";
 }
