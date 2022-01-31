@@ -6,10 +6,10 @@
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
+    pkgs.gnomeExtensions.espresso
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
-    pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.proxy-switcher
@@ -30,6 +30,7 @@
       "blur-my-shell@aunetx"
       "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
       "dash-to-dock@micxgx.gmail.com"
+      "espresso@coadmunkee.github.com"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -65,5 +66,9 @@
     "org/gnome/shell/extensions/dash-to-dock".background-color = "rgb(151,126,128)";
     # Dash to Dock - Appearance - Customize opacity - Dynamic
     "org/gnome/shell/extensions/dash-to-dock".transparency-mode = "DYNAMIC";
+
+    # Espresso - Restore state across reboots - ON
+    "org/gnome/shell/extensions/espresso".restore-state = true;
+    "org/gnome/shell/extensions/espresso".user-enabled = true;
   };
 }
