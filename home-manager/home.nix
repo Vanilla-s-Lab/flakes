@@ -28,6 +28,7 @@
     ./gnome/tweaks.nix
     ./gnome/system-monitor.nix
     ./gnome/folders.nix
+    ./gnome/settings.nix
 
     ./config/fcitx5.nix
     ./config/sops.nix
