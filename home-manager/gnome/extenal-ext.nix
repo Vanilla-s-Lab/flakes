@@ -21,8 +21,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
-
     pkgs.gnomeExtensions.unite
+
     pkgs.gnomeExtensions.window-is-ready-remover
     pkgs.gnomeExtensions.vitals
   ];
@@ -44,6 +44,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "simplenetspeed@biji.extension"
       "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
+      "unite@hardpixel.eu"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -104,5 +105,22 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     "org/gnome/shell/extensions/sound-output-device-chooser".show-profiles = false;
     # Sound IO Device Chooser - Icons - Icon Theme - None
     "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
+
+    # Unite - General - Expand top bar left box - OFF
+    "org/gnome/shell/extensions/unite".extend-left-box = false;
+    # Unite - General - Auto focus new windows - OFF
+    "org/gnome/shell/extensions/unite".autofocus-windows = false;
+    # Unite - General - Hide window titlebars - Never
+    "org/gnome/shell/extensions/unite".hide-window-titlebars = "never";
+    # Unite - General - Show window title in app menu - Never
+    "org/gnome/shell/extensions/unite".show-window-title = "never";
+    # Unite - General - Show window buttons in top bar - Never
+    "org/gnome/shell/extensions/unite".show-window-buttons = "never";
+    # Unite - General - Notification messages position - Center
+    "org/gnome/shell/extensions/unite".notifications-position = "center";
+    # Unite - Appearance - Hide app menu application icon - OFF
+    "org/gnome/shell/extensions/unite".hide-app-menu-icon = false;
+    # Unite - Appearance - Reduce top bar items spacing - OFF
+    "org/gnome/shell/extensions/unite".reduce-panel-spacing = false;
   };
 }
