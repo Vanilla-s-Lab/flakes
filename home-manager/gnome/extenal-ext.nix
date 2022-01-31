@@ -2,6 +2,7 @@
 {
   home.packages = [
     pkgs.gnomeExtensions.arcmenu
+    pkgs.gnomeExtensions.bluetooth-quick-connect
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
@@ -11,7 +12,6 @@
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.proxy-switcher
     pkgs.gnomeExtensions.screenshot-tool
-    pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
@@ -27,6 +27,7 @@
   dconf.settings = {
     "org/gnome/shell".enabled-extensions = [
       "arcmenu@arcmenu.com"
+      "bluetooth-quick-connect@bjarosze.gmail.com"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -37,5 +38,10 @@
     "org/gnome/shell/extensions/arcmenu".menu-button-icon = "Custom_Icon";
     "org/gnome/shell/extensions/arcmenu".custom-menu-button-icon =
       "/home/vanilla/Projects/nixos-artwork/logo/white.svg";
+
+    # Bluetooth Quick Connect - Show battery value (restart required) - ON
+    "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-value-on = true;
+    # Bluetooth Quick Connect - Show battery icon (restart required) - OFF
+    "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-icon-on = false;
   };
 }
