@@ -16,6 +16,8 @@
     "${inputs.Vanilla}/persistBluetooth.nix"
     "${inputs.Vanilla}/bluetoothExperimental.nix"
 
+    "${inputs.Vanilla}/pulseAudioAptX.nix"
+
     ./users.nix
     { boot.loader.systemd-boot.enable = true; }
     "${inputs.Vanilla}/xanmodKernel.nix"
