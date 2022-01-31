@@ -17,7 +17,6 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
     pkgs.gnomeExtensions.simple-net-speed
-    pkgs.gnomeExtensions.proxy-switcher
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
