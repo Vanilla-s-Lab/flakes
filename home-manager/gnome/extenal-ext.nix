@@ -4,6 +4,7 @@
     pkgs.gnomeExtensions.arcmenu
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
+    pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.runcat
@@ -20,7 +21,6 @@
     pkgs.gnomeExtensions.disconnect-wifi
     pkgs.gnomeExtensions.sensory-perception
     pkgs.gnomeExtensions.vitals
-    pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.kimpanel
   ];
 
@@ -29,6 +29,7 @@
       "arcmenu@arcmenu.com"
       "bluetooth-quick-connect@bjarosze.gmail.com"
       "blur-my-shell@aunetx"
+      "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
