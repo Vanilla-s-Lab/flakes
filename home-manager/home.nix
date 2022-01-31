@@ -18,8 +18,6 @@
 
     ./programs/exa.nix
 
-    "${inputs.Vanilla}/gnomeNoWelcome.nix"
-
     ./file-links.nix
     ./fonts.nix
 
@@ -29,6 +27,10 @@
     ./gnome/system-monitor.nix
     ./gnome/folders.nix
     ./gnome/settings.nix
+    ./gnome/dockIcons.nix
+
+    "${inputs.Vanilla}/gnomeNoWelcome.nix"
+    "${inputs.Vanilla}/gnomeDefApps.nix"
 
     ./config/fcitx5.nix
     ./config/sops.nix
