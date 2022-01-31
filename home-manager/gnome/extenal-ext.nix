@@ -22,9 +22,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.unite
+    pkgs.gnomeExtensions.vitals
 
     pkgs.gnomeExtensions.window-is-ready-remover
-    pkgs.gnomeExtensions.vitals
   ];
 
   dconf.settings = {
@@ -45,6 +45,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
       "unite@hardpixel.eu"
+      "Vitals@CoreCoding.com"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -122,5 +123,12 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     "org/gnome/shell/extensions/unite".hide-app-menu-icon = false;
     # Unite - Appearance - Reduce top bar items spacing - OFF
     "org/gnome/shell/extensions/unite".reduce-panel-spacing = false;
+
+    # Vitals - General - Use higher precision - ON
+    "org/gnome/shell/extensions/vitals".use-higher-precision = true;
+    # Vitals - Sensors - Monitor network - Network Preferences - Include public IP address - ON
+    "org/gnome/shell/extensions/vitals".include-public-ip = true;
+    # Vitals - Sensors - Monitor battery - ON
+    "org/gnome/shell/extensions/vitals".show-battery = true;
   };
 }
