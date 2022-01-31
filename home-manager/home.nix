@@ -16,6 +16,8 @@
     ./services/gpg-agent.nix
     ./programs/ssh.nix
 
+    ./programs/exa.nix
+
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
 
     ./file-links.nix
