@@ -46,6 +46,8 @@
     "${inputs.Vanilla}/persistEtcSsh.nix"
 
     ./sops-config/pxder.nix
+
+    "${inputs.Vanilla}/sudoNoLecture.nix"
   ];
 
   environment.etc."nixos".source =
