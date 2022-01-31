@@ -34,6 +34,7 @@
     # Button Appearance - Menu Button Appearance - Text - "    Vanilla"
     "org/gnome/shell/extensions/arcmenu".custom-menu-button-text = "    Vanilla";
     # Button Appearance - Icon Appearance - Icon - Browse Icons - Custom Icon
+    "org/gnome/shell/extensions/arcmenu".menu-button-icon = "Custom_Icon";
     "org/gnome/shell/extensions/arcmenu".custom-menu-button-icon =
       "/home/vanilla/Projects/nixos-artwork/logo/white.svg";
   };
