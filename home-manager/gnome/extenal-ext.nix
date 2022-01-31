@@ -13,9 +13,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
     (forceG41 pkgs.gnomeExtensions.openweather)
+    pkgs.gnomeExtensions.runcat
 
     pkgs.gnomeExtensions.unite
-    pkgs.gnomeExtensions.runcat
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnomeExtensions.sound-output-device-chooser
@@ -36,6 +36,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "kimpanel@kde.org"
       "lockkeys@vaina.lt"
       "openweather-extension@jenslody.de"
+      "runcat@kolesnikov.se"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
