@@ -18,7 +18,6 @@
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
     pkgs.gnomeExtensions.lock-keys
-    pkgs.gnomeExtensions.disconnect-wifi
     pkgs.gnomeExtensions.sensory-perception
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.kimpanel
