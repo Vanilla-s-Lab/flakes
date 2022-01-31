@@ -109,6 +109,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     # Sound IO Device Chooser - Icons - Icon Theme - None
     "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
 
+    # Status Area Horizontal Spacing - Right key * 3 times.
+    "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
+
     # Unite - General - Expand top bar left box - OFF
     "org/gnome/shell/extensions/unite".extend-left-box = false;
     # Unite - General - Auto focus new windows - OFF
