@@ -12,6 +12,9 @@
     ./hardware/bind-mount.nix
     ./hardware/nvidia.nix
 
+    "${inputs.Vanilla}/enableBluetooth.nix"
+    "${inputs.Vanilla}/bluetoothExperimental.nix"
+
     ./users.nix
     { boot.loader.systemd-boot.enable = true; }
     "${inputs.Vanilla}/xanmodKernel.nix"
