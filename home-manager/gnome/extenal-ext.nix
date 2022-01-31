@@ -92,6 +92,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       + "28.6851715,115.9572763>青山湖区, 南昌市, 江西省, 中国 >-2";
     # OpenWeather - Units - Temperature Unit - °C
     "org/gnome/shell/extensions/openweather".unit = "celsius";
+    # OpenWeather - Layout - Position in Panel - Left
+    "org/gnome/shell/extensions/openweather".position-in-panel = "left";
     # OpenWeather - Fix refresh weather issues after reboot.
     "org/gnome/shell/extensions/openweather".actual-city = 0;
 
