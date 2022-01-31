@@ -18,9 +18,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnome.gnome-screenshot
     pkgs.gnomeExtensions.sensory-perception
     pkgs.lm_sensors
+    pkgs.gnomeExtensions.simple-net-speed
 
     pkgs.gnomeExtensions.unite
-    pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
@@ -41,6 +41,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "runcat@kolesnikov.se"
       "gnome-shell-screenshot@ttll.de"
       "sensory-perception@HarlemSquirrel.github.io"
+      "simplenetspeed@biji.extension"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -93,5 +94,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
 
     # Sensory Perception - Display decimal value
     "org/gnome/shell/extensions/sensory-perception".display-decimal-value = true;
+
+    # Simple net speed - [ click once to show B/s ]
+    "org/gnome/shell/extensions/simplenetspeed".mode = 1;
   };
 }
