@@ -14,10 +14,11 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.lock-keys
     (forceG41 pkgs.gnomeExtensions.openweather)
     pkgs.gnomeExtensions.runcat
+    pkgs.gnomeExtensions.screenshot-tool
+    pkgs.gnome.gnome-screenshot
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.simple-net-speed
-    pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
@@ -37,6 +38,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "lockkeys@vaina.lt"
       "openweather-extension@jenslody.de"
       "runcat@kolesnikov.se"
+      "gnome-shell-screenshot@ttll.de"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -83,5 +85,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       + "28.6851715,115.9572763>青山湖区, 南昌市, 江西省, 中国 >-2";
     # OpenWeather - Units - Temperature Unit - °C
     "org/gnome/shell/extensions/openweather".unit = "celsius";
+
+    # Screenshot Tool - Auto-Copy to Clipboard - Image Data
+    "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
   };
 }
