@@ -33,6 +33,7 @@
     "${inputs.Vanilla}/enLocalMap.nix"
 
     "${inputs.Vanilla}/nixFlakes.nix"
+    { programs.git.enable = true; }
     "${inputs.Vanilla}/nixOfficialCache.nix"
     "${inputs.Vanilla}/nixIlyaFedinCache.nix"
 
