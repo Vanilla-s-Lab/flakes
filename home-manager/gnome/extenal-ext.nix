@@ -16,13 +16,14 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.runcat
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot
+    pkgs.gnomeExtensions.sensory-perception
+    pkgs.lm_sensors
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
     pkgs.gnomeExtensions.window-is-ready-remover
-    pkgs.gnomeExtensions.sensory-perception
     pkgs.gnomeExtensions.vitals
   ];
 
@@ -39,6 +40,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "openweather-extension@jenslody.de"
       "runcat@kolesnikov.se"
       "gnome-shell-screenshot@ttll.de"
+      "sensory-perception@HarlemSquirrel.github.io"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -88,5 +90,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
 
     # Screenshot Tool - Auto-Copy to Clipboard - Image Data
     "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
+
+    # Sensory Perception - Display decimal value
+    "org/gnome/shell/extensions/sensory-perception".display-decimal-value = true;
   };
 }
