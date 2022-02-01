@@ -8,9 +8,9 @@
     ./config/mr.nix
     "${inputs.Vanilla}/gitNixpkgs.nix"
 
-    ./programs/qv2ray.nix
-    ./programs/albert.nix
-    ./programs/kotatogram.nix
+    ./programs/autostart/qv2ray.nix
+    ./programs/autostart/albert.nix
+    ./programs/autostart/kotatogram.nix
 
     ./programs/fish.nix
     ./programs/starship.nix
