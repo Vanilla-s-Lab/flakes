@@ -7,7 +7,7 @@
 
   dconf.settings = {
     # Nautilus - Scroll Down Twice.
-    "org/gnome/nautilus".default-zoom-level = "small";
+    "org/gnome/nautilus/icon-view".default-zoom-level = "small";
   };
 
   home.file.".config/gtk-3.0/bookmarks".text = ''
