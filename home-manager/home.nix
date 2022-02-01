@@ -12,14 +12,13 @@
     ./programs/autostart/albert.nix
     ./programs/autostart/kotatogram.nix
 
-    ./programs/fish.nix
-    ./programs/starship.nix
+    ./programs/shell/fish.nix
+    ./programs/shell/starship.nix
+    ./programs/shell/exa.nix
 
     ./programs/gpg.nix
     ./services/gpg-agent.nix
     ./programs/ssh.nix
-
-    ./programs/exa.nix
 
     ./file-links.nix
     ./fonts.nix
