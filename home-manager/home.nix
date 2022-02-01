@@ -3,6 +3,7 @@
   imports = [
     ./programs/chromium.nix
     ./programs/alacritty.nix
+    ./programs/obs-studio.nix
 
     ./programs/git.nix
     ./config/mr.nix

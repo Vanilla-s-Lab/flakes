@@ -31,4 +31,8 @@
   home.file.".local/share/Steam".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Steam";
+
+  home.file."Videos".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Videos";
 }
