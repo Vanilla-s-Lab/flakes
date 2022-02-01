@@ -85,6 +85,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     # Espresso - Restore state across reboots - ON
     "org/gnome/shell/extensions/espresso".restore-state = true;
     "org/gnome/shell/extensions/espresso".user-enabled = true;
+    # Espresso - Enable notifications - OFF
+    "org/gnome/shell/extensions/espresso".show-notifications = false;
 
     # OpenWeather - Locations - [ Location + Provider ]
     "org/gnome/shell/extensions/openweather".city =
