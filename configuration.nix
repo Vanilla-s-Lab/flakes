@@ -54,6 +54,7 @@
 
     "${inputs.Vanilla}/enableSteam.nix"
     "${inputs.Vanilla}/virtualBoxWithExt.nix"
+    "${inputs.Vanilla}/adbUdevRules.nix"
   ];
 
   environment.etc."nixos".source =

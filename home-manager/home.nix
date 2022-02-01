@@ -4,6 +4,7 @@
     ./programs/chromium.nix
     ./programs/alacritty.nix
     ./programs/obs-studio.nix
+    ./programs/adb.nix
 
     ./programs/sg_cli.nix
     ./config/sg_cli.nix
