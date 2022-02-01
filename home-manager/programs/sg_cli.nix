@@ -2,6 +2,8 @@
 {
   home.packages = [
     pkgs.nodePackages.clipboard-cli
+    pkgs.xsel
+
     (pkgs.rustPlatform.buildRustPackage rec {
       pname = "sg_cli";
       version = "41e87fa";
