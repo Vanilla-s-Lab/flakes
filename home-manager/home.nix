@@ -28,7 +28,9 @@
     ./gnome/folders.nix
     ./gnome/settings.nix
     ./gnome/dockIcons.nix
+
     ./gnome/nautilus.nix
+    ./gnome/gedit.nix
 
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
     "${inputs.Vanilla}/gnomeDefApps.nix"
