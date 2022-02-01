@@ -35,4 +35,8 @@
   home.file."Videos".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Videos";
+
+  home.file.".config/VirtualBox".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/VirtualBox";
 }
