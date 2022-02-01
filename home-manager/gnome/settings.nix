@@ -27,5 +27,8 @@
     "org/gnome/desktop/datetime".automatic-timezone = true;
     # Settings - Date & Time - Time Format - AM/PM
     "org/gnome/desktop/interface".clock-format = "12h";
+
+    # Settings - Last panel set to Sound, until pereiet.
+    "org/gnome/control-center".last-panel = "sound";
   };
 }
