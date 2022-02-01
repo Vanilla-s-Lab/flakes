@@ -5,6 +5,9 @@
     ./programs/alacritty.nix
     ./programs/obs-studio.nix
 
+    ./programs/sg_cli.nix
+    ./config/sg_cli.nix
+
     ./programs/git.nix
     ./config/mr.nix
     "${inputs.Vanilla}/gitNixpkgs.nix"
