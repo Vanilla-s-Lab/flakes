@@ -94,6 +94,8 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     "org/gnome/shell/extensions/openweather".unit = "celsius";
     # OpenWeather - Layout - Position in Panel - Left
     "org/gnome/shell/extensions/openweather".position-in-panel = "left";
+    # OpenWeather - Layout - Conditions in Panel - ON
+    "org/gnome/shell/extensions/openweather".show-comment-in-panel = true;
     # OpenWeather - Fix refresh weather issues after reboot.
     "org/gnome/shell/extensions/openweather".actual-city = 0;
 
