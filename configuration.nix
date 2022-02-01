@@ -49,9 +49,11 @@
     ./sops-config/sg_cli.nix
 
     "${inputs.Vanilla}/sudoNoLecture.nix"
-    "${inputs.Vanilla}/enableSteam.nix"
     "${inputs.Vanilla}/etcAvahiServices.nix"
     "${inputs.Vanilla}/disablePlymouthQuit.nix"
+
+    "${inputs.Vanilla}/enableSteam.nix"
+    "${inputs.Vanilla}/virtualBoxWithExt.nix"
   ];
 
   environment.etc."nixos".source =
