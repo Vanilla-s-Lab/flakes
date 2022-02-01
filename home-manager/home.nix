@@ -7,6 +7,7 @@
 
     ./programs/sg_cli.nix
     ./config/sg_cli.nix
+    "${inputs.Vanilla}/enableMangohud.nix"
 
     ./programs/git.nix
     ./config/mr.nix
