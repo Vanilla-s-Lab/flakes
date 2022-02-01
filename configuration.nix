@@ -49,6 +49,8 @@
 
     "${inputs.Vanilla}/sudoNoLecture.nix"
     "${inputs.Vanilla}/enableSteam.nix"
+    "${inputs.Vanilla}/etcAvahiServices.nix"
+    "${inputs.Vanilla}/disablePlymouthQuit.nix"
   ];
 
   environment.etc."nixos".source =
