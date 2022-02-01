@@ -3,7 +3,10 @@
   imports = [
     ./programs/chromium.nix
     ./programs/alacritty.nix
+
     ./programs/git.nix
+    ./config/mr.nix
+    "${inputs.Vanilla}/gitNixpkgs.nix"
 
     ./programs/qv2ray.nix
     ./programs/albert.nix
@@ -39,7 +42,6 @@
     ./config/fcitx5.nix
     ./config/sops.nix
     ./config/pxder.nix
-    ./config/mr.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
