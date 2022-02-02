@@ -1,7 +1,8 @@
 { ... }:
 {
   imports = [
-    ./bluetooth/default.nix
+    ./bluetooth.nix
+
     ./nvidia/default.nix
     ./microcode/default.nix
     ./fileSystems/default.nix
