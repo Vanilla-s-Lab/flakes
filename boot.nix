@@ -17,4 +17,7 @@
 
   # https://nixos.wiki/wiki/NTFS
   boot.supportedFilesystems = [ "ntfs" ];
+
+  # Required nvme kernel module to find disk.
+  boot.initrd.availableKernelModules = [ "nvme" ];
 }
