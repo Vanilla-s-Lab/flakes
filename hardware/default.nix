@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./bluetooth/default.nix
+  ];
+}

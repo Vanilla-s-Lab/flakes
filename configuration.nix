@@ -12,9 +12,7 @@
     ./hardware/bind-mount.nix
     ./hardware/nvidia.nix
 
-    "${inputs.Vanilla}/enableBluetooth.nix"
-    "${inputs.Vanilla}/persistBluetooth.nix"
-    "${inputs.Vanilla}/bluetoothExperimental.nix"
+    ./hardware/default.nix
 
     "${inputs.Vanilla}/pulseAudioAptX.nix"
 
