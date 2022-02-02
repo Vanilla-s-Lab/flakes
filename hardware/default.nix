@@ -5,8 +5,8 @@
 
     ./nvidia/default.nix
     ./microcode/default.nix
-    ./fileSystems/default.nix
 
+    ./fileSystems.nix
     ./bindMount.nix
 
     ./pulseaudio/default.nix
