@@ -47,6 +47,7 @@
     ./config/fcitx5.nix
     ./config/sops.nix
     ./config/pxder.nix
+    ./config/ArchiSteamFarm.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
