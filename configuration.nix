@@ -7,8 +7,8 @@
 {
   imports = [
     ./hardware/default.nix
+    ./users/default.nix
 
-    ./users.nix
     { boot.loader.systemd-boot.enable = true; }
     "${inputs.Vanilla}/xanmodKernel.nix"
     "${inputs.Vanilla}/enableSysRq.nix"
