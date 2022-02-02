@@ -6,7 +6,9 @@
     ./microcode/default.nix
     ./fileSystems/default.nix
     ./kernelModules/default.nix
-    ./bindMount/default.nix
+
+    ./bindMount.nix
+
     ./pulseaudio/default.nix
   ];
 }
