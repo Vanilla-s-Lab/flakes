@@ -14,9 +14,7 @@
 
     ./networking.nix
     ./xserver.nix
-
-    "${inputs.Vanilla}/fcitx5Chinese.nix"
-    "${inputs.Vanilla}/enLocalMap.nix"
+    ./i18n.nix
 
     "${inputs.Vanilla}/nixFlakes.nix"
     { programs.git.enable = true; }
