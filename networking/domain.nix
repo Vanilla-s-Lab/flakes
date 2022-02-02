@@ -1,0 +1,2 @@
+{ ... }:
+{ networking.domain = "vanilla.local"; }

@@ -10,10 +10,7 @@
     ./users/default.nix
     ./boot/default.nix
     ./time/default.nix
-
-    ./networking/hostName-domain.nix
-    ./networking/networkmanager.nix
-    ./networking/proxy.nix
+    ./networking/default.nix
 
     ./xserver.nix
 
