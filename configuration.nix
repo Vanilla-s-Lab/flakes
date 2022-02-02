@@ -9,9 +9,7 @@
     ./hardware/default.nix
     ./users/default.nix
     ./boot/default.nix
-
-    { time.timeZone = "Asia/Shanghai"; }
-    "${inputs.Vanilla}/dualBootWindows.nix"
+    ./time/default.nix
 
     ./networking/hostName-domain.nix
     ./networking/networkmanager.nix
