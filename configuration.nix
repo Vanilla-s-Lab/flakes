@@ -6,8 +6,6 @@
 
 {
   imports = [
-    ./hardware/bind-mount.nix
-
     ./hardware/default.nix
 
     "${inputs.Vanilla}/pulseAudioAptX.nix"
