@@ -11,8 +11,8 @@
     ./users.nix
 
     ./hardware/default.nix
-    ./networking/default.nix
 
+    ./networking.nix
     ./xserver.nix
 
     "${inputs.Vanilla}/fcitx5Chinese.nix"

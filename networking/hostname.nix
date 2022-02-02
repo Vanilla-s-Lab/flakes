@@ -1,2 +1,0 @@
-{ ... }:
-{ networking.hostName = "NixOS-RoT"; }
