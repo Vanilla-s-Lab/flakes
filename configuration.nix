@@ -6,9 +6,10 @@
 
 {
   imports = [
+    ./boot.nix
+
     ./hardware/default.nix
     ./users/default.nix
-    ./boot/default.nix
     ./time/default.nix
     ./networking/default.nix
 
