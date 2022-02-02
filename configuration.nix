@@ -7,10 +7,10 @@
 {
   imports = [
     ./boot.nix
+    ./time.nix
 
     ./hardware/default.nix
     ./users/default.nix
-    ./time/default.nix
     ./networking/default.nix
 
     ./xserver.nix
