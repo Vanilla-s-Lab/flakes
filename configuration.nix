@@ -8,11 +8,7 @@
   imports = [
     ./hardware/default.nix
     ./users/default.nix
-
-    { boot.loader.systemd-boot.enable = true; }
-    "${inputs.Vanilla}/xanmodKernel.nix"
-    "${inputs.Vanilla}/enableSysRq.nix"
-    "${inputs.Vanilla}/supportNTFS.nix"
+    ./boot/default.nix
 
     { time.timeZone = "Asia/Shanghai"; }
     "${inputs.Vanilla}/dualBootWindows.nix"
