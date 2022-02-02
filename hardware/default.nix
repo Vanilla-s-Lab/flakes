@@ -2,9 +2,7 @@
 {
   imports = [
     ./bluetooth.nix
-
-    ./nvidia/default.nix
-
+    ./nvidia.nix
     ./microcode.nix
     ./fileSystems.nix
     ./bindMount.nix
