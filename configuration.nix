@@ -8,8 +8,6 @@
   imports = [
     ./hardware/default.nix
 
-    "${inputs.Vanilla}/pulseAudioAptX.nix"
-
     ./users.nix
     { boot.loader.systemd-boot.enable = true; }
     "${inputs.Vanilla}/xanmodKernel.nix"

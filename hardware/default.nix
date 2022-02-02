@@ -7,5 +7,6 @@
     ./fileSystems/default.nix
     ./kernelModules/default.nix
     ./bindMount/default.nix
+    ./pulseaudio/default.nix
   ];
 }
