@@ -15,11 +15,7 @@
     ./networking.nix
     ./xserver.nix
     ./i18n.nix
-
-    "${inputs.Vanilla}/nixFlakes.nix"
-    { programs.git.enable = true; }
-    "${inputs.Vanilla}/nixOfficialCache.nix"
-    "${inputs.Vanilla}/nixIlyaFedinCache.nix"
+    ./nix.nix
 
     "${inputs.Vanilla}/useOpenSSH.nix"
     "${inputs.Vanilla}/useFail2ban.nix"
