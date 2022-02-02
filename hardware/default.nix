@@ -8,7 +8,6 @@
 
     ./fileSystems.nix
     ./bindMount.nix
-
-    ./pulseaudio/default.nix
+    ./pulseaudio.nix
   ];
 }
