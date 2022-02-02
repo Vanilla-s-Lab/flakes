@@ -10,7 +10,6 @@
     ./hardware/configuration.nix
     ./hardware/fileSystems.nix
     ./hardware/bind-mount.nix
-    ./hardware/nvidia.nix
 
     ./hardware/default.nix
 
