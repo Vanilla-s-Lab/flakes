@@ -6,8 +6,6 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware/configuration.nix
     ./hardware/bind-mount.nix
 
     ./hardware/default.nix
