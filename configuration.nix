@@ -8,9 +8,9 @@
   imports = [
     ./boot.nix
     ./time.nix
+    ./users.nix
 
     ./hardware/default.nix
-    ./users/default.nix
     ./networking/default.nix
 
     ./xserver.nix
