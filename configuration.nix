@@ -10,7 +10,12 @@
     ./time.nix
     ./users.nix
 
-    ./hardware/default.nix
+    ./hardware/bluetooth.nix
+    ./hardware/nvidia.nix
+    ./hardware/microcode.nix
+    ./hardware/fileSystems.nix
+    ./hardware/bindMount.nix
+    ./hardware/pulseaudio.nix
 
     ./networking.nix
     ./xserver.nix
