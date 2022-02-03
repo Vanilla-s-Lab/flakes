@@ -32,8 +32,7 @@
     ./security/sudo.nix
     ./security/yubico.nix
 
-    "${inputs.Vanilla}/etcAvahiServices.nix"
-    "${inputs.Vanilla}/disablePlymouthQuit.nix"
+    ./fixes.nix
 
     "${inputs.Vanilla}/enableSteam.nix"
     "${inputs.Vanilla}/virtualBoxWithExt.nix"
