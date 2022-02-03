@@ -10,5 +10,6 @@ let fromGH = owner: repo: lib.generators.toINI { } {
     (fromGH "Vanilla-s-Lab" "flakes")
     (fromGH "NixOS" "nixos-artwork")
     (fromGH "NixOS" "nixpkgs")
+    (fromGH "VergeDX" "masm")
   ];
 }
