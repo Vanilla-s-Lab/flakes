@@ -10,7 +10,10 @@
     ./config/sg_cli.nix
     "${inputs.Vanilla}/enableMangohud.nix"
 
-    ./programs/git.nix
+    ./programs/github/git.nix
+    ./programs/github/gpg.nix
+    ./services/gpg-agent.nix
+    ./programs/github/ssh.nix
     ./config/mr.nix
     "${inputs.Vanilla}/gitNixpkgs.nix"
 
@@ -21,10 +24,6 @@
     ./programs/shell/fish.nix
     ./programs/shell/starship.nix
     ./programs/shell/exa.nix
-
-    ./programs/gpg.nix
-    ./services/gpg-agent.nix
-    ./programs/ssh.nix
 
     ./file-links.nix
     ./fonts.nix
