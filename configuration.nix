@@ -22,10 +22,8 @@
     ./i18n.nix
     ./nix.nix
 
-    "${inputs.Vanilla}/useOpenSSH.nix"
-    "${inputs.Vanilla}/useFail2ban.nix"
-
-    "${inputs.Vanilla}/persistEtcSsh.nix"
+    ./services/openssh.nix
+    ./services/fail2ban.nix
 
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
