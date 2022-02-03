@@ -24,6 +24,7 @@
 
     ./services/openssh.nix
     ./services/fail2ban.nix
+    ./services/udev.nix
 
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
@@ -33,10 +34,9 @@
     ./security/yubico.nix
 
     ./fixes.nix
+    ./steam.nix
 
-    "${inputs.Vanilla}/enableSteam.nix"
-    "${inputs.Vanilla}/virtualBoxWithExt.nix"
-    "${inputs.Vanilla}/adbUdevRules.nix"
+    ./virtualisation/virtualbox.nix
   ];
 
   environment.etc."nixos".source =
