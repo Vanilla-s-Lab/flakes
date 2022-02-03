@@ -29,7 +29,9 @@
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
 
-    "${inputs.Vanilla}/sudoNoLecture.nix"
+    ./security/sudo.nix
+    ./security/yubico.nix
+
     "${inputs.Vanilla}/etcAvahiServices.nix"
     "${inputs.Vanilla}/disablePlymouthQuit.nix"
 
