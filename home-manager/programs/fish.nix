@@ -4,7 +4,8 @@
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
     pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
-  ] ++ [ pkgs.fishPlugins.pisces ];
+  ] ++ [ pkgs.fishPlugins.pisces ]
+  ++ [ pkgs.any-nix-shell ];
 
   # https://github.com/jhillyerd/plugin-git
   home.activation."fishPlugins.git" =
@@ -32,4 +33,8 @@
   home.activation."rose_pine-dawn" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
       ''fish -c "rose_pine dawn" || true'';
+
+  # https://github.com/haslersn/any-nix-shell
+  programs.fish.interactiveShellInit =
+    "any-nix-shell fish --info-right | source";
 }
