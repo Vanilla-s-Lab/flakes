@@ -32,7 +32,7 @@
 
   home.activation."rose_pine-dawn" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
-      ''fish -c "rose_pine dawn" || true'';
+      ''fish -c "rose_pine dawn" > /dev/null || true'';
 
   # https://github.com/haslersn/any-nix-shell
   programs.fish.interactiveShellInit =
