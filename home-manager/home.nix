@@ -21,9 +21,7 @@
     ./programs/autostart/albert.nix
     ./programs/autostart/kotatogram.nix
 
-    ./programs/shell/fish.nix
-    ./programs/shell/starship.nix
-    ./programs/shell/exa.nix
+    ./programs/fish.nix
 
     ./file-links.nix
     ./fonts.nix
