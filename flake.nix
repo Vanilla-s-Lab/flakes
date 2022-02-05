@@ -23,7 +23,7 @@
         inherit system; specialArgs = { inherit inputs; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-          ++ [{ home-manager.extraSpecialArgs = { inherit inputs; }; }]
+          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
           ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
           ++ [ sops-nix.nixosModules.sops ]

@@ -22,6 +22,7 @@
     ./programs/autostart/kotatogram.nix
 
     ./programs/fish.nix
+    ./programs/wine-wechat.nix
 
     ./file-links.nix
     ./fonts.nix

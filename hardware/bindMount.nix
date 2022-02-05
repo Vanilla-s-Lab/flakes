@@ -17,6 +17,13 @@
       ++ [ "uid=1000" "gid=100" ];
   };
 
+  # ~/.local are also should be accessable.
+  fileSystems."/home/vanilla/.local" = {
+    fsType = "tmpfs";
+    options = [ "defaults" "size=2G" ]
+      ++ [ "uid=1000" "gid=100" ];
+  };
+
   # Used for persist fish_history for user root.
   fileSystems."/root/.local/share/fish" = {
     device = "/persistent/root/dot/local/share/fish";
