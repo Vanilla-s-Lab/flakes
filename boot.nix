@@ -8,7 +8,7 @@
 
   # https://nixos.wiki/wiki/Linux_kernel
   boot.kernelPackages =
-    pkgs.linuxPackages_xanmod;
+    pkgs.linuxPackages_latest;
 
   # https://wiki.archlinux.org/title/sysctl
   boot.kernel.sysctl = {
