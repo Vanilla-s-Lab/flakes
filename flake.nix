@@ -3,10 +3,18 @@
     nixos.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
+
     home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixos";
+
     nur.url = "github:nix-community/NUR";
+
     sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixos";
+
     nixos-cn.url = "github:nixos-cn/flakes";
+    nixos-cn.inputs.flake-utils.follows = "flake-utils";
+    nixos-cn.inputs.nixpkgs.follows = "nixos";
   };
 
   outputs = { self, ... }@inputs: with inputs;
