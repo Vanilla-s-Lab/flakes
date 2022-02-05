@@ -7,11 +7,12 @@ let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIW
   # https://github.com/fish-shell/fish-shell
   users.defaultUserShell = pkgs.fish;
 
+  programs.adb.enable = true;
   users.users."vanilla" = {
     isNormalUser = true;
     inherit hashedPassword;
 
     # Enable ‘sudo’ for the user.
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "adbusers" ];
   };
 }
