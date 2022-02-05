@@ -16,10 +16,7 @@
     ./config/mr.nix
     "${inputs.Vanilla}/gitNixpkgs.nix"
 
-    ./programs/autostart/qv2ray.nix
-    ./programs/autostart/albert.nix
-    ./programs/autostart/kotatogram.nix
-
+    ./programs/autostart.nix
     ./programs/fish.nix
     ./programs/wine-wechat.nix
 
