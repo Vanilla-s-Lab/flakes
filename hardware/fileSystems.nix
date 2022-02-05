@@ -1,7 +1,7 @@
 { ... }:
 {
   fileSystems = {
-    "/" = { fsType = "tmpfs"; options = [ "defaults" "size=3G" "mode=755" ]; };
+    "/" = { fsType = "tmpfs"; options = [ "defaults" "size=6G" "mode=755" ]; };
     "/boot" = { device = "/dev/disk/by-uuid/2F71-8FE8"; fsType = "vfat"; };
   };
 
