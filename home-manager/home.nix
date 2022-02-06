@@ -5,8 +5,6 @@
     ./programs/alacritty.nix
     ./programs/obs-studio.nix
 
-    ./programs/sg_cli.nix
-    ./config/sg_cli.nix
     "${inputs.Vanilla}/enableMangohud.nix"
 
     ./programs/github/git.nix
@@ -41,6 +39,7 @@
     ./config/fcitx5.nix
     ./config/sops.nix
     ./config/pxder.nix
+    ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
