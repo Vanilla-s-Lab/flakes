@@ -31,4 +31,13 @@
     # Settings - Last panel set to Sound, until pereiet.
     "org/gnome/control-center".last-panel = "sound";
   };
+
+  # https://wiki.archlinux.org/title/backlight#Using_DBus_with_GNOME
+  home.activation."backlight_Using_DBus_with_GNOME" = ''
+    gdbus call --session --dest org.gnome.SettingsDaemon.Power \
+      --object-path /org/gnome/SettingsDaemon/Power \
+      --method org.freedesktop.DBus.Properties.Set \
+      org.gnome.SettingsDaemon.Power.Screen \
+      Brightness "<int32 100>" > /dev/null
+  '';
 }
