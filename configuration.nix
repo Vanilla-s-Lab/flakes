@@ -12,7 +12,6 @@
 
     ./hardware/bluetooth.nix
     ./hardware/nvidia.nix
-    ./hardware/microcode.nix
     ./hardware/fileSystems.nix
     ./hardware/bindMount.nix
     ./hardware/pulseaudio.nix
