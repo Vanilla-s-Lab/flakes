@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, self, ... }:
 {
   # https://nixos.wiki/wiki/Flakes
   nix.package = pkgs.nixFlakes;
@@ -24,4 +24,7 @@
     "kdna.cachix.org-1:xAkLlelk3u0frMsevzcDLsjGe6ifqXx8q+OrPkbmetI="
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
   ];
+
+  nix.nixPath = [ "nixos=${inputs.nixos}" ];
+  nix.registry."p".flake = self;
 }

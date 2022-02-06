@@ -20,7 +20,7 @@
   outputs = { self, ... }@inputs: with inputs;
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: {
       packages.nixosConfigurations."NixOS-RoT" = nixos.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit inputs; };
+        inherit system; specialArgs = { inherit inputs self; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
