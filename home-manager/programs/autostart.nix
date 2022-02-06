@@ -1,4 +1,8 @@
 { pkgs, config, ... }:
+let
+  pkgs_kdna = (pkgs.nur.repos.ilya-fedin.kotatogram-desktop.overrideAttrs (old: {
+    patches = pkgs.lib.singleton ./patches/no-sponsored_messages.patch;
+  })); in
 {
   home.packages = [
     pkgs.qv2ray
@@ -13,10 +17,10 @@
       package = pkgs.albert;
     })
 
-    pkgs.nur.repos.ilya-fedin.kotatogram-desktop
+    pkgs_kdna
     (pkgs.makeAutostartItem {
       name = "kotatogramdesktop";
-      package = pkgs.nur.repos.ilya-fedin.kotatogram-desktop;
+      package = pkgs_kdna;
     })
   ];
 
