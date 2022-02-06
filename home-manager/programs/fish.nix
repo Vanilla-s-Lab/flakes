@@ -1,4 +1,5 @@
 { pkgs, lib, config, ... }:
+let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; in
 {
   programs.fish.enable = true;
   home.packages = [
@@ -41,4 +42,8 @@
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+
+  home.file.".local/share/direnv/allow/${masm}".text = ''
+    /persistent/Projects/masm/.envrc
+  '';
 }
