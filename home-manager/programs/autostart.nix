@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
-let
-  pkgs_kdna = (pkgs.nur.repos.ilya-fedin.kotatogram-desktop.overrideAttrs (old: {
-    patches = pkgs.lib.singleton ./patches/no-sponsored_messages.patch;
-  })); in
+let dsm = "Telegram/SourceFiles/data/data_sponsored_messages.cpp"; in
+let pkgs_kdna = (pkgs.nur.repos.ilya-fedin.kotatogram-desktop.overrideAttrs (old: {
+  patchPhase = "sed -i 's/history->isChannel()/0/g' ${dsm}";
+})); in
 {
   home.packages = [
     pkgs.qv2ray
