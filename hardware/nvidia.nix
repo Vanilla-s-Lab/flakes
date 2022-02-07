@@ -7,6 +7,9 @@
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  # Remove NVIDIA X Server Settings app.
+  hardware.nvidia.nvidiaSettings = false;
+
   # https://nixos.wiki/wiki/Nvidia#sync_mode
   hardware.nvidia.prime.sync.enable = true;
   hardware.nvidia.prime.intelBusId = "PCI:0:2:0";
