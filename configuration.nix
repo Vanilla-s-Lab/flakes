@@ -34,8 +34,7 @@
 
     ./fixes.nix
     ./steam.nix
-
-    ./virtualisation/virtualbox.nix
+    ./virtualisation.nix
   ];
 
   environment.etc."nixos".source =
