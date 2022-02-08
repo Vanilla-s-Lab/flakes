@@ -13,7 +13,6 @@
     ./hardware/bluetooth.nix
     ./hardware/nvidia.nix
     ./hardware/fileSystems.nix
-    ./hardware/bindMount.nix
     ./hardware/pulseaudio.nix
 
     ./networking.nix
