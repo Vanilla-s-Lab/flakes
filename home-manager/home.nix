@@ -7,12 +7,8 @@
 
     "${inputs.Vanilla}/enableMangohud.nix"
 
-    ./programs/github/git.nix
-    ./programs/github/gpg.nix
-    ./services/gpg-agent.nix
-    ./programs/github/ssh.nix
+    ./programs/github.nix
     ./config/mr.nix
-    "${inputs.Vanilla}/gitNixpkgs.nix"
 
     ./programs/autostart.nix
     ./programs/fish.nix
