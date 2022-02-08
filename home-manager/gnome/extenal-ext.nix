@@ -55,7 +55,11 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     # Button Appearance - Icon Appearance - Icon - Browse Icons - Custom Icon
     "org/gnome/shell/extensions/arcmenu".menu-button-icon = "Custom_Icon";
     "org/gnome/shell/extensions/arcmenu".custom-menu-button-icon =
-      "/home/vanilla/Projects/nixos-artwork/logo/white.svg";
+      builtins.toString (pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com" +
+          "/NixOS/nixos-artwork/master/logo/white.svg";
+        hash = "sha256-Ed2l6i2wi/YTcWCq23bspH/t3RYp6AodykpXF1Zgccw=";
+      });
 
     # Bluetooth Quick Connect - Show battery value (restart required) - ON
     "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-value-on = true;
