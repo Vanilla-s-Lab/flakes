@@ -17,6 +17,7 @@
     ./programs/autostart.nix
     ./programs/fish.nix
     ./programs/wine-wechat.nix
+    ./programs/common.nix
 
     ./file-links.nix
     ./fonts.nix
