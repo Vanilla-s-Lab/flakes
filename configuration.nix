@@ -24,6 +24,7 @@
     ./services/fail2ban.nix
     ./services/udev.nix
     ./services/samba.nix
+    ./services/btrfs.nix
 
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
