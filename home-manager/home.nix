@@ -18,7 +18,6 @@
     ./file-links.nix
     ./fonts.nix
 
-    ./gnome/bundled-ext.nix
     ./gnome/extenal-ext.nix
     ./gnome/tweaks.nix
     ./gnome/system-monitor.nix
