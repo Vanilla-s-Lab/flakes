@@ -13,6 +13,7 @@
         "org.fcitx.Fcitx5.desktop"
         "fcitx5-configtool.desktop"
         "org.fcitx.fcitx5-migrator.desktop"
+        "kbd-layout-viewer5.desktop"
       ];
     };
 
