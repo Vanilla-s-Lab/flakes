@@ -4,8 +4,6 @@
     ./programs/chromium.nix
     ./programs/terminal.nix
 
-    "${inputs.Vanilla}/enableMangohud.nix"
-
     ./programs/github.nix
     ./config/mr.nix
 

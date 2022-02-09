@@ -15,6 +15,10 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/lib/wine-wechat";
 
+  # https://github.com/flightlessmango/MangoHud
+  programs.mangohud.enable = true;
+  programs.mangohud.enableSessionWide = true;
+
   # https://nixos.wiki/wiki/Virt-manager
   dconf.settings."org/virt-manager/virt-manager/connections" = {
     autoconnect = [ "qemu:///system" ];
