@@ -3,7 +3,6 @@
   imports = [
     ./programs/chromium.nix
     ./programs/terminal.nix
-    ./programs/obs-studio.nix
 
     "${inputs.Vanilla}/enableMangohud.nix"
 
