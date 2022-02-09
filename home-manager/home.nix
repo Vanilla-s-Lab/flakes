@@ -11,7 +11,6 @@
     ./config/mr.nix
 
     ./programs/autostart.nix
-    ./programs/wine-wechat.nix
     ./programs/common.nix
 
     ./file-links.nix
