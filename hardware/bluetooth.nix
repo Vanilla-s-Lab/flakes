@@ -4,11 +4,10 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Persist the state of connected devices.
-  fileSystems."/var/lib/bluetooth" = {
-    device = "/persistent/var/lib/bluetooth";
-    options = [ "bind" ];
-  };
+  # https://www.freedesktop.org/software/systemd/man/tmpfiles.d.html
+  systemd.tmpfiles.rules = [
+    "L /var/lib/bluetooth - - - - /persistent/var/lib/bluetooth"
+  ];
 
   # Shows the battery percent in bluez.
   hardware.bluetooth.settings = {
