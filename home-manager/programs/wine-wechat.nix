@@ -6,8 +6,4 @@
   home.file.".local/lib/wine-wechat".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/lib/wine-wechat";
-
-  home.file.".cache/wine".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/cache/wine";
 }
