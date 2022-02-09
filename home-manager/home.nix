@@ -22,6 +22,7 @@
 
     ./gnome/nautilus.nix
     ./gnome/gedit.nix
+    ./gnome/gfeeds.nix
 
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
     "${inputs.Vanilla}/gnomeDefApps.nix"
