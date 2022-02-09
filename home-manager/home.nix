@@ -2,7 +2,7 @@
 {
   imports = [
     ./programs/chromium.nix
-    ./programs/alacritty.nix
+    ./programs/terminal.nix
     ./programs/obs-studio.nix
 
     "${inputs.Vanilla}/enableMangohud.nix"
@@ -11,7 +11,6 @@
     ./config/mr.nix
 
     ./programs/autostart.nix
-    ./programs/fish.nix
     ./programs/wine-wechat.nix
     ./programs/common.nix
 

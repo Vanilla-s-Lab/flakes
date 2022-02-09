@@ -1,6 +1,23 @@
-{ pkgs, lib, config, ... }:
+{ lib, pkgs, config, ... }:
 let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; in
 {
+  # https://github.com/fish-shell/fish-shell
+  programs.alacritty.enable = true;
+  programs.alacritty.settings = {
+    import = lib.singleton (pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/rose-pine-dawn.yml";
+      sha256 = "sha256-/1y/sYIugR27QgbM2rG4WganTPbdqbAgnbrjkDXIgUg=";
+    });
+
+    font = {
+      normal = { family = "Hack Nerd Font"; style = "Regular"; };
+      bold = { family = "Hack Nerd Font"; style = "Bold"; };
+      italic = { family = "Hack Nerd Font"; style = "Italic"; };
+      size = 11.0;
+    };
+  };
+
+  # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
