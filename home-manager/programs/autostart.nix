@@ -1,13 +1,5 @@
 { pkgs, config, ... }:
-let dsm = "Telegram/SourceFiles/data/data_sponsored_messages.cpp"; in
-let pkgs_kdna = (pkgs.nur.repos.ilya-fedin.kotatogram-desktop.overrideAttrs (old: {
-  patchPhase = "sed -i 's/history->isChannel()/0/g' ${dsm}";
-})); in
-let pkgs_kdna_autostart = pkgs.makeDesktopItem rec {
-  name = "kotatogramdesktop";
-  exec = "${pkgs_kdna}/bin/kotatogram-desktop -autostart";
-  desktopName = name;
-}; in
+let pkgs_kdna = import ../packages/kdna.nix { inherit pkgs; }; in
 {
   home.packages = [
     pkgs.qv2ray
@@ -22,10 +14,10 @@ let pkgs_kdna_autostart = pkgs.makeDesktopItem rec {
       package = pkgs.albert;
     })
 
-    pkgs_kdna
+    pkgs_kdna.self
     (pkgs.makeAutostartItem {
       name = "kotatogramdesktop";
-      package = pkgs_kdna_autostart;
+      package = pkgs_kdna.autostart;
     })
   ];
 
