@@ -33,7 +33,7 @@
   };
 
   # https://wiki.archlinux.org/title/backlight
-  home.activation."backlight_set_to_60000" = ''
-    echo 60000 > /sys/class/backlight/intel_backlight/brightness
-  '';
+  home.activation."backlight_set_to_60000" =
+    ("echo 60000 > /sys/class/backlight/intel_backlight/brightness"
+      + " " + "||" + " " + "true");
 }
