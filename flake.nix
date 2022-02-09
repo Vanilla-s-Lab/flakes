@@ -15,6 +15,8 @@
     nixos-cn.url = "github:nixos-cn/flakes";
     nixos-cn.inputs.flake-utils.follows = "flake-utils";
     nixos-cn.inputs.nixpkgs.follows = "nixos";
+
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -27,7 +29,8 @@
           ++ [{ home-manager.useGlobalPkgs = true; }]
           ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
           ++ [ sops-nix.nixosModules.sops ]
-          ++ [ nixos-cn.nixosModules.nixos-cn ];
+          ++ [ nixos-cn.nixosModules.nixos-cn ]
+          ++ [ impermanence.nixosModules.impermanence ];
       };
     });
 }

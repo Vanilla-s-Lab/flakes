@@ -5,8 +5,7 @@
   users.users."vanilla".extraGroups = [ "libvirtd" ];
 
   # The default KVM virtual storage location.
-  fileSystems."/var/lib/libvirt" = {
-    device = "/persistent/var/lib/libvirt";
-    options = [ "bind" ];
+  environment.persistence."/persistent" = {
+    directories = [ "/var/lib/libvirt" ];
   };
 }
