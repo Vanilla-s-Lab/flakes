@@ -24,6 +24,11 @@ let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; i
     pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
     pkgs.fishPlugins.pisces
     pkgs.any-nix-shell
+
+    # https://github.com/sharkdp/fd
+    pkgs.fd
+    # https://github.com/BurntSushi/ripgrep
+    pkgs.ripgrep
   ];
 
   # https://github.com/jhillyerd/plugin-git
