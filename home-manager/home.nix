@@ -9,6 +9,7 @@
 
     ./programs/autostart.nix
     ./programs/common.nix
+    ./programs/develop.nix
 
     ./file-links.nix
     ./fonts.nix

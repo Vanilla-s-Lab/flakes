@@ -2,7 +2,6 @@
 {
   home.packages = [
     pkgs.gnome.gedit
-    (pkgs.python3.withPackages (p: [ p.pygobject3 ]))
   ];
 
   dconf.settings = {
