@@ -9,7 +9,7 @@
     # Text Editor - Preferences - Font & Colors - Color Scheme - Flat-Remix
     "org/gnome/gedit/preferences/editor".scheme = "Flat-Remix";
     # Text Editor - Preferences - Plugins - Enable All.
-    "org/gnome/gedit".active-plugins = [
+    "org/gnome/gedit/plugins".active-plugins = [
       "time"
       "spell"
       "sort"
