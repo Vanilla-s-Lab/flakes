@@ -17,6 +17,9 @@
     nixos-cn.inputs.nixpkgs.follows = "nixos";
 
     impermanence.url = "github:nix-community/impermanence";
+
+    nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree";
+    nixpkgs-unfree.inputs.nixpkgs.follows = "nixos";
   };
 
   outputs = { self, ... }@inputs: with inputs;
