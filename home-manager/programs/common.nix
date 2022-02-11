@@ -6,6 +6,10 @@
     pkgs.virt-manager
     pkgs.wpsoffice
     pkgs.nur.repos.linyinfeng.wemeet
+
+    # ls[usb|pci].
+    pkgs.pciutils
+    pkgs.usbutils
   ];
 
   home.file.".config/obs-studio".source =
