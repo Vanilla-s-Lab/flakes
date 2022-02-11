@@ -1,4 +1,4 @@
-{ pkgs, inputs, self, ... }:
+{ pkgs, inputs, self, ... }: with inputs;
 {
   # https://nixos.wiki/wiki/Flakes
   nix.package = pkgs.nixFlakes;
@@ -26,5 +26,5 @@
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-  nix.registry."p".flake = self;
+  nix.registry."nixpkgs-unstable".flake = nixpkgs-unfree;
 }
