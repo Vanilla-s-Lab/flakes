@@ -1,5 +1,6 @@
 { lib, pkgs, config, ... }:
 let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; in
+let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fba113"; in
 {
   # https://github.com/fish-shell/fish-shell
   programs.alacritty.enable = true;
@@ -66,7 +67,8 @@ let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; i
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
 
-  home.file.".local/share/direnv/allow/${masm}".text = ''
-    /persistent/Projects/masm/.envrc
-  '';
+  home.file.".local/share/direnv/allow/${masm}".text =
+    "/persistent/Projects/masm/.envrc";
+  home.file.".local/share/direnv/allow/${myh2o_backup}".text =
+    "/persistent/Documents/myh2o_backup/.envrc";
 }
