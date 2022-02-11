@@ -30,9 +30,7 @@
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
 
-    ./security/sudo.nix
-    ./security/yubico.nix
-
+    ./security.nix
     ./fixes.nix
     ./steam.nix
     ./virtualisation.nix
