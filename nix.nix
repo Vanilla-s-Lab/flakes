@@ -25,6 +25,6 @@
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
   ];
 
-  nix.nixPath = [ "nixos=${inputs.nixos}" ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   nix.registry."p".flake = self;
 }
