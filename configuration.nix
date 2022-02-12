@@ -6,7 +6,6 @@
 
 {
   imports = [
-    ./time.nix
     ./users.nix
 
     ./hardware/bluetooth.nix
@@ -54,6 +53,12 @@
   # Define your hostname.
   networking.hostName = "NixOS-RoT";
   networking.domain = "vanilla.local";
+
+  # Set your time zone.
+  time.timeZone = "Asia/Shanghai";
+
+  # https://nixos.wiki/wiki/Dual_Booting_NixOS_and_Windows
+  time.hardwareClockInLocalTime = true;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
