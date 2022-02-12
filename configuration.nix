@@ -29,7 +29,6 @@
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
-    ./sops-config/yubico.nix
 
     ./security.nix
     ./fixes.nix

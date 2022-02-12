@@ -39,4 +39,8 @@
   home.file."Documents".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Documents";
+
+  home.file.".yubico".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/yubico";
 }
