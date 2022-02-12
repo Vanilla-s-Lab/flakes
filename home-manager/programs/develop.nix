@@ -1,4 +1,5 @@
-{ pkgs, config, ... }:
+{ pkgs, config, pkgsUnstable, ... }:
+let mariadb = pkgsUnstable.python3Packages.mariadb; in
 {
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
