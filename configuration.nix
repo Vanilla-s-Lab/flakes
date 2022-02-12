@@ -51,6 +51,10 @@
   # Required nvme kernel module to find disk.
   boot.initrd.availableKernelModules = [ "nvme" ];
 
+  # Define your hostname.
+  networking.hostName = "NixOS-RoT";
+  networking.domain = "vanilla.local";
+
   # Configure keymap in X11
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
