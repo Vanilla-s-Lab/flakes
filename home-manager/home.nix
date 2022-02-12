@@ -19,10 +19,7 @@
     ./gnome/system-monitor.nix
     ./gnome/settings.nix
     ./gnome/desktop.nix
-
-    ./gnome/nautilus.nix
-    ./gnome/gedit.nix
-    ./gnome/gfeeds.nix
+    ./gnome/common.nix
 
     "${inputs.Vanilla}/gnomeNoWelcome.nix"
     "${inputs.Vanilla}/gnomeDefApps.nix"
