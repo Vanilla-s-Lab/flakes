@@ -17,9 +17,8 @@
     ./gnome/extensions.nix
     ./gnome/tweaks.nix
     ./gnome/system-monitor.nix
-    ./gnome/folders.nix
     ./gnome/settings.nix
-    ./gnome/dockIcons.nix
+    ./gnome/desktop.nix
 
     ./gnome/nautilus.nix
     ./gnome/gedit.nix

@@ -1,6 +1,15 @@
 { ... }:
 {
   dconf.settings = {
+    "org/gnome/shell".favorite-apps = [
+      "org.gnome.Epiphany.desktop"
+      "org.gnome.Geary.desktop"
+      "org.gnome.Calendar.desktop"
+      "org.gnome.Lollypop.desktop"
+      "org.gnome.Totem.desktop"
+      "org.gnome.eog.desktop"
+    ];
+
     "org/gnome/desktop/app-folders".folder-children = [
       "d3165349-919a-496a-acbb-7a59027f0f54" # Fcitx 5
       "4e0291de-0741-434f-94ef-75ff8dc5ef2c" # WeChat
