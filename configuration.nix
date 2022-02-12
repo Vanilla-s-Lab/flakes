@@ -11,7 +11,6 @@
     ./hardware/bluetooth.nix
     ./hardware/nvidia.nix
     ./hardware/fileSystems.nix
-    ./hardware/pulseaudio.nix
 
     ./networking.nix
     ./nix.nix
@@ -100,6 +99,14 @@
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
+
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+
+  # https://nixos.wiki/wiki/Bluetooth#Enabling_extra_codecs
+  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
