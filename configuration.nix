@@ -15,7 +15,6 @@
 
     ./networking.nix
     ./xserver.nix
-    ./i18n.nix
     ./nix.nix
 
     ./services/openssh.nix
@@ -71,6 +70,16 @@
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
+  console = { keyMap = "us"; };
+
+  # Enable fcitx5 with chinese addons.
+  i18n.inputMethod.enabled = "fcitx5";
+  i18n.inputMethod.fcitx5.addons = [
+    pkgs.fcitx5-chinese-addons
+  ];
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
