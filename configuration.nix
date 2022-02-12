@@ -14,7 +14,6 @@
     ./hardware/pulseaudio.nix
 
     ./networking.nix
-    ./xserver.nix
     ./nix.nix
 
     ./services/openssh.nix
@@ -80,6 +79,20 @@
   i18n.inputMethod.fcitx5.addons = [
     pkgs.fcitx5-chinese-addons
   ];
+
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+
+  # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # Disable most of GNOME bundled tools.
+  services.gnome.core-utilities.enable = false;
+  services.gnome.core-developer-tools.enable = false;
+  # https://github.com/NixOS/nixpkgs/pull/107850
+  systemd.services."display-manager".preStart =
+    "cp /persistent/dot/config/monitors.xml /run/gdm/.config/monitors.xml";
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
