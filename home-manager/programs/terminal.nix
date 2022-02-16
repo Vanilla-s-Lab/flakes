@@ -66,6 +66,8 @@ let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fb
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+  # https://github.com/nix-community/nix-direnv/issues/137
+  programs.direnv.nix-direnv.enableFlakes = true;
 
   home.file.".local/share/direnv/allow/${masm}".text =
     "/persistent/Projects/masm/.envrc";
