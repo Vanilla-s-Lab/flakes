@@ -25,6 +25,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
+    pkgs.gnomeExtensions.x11-gestures
   ];
 
   home.file.".config/gsconnect".source =
@@ -62,6 +63,7 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
       "windowIsReady_Remover@nunofarruca@gmail.com"
+      "x11gestures@joseexposito.github.io"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
