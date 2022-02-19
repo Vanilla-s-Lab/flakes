@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, pkgsUnstable, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -64,7 +64,7 @@
     "/persistent/etc/NetworkManager/system-connections";
 
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
-  hardware.firmware = [ pkgsUnstable.linux-firmware ];
+  hardware.firmware = [ pkgs.linux-firmware ];
 
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";

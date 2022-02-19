@@ -1,10 +1,10 @@
-{ pkgsUnstable, pkgs, config, lib, ... }:
+{ pkgs, config, lib, ... }:
 let forceG41 = ext: (ext.overrideAttrs (old: {
   patchPhase = ''sed -i 's/"40"/"40", "41"/g' metadata.json'';
 })); in
 {
   home.packages = [
-    pkgsUnstable.gnomeExtensions.arcmenu
+    pkgs.gnomeExtensions.arcmenu
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
@@ -15,9 +15,9 @@ let forceG41 = ext: (ext.overrideAttrs (old: {
     pkgs.gnomeExtensions.lock-keys
     (forceG41 pkgs.gnomeExtensions.openweather)
     pkgs.gnomeExtensions.runcat
-    (forceG41 pkgs.gnomeExtensions.screenshot-tool)
+    pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot
-    (forceG41 pkgs.gnomeExtensions.sensory-perception)
+    pkgs.gnomeExtensions.sensory-perception
     pkgs.lm_sensors
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser

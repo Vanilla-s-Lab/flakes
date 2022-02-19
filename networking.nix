@@ -1,4 +1,4 @@
-{ pkgsUnstable, ... }:
+{ pkgs, ... }:
 {
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 1089 8889 ];
