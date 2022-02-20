@@ -10,6 +10,8 @@
     # ls[usb|pci].
     pkgs.pciutils
     pkgs.usbutils
+
+    pkgs.cawbird
   ];
 
   home.file.".config/obs-studio".source =
@@ -33,4 +35,13 @@
   home.file.".local/share/wemeetapp".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/wemeetapp";
+
+  home.file.".config/cawbird".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/cawbird";
+
+  dconf.settings."uk.co.ibboard.cawbird" = {
+    hide-nsfw-content = false;
+    startup-accounts = [ "osu_Vanilla" ];
+  };
 }
