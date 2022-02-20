@@ -2,13 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, pkgsTemp, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
-  # https://github.com/NixOS/nixpkgs/pull/159074
-  nixpkgs.overlays = lib.singleton (self: super:
-    { remarshal = pkgsTemp.remarshal; });
-
   imports = [
     ./users.nix
 
