@@ -5,6 +5,7 @@
       ++ [ pip setuptools ] ++ [ mariadb XlsxWriter pandas ]))
 
     pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.idea-ultimate
   ];
 
   home.file.".cache/JetBrains".source =
