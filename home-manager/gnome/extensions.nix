@@ -13,6 +13,7 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
+    pkgs.gnomeExtensions.gesture-improvements
     pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
@@ -53,6 +54,7 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
       "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
       "dash-to-dock@micxgx.gmail.com"
       "espresso@coadmunkee.github.com"
+      "gestureImprovements@gestures"
       "gsconnect@andyholmes.github.io"
       "kimpanel@kde.org"
       "lockkeys@vaina.lt"
