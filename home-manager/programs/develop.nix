@@ -7,6 +7,10 @@
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.rider
+
+    pkgs.dotnet-sdk
+    pkgs.mono
   ];
 
   home.file.".cache/JetBrains".source =
