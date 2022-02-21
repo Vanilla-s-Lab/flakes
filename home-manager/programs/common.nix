@@ -1,9 +1,9 @@
-{ inputs, system, pkgs, config, pkgsTemp, ... }:
+{ inputs, system, pkgs, config, ... }:
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
     pkgs.obs-studio
-    pkgsTemp.virt-manager
+    pkgs.virt-manager
     pkgs.wpsoffice
     pkgs.nur.repos.linyinfeng.wemeet
 
