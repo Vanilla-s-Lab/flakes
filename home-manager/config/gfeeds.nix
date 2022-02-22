@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: with lib;
+{ pkgs, lib, config, ... }: with lib;
 let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
   { name = "https://github.com/${repo}/tags.atom"; value = { tags = [ tag ]; }; }
 ))); in
@@ -27,4 +27,8 @@ let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
     # Advanced - Maximum refresh threads - 8
     max_refresh_threads = 8;
   };
+
+  home.file.".cache/org.gabmus.gfeeds".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/org.gabmus.gfeeds";
 }
