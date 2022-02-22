@@ -31,6 +31,7 @@
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
     ./config/gfeeds.nix
+    ./config/hysteria.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
