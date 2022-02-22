@@ -76,4 +76,16 @@ let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f";
     "/persistent/Documents/myh2o_backup/.envrc";
   home.file.".local/share/direnv/allow/${Videos}".text =
     "/persistent/Videos/.envrc";
+
+  # https://github.com/bennofs/nix-index
+  programs.nix-index.enable = true;
+  programs.nix-index.enableFishIntegration = true;
+
+  # https://github.com/Mic92/nix-index-database/releases
+  home.file.".cache/nix-index/files".source =
+    pkgs.fetchurl {
+      url = "https://github.com/Mic92/nix-index-database" +
+        "/releases/download/2022-02-19/index-x86_64-linux";
+      hash = "sha256-4n4x7lJM47/v/6Tc3kxbDKMqIhg9IEwGSs4Q2A1Ld8Q=";
+    };
 }
