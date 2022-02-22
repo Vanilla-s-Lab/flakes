@@ -137,6 +137,8 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
 
     # Sensory Perception - Display decimal value
     "org/gnome/shell/extensions/sensory-perception".display-decimal-value = true;
+    # Sensory Perception - Sensor in panel - Package id 0
+    "org/gnome/shell/extensions/sensory-perception".main-sensor = "Package id 0";
 
     # Simple net speed - [ click once to show B/s ]
     "org/gnome/shell/extensions/simplenetspeed".mode = 1;
