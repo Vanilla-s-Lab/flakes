@@ -16,6 +16,7 @@
       "466c96ac-0106-4985-a59c-404a9d69a44e" # WPS Office
       "f31c95a8-8ed5-43d0-b849-c02b87cf6f2c" # Terminal
       "046ad3d2-1480-422d-89a4-f8bd19324788" # Autostart
+      "22647c69-a025-4142-ace6-9ea9a0cbdca1" # IDEs
     ];
 
     "org/gnome/desktop/app-folders/folders/d3165349-919a-496a-acbb-7a59027f0f54" = {
@@ -54,6 +55,11 @@
     "org/gnome/desktop/app-folders/folders/046ad3d2-1480-422d-89a4-f8bd19324788" = {
       name = "Autostart";
       apps = [ "albert.desktop" "kotatogramdesktop.desktop" "qv2ray.desktop" ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
+      name = "IDEs";
+      apps = [ "idea-ultimate.desktop" "pycharm-professional.desktop" "rider.desktop" ];
     };
   };
 }
