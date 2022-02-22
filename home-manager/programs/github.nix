@@ -5,6 +5,9 @@
   programs.git.userName = "Vanilla";
   programs.git.userEmail = "osu_Vanilla@126.com";
 
+  # https://git-lfs.github.com/
+  programs.git.lfs.enable = true;
+
   # Use YubiKey GPG sign the commit by default.
   programs.git.signing.key = "3750028ED04FA42E";
   programs.git.signing.signByDefault = true;
