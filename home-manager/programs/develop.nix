@@ -13,6 +13,17 @@
     pkgs.mono
 
     pkgs.jetbrains.clion
+
+    pkgs.rustup
+    pkgs.gcc
+  ];
+
+  home.file.".rustup".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/rustup";
+
+  home.sessionPath = [
+    "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"
   ];
 
   home.file.".cache/JetBrains".source =
