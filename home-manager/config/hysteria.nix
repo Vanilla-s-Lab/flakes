@@ -23,7 +23,9 @@ let hysteria_bin = pkgs.stdenv.mkDerivation rec {
   systemd.user.services."hysteria" = {
     Service.ExecStart = "${hysteria_bin}/bin/hysteria -c "
       + nixosConfig.sops.templates.hysteria.path + " --no-check";
-    Install.WantedBy = [ "default.target" ];
+
+    # Uncomment this line to enable.
+    # Install.WantedBy = [ "default.target" ];
 
     Unit.Wants = "wait-nm-online.service";
     Unit.After = "wait-nm-online.service";
