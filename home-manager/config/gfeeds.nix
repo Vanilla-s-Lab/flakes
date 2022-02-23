@@ -28,6 +28,25 @@ let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
         "yc9559/uperf/releases"
         "LSPosed/LSPosed/releases"
       ];
+
+      "LSPosed" = [
+        "LSPosed/CorePatch/releases"
+        "KieronQuinn/DarQ/releases"
+        "Xposed-Modules-Repo/io.github.tehcneko.applinkverify/releases"
+        "xloger/ExLink/commits"
+        "Xposed-Modules-Repo/org.hello.coolapk/releases"
+        "Dr-TSNG/Hide-My-Applist/releases"
+        "shatyuka/Killergram/releases"
+        "KitsunePie/QQCleaner/releases"
+        "Xposed-Modules-Repo/com.fkzhang.qqxposed/releases"
+        "KieronQuinn/SIMNumberSetter/releases"
+        "Tornaco/Thanox/releases"
+        "fankes/TSBattery/releases"
+        "Dr-TSNG/TwiFucker/releases"
+        "Xposed-Modules-Repo/com.fkzhang.wechatxposed/releases"
+        "yujincheng08/BiliRoaming/releases"
+        "shatyuka/Zhiliao/releases"
+      ];
     }));
 
     tags = [ "NixOS" ];
