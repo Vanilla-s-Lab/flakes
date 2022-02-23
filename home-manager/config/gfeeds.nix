@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }: with lib;
 let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
-  { name = "https://github.com/${repo}/tags.atom"; value = { tags = [ tag ]; }; }
+  { name = "https://github.com/${repo}.atom"; value = { tags = [ tag ]; }; }
 ))); in
 {
   home.packages = [
@@ -11,12 +11,12 @@ let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
     # nix-build maintainers/scripts/build.nix --argstr maintainer vanilla 
     feeds = builtins.listToAttrs (flatten (buildFeeds {
       "NixOS" = [
-        "daniruiz/flat-remix-gnome"
-        "thezbyg/gpick"
-        "vinceliuice/Layan-gtk-theme"
-        "lhvy/pipes-rs"
-        "laughedelic/pisces"
-        "mariadb-corporation/mariadb-connector-python"
+        "daniruiz/flat-remix-gnome/releases"
+        "thezbyg/gpick/tags"
+        "vinceliuice/Layan-gtk-theme/releases"
+        "lhvy/pipes-rs/releases"
+        "laughedelic/pisces/releases"
+        "mariadb-corporation/mariadb-connector-python/tags"
       ];
     }));
 
