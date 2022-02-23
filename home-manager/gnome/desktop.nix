@@ -60,7 +60,12 @@
 
     "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
       name = "IDEs";
-      apps = [ "idea-ultimate.desktop" "pycharm-professional.desktop" "rider.desktop" ];
+      apps = [
+        "clion.desktop"
+        "idea-ultimate.desktop"
+        "pycharm-professional.desktop"
+        "rider.desktop"
+      ];
     };
   };
 }

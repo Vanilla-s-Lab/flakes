@@ -11,6 +11,8 @@
 
     pkgs.dotnet-sdk
     pkgs.mono
+
+    pkgs.jetbrains.clion
   ];
 
   home.file.".cache/JetBrains".source =
