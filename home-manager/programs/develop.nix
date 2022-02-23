@@ -22,6 +22,10 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/rustup";
 
+  home.file.".cargo".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cargo";
+
   home.sessionPath = [
     "$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"
   ];
