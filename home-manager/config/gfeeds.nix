@@ -18,6 +18,16 @@ let buildFeeds = mapAttrsToList (tag: repoList: (forEach repoList (repo:
         "laughedelic/pisces/releases"
         "mariadb-corporation/mariadb-connector-python/tags"
       ];
+
+      "Magisk" = [
+        "kdrag0n/android12-extensions/releases"
+        "XEonAX/ANXVerse/tags"
+        "Magisk-Modules-Repo/energizedprotection/commits"
+        "simonsmh/notocjk/releases"
+        "gloeyisk/universal-gms-doze/releases"
+        "yc9559/uperf/releases"
+        "LSPosed/LSPosed/releases"
+      ];
     }));
 
     tags = [ "NixOS" ];
