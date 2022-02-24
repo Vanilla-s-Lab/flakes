@@ -9,6 +9,5 @@ let fromGH = owner: repo: lib.generators.toINI { } {
   home.file.".mrconfig".text = lib.strings.concatStringsSep "\n" [
     (fromGH "Vanilla-s-Lab" "flakes")
     (fromGH "NixOS" "nixpkgs")
-    (fromGH "VergeDX" "masm")
   ];
 }

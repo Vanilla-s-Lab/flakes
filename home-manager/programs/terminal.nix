@@ -1,5 +1,4 @@
 { lib, pkgs, config, ... }:
-let masm = "4416b7916d75b2184e06d96d096d5f12496c67f6a73db2c7a8237e53ab26e148"; in
 let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fba113"; in
 let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f"; in
 {
@@ -70,8 +69,6 @@ let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f";
   # https://github.com/nix-community/nix-direnv/issues/137
   programs.direnv.nix-direnv.enableFlakes = true;
 
-  home.file.".local/share/direnv/allow/${masm}".text =
-    "/persistent/Projects/masm/.envrc";
   home.file.".local/share/direnv/allow/${myh2o_backup}".text =
     "/persistent/Documents/myh2o_backup/.envrc";
   home.file.".local/share/direnv/allow/${Videos}".text =
