@@ -57,4 +57,11 @@
     windowMemory = "2g";
     packSizeLimit = "1g";
   };
+
+  # https://cms-sw.github.io/tutorial-proxy.html
+  programs.ssh.matchBlocks."github.com" = {
+    host = "github.com";
+    user = "git";
+    proxyCommand = "nc -x localhost:1089 %h %p";
+  };
 }
