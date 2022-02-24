@@ -25,7 +25,6 @@
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/certificate-pem.nix
-    ./sops-config/hysteria.nix
     ./sops-config/chaoxing.nix
 
     ./security.nix
