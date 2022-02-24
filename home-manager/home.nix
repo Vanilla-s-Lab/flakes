@@ -5,7 +5,6 @@
     ./programs/terminal.nix
 
     ./programs/github.nix
-    ./config/mr.nix
 
     ./programs/autostart.nix
     ./programs/common.nix
