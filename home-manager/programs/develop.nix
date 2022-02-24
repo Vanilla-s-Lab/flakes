@@ -16,7 +16,25 @@
 
     pkgs.rustup
     pkgs.gcc
+
+    pkgs.android-studio
   ];
+
+  home.file."Android".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Android";
+
+  home.file.".cache/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/Google";
+
+  home.file.".config/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/Google";
+
+  home.file.".local/share/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/Google";
 
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink

@@ -61,6 +61,8 @@
     "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
       name = "IDEs";
       apps = [
+        # https://github.com/NixOS/nixpkgs/issues/161621
+        "android-studio-stable-2021.1.1.21.desktop"
         "clion.desktop"
         "idea-ultimate.desktop"
         "pycharm-professional.desktop"
