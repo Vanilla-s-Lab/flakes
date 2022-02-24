@@ -3,7 +3,7 @@ let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fb
 let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f"; in
 let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147e3b9573880"; in
 {
-  # https://github.com/fish-shell/fish-shell
+  # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
   programs.alacritty.settings = {
     import = lib.singleton (pkgs.fetchurl {
