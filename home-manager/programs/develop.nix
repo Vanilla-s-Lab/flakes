@@ -3,7 +3,7 @@
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
       ++ [ pip setuptools ] ++ [ mariadb XlsxWriter pandas ]
-      ++ [ requests faker ] ++ [ pillow ]))
+      ++ [ requests faker ] ++ [ pillow ] ++ [ mysql-connector ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
@@ -35,6 +35,10 @@
   home.file.".local/share/Google".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Google";
+
+  home.file.".gradle".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/gradle";
 
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink
