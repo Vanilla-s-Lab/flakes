@@ -130,7 +130,7 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
     # OpenWeather - Layout - Conditions in Panel - ON
     "org/gnome/shell/extensions/openweather".show-comment-in-panel = true;
     # OpenWeather - Fix refresh weather issues after reboot.
-    "org/gnome/shell/extensions/openweather".actual-city = 0;
+    "org/gnome/shell/extensions/openweather".actual-city = 1;
 
     # Screenshot Tool - Auto-Copy to Clipboard - Image Data
     "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
