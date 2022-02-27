@@ -4,6 +4,13 @@
     pkgs.gnome.nautilus
     pkgs.gnome.sushi
     pkgs.gnome.gedit
+
+    pkgs.epiphany
+    pkgs.gnome.geary
+    pkgs.gnome.gnome-calendar
+    pkgs.lollypop
+    pkgs.gnome.totem
+    pkgs.gnome.eog
   ];
 
   dconf.settings = {
