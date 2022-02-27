@@ -40,6 +40,10 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/gradle";
 
+  home.file.".android".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/android";
+
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/rustup";
