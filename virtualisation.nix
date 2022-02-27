@@ -8,4 +8,7 @@
   environment.persistence."/persistent" = {
     directories = [ "/var/lib/libvirt" ];
   };
+
+  # Support running binary of armv7l architecture.
+  boot.binfmt.emulatedSystems = [ "armv7l-linux" ];
 }
