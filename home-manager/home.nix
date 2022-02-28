@@ -28,7 +28,6 @@
     ./config/pxder.nix
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
-    ./config/gfeeds.nix
 
     "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
