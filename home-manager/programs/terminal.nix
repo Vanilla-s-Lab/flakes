@@ -76,16 +76,4 @@ let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147
     "/persistent/Videos/.envrc";
   home.file.".local/share/direnv/allow/${chaoxing_auto_sign}".text =
     "/persistent/Documents/chaoxing_auto_sign/.envrc";
-
-  # https://github.com/bennofs/nix-index
-  programs.nix-index.enable = true;
-  programs.nix-index.enableFishIntegration = true;
-
-  # https://github.com/Mic92/nix-index-database/releases
-  home.file.".cache/nix-index/files".source =
-    pkgs.fetchurl {
-      url = "https://github.com/Mic92/nix-index-database" +
-        "/releases/download/2022-02-19/index-x86_64-linux";
-      hash = "sha256-4n4x7lJM47/v/6Tc3kxbDKMqIhg9IEwGSs4Q2A1Ld8Q=";
-    };
 }
