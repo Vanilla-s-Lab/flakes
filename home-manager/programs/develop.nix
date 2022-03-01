@@ -18,6 +18,10 @@
     pkgs.gcc
 
     pkgs.android-studio
+
+    pkgs.helix
+    pkgs.rnix-lsp
+    pkgs.rust-analyzer
   ];
 
   home.file."Android".source =
