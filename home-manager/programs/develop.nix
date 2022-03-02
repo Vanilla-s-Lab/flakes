@@ -2,8 +2,8 @@
 {
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
-      ++ [ pip setuptools ] ++ [ mariadb XlsxWriter pandas ]
-      ++ [ requests faker ] ++ [ pillow ] ++ [ mysql-connector ]))
+      ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
+      ++ [ requests faker ] ++ [ pillow ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
