@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, pkgsUnstable, config, lib, ... }:
 let forceG41 = ext: (ext.overrideAttrs (old: {
   patchPhase = ''sed -i 's/"40"/"40", "41"/g' metadata.json'';
 })); in
@@ -7,7 +7,7 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
   { }; in
 {
   home.packages = [
-    pkgs.gnomeExtensions.arcmenu
+    pkgsUnstable.gnomeExtensions.arcmenu
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
@@ -19,9 +19,9 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
     pkgs.gnomeExtensions.lock-keys
     (forceG41 pkgs.gnomeExtensions.openweather)
     pkgs.gnomeExtensions.runcat
-    pkgs.gnomeExtensions.screenshot-tool
+    (forceG41 pkgs.gnomeExtensions.screenshot-tool)
     pkgs.gnome.gnome-screenshot
-    pkgs.gnomeExtensions.sensory-perception
+    (forceG41 pkgs.gnomeExtensions.sensory-perception)
     pkgs.lm_sensors
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
