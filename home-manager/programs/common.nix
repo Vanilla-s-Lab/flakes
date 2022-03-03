@@ -1,11 +1,15 @@
-{ inputs, system, pkgs, config, ... }:
+{ inputs, system, pkgs, pkgsUnstable, config, ... }:
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
     pkgs.obs-studio
     pkgs.virt-manager
     pkgs.wpsoffice
-    pkgs.nur.repos.linyinfeng.wemeet
+
+    ((pkgs.nur.repos.linyinfeng.wemeet.overrideAttrs
+      (old: { meta = { }; })).override {
+      makeDesktopItem = pkgsUnstable.makeDesktopItem;
+    })
 
     # ls[usb|pci].
     pkgs.pciutils
