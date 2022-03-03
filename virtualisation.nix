@@ -17,4 +17,8 @@
   # https://github.com/k3d-io/k3d/issues/84
   virtualisation.docker.enable = true;
   users.users."vanilla".extraGroups = [ "docker" ];
+
+  systemd.tmpfiles.rules = [
+    "L /var/lib/docker - - - - /persistent/var/lib/docker"
+  ];
 }
