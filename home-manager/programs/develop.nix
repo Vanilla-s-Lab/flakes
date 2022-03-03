@@ -22,6 +22,9 @@
     pkgs.helix
     pkgs.rnix-lsp
     pkgs.rust-analyzer
+
+    pkgs.minikube
+    pkgs.kubectl
   ];
 
   home.file."Android".source =
