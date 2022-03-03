@@ -22,9 +22,6 @@
     pkgs.helix
     pkgs.rnix-lsp
     pkgs.rust-analyzer
-
-    pkgs.arion
-    pkgs.docker-client
   ];
 
   home.file."Android".source =
