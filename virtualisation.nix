@@ -11,4 +11,9 @@
 
   # Support running binary of armv7l architecture.
   boot.binfmt.emulatedSystems = [ "armv7l-linux" ];
+
+  # https://docs.hercules-ci.com/arion/#_nixos
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerSocket.enable = true;
+  users.extraUsers."vanilla".extraGroups = [ "podman" ];
 }
