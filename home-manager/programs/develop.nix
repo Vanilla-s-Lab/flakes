@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, pkgsUnstable, config, ... }:
 {
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -24,8 +24,12 @@
     pkgs.rust-analyzer
 
     pkgs.minikube
-    pkgs.kubectl
+    pkgsUnstable.kubectl
   ];
+
+  programs.fish.interactiveShellInit = ''
+    kubectl completion fish | source
+  '';
 
   home.file."Android".source =
     config.lib.file.mkOutOfStoreSymlink
