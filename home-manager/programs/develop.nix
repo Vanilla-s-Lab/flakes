@@ -27,6 +27,15 @@
     pkgsUnstable.kubectl
   ];
 
+  home.file.".docker/config.json".text = builtins.toJSON {
+    "proxies" = {
+      "default" = {
+        "httpProxy" = "http://127.0.0.1:8889";
+        "httpsProxy" = "https://127.0.0.1:8889";
+      };
+    };
+  };
+
   home.file.".minikube".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/minikube";
