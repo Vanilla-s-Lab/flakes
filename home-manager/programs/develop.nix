@@ -27,6 +27,10 @@
     pkgsUnstable.kubectl
   ];
 
+  home.file.".minikube".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/minikube";
+
   programs.fish.interactiveShellInit = ''
     kubectl completion fish | source
   '';
