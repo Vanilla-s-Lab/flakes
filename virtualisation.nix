@@ -2,7 +2,9 @@
 {
   # https://nixos.wiki/wiki/Virt-manager
   virtualisation.libvirtd.enable = true;
-  users.users."vanilla".extraGroups = [ "libvirtd" ];
+  users.users."vanilla".extraGroups = [ "libvirtd" ]
+    ++ [ "docker" ]; # GitHub - k3d-io/k3d - #84
+  virtualisation.docker.enable = true;
 
   # The default KVM virtual storage location.
   environment.persistence."/persistent" = {
@@ -11,12 +13,6 @@
 
   # Support running binary of armv7l architecture.
   boot.binfmt.emulatedSystems = [ "armv7l-linux" ];
-
-} // {
-
-  # https://github.com/k3d-io/k3d/issues/84
-  virtualisation.docker.enable = true;
-  users.users."vanilla".extraGroups = [ "docker" ];
 
   systemd.tmpfiles.rules = [
     "L /var/lib/docker - - - - /persistent/var/lib/docker"
