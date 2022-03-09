@@ -27,7 +27,8 @@
   outputs = { self, ... }@inputs: with inputs;
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: rec {
       pkgs = import nixpkgs { inherit system; };
-      pkgsUnstable = import nixpkgs-unstable { inherit system; };
+      pkgsUnstable = import nixpkgs-unstable ({ inherit system; }
+        // { config.allowUnfree = true; });
 
       packages.nixosConfigurations."NixOS-RoT" = nixosConfig;
 

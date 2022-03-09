@@ -5,14 +5,14 @@
       ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
       ++ [ requests faker ] ++ [ pillow ]))
 
-    pkgs.jetbrains.pycharm-professional
-    pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.rider
+    pkgsUnstable.jetbrains.pycharm-professional
+    pkgsUnstable.jetbrains.idea-ultimate
+    pkgsUnstable.jetbrains.rider
 
     pkgs.dotnet-sdk
     pkgs.mono
 
-    pkgs.jetbrains.clion
+    pkgsUnstable.jetbrains.clion
 
     pkgs.rustup
     pkgs.gcc
