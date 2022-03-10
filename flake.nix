@@ -22,6 +22,12 @@
 
     nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree";
     nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
+
+    ilya-fedin = {
+      # https://github.com/ilya-fedin/nur-repository/commits/master
+      url = "github:ilya-fedin/nur-repository?rev=451e80f22f2d1afb67a02504c29add73fea5b80d";
+      flake = false;
+    };
   };
 
   outputs = { self, ... }@inputs: with inputs;
