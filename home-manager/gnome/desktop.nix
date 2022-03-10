@@ -63,6 +63,7 @@
       apps = [
         "android-studio-stable-2020.3.1.25.desktop"
         "clion.desktop"
+        "datagrip.desktop"
         "idea-ultimate.desktop"
         "pycharm-professional.desktop"
         "rider.desktop"

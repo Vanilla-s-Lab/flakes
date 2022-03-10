@@ -25,6 +25,8 @@
 
     pkgs.minikube
     pkgsUnstable.kubectl
+
+    pkgsUnstable.jetbrains.datagrip
   ];
 
   home.file.".docker/config.json".text = builtins.toJSON {
