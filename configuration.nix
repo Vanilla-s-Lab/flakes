@@ -97,6 +97,12 @@
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.hplip ];
 
+  # /etc/cups -> /var/lib/cups
+  systemd.tmpfiles.rules = [
+    "L /var/lib/cups - - - - /persistent/var/lib/cups"
+  ];
+
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
