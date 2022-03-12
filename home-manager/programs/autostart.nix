@@ -1,5 +1,5 @@
 { pkgs, config, pkgsUnstable, inputs, ... }:
-let pkgs_kdna = import ../packages/kdna.nix { inherit pkgs inputs; }; in
+let pkgs_kdna = import ../packages/kdna.nix { inherit pkgsUnstable inputs; }; in
 {
   home.packages = [
     pkgs.qv2ray
