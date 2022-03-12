@@ -19,10 +19,6 @@
 
     pkgs.android-studio
 
-    pkgs.helix
-    pkgs.rnix-lsp
-    pkgs.rust-analyzer
-
     pkgs.minikube
     pkgsUnstable.kubectl
 
