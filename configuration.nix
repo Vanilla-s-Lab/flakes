@@ -28,7 +28,6 @@
     ./sops-config/chaoxing.nix
 
     ./security.nix
-    ./fixes.nix
     ./steam.nix
     ./virtualisation.nix
   ];
