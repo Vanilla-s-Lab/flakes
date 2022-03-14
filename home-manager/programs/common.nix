@@ -44,4 +44,15 @@
     hide-nsfw-content = false;
     startup-accounts = [ "osu_Vanilla" ];
   };
+
+  home.file.".config/Kingsoft/Office.conf".text = ''
+    [6.0]
+    common\AcceptedEULA=true
+    plugins\kstartpage\redpoint_skincenter=false
+  '';
+
+  home.file.".local/share/Kingsoft/office6/skins/default/histroy.ini".text = ''
+    [wpsoffice]
+    lastSkin=2019white
+  '';
 }
