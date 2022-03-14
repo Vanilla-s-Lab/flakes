@@ -49,6 +49,10 @@
     [6.0]
     common\AcceptedEULA=true
     plugins\kstartpage\redpoint_skincenter=false
+    common\system_check\no_necessary_symbol_fonts=false
+
+    [UnixUpdateInfo]
+    UserRejectUpdateVersion=11.1.0.10920
   '';
 
   home.file.".local/share/Kingsoft/office6/skins/default/histroy.ini".text = ''
