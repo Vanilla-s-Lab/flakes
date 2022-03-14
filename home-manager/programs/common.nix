@@ -36,10 +36,6 @@
     uris = [ "qemu:///system" ];
   };
 
-  home.file.".local/share/wemeetapp".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/wemeetapp";
-
   home.file.".config/cawbird".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/cawbird";
