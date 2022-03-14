@@ -16,9 +16,6 @@
     pkgs.usbutils
 
     pkgs.cawbird
-
-    pkgs.wine
-    pkgs.winetricks
   ];
 
   home.file.".config/obs-studio".source =
@@ -62,12 +59,4 @@
     [wpsoffice]
     lastSkin=2019white
   '';
-
-  home.file.".wine".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/wine";
-
-  home.file.".cache/winetricks".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/cache/winetricks";
 }
