@@ -11,6 +11,11 @@
     # Settings - Privacy - Microphone - OFF
     "org/gnome/desktop/privacy".disable-microphone = true;
 
+    # Settings - Power - Power Saving Options - Automatic Suspend - On Battery Power - OFF
+    "org/gnome/settings-daemon/plugins/power".sleep-inactive-battery-type = "nothing";
+    # Settings - Power - Power Saving Options - Automatic Suspend - Plugged In - OFF
+    "org/gnome/settings-daemon/plugins/power".sleep-inactive-ac-type = "nothing";
+
     # Settings - Displays - Night Light - ON
     "org/gnome/settings-daemon/plugins/color".night-light-enabled = true;
 
