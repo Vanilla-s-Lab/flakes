@@ -16,7 +16,13 @@
     pkgs.usbutils
 
     pkgs.cawbird
+
+    pkgs.playonlinux
   ];
+
+  home.file.".PlayOnLinux".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/PlayOnLinux";
 
   home.file.".config/obs-studio".source =
     config.lib.file.mkOutOfStoreSymlink
