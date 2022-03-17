@@ -34,10 +34,6 @@
     };
   };
 
-  home.file.".minikube".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/minikube";
-
   programs.fish.interactiveShellInit = ''
     kubectl completion fish | source
   '';
@@ -57,10 +53,6 @@
   home.file.".local/share/Google".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Google";
-
-  home.file.".gradle".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/gradle";
 
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink
