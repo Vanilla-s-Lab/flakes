@@ -15,6 +15,10 @@
   # https://nixos.wiki/wiki/Podman
   virtualisation.podman.enable = true;
 
+  # https://doc.traefik.io/traefik/getting-started/quick-start/
+  virtualisation.podman.dockerSocket.enable = true;
+  users.extraGroups."podman".members = [ "vanilla" ];
+
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "vanilla" ];
