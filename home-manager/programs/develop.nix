@@ -23,6 +23,9 @@
     pkgsUnstable.kubectl
 
     pkgsUnstable.jetbrains.datagrip
+
+    pkgs.docker-compose
+    pkgs.podman-compose
   ];
 
   home.file.".docker/config.json".text = builtins.toJSON {
