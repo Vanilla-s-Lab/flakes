@@ -2,7 +2,9 @@
 {
   # https://nixos.wiki/wiki/Virt-manager
   virtualisation.libvirtd.enable = true;
-  users.users."vanilla".extraGroups = [ "libvirtd" ];
+  users.users."vanilla".extraGroups = [ "libvirtd" ]
+    ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
+  virtualisation.docker.enable = true;
 
   # The default KVM virtual storage location.
   environment.persistence."/persistent" = {
@@ -14,10 +16,6 @@
 
   # https://nixos.wiki/wiki/Podman
   virtualisation.podman.enable = true;
-
-  # https://doc.traefik.io/traefik/getting-started/quick-start/
-  virtualisation.podman.dockerSocket.enable = true;
-  users.extraGroups."podman".members = [ "vanilla" ];
 
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox.host.enable = true;
