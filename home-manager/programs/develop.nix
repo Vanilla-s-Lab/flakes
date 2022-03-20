@@ -28,6 +28,9 @@
     pkgs.podman-compose
 
     pkgsUnstable.jetbrains.webstorm
+
+    pkgs.nodejs
+    pkgs.nodePackages.npm
   ];
 
   home.file.".docker/config.json".text = builtins.toJSON {
