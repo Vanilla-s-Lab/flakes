@@ -71,6 +71,7 @@
         "idea-ultimate.desktop"
         "pycharm-professional.desktop"
         "rider.desktop"
+        "webstorm.desktop"
       ];
     };
 
