@@ -2,9 +2,6 @@
 let forceG41 = ext: (ext.overrideAttrs (old: {
   patchPhase = ''sed -i 's/"40"/"40", "41"/g' metadata.json'';
 })); in
-let gnome-x11-gesture-daemon = pkgs.callPackage
-  ../packages/gnome-x11-gesture-daemon.nix
-  { }; in
 {
   home.packages = [
     pkgsUnstable.gnomeExtensions.arcmenu
@@ -13,7 +10,6 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
-    pkgs.gnomeExtensions.gesture-improvements
     pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
@@ -29,7 +25,6 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
-    pkgs.gnomeExtensions.x11-gestures
   ];
 
   home.file.".config/gsconnect".source =
@@ -54,7 +49,6 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
       "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
       "dash-to-dock@micxgx.gmail.com"
       "espresso@coadmunkee.github.com"
-      "gestureImprovements@gestures"
       "gsconnect@andyholmes.github.io"
       "kimpanel@kde.org"
       "lockkeys@vaina.lt"
@@ -68,7 +62,6 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
       "windowIsReady_Remover@nunofarruca@gmail.com"
-      "x11gestures@joseexposito.github.io"
     ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
@@ -181,20 +174,4 @@ let gnome-x11-gesture-daemon = pkgs.callPackage
       cert=`cat /run/secrets/gsconnect/certificate-pem` && DCONF_DBUS_RUN_SESSION="${pkgs.dbus}/bin/dbus-run-session"
       $DCONF_DBUS_RUN_SESSION dconf write /org/gnome/shell/extensions/gsconnect/device/15da62e6592a7f47/certificate-pem \""$cert"\"
     '';
-
-  # gesture_improvements_gesture_daemon.service
-  systemd.user.services."gesture_improvements_gesture_daemon" = {
-    Unit = {
-      Requires = "dbus.service";
-      Description = "gesture improvements Gesture Daemon";
-      StartLimitInterval = 0;
-    };
-
-    Service = {
-      Type = "simple";
-      ExecStart = "${gnome-x11-gesture-daemon}/bin/gesture_improvements_gesture_daemon";
-      Restart = "always";
-      RestartSec = "1s";
-    };
-  };
 }
