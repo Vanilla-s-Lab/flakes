@@ -18,7 +18,16 @@
     pkgs.cawbird
 
     pkgs.playonlinux
+
+    (pkgs.nur.repos.xddxdd.dingtalk.overrideAttrs (old: {
+      buildInputs = old.buildInputs ++ [ pkgs.krb5 ];
+    }))
+    # nixos-cn.legacyPackages."${system}".dingtalk
   ];
+
+  home.file.".config/DingTalk".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/DingTalk";
 
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
