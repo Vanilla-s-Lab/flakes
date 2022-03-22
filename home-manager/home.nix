@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./programs/chromium.nix
+    ./programs/browsers.nix
     ./programs/terminal.nix
 
     ./programs/github.nix
