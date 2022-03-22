@@ -3,7 +3,7 @@
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
       ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
-      ++ [ requests faker ] ++ [ pillow ]))
+      ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]))
 
     pkgsUnstable.jetbrains.pycharm-professional
     pkgsUnstable.jetbrains.idea-ultimate
