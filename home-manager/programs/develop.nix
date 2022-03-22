@@ -31,7 +31,13 @@
 
     pkgs.nodejs
     pkgs.nodePackages.npm
+
+    pkgs.gradle
   ];
+
+  home.file.".gradle".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/gradle";
 
   programs.fish.interactiveShellInit = ''
     kubectl completion fish | source
