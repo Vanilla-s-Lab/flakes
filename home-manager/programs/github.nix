@@ -64,4 +64,8 @@
     user = "git";
     proxyCommand = "nc -x localhost:1089 %h %p";
   };
+
+  programs.git.extraConfig = {
+    init.defaultBranch = "master";
+  };
 }
