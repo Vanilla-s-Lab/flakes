@@ -6,6 +6,10 @@
     ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
 
+  systemd.tmpfiles.rules = [
+    "L /var/lib/docker - - - - /persistent/var/lib/docker"
+  ];
+
   # The default KVM virtual storage location.
   environment.persistence."/persistent" = {
     directories = [ "/var/lib/libvirt" ];
