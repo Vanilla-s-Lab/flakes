@@ -35,6 +35,9 @@
     pkgs.gradle
   ];
 
+  # https://minikube.sigs.k8s.io/docs/handbook/config/
+  home.sessionVariables = { MINIKUBE_IN_STYLE = "false"; };
+
   home.file.".minikube".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/minikube";
