@@ -3,7 +3,7 @@
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
     pkgs.obs-studio
-    pkgs.virt-manager
+    pkgsUnstable.virt-manager
     pkgs.wpsoffice
 
     ((pkgs.nur.repos.linyinfeng.wemeet.overrideAttrs
