@@ -11,4 +11,11 @@
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
   users.users."vanilla".extraGroups = [ "wireshark" ];
+
+  networking.firewall.allowPing = false;
+  # https://www.garron.me/en/bits/iptables-open-port-for-specific-ip.html
+  networking.firewall.extraCommands = ''
+    iptables -A INPUT -p tcp -s 192.168.49.2 --dport 8889 -j ACCEPT
+    iptables -A OUTPUT -p tcp -d 192.168.49.2 --dport 8889 -j ACCEPT
+  '';
 }
