@@ -9,7 +9,9 @@
   # Used for flake in root.
   programs.git.enable = true;
 
+  # https://mirrors.bfsu.edu.cn/help/nix/
   nix.binaryCaches = [
+    "https://mirrors.bfsu.edu.cn/nix-channels/store"
     "https://nixos-cn.cachix.org/"
     "https://cache.nixos.org/"
   ];
