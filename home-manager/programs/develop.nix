@@ -35,6 +35,10 @@
     pkgs.gradle
   ];
 
+  home.file.".minikube".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/minikube";
+
   home.file.".gradle".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/gradle";
