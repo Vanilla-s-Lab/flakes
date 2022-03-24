@@ -19,7 +19,7 @@
 
     pkgs.android-studio
 
-    pkgs.minikube
+    pkgsUnstable.minikube
     pkgsUnstable.kubectl
 
     pkgsUnstable.jetbrains.datagrip
