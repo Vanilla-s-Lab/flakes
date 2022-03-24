@@ -4,7 +4,7 @@
   sops.secrets."pxder/token" = { };
 
   sops.templates.pxder.owner = "vanilla";
-  sops.templates.pxder.group = "users";
+  # sops.templates.pxder.group = "users";
 
   sops.templates.pxder.content = builtins.toJSON {
     "download" = {
