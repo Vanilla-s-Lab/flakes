@@ -23,4 +23,7 @@ let firewallIO = { ip, port }: ''
     ${firewallIO { ip = "192.168.49.3"; port = 8889; }}
     ${firewallIO { ip = "192.168.49.4"; port = 8889; }}
   '';
+
+  # networking.firewall.enable = false;
+  networking.firewall.checkReversePath = "loose";
 }
