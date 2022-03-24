@@ -1,4 +1,8 @@
 { pkgs, ... }:
+let firewallIO = { ip, port }: ''
+  iptables -A INPUT -p tcp -s ${ip} --dport ${builtins.toString port} -j ACCEPT
+  iptables -A OUTPUT -p tcp -d ${ip} --dport ${builtins.toString port} -j ACCEPT
+''; in
 {
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 1089 8889 ];
@@ -15,7 +19,8 @@
   networking.firewall.allowPing = false;
   # https://www.garron.me/en/bits/iptables-open-port-for-specific-ip.html
   networking.firewall.extraCommands = ''
-    iptables -A INPUT -p tcp -s 192.168.49.2 --dport 8889 -j ACCEPT
-    iptables -A OUTPUT -p tcp -d 192.168.49.2 --dport 8889 -j ACCEPT
+    ${firewallIO { ip = "192.168.49.2"; port = 8889; }}
+    ${firewallIO { ip = "192.168.49.3"; port = 8889; }}
+    ${firewallIO { ip = "192.168.49.4"; port = 8889; }}
   '';
 }
