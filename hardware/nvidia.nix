@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   # https://nixos.wiki/wiki/FAQ
   nixpkgs.config.allowUnfree = true;
@@ -28,4 +28,11 @@
 
   # https://github.com/NixOS/nixpkgs/issues/163294
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
+
+  # https://nixos.wiki/wiki/OpenGL
+  hardware.opengl.driSupport = true;
+  hardware.opengl.driSupport32Bit = true;
+
+  # https://nixos.wiki/wiki/Accelerated_Video_Playback
+  hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
 }
