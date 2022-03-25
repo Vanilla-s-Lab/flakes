@@ -143,4 +143,9 @@ let dev_rickroll = pkgs.callPackage ./home-manager/packages/dev_rickroll.nix {
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.11"; # Did you read the comment?
 
+  # https://github.com/rofl0r/proxychains-ng
+  environment.etc."proxychains.conf".text = ''
+    [ProxyList]
+    socks5 127.0.0.1 1080
+  '';
 }
