@@ -35,4 +35,8 @@
   home.file.".yubico".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/yubico";
+
+  home.file."VirtualBox VMs".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/VirtualBox VMs";
 }

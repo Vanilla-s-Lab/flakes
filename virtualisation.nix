@@ -27,5 +27,6 @@ let qemuOld = (import inputs.nixpkgs-old
 
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
   users.extraGroups.vboxusers.members = [ "vanilla" ];
 }
