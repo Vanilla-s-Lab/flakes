@@ -33,6 +33,8 @@
     pkgs.nodePackages.npm
 
     pkgs.gradle
+
+    pkgsUnstable.kubectl-tree
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
