@@ -83,7 +83,11 @@
 
     "org/gnome/desktop/app-folders/folders/216c8193-f990-444b-8882-ea9d773441ef" = {
       name = "Internet";
-      apps = [ "chromium-browser.desktop" "torbrowser.desktop" "wireshark.desktop" ];
+      apps = [
+        "chromium-browser.desktop"
+        "torbrowser.desktop"
+        "org.wireshark.Wireshark.desktop"
+      ];
     };
   };
 }
