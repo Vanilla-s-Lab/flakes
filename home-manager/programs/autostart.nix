@@ -1,5 +1,4 @@
 { pkgs, config, pkgsUnstable, inputs, ... }:
-let pkgs_kdna = import ../packages/kdna.nix { inherit pkgsUnstable inputs; }; in
 {
   home.packages = [
     pkgs.qv2ray
@@ -14,10 +13,10 @@ let pkgs_kdna = import ../packages/kdna.nix { inherit pkgsUnstable inputs; }; in
       package = pkgs.albert;
     })
 
-    pkgs_kdna.self
+    pkgs.kotatogram-desktop
     (pkgs.makeAutostartItem {
       name = "kotatogramdesktop";
-      package = pkgs_kdna.autostart;
+      package = pkgs.kotatogram-desktop;
     })
   ];
 
