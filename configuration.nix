@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, lib, ... }:
-let dev_rickroll = pkgs.callPackage ./home-manager/packages/dev_rickroll.nix {
-  kernel = config.boot.kernelPackages.kernel;
-}; in
 {
   # networking.firewall.allowedTCPPorts = [ 8080 ];
   # networking.firewall.allowedUDPPorts = [ 8080 ];
@@ -55,10 +52,6 @@ let dev_rickroll = pkgs.callPackage ./home-manager/packages/dev_rickroll.nix {
   boot.supportedFilesystems = [ "ntfs" ];
   # Required nvme kernel module to find disk.
   boot.initrd.availableKernelModules = [ "nvme" ];
-
-  # https://nixos.wiki/wiki/Linux_kernel#Out-of-tree_kernel_modules
-  boot.extraModulePackages = [ dev_rickroll ];
-  boot.kernelModules = [ "rickroll" ];
 
   # Define your hostname.
   networking.hostName = "NixOS-RoT";
