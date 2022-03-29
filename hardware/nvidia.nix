@@ -26,9 +26,6 @@
     kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
   };
 
-  # https://github.com/NixOS/nixpkgs/issues/163294
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
-
   # https://nixos.wiki/wiki/OpenGL
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
