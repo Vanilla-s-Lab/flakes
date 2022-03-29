@@ -66,7 +66,7 @@
     "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
       name = "IDEs";
       apps = [
-        "android-studio-stable-2020.3.1.25.desktop"
+        "android-studio.desktop"
         "clion.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
