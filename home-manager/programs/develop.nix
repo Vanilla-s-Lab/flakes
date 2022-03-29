@@ -1,4 +1,4 @@
-{ pkgs, pkgsUnstable, config, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = [
     (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -6,36 +6,36 @@
       ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
       ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ]))
 
-    pkgsUnstable.jetbrains.pycharm-professional
-    pkgsUnstable.jetbrains.idea-ultimate
-    pkgsUnstable.jetbrains.rider
+    pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.rider
 
     pkgs.dotnet-sdk
     pkgs.mono
 
-    pkgsUnstable.jetbrains.clion
+    # pkgs.jetbrains.clion
 
     pkgs.rustup
     pkgs.gcc
 
     pkgs.android-studio
 
-    pkgsUnstable.minikube
-    pkgsUnstable.kubectl
+    pkgs.minikube
+    pkgs.kubectl
 
-    pkgsUnstable.jetbrains.datagrip
+    pkgs.jetbrains.datagrip
 
     pkgs.docker-compose
     pkgs.podman-compose
 
-    pkgsUnstable.jetbrains.webstorm
+    pkgs.jetbrains.webstorm
 
     pkgs.nodejs
     pkgs.nodePackages.npm
 
     pkgs.gradle
 
-    pkgsUnstable.kubectl-tree
+    pkgs.kubectl-tree
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/

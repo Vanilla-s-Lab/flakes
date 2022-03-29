@@ -1,8 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-20.09";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
@@ -33,16 +32,13 @@
   outputs = { self, ... }@inputs: with inputs;
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: rec {
       pkgs = import nixpkgs { inherit system; };
-      pkgsUnstable = import nixpkgs-unstable ({ inherit system; }
-        // { config.allowUnfree = true; });
-
       packages.nixosConfigurations."NixOS-RoT" = nixosConfig;
 
       nixosConfig = nixpkgs.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit inputs self pkgsUnstable; };
+        inherit system; specialArgs = { inherit inputs self; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
+          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
           ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
           ++ [ sops-nix.nixosModules.sops ]

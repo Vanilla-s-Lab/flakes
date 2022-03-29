@@ -1,4 +1,4 @@
-{ pkgs, config, pkgsUnstable, inputs, ... }:
+{ pkgs, config, inputs, ... }:
 {
   home.packages = [
     pkgs.qv2ray
@@ -23,8 +23,8 @@
   home.file.".config/qv2ray-vcore".source =
     pkgs.runCommand "vcore" { } ''mkdir $out/ && \
       ln -s ${pkgs.v2ray}/bin/v2ray $out/v2ray && ln -s ${pkgs.v2ray}/bin/v2ctl $out/v2ctl
-      ln -s ${pkgsUnstable.v2ray-geoip}/share/v2ray/geoip.dat $out/geoip.dat
-      ln -s ${pkgsUnstable.v2ray-domain-list-community}/share/v2ray/geosite.dat $out/geosite.dat
+      ln -s ${pkgs.v2ray-geoip}/share/v2ray/geoip.dat $out/geoip.dat
+      ln -s ${pkgs.v2ray-domain-list-community}/share/v2ray/geosite.dat $out/geosite.dat
     '';
 
   home.file.".config/qv2ray".source =
