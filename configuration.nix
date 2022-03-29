@@ -45,6 +45,9 @@
 
   # https://nixos.wiki/wiki/Linux_kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  # https://bugzilla.kernel.org/show_bug.cgi?id=203637
+  hardware.cpu.intel.updateMicrocode = true;
+
   # https://wiki.archlinux.org/title/sysctl
   boot.kernel.sysctl."kernel.sysrq" = 1;
   # https://nixos.wiki/wiki/NTFS
