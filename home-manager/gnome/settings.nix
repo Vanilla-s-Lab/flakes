@@ -7,9 +7,6 @@
     # Appearance - Style - Light
     "org/gnome/desktop/interface".color-scheme = "default";
 
-    # Settings - Search - OFF
-    "org/gnome/desktop/search-providers".disable-external = true;
-
     # Settings - Privacy - Location Services - ON
     "org/gnome/system/location".enabled = true;
     # Settings - Privacy - Camera - OFF
