@@ -4,6 +4,9 @@
     # Network - Network Proxy - Automatic
     "system/proxy".mode = "auto";
 
+    # Appearance - Style - Light
+    "org/gnome/desktop/interface".color-scheme = "default";
+
     # Settings - Search - OFF
     "org/gnome/desktop/search-providers".disable-external = true;
 
