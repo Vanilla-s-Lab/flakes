@@ -111,14 +111,13 @@
     "L /var/lib/cups - - - - /persistent/var/lib/cups"
   ];
 
+  # https://nixos.wiki/wiki/PipeWire#Enabling_PipeWire
+  security.rtkit.enable = true;
+  services.pipewire.enable = true;
+  services.pipewire.pulse.enable = true;
 
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  # https://nixos.wiki/wiki/Bluetooth#Enabling_extra_codecs
-  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  # nixos/modules/services/x11/desktop-managers/gnome.nix
+  hardware.pulseaudio.enable = false; # mkDefault true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
