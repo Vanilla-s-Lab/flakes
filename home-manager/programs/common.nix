@@ -20,6 +20,8 @@
       buildInputs = old.buildInputs ++ [ pkgs.krb5 ];
     }))
     # nixos-cn.legacyPackages."${system}".dingtalk
+
+    pkgs.alsa-utils
   ];
 
   home.file.".config/DingTalk".source =

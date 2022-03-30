@@ -116,6 +116,10 @@
   services.pipewire.enable = true;
   services.pipewire.pulse.enable = true;
 
+  # amixer sset 'Master' 35%
+  services.pipewire.alsa.enable = true;
+  services.pipewire.alsa.support32Bit = true;
+
   # nixos/modules/services/x11/desktop-managers/gnome.nix
   hardware.pulseaudio.enable = false; # mkDefault true;
 
