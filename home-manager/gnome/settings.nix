@@ -1,6 +1,9 @@
 { ... }:
 {
   dconf.settings = {
+    # Network - Network Proxy - Automatic
+    "system/proxy".mode = "auto";
+
     # Settings - Search - OFF
     "org/gnome/desktop/search-providers".disable-external = true;
 
