@@ -67,8 +67,6 @@ let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
-  # https://github.com/nix-community/nix-direnv/issues/137
-  programs.direnv.nix-direnv.enableFlakes = true;
 
   home.file.".local/share/direnv/allow/${myh2o_backup}".text =
     "/persistent/Documents/myh2o_backup/.envrc";
