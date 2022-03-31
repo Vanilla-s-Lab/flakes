@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   # https://nixos.wiki/wiki/FAQ
   nixpkgs.config.allowUnfree = true;
@@ -33,6 +33,9 @@
   # https://nixos.wiki/wiki/Accelerated_Video_Playback
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+
+    # https://github.com/NixOS/nixpkgs/pull/165064/files
+    nvidia-vaapi-driver = lib.hiPrio pkgs.nvidia-vaapi-driver;
   };
 
   hardware.opengl.enable = true;
