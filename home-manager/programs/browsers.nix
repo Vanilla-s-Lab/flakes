@@ -1,7 +1,13 @@
 { pkgs, config, ... }:
 {
   programs.chromium.enable = true;
-  home.packages = [ pkgs.tor-browser-bundle-bin ];
+  programs.chromium.commandLineArgs =
+    # https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
+    [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ];
+
+  home.packages = [
+    pkgs.tor-browser-bundle-bin
+  ];
 
   # https://wiki.archlinux.org/title/chromium
   systemd.user.sessionVariables = {
