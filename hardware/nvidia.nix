@@ -31,5 +31,12 @@
   hardware.opengl.driSupport32Bit = true;
 
   # https://nixos.wiki/wiki/Accelerated_Video_Playback
-  hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  };
+
+  hardware.opengl.enable = true;
+  hardware.opengl.extraPackages = with pkgs; [ mesa.drivers ]
+    ++ [ intel-media-driver vaapiIntel vaapiVdpau libvdpau-va-gl ];
+  hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ vaapiIntel ];
 }
