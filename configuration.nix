@@ -44,7 +44,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/Linux_kernel
-  boot.kernelPackages = pkgs.linuxPackages_xanmod;
+  boot.kernelPackages = pkgs.linuxPackages_lqx;
   # https://bugzilla.kernel.org/show_bug.cgi?id=203637
   hardware.cpu.intel.updateMicrocode = true;
 
