@@ -3,7 +3,9 @@
   programs.chromium.enable = true;
   programs.chromium.commandLineArgs =
     # https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
-    [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ];
+    [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ]
+    # https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
+    ++ [ "--enable-features=VaapiVideoDecoder" /* "--use-gl=egl" */ ];
 
   home.packages = [
     pkgs.tor-browser-bundle-bin
