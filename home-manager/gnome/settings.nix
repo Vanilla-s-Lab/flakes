@@ -7,10 +7,8 @@
     # Appearance - Style - Light
     "org/gnome/desktop/interface".color-scheme = "default";
 
-    # Search - Search Locations - [ Places - Downloads | Bookmarks - Projects ] - ON
-    "org/freedesktop/tracker/miner/files".index-recursive-directories =
-      [ "&DESKTOP" "&DOCUMENTS" "&MUSIC" "&PICTURES" "&VIDEOS" "&DOWNLOAD" ]
-      ++ [ "/home/vanilla/Projects" ];
+    # Settings - Search - OFF
+    "org/gnome/desktop/search-providers".disable-external = true;
 
     # Settings - Privacy - Location Services - ON
     "org/gnome/system/location".enabled = true;
