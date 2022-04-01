@@ -10,7 +10,7 @@
     pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
-    # pkgs.gnomeExtensions.openweather
+    pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.runcat
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot

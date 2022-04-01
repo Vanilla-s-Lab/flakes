@@ -13,7 +13,7 @@
     pkgs.dotnet-sdk
     pkgs.mono
 
-    # pkgs.jetbrains.clion
+    pkgs.jetbrains.clion
 
     pkgs.rustup
     pkgs.gcc
