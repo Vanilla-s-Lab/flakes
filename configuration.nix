@@ -123,6 +123,9 @@
   # nixos/modules/services/x11/desktop-managers/gnome.nix
   hardware.pulseaudio.enable = false; # mkDefault true;
 
+  # https://github.com/NixOS/nixpkgs/pull/165125#issuecomment-1074650829=
+  systemd.user.services.pipewire-pulse.path = [ pkgs.pulseaudio ];
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
