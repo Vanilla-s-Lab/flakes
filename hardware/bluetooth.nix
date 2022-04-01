@@ -12,11 +12,8 @@
   # Shows the battery percent in bluez.
   hardware.bluetooth.settings."General" = {
     "Experimental" = true;
-
-    # https://github.com/atar-axis/xpadneo/issues/259#issuecomment-918469473
-    "Privacy" = "device";
-    "JustWorksRepairing" = "always";
-    "Class" = "0x000100";
-    "FastConnectable" = "true";
   };
+
+  # https://github.com/atar-axis/xpadneo/issues/259
+  hardware.xpadneo.enable = true;
 }
