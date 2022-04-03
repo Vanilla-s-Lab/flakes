@@ -23,6 +23,7 @@
     ./services/openssh.nix
     ./services/fail2ban.nix
     ./services/udev.nix
+    ./services/samba.nix
     ./services/btrfs.nix
 
     ./sops-config/pxder.nix
