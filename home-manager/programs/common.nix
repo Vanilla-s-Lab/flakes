@@ -22,6 +22,9 @@
     # nixos-cn.legacyPackages."${system}".dingtalk
 
     pkgs.alsa-utils
+
+    # https://github.com/dyweb/Deedy-Resume-for-Chinese
+    pkgs.texlive.combined.scheme-full
   ];
 
   home.file.".config/DingTalk".source =
