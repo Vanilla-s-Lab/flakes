@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-20.09";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # https://github.com/NixOS/nixpkgs/pull/160115
     nixpkgs-jetbrains.url = "github:VergeDX/nixpkgs";
