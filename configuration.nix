@@ -31,6 +31,7 @@
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/certificate-pem.nix
     ./sops-config/chaoxing.nix
+    ./sops-config/access-tokens.nix
 
     ./security.nix
     ./steam.nix
