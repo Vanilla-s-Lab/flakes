@@ -1,4 +1,7 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, system, ... }:
+let pkgsJB = import inputs.nixpkgs-jetbrains
+  { inherit system; config.allowUnfree = true; }; in
+let pkgs_jetbrains = pkgsJB.jetbrains; in
 {
   home.packages = [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -6,14 +9,14 @@
     #   ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
     #   ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
 
-    pkgs.jetbrains.pycharm-professional
-    pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.rider
+    pkgs_jetbrains.pycharm-professional
+    pkgs_jetbrains.idea-ultimate
+    pkgs_jetbrains.rider
 
     pkgs.dotnet-sdk
     pkgs.mono
 
-    pkgs.jetbrains.clion
+    pkgs_jetbrains.clion
 
     pkgs.rustup
     pkgs.gcc
@@ -23,12 +26,12 @@
     pkgs.minikube
     pkgs.kubectl
 
-    pkgs.jetbrains.datagrip
+    pkgs_jetbrains.datagrip
 
     pkgs.docker-compose
     pkgs.podman-compose
 
-    pkgs.jetbrains.webstorm
+    pkgs_jetbrains.webstorm
 
     pkgs.nodejs
     pkgs.nodePackages.npm

@@ -3,6 +3,9 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-20.09";
 
+    # https://github.com/NixOS/nixpkgs/pull/160115
+    nixpkgs-jetbrains.url = "github:VergeDX/nixpkgs";
+
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
 
