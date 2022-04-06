@@ -1,10 +1,10 @@
 { pkgs, config, ... }:
 {
   home.packages = [
-    (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
-      ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
-      ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
-      ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
+    # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
+    #   ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
+    #   ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
+    #   ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate

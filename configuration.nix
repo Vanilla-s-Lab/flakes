@@ -106,8 +106,8 @@
   # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.hplip ];
+  # services.printing.enable = true;
+  # services.printing.drivers = [ pkgs.hplip ];
 
   # /etc/cups -> /var/lib/cups
   systemd.tmpfiles.rules = [
