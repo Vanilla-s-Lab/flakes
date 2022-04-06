@@ -14,4 +14,8 @@
       type = "ed25519";
     }
   ];
+
+  services.openssh.permitRootLogin = "no";
+  services.openssh.passwordAuthentication = false;
+  services.openssh.kbdInteractiveAuthentication = false;
 }
