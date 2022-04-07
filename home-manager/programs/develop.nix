@@ -3,7 +3,7 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
 let pkgs_jetbrains = pkgsJB.jetbrains; in
 {
-  home.packages = [
+  home.packages = with inputs; [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
     #   ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
     #   ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
@@ -39,6 +39,8 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
     pkgs.gradle
 
     pkgs.kubectl-tree
+
+    nvem.defaultPackage."${system}"
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/

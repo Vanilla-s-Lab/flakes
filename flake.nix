@@ -28,6 +28,9 @@
 
     nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree";
     nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
+
+    # https://github.com/VanCoding/nix-vscode-extension-manager
+    nvem.url = "github:VanCoding/nix-vscode-extension-manager";
   };
 
   outputs = { self, ... }@inputs: with inputs;
