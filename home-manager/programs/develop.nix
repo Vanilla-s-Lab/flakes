@@ -105,5 +105,9 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
   programs.vscode.package = (pkgs.vscode-with-extensions.override {
     vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
       (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
-  });
+  }).overrideAttrs (old: { pname = "vscode"; });
+
+  programs.vscode.userSettings = {
+    "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
+  };
 }

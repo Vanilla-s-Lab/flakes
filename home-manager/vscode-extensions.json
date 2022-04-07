@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "publisher": "unthrottled",
+    "name": "doki-theme",
+    "sha256": "7d98b15dd901fa655c179091883fad69697d074ac95bb188ab8c23c24d1e1d7c",
+    "version": "78.1.2"
+  }
+]
