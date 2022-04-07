@@ -97,4 +97,10 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/java/dot/userPrefs/jetbrains";
+
+  programs.vscode.enable = true;
+  programs.vscode.package = (pkgs.vscode-with-extensions.override {
+    vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
+      (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
+  });
 }
