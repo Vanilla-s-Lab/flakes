@@ -9,6 +9,9 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
     #   ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
     #   ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
 
+    (pkgs.python3.withPackages
+      (p: with p; [ openpyxl mysql-connector ]))
+
     pkgs_jetbrains.pycharm-professional
     pkgs_jetbrains.idea-ultimate
     pkgs_jetbrains.rider
