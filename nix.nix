@@ -13,7 +13,6 @@
   nix.binaryCaches = [
     "https://mirrors.bfsu.edu.cn/nix-channels/store"
     "https://nixos-cn.cachix.org/"
-    "https://cache.nixos.org/"
   ];
 
   # https://github.com/cachix/install-nix-action
