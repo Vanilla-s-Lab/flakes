@@ -11,8 +11,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
 
-    # https://github.com/nix-community/home-manager/issues/2846
-    home-manager.url = "github:VergeDX/home-manager";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nur.url = "github:nix-community/NUR";
