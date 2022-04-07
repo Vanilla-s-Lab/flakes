@@ -115,20 +115,13 @@
     "L /var/lib/cups - - - - /persistent/var/lib/cups"
   ];
 
-  # https://nixos.wiki/wiki/PipeWire#Enabling_PipeWire
-  security.rtkit.enable = true;
-  services.pipewire.enable = true;
-  services.pipewire.pulse.enable = true;
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
-  # amixer sset 'Master' 35%
-  services.pipewire.alsa.enable = true;
-  services.pipewire.alsa.support32Bit = true;
-
-  # nixos/modules/services/x11/desktop-managers/gnome.nix
-  hardware.pulseaudio.enable = false; # mkDefault true;
-
-  # https://github.com/NixOS/nixpkgs/pull/165125#issuecomment-1074650829=
-  systemd.user.services.pipewire-pulse.path = [ pkgs.pulseaudio ];
+  # https://nixos.wiki/wiki/Bluetooth#Enabling_extra_codecs
+  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
