@@ -25,6 +25,7 @@
     ./services/udev.nix
     ./services/samba.nix
     ./services/btrfs.nix
+    ./services/hostapd.nix
 
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
@@ -66,6 +67,7 @@
 
   # Use NetworkManager, persist WiFi connections.
   networking.networkmanager.enable = true;
+  networking.networkmanager.unmanaged = [ "wlp0s20f3" ];
   environment.etc."NetworkManager/system-connections".source =
     "/persistent/etc/NetworkManager/system-connections";
 
