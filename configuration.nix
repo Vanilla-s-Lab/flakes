@@ -73,6 +73,16 @@
   environment.etc."NetworkManager/system-connections".source =
     "/persistent/etc/NetworkManager/system-connections";
 
+  # https://discourse.nixos.org/t/nixos-access-point-via-hostapd/1060/5
+  networking.interfaces."wlp0s20f3".ipv4.addresses = [{
+    address = "10.0.10.1";
+    prefixLength = 24;
+  }];
+
+  networking.firewall.extraCommands = ''
+    iptables -t nat -A POSTROUTING -o enp3s0f1 -j MASQUERADE
+  '';
+
   # https://trevphil.com/posts/captive-portal
   boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
   boot.kernel.sysctl."net.ipv6.conf.all.forwarding" = 1;
