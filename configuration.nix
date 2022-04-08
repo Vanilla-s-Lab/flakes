@@ -87,7 +87,9 @@
 
   # https://trevphil.com/posts/captive-portal
   boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
-  boot.kernel.sysctl."net.ipv6.conf.all.forwarding" = 1;
+  # boot.kernel.sysctl."net.ipv6.conf.all.forwarding" = 1;
+  # https://superuser.com/questions/575684/how-to-disable-ipv6-on-a-specific-interface-in-linux
+  boot.kernel.sysctl."net.ipv6.conf.wlp0s20f3.disable_ipv6" = 1;
 
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
   hardware.firmware = [ pkgs.linux-firmware ];
