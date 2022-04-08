@@ -29,6 +29,8 @@
     ./services/hostapd.nix
     ./services/dhcpd4.nix
 
+    ./services/dnscrypt-proxy2.nix
+
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
