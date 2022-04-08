@@ -1,6 +1,4 @@
-{ pkgs, config, inputs, system, ... }:
-let pkgsNickCao = import inputs.nixpkgs-NickCao { inherit system; }; in
-let pkgs_tdesktop_Fixed = pkgsNickCao.tdesktop; in
+{ pkgs, config, inputs, ... }:
 {
   home.packages = [
     pkgs.qv2ray
@@ -19,12 +17,6 @@ let pkgs_tdesktop_Fixed = pkgsNickCao.tdesktop; in
     (pkgs.makeAutostartItem {
       name = "kotatogramdesktop";
       package = pkgs.kotatogram-desktop;
-    })
-
-    pkgs_tdesktop_Fixed
-    (pkgs.makeAutostartItem {
-      name = "telegramdesktop";
-      package = pkgs_tdesktop_Fixed;
     })
   ];
 
@@ -52,8 +44,4 @@ let pkgs_tdesktop_Fixed = pkgsNickCao.tdesktop; in
       /sys/bus/usb/devices/1-8/bConfigurationValue \
       > /dev/null || true
   '';
-
-  home.file.".local/share/TelegramDesktop".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/TelegramDesktop";
 }

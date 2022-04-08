@@ -6,7 +6,6 @@
 
     # https://github.com/NixOS/nixpkgs/pull/160115
     nixpkgs-jetbrains.url = "github:VergeDX/nixpkgs";
-    nixpkgs-NickCao.url = "github:NickCao/nixpkgs";
 
     flake-utils.url = "github:numtide/flake-utils";
     Vanilla.url = "github:Vanilla-s-Lab/Vanilla";
