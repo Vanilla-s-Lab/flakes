@@ -25,7 +25,9 @@
     ./services/udev.nix
     ./services/samba.nix
     ./services/btrfs.nix
+
     ./services/hostapd.nix
+    ./services/dhcpd4.nix
 
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
