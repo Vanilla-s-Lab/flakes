@@ -71,6 +71,10 @@
   environment.etc."NetworkManager/system-connections".source =
     "/persistent/etc/NetworkManager/system-connections";
 
+  # https://trevphil.com/posts/captive-portal
+  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+  boot.kernel.sysctl."net.ipv6.conf.all.forwarding" = 1;
+
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
   hardware.firmware = [ pkgs.linux-firmware ];
 
