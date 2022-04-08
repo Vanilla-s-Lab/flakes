@@ -12,5 +12,8 @@
 
     listen_addresses = [ "0.0.0.0:53" ];
     server_names = [ "alidns-doh" "dnspod-doh" "adguard-dns" ];
+
+    # No testing, just follow the list.
+    netprobe_timeout = 0;
   };
 }
