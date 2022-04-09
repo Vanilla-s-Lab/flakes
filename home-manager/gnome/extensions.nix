@@ -7,7 +7,6 @@
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
-    pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
     pkgs.gnomeExtensions.openweather
@@ -23,10 +22,6 @@
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
   ];
-
-  home.file.".config/gsconnect".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/gsconnect";
 
   dconf.settings = {
     "org/gnome/shell".enabled-extensions = [
@@ -46,7 +41,6 @@
       "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
       "dash-to-dock@micxgx.gmail.com"
       "espresso@coadmunkee.github.com"
-      "gsconnect@andyholmes.github.io"
       "kimpanel@kde.org"
       "lockkeys@vaina.lt"
       "openweather-extension@jenslody.de"
@@ -105,10 +99,6 @@
     # Espresso - Enable notifications - OFF
     "org/gnome/shell/extensions/espresso".show-notifications = false;
 
-    # GSConnect - Mobile Devices - Movile Settings - Redmi K30 - Pair
-    "org/gnome/shell/extensions/gsconnect/device/15da62e6592a7f47".certificate-pem = "";
-    "org/gnome/shell/extensions/gsconnect/device/15da62e6592a7f47".paired = true;
-
     # OpenWeather - Locations - [ Location + Provider ]
     "org/gnome/shell/extensions/openweather".city =
       "35.2791075,113.8452766>卫滨区, 新乡市, 河南省, 中国 >-2" + " && "
@@ -165,10 +155,4 @@
     # Vitals - Sensors - Monitor battery - ON
     "org/gnome/shell/extensions/vitals".show-battery = true;
   };
-
-  home.activation."GSConnect_certificate-pem" =
-    lib.hm.dag.entryAfter [ "dconfSettings" ] ''
-      cert=`cat /run/secrets/gsconnect/certificate-pem` && DCONF_DBUS_RUN_SESSION="${pkgs.dbus}/bin/dbus-run-session"
-      $DCONF_DBUS_RUN_SESSION dconf write /org/gnome/shell/extensions/gsconnect/device/15da62e6592a7f47/certificate-pem \""$cert"\"
-    '';
 }

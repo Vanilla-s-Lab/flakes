@@ -28,7 +28,6 @@
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
-    ./sops-config/certificate-pem.nix
     ./sops-config/chaoxing.nix
     ./sops-config/access-tokens.nix
 
