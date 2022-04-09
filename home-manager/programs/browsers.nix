@@ -1,10 +1,6 @@
 { pkgs, config, inputs, system, ... }:
-let pkgsUnStable = import inputs.nixpkgs-unstable { inherit system; }; in
-let chromiumUnStable = pkgsUnStable.chromium; in
 {
   programs.chromium.enable = true;
-  programs.chromium.package = chromiumUnStable;
-
   programs.chromium.commandLineArgs =
     # https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
     [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ]
