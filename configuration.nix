@@ -114,6 +114,9 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # nixos/modules/services/x11/desktop-managers/gnome.nix
+  services.avahi.enable = false; # mkDefault true;
+
   # TODO: GDM / GNOME wayland on NVIDIA sync...?
   services.xserver.displayManager.gdm.wayland = false;
 
