@@ -19,9 +19,7 @@
     ./gnome/settings.nix
     ./gnome/desktop.nix
     ./gnome/common.nix
-
-    "${inputs.Vanilla}/gnomeNoWelcome.nix"
-    "${inputs.Vanilla}/gnomeEnableNumLock.nix"
+    ./gnome/dconf.nix
 
     ./config/fcitx5.nix
     ./config/sops.nix
@@ -29,8 +27,6 @@
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
     ./config/access_tokens.nix
-
-    "${inputs.Vanilla}/persistHomeSsh.nix"
   ];
 
   home.packages = [ pkgs.nixpkgs-fmt ];
