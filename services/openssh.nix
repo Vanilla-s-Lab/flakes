@@ -1,7 +1,7 @@
 { ... }:
 {
   services.openssh.enable = true;
-  services.openssh.openFirewall = true;
+  services.openssh.openFirewall = false;
 
   services.openssh.hostKeys = [
     {
@@ -15,6 +15,7 @@
     }
   ];
 
+  # Only allow pubkeys login.
   services.openssh.permitRootLogin = "no";
   services.openssh.passwordAuthentication = false;
   services.openssh.kbdInteractiveAuthentication = false;
