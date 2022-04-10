@@ -44,6 +44,8 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
     pkgs.kubectl-tree
 
     nvem.defaultPackage."${system}"
+
+    pkgs.dig
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
