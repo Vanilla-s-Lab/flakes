@@ -12,8 +12,9 @@ let customConfig = pkgs.runCommand "nodogsplash" { } ''
   networking.firewall.allowedTCPPorts = [ 2050 ];
   networking.firewall.allowedUDPPorts = [ 2050 ];
 
-  environment.etc."nodogsplash/htdocs".source =
-    "${nodogsplash}/etc/nodogsplash/htdocs";
+  environment.etc."nodogsplash/htdocs/splash.html".source = ../data/splash.html;
+  environment.etc."nodogsplash/htdocs/status.html".source = ../data/status.html;
+  environment.etc."nodogsplash/htdocs/imgs/rickroll.mp4".source = ../data/rickroll.mp4;
 
   systemd.services."nodogsplash" = {
     wantedBy = [ "multi-user.target" ];
