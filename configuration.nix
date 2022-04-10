@@ -68,6 +68,14 @@
   environment.etc."NetworkManager/system-connections".source =
     "/persistent/etc/NetworkManager/system-connections";
 
+  # https://nixos.wiki/wiki/Encrypted_DNS#Setting_nameservers
+  networking.networkmanager.insertNameservers =
+    [ "223.5.5.5" "223.6.6.6" ] ++ # https://alidns.com/knowledge?type=SETTING_DOCS#user_linux
+    [ "119.29.29.29" ] ++ # https://docs.dnspod.cn/public-dns/public-dns-config-guide/
+    [ "94.140.14.14" "94.140.15.15" ]; # https://kb.adguard.com/en/general/dns-providers#adguard-dns
+
+  networking.resolvconf.enable = false;
+
   # https://discourse.nixos.org/t/nixos-access-point-via-hostapd/1060/5
   networking.interfaces."wlp0s20f3".ipv4.addresses = [{
     address = "10.0.10.1";
