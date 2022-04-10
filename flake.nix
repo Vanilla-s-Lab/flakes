@@ -5,8 +5,6 @@
     # https://github.com/NixOS/nixpkgs/pull/160115
     nixpkgs-jetbrains.url = "github:VergeDX/nixpkgs";
 
-    flake-utils.url = "github:numtide/flake-utils";
-
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -16,7 +14,6 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     nixos-cn.url = "github:nixos-cn/flakes";
-    nixos-cn.inputs.flake-utils.follows = "flake-utils";
     nixos-cn.inputs.nixpkgs.follows = "nixpkgs";
 
     impermanence.url = "github:nix-community/impermanence";
@@ -34,14 +31,15 @@
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
-    deploy-rs.inputs.utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: rec {
+    let system = "x86_64-linux"; in
+    rec {
       pkgs = import nixpkgs { inherit system; };
       packages.nixosConfigurations."NixOS-RoT" = nixosConfig;
 
+      nixosConfigurations."NixOS-RoT" = nixosConfig;
       nixosConfig = nixpkgs.lib.nixosSystem rec {
         inherit system; specialArgs = { inherit inputs self; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
@@ -53,5 +51,5 @@
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
       };
-    });
+    };
 }
