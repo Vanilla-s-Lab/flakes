@@ -26,6 +26,10 @@
 
     # https://github.com/VanCoding/nix-vscode-extension-manager
     nvem.url = "github:VanCoding/nix-vscode-extension-manager";
+
+    # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
+    "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
+    "icebox-nix/netkit.nix".flake = false;
   };
 
   outputs = { self, ... }@inputs: with inputs;

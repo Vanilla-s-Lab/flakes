@@ -25,6 +25,8 @@
     ./services/hostapd.nix
     ./services/dhcpd4.nix
 
+    ./services/smartdns.nix
+
     ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
@@ -69,7 +71,7 @@
     "/persistent/etc/NetworkManager/system-connections";
 
   # https://nixos.wiki/wiki/Encrypted_DNS#Setting_nameservers
-  networking.networkmanager.insertNameservers =
+  networking.networkmanager.insertNameservers = [ "127.0.0.1" "::1" ] ++
     [ "223.5.5.5" "223.6.6.6" ] ++ # https://alidns.com/knowledge?type=SETTING_DOCS#user_linux
     [ "119.29.29.29" ] ++ # https://docs.dnspod.cn/public-dns/public-dns-config-guide/
     [ "94.140.14.14" "94.140.15.15" ]; # https://kb.adguard.com/en/general/dns-providers#adguard-dns
