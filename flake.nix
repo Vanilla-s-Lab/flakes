@@ -49,6 +49,9 @@
           ++ [ impermanence.nixosModules.impermanence ];
       };
 
+      # https://nixos.wiki/wiki/NixOS_on_ARM#Build_your_own_image_natively
+      sdImage = raspi.config.system.build.sdImage;
+
       raspi = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ] ++
