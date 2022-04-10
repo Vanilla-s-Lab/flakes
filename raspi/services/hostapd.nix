@@ -1,7 +1,7 @@
 { ... }:
 {
   services.hostapd.enable = true;
-  services.hostapd.interface = "wlp0s20f3";
+  services.hostapd.interface = "wlan0";
 
   # https://en.wikipedia.org/wiki/ISO_3166-1
   services.hostapd.countryCode = "CN";

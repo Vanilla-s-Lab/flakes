@@ -53,7 +53,8 @@
         system = "aarch64-linux";
         modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ] ++
           [{ sdImage.compressImage = false; }] # nix build .#raspi.config.system.build.sdImage -v -L
-          ++ [ ./raspi/configuration.nix ./raspi/users.nix ];
+          ++ [ ./raspi/configuration.nix ./raspi/users.nix ] ++
+          [ ./raspi/services/dhcpd4.nix ./raspi/services/hostapd.nix ];
       };
 
       deploy.nodes.raspi = {
