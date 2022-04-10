@@ -52,7 +52,19 @@
       raspi = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ] ++
-          [{ sdImage.compressImage = false; }]; # nix build .#raspi.config.system.build.sdImage -v -L
+          [{ sdImage.compressImage = false; }] # nix build .#raspi.config.system.build.sdImage -v -L
+          ++ [ ./raspi/configuration.nix ./raspi/users.nix ];
+      };
+
+      deploy.nodes.raspi = {
+        sshUser = "root";
+        hostname = "192.168.3.151";
+
+        profiles.system.path =
+          deploy-rs.lib."${raspi.pkgs.system}".activate.nixos
+            raspi;
+
+        fastConnection = true;
       };
     };
 }
