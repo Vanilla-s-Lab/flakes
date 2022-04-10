@@ -54,7 +54,8 @@
 
       raspi = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ];
+        modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ] ++
+          [{ sdImage.compressImage = false; }]; # nix build .#raspi.config.system.build.sdImage -v -L
       };
     };
 }
