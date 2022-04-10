@@ -21,11 +21,6 @@
     ./services/fail2ban.nix
     ./services/udev.nix
     ./services/btrfs.nix
-
-    ./services/hostapd.nix
-    ./services/dhcpd4.nix
-    ./services/nodogsplash.nix
-
     ./services/smartdns.nix
 
     ./sops-config/pxder.nix
