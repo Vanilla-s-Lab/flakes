@@ -24,6 +24,7 @@
 
     ./services/hostapd.nix
     ./services/dhcpd4.nix
+    ./services/nodogsplash.nix
 
     ./services/smartdns.nix
 
