@@ -11,4 +11,9 @@
 
   boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
   boot.kernel.sysctl."net.ipv6.conf.wlan0.disable_ipv6" = 1;
+
+  # https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
+  services.hostapd.extraConfig = ''
+    ieee80211n=1
+  '';
 }
