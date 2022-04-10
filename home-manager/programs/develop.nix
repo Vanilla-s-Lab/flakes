@@ -2,6 +2,7 @@
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
 let pkgs_jetbrains = pkgsJB.jetbrains; in
+let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 {
   home.packages = with inputs; [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -46,6 +47,8 @@ let pkgs_jetbrains = pkgsJB.jetbrains; in
     nvem.defaultPackage."${system}"
 
     pkgs.dig
+
+    pkgs_nodogsplash
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
