@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # networking.networkmanager.enable = true;
   networking.interfaces."eth0".useDHCP = true;
@@ -8,4 +8,7 @@
 
   services.fail2ban.enable = true;
   services.fail2ban.bantime-increment.enable = true;
+
+  # TODO: Debug deps, remove after finish.
+  environment.systemPackages = [ pkgs.iw ];
 }
