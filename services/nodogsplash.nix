@@ -14,4 +14,13 @@ let customConfig = pkgs.runCommand "nodogsplash" { } ''
 
   environment.etc."nodogsplash/htdocs".source =
     "${nodogsplash}/etc/nodogsplash/htdocs";
+
+  systemd.services."nodogsplash" = {
+    wantedBy = [ "multi-user.target" ];
+    after = [ "dhcpd4.service" ];
+
+    # -c ${customConfig}/etc/nodogsplash.conf
+    script = "${nodogsplash}/bin/nodogsplash -f";
+    path = with pkgs; [ iptables iproute2 ];
+  };
 }
