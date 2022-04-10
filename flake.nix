@@ -36,9 +36,6 @@
   outputs = { self, ... }@inputs: with inputs;
     let system = "x86_64-linux"; in
     rec {
-      pkgs = import nixpkgs { inherit system; };
-      packages.nixosConfigurations."NixOS-RoT" = nixosConfig;
-
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       nixosConfig = nixpkgs.lib.nixosSystem rec {
         inherit system; specialArgs = { inherit inputs self; };
