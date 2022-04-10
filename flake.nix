@@ -30,6 +30,11 @@
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
     "icebox-nix/netkit.nix".flake = false;
+
+    # https://github.com/serokell/deploy-rs
+    deploy-rs.url = "github:serokell/deploy-rs";
+    deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
+    deploy-rs.inputs.utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;

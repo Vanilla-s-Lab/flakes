@@ -49,6 +49,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.dig
 
     pkgs_nodogsplash
+
+    deploy-rs.packages."${system}".deploy-rs
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
