@@ -44,7 +44,7 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 
     pkgs.kubectl-tree
 
-    nvem.defaultPackage."${system}"
+    # nvem.defaultPackage."${system}"
 
     pkgs.dig
 
@@ -106,11 +106,11 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/java/dot/userPrefs/jetbrains";
 
-  programs.vscode.enable = true;
-  programs.vscode.package = (pkgs.vscode-with-extensions.override {
-    vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
-      (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
-  }).overrideAttrs (old: { pname = "vscode"; });
+  # programs.vscode.enable = true;
+  # programs.vscode.package = (pkgs.vscode-with-extensions.override {
+  #   vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
+  #     (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
+  # }).overrideAttrs (old: { pname = "vscode"; });
 
   programs.vscode.userSettings = {
     "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
