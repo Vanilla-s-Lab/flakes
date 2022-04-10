@@ -13,8 +13,4 @@ let chinalist = pkgs.callPackage
       "${chinalist}/google.china.smartdns.conf"
     ];
   };
-
-  # networking.firewall.enable = false;
-  networking.firewall.allowedTCPPorts = [ 53 ];
-  networking.firewall.allowedUDPPorts = [ 53 ];
 }
