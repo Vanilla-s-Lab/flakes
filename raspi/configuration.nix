@@ -11,4 +11,7 @@
 
   # TODO: Debug deps, remove after finish.
   environment.systemPackages = [ pkgs.iw ];
+
+  networking.firewall.allowedTCPPorts = [ 53 ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
 }
