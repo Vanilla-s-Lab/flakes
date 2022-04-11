@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 22bd0e0..d8d3b67 100755
+--- a/Makefile
++++ b/Makefile
+@@ -2393,7 +2393,7 @@ strip:
+ 	$(CROSS_COMPILE)strip $(MODULE_NAME).ko --strip-unneeded
+ 
+ install:
+-	install -p -m 644 $(MODULE_NAME).ko  $(MODDESTDIR)
++	install -p -m 644 $(MODULE_NAME).ko NIX_INSTALL/$(MODDESTDIR)
+ 	/sbin/depmod -a ${KVER}
+ 
+ uninstall:
