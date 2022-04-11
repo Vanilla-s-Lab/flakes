@@ -23,7 +23,6 @@
     ./services/btrfs.nix
     ./services/smartdns.nix
 
-    ./sops-config/pxder.nix
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix

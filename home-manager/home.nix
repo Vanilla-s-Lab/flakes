@@ -23,7 +23,6 @@
 
     ./config/fcitx5.nix
     ./config/sops.nix
-    ./config/pxder.nix
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
     ./config/access_tokens.nix
