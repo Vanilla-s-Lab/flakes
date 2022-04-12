@@ -61,6 +61,8 @@
 
   # Use NetworkManager, persist WiFi connections.
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.macAddress = "random";
+  networking.networkmanager.ethernet.macAddress = "random";
   environment.etc."NetworkManager/system-connections".source =
     "/persistent/etc/NetworkManager/system-connections";
 
