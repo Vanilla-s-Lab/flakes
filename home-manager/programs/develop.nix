@@ -51,6 +51,9 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs_nodogsplash
 
     deploy-rs.packages."${system}".deploy-rs
+
+    # https://wiki.archlinux.org/title/default_applications#xdg-open
+    pkgs.perlPackages.FileMimeInfo
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
