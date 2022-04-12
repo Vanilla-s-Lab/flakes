@@ -129,5 +129,10 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     "workbench.enableExperiments" = false; # You
     # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-crash-reporting
     "enable-crash-reporter" = false; # Microsoft
+
+    # https://code.visualstudio.com/docs/supporting/faq#_how-do-i-opt-out-of-vs-code-autoupdates=
+    "update.mode" = "none";
+    # https://code.visualstudio.com/docs/supporting/faq#_opt-out-of-extension-updates
+    "extensions.autoUpdate" = false;
   };
 }
