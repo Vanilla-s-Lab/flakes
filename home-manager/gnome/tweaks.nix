@@ -7,14 +7,7 @@
     pkgs.breeze-gtk
     pkgs.tela-icon-theme
 
-    # https://github.com/NixOS/nixpkgs/pull/167880
-    (pkgs.flat-remix-gnome.overrideAttrs (old: rec {
-      version = "20220407";
-      src = pkgs.fetchFromGitHub (
-        { owner = "daniruiz"; repo = "${old.pname}"; rev = "${version}"; } //
-        { hash = "sha256-Q54uF49NbvupN6LH80bgRtvyW7Cqm9vqsWXDkQrF4HQ="; }
-      );
-    }))
+    pkgs.flat-remix-gnome
   ];
 
   dconf.settings = {
