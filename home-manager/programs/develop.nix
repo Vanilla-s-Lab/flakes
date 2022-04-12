@@ -122,5 +122,12 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     "workbench.colorTheme" = "Adwaita Light"; # macOS one day xD
     # "workbench.preferredLightColorTheme" = "Adwaita Light";
     # "workbench.preferredDarkColorTheme" = "Adwaita Dark";
+
+    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting
+    "telemetry.telemetryLevel" = "off"; # Fuck
+    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-experiments
+    "workbench.enableExperiments" = false; # You
+    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-crash-reporting
+    "enable-crash-reporter" = false; # Microsoft
   };
 }
