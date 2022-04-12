@@ -1,8 +1,8 @@
 [
   {
-    "publisher": "unthrottled",
-    "name": "doki-theme",
-    "sha256": "7d98b15dd901fa655c179091883fad69697d074ac95bb188ab8c23c24d1e1d7c",
-    "version": "78.1.2"
+    "publisher": "piousdeer",
+    "name": "adwaita-theme",
+    "sha256": "19c1569615a10dcf9a3560324580ed0ed216edcd4abbb3843db6b8961d9c206d",
+    "version": "1.0.4"
   }
 ]

@@ -118,6 +118,9 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
   }).overrideAttrs (old: { pname = "vscode"; });
 
   programs.vscode.userSettings = {
-    "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
+    # https://github.com/piousdeer/vscode-adwaita#suggested-settings=
+    "workbench.colorTheme" = "Adwaita Light"; # macOS one day xD
+    # "workbench.preferredLightColorTheme" = "Adwaita Light";
+    # "workbench.preferredDarkColorTheme" = "Adwaita Dark";
   };
 }
