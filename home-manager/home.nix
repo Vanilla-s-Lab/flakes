@@ -20,6 +20,7 @@
     ./gnome/desktop.nix
     ./gnome/common.nix
     ./gnome/dconf.nix
+    ./gnome/mimeApps.nix
 
     ./config/fcitx5.nix
     ./config/sops.nix
