@@ -132,5 +132,13 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     "update.mode" = "none";
     # https://code.visualstudio.com/docs/supporting/faq#_opt-out-of-extension-updates
     "extensions.autoUpdate" = false;
+
+    "editor.inlineSuggest.enabled" = true;
+    "github.copilot.enable" = {
+      "*" = true;
+      "yaml" = true;
+      "plaintext" = true;
+      "markdown" = true;
+    };
   };
 }

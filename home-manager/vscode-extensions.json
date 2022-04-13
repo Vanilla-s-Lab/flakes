@@ -4,5 +4,11 @@
     "name": "adwaita-theme",
     "sha256": "19c1569615a10dcf9a3560324580ed0ed216edcd4abbb3843db6b8961d9c206d",
     "version": "1.0.4"
+  },
+  {
+    "publisher": "GitHub",
+    "name": "copilot",
+    "sha256": "8ebe967ce07e79f2bc828354f4ed1b22b71a7ab1fe0f12a4b788a839a3e95e1d",
+    "version": "1.12.5517"
   }
 ]
