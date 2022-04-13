@@ -52,6 +52,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 
     # https://wiki.archlinux.org/title/default_applications#xdg-open
     pkgs.perlPackages.FileMimeInfo
+
+    pkgs.kubernetes-helm
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
@@ -140,5 +142,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
       "plaintext" = true;
       "markdown" = true;
     };
+
+    # https://github.com/redhat-developer/vscode-yaml
+    "redhat.telemetry.enabled" = false;
   };
 }
