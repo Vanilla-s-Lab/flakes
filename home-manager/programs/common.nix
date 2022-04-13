@@ -25,6 +25,9 @@
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
+
+    # pkgs.across
+    ACross.packages."${system}".across
   ];
 
   home.file.".config/DingTalk".source =

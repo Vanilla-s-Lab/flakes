@@ -37,6 +37,10 @@
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
     deploy-rs.inputs.utils.follows = "flake-utils";
+
+    # https://github.com/ArkToria/ACross
+    ACross.url = "github:ArkToria/ACross";
+    ACross.inputs.flake-utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;
