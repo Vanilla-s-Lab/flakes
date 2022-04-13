@@ -13,8 +13,11 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     nixos-cn.url = "github:nixos-cn/flakes";
     nixos-cn.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-cn.inputs.flake-utils.follows = "flake-utils";
 
     impermanence.url = "github:nix-community/impermanence";
 
@@ -23,6 +26,8 @@
 
     # https://github.com/VanCoding/nix-vscode-extension-manager
     nvem.url = "github:VanCoding/nix-vscode-extension-manager";
+    nvem.inputs.flake-utils.follows = "flake-utils";
+    nvem.inputs.nixpkgs.follows = "nixpkgs";
 
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
@@ -31,6 +36,7 @@
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
+    deploy-rs.inputs.utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;
