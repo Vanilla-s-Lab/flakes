@@ -32,11 +32,6 @@
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
     "icebox-nix/netkit.nix".flake = false;
-
-    # https://github.com/serokell/deploy-rs
-    deploy-rs.url = "github:serokell/deploy-rs";
-    deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
-    deploy-rs.inputs.utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -53,30 +48,6 @@
           ++ [ sops-nix.nixosModules.sops ]
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
-      };
-
-      # https://nixos.wiki/wiki/NixOS_on_ARM#Build_your_own_image_natively
-      sdImage = raspi.config.system.build.sdImage;
-
-      raspi = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [ "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix" ] ++
-          [{ sdImage.compressImage = false; }] # nix build .#raspi.config.system.build.sdImage -v -L
-          ++ [ ./raspi/configuration.nix ./raspi/users.nix ] ++ [ ./services/smartdns.nix ] ++
-          [ ./raspi/services/dhcpd4.nix ./raspi/services/hostapd.nix ./raspi/services/nodogsplash.nix ];
-
-        specialArgs = { inherit inputs; };
-      };
-
-      deploy.nodes.raspi = {
-        sshUser = "root";
-        hostname = "192.168.3.151";
-
-        profiles.system.path =
-          deploy-rs.lib."${raspi.pkgs.system}".activate.nixos
-            raspi;
-
-        fastConnection = true;
       };
     };
 }
