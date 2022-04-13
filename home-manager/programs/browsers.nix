@@ -5,7 +5,8 @@
     # https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
     [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ]
     # https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
-    ++ [ "--enable-features=VaapiVideoDecoder" /* "--use-gl=egl" */ ];
+    ++ [ "--enable-features=VaapiVideoDecoder" /* "--use-gl=egl" */ ]
+    ++ [ "--disable-features=MediaRouter" ]; # issues 1218418.
 
   home.packages = [
     pkgs.tor-browser-bundle-bin
