@@ -28,5 +28,11 @@
     "name": "vscode-yaml",
     "sha256": "387cd99771b895aa1bec4ddc82f649d8472e3c605fdc27c467cff84983677e88",
     "version": "1.6.0"
+  },
+  {
+    "publisher": "k--kato",
+    "name": "intellij-idea-keybindings",
+    "sha256": "5feab8de9e39e49f521c112f8a7d549abe147d054223cbe7224a07e7fbd4509b",
+    "version": "1.5.1"
   }
 ]
