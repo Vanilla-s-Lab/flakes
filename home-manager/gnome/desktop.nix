@@ -19,6 +19,7 @@
       "22647c69-a025-4142-ace6-9ea9a0cbdca1" # IDEs
       "e644c5d3-83a7-463c-bbef-e0dbbea16076" # Virtualisation
       "216c8193-f990-444b-8882-ea9d773441ef" # Internet
+      "337d3799-cc4d-47f5-a6ce-5943775f331e" # Document
     ];
 
     "org/gnome/desktop/app-folders/folders/d3165349-919a-496a-acbb-7a59027f0f54" = {
@@ -89,6 +90,11 @@
         "torbrowser.desktop"
         "org.wireshark.Wireshark.desktop"
       ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/337d3799-cc4d-47f5-a6ce-5943775f331e" = {
+      name = "Document";
+      apps = [ "org.gnome.Evince.desktop" "nixos-manual.desktop" ];
     };
   };
 }
