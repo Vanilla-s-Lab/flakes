@@ -5,6 +5,7 @@ let chinalist = pkgs.callPackage
 {
   services.smartdns.enable = true;
   services.smartdns.settings = {
+    bind = "127.0.0.1:53";
     server = [ "114.114.114.114" "114.114.115.115" ];
 
     conf-file = [
