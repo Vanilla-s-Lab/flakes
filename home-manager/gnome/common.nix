@@ -11,6 +11,8 @@
     pkgs.lollypop
     pkgs.gnome.totem
     pkgs.gnome.eog
+
+    pkgs.evince
   ];
 
   dconf.settings = {
