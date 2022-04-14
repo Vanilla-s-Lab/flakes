@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 1089 8889 ];
@@ -17,4 +17,19 @@
 
   # networking.firewall.enable = false;
   networking.firewall.checkReversePath = "loose";
+
+  # https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/713#note_890189
+  networking.networkmanager.dispatcherScripts = lib.singleton {
+    source = pkgs.writeText "50-delete-lease" ''
+      ifname="$1"
+      event="$2"
+
+      [ "$ifname" != enp3s0f1 ] && exit 0
+      [ "$event" != down ] && exit 0
+
+      rm /var/lib/NetworkManager/*-"$CONNECTION_UUID"-"$ifname".lease
+    '';
+
+    type = "basic";
+  };
 }
