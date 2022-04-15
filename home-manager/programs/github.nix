@@ -34,6 +34,7 @@
 
   # Pinentry curses is a TUI password ipnut box.
   services.gpg-agent.pinentryFlavor = "gnome3";
+  home.sessionVariables = { SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh"; };
 
   # Trust GitHub server in known_hosts.
   programs.ssh.enable = true;
