@@ -33,18 +33,7 @@
   services.gpg-agent.enableSshSupport = true;
 
   # Pinentry curses is a TUI password ipnut box.
-  services.gpg-agent.pinentryFlavor = "curses";
-  programs.fish.interactiveShellInit = ''
-    # So it should know which tty to show the box.
-    gpg-connect-agent updatestartuptty /bye > /dev/null
-
-    # Also, import secret key if plugin.
-    gpg --card-status 2&> /dev/null
-
-    set UID (id -u vanilla)
-    # ssh commands require the SOCK to find ssh key.
-    export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
-  '';
+  services.gpg-agent.pinentryFlavor = "gnome3";
 
   # Trust GitHub server in known_hosts.
   programs.ssh.enable = true;

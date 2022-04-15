@@ -43,4 +43,8 @@
   home.file.".cache/nix".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/cache/nix";
+
+  home.file.".gnupg/private-keys-v1.d".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/gnupg/private-keys-v1.d";
 }
