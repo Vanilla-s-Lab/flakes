@@ -21,6 +21,15 @@ let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147
 
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
+  # https://github.com/blackjid/plugin-kubectl
+  programs.fish.plugins = lib.singleton rec {
+    name = "plugin-kubectl";
+    src = pkgs.fetchgit {
+      url = "https://github.com/blackjid/${name}";
+      hash = "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=";
+    };
+  };
+
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
     pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
@@ -40,6 +49,11 @@ let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147
   home.activation."fishPlugins.git" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
       ''fish -c "__git.init" || true'';
+
+  # https://github.com/blackjid/plugin-kubectl/blob/master/hooks/install.fish
+  home.activation."plugin-kubectl" =
+    lib.hm.dag.entryAfter [ "dconfSettings" ]
+      ''fish -c "__kubectl.init" || true'';
 
   # https://starship.rs/
   programs.starship.enable = true;
