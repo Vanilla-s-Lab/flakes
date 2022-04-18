@@ -1,4 +1,4 @@
-{
+{ fetchurl, ... }: {
   sources = {
     p-jetbrains-jdk-bin = {
       pname = "p-jetbrains-jdk-bin";
