@@ -2,7 +2,7 @@
 let inherit (self) lib;
 in { stdenv, zlib, xorg, freetype, alsa-lib, atk, at-spi2-atk, at-spi2-core, cups, dbus
 , expat, fontconfig, glib, libdrm, libxkbcommon, mesa, nspr, nss, libglvnd, udev
-, setJavaClassPath }:
+, setJavaClassPath, pango, cairo }:
 let
   result = stdenv.mkDerivation {
     pname = "p-jetbrains-jdk-bin";
@@ -47,6 +47,9 @@ let
           libglvnd
           udev
           mesa.drivers
+
+          pango
+          cairo
         ]
       }"
 
