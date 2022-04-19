@@ -113,40 +113,4 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/java/dot/userPrefs/jetbrains";
-
-  programs.vscode.enable = true;
-  programs.vscode.package = (pkgs.vscode-with-extensions.override {
-    vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
-      (builtins.fromJSON (builtins.readFile ../vscode-extensions.json));
-  }).overrideAttrs (old: { pname = "vscode"; });
-
-  programs.vscode.userSettings = {
-    # https://github.com/piousdeer/vscode-adwaita#suggested-settings=
-    "workbench.colorTheme" = "Adwaita Light"; # macOS one day xD
-    # "workbench.preferredLightColorTheme" = "Adwaita Light";
-    # "workbench.preferredDarkColorTheme" = "Adwaita Dark";
-
-    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting
-    "telemetry.telemetryLevel" = "off"; # Fuck
-    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-experiments
-    "workbench.enableExperiments" = false; # You
-    # https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-crash-reporting
-    "enable-crash-reporter" = false; # Microsoft
-
-    # https://code.visualstudio.com/docs/supporting/faq#_how-do-i-opt-out-of-vs-code-autoupdates=
-    "update.mode" = "none";
-    # https://code.visualstudio.com/docs/supporting/faq#_opt-out-of-extension-updates
-    "extensions.autoUpdate" = false;
-
-    "editor.inlineSuggest.enabled" = true;
-    "github.copilot.enable" = {
-      "*" = true;
-      "yaml" = true;
-      "plaintext" = true;
-      "markdown" = true;
-    };
-
-    # https://github.com/redhat-developer/vscode-yaml
-    "redhat.telemetry.enabled" = false;
-  };
 }
