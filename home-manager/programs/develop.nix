@@ -54,6 +54,9 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.perlPackages.FileMimeInfo
 
     pkgs.kubernetes-helm
+
+    # pkgs.terraform-full
+    pkgs.terraform
   ];
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
