@@ -49,5 +49,11 @@
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
       };
+
+      do-image = do.config.system.build.digitalOceanImage;
+      do = nixpkgs.lib.nixosSystem rec {
+        inherit system; specialArgs = { inherit nixpkgs; };
+        modules = [ ./do/configuration.nix ];
+      };
     };
 }
