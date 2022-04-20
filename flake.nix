@@ -50,10 +50,10 @@
           ++ [ impermanence.nixosModules.impermanence ];
       };
 
-      do-image = do.config.system.build.digitalOceanImage;
-      do = nixpkgs.lib.nixosSystem rec {
+      azure-image = azure.config.system.build.azureImage;
+      azure = nixpkgs.lib.nixosSystem rec {
         inherit system; specialArgs = { inherit nixpkgs; };
-        modules = [ ./do/configuration.nix ];
+        modules = [ ./azure/configuration.nix ];
       };
     };
 }
