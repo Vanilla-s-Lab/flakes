@@ -120,4 +120,7 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/java/dot/userPrefs/jetbrains";
+
+  programs.java.enable = true;
+  programs.java.package = pkgs.jdk17_headless;
 }

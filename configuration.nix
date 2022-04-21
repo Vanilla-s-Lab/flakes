@@ -4,9 +4,6 @@
 
 { config, pkgs, inputs, lib, ... }:
 {
-  programs.java.enable = true;
-  programs.java.package = pkgs.jdk17_headless;
-
   imports = [
     ./users.nix
 
