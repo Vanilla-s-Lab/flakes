@@ -65,6 +65,9 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/azure";
 
+  home.file.".terraform.d".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/terraform.d";
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
   home.sessionVariables = { MINIKUBE_IN_STYLE = "false"; };
