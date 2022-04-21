@@ -49,11 +49,5 @@
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
       };
-
-      azure-image = azure.config.system.build.azureImage;
-      azure = nixpkgs.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit nixpkgs; };
-        modules = [ ./azure/configuration.nix ];
-      };
     };
 }
