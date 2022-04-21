@@ -2,6 +2,7 @@
 let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fba113"; in
 let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f"; in
 let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147e3b9573880"; in
+let azure-nix = "1bd03d69e4884dcfa883f44694cf239592f6cb21ca25ea6c485f5dd550eaef9a"; in
 
 let enable_feature = feature_list: builtins.listToAttrs
   (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
@@ -98,4 +99,6 @@ let enable_feature = feature_list: builtins.listToAttrs
     "/persistent/Videos/.envrc";
   home.file.".local/share/direnv/allow/${chaoxing_auto_sign}".text =
     "/persistent/Documents/chaoxing_auto_sign/.envrc";
+  home.file.".local/share/direnv/allow/${azure-nix}".text =
+    "/persistent/Projects/azure-nix/.envrc";
 }
