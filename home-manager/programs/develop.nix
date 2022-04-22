@@ -56,9 +56,10 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.kubernetes-helm
 
     # pkgs.terraform-full
-    # pkgs.terraform
+    pkgs.terraform
 
-    # pkgs.azure-cli
+    pkgs.azure-cli
+    pkgs.azure-storage-azcopy
   ];
 
   home.file.".azure".source =
