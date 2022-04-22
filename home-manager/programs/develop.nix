@@ -60,6 +60,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 
     pkgs.azure-cli
     pkgs.azure-storage-azcopy
+
+    pkgs.gh
   ];
 
   home.file.".azure".source =
@@ -69,6 +71,10 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
   home.file.".terraform.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/terraform.d";
+
+  home.file.".config/gh".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/gh";
 
   # https://minikube.sigs.k8s.io/docs/handbook/config/
   home.sessionVariables = { MINIKUBE_IN_STYLE = "false"; };
