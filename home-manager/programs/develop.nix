@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, system, ... }:
+{ pkgs, config, inputs, system, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
 let pkgs_jetbrains = pkgsJB.jetbrains; in
@@ -62,6 +62,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.azure-storage-azcopy
 
     pkgs.gh
+
+    deploy-rs.defaultPackage."${system}"
   ];
 
   home.file.".azure".source =
