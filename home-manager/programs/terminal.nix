@@ -65,7 +65,7 @@ let enable_feature = feature_list: builtins.listToAttrs
   # https://starship.rs/config/
   programs.starship.settings = (enable_feature
     ([ "git_metrics" "kubernetes" "memory_usage" ]
-      ++ [ "shell" "status" "sudo" "time" ]));
+      ++ [ "shell" "status" /* "sudo" */ "time" ]));
 
   # https://github.com/ogham/exa
   programs.exa.enable = true;
