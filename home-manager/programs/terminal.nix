@@ -27,13 +27,24 @@ let enable_feature = feature_list: builtins.listToAttrs
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
   # https://github.com/blackjid/plugin-kubectl
-  programs.fish.plugins = lib.singleton rec {
-    name = "plugin-kubectl";
-    src = pkgs.fetchgit {
-      url = "https://github.com/blackjid/${name}";
-      hash = "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=";
-    };
-  };
+  programs.fish.plugins = [
+    rec {
+      name = "plugin-kubectl";
+      src = pkgs.fetchgit {
+        url = "https://github.com/blackjid/${name}";
+        rev = "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8";
+        hash = "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=";
+      };
+    }
+    rec {
+      name = "Boxfish";
+      src = pkgs.fetchgit {
+        url = "https://github.com/MidAutumnMoon/${name}";
+        rev = "38f6eb04f24e1795ed9b9d7dbf777903d4e0f5dd";
+        hash = "sha256-gJcYNIbJXtysgno9cHA5UhMYxWVcwx22vtarK1TF3o4=";
+      };
+    }
+  ];
 
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
@@ -48,6 +59,9 @@ let enable_feature = feature_list: builtins.listToAttrs
 
     # https://github.com/nvbn/thefuck#installation=
     pkgs.thefuck
+
+    # https://github.com/MidAutumnMoon/Boxfish
+    pkgs.bubblewrap
   ];
 
   # https://github.com/jhillyerd/plugin-git
