@@ -57,7 +57,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     # pkgs.terraform-full
     pkgs.terraform
 
-    pkgs.azure-cli
+    # https://github.com/NixOS/nixpkgs/pull/169829
+    # pkgs.azure-cli
     pkgs.azure-storage-azcopy
 
     pkgs.gh
