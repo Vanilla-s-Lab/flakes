@@ -75,7 +75,7 @@
 
     # Blur my shell - Blue - [ dash | panel | window list extension ] - OFF
     "org/gnome/shell/extensions/blur-my-shell" =
-      { blur-dash = false; blur-panel = false; blur-window-list = false; };
+      { blur-dash = false; panel-blur = false; blur-window-list = false; };
 
     # Dash to Dock - Position and size - Show on all monitors.
     "org/gnome/shell/extensions/dash-to-dock".multi-monitor = true;
