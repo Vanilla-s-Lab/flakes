@@ -6,8 +6,11 @@
     experimental-features = nix-command flakes
   '';
 
-  # Used for flake in root.
   programs.git.enable = true;
+  # https://stackoverflow.com/questions/71876704
+  programs.git.config = {
+    safe.directory = "/persistent/Projects/flakes";
+  };
 
   # https://mirrors.bfsu.edu.cn/help/nix/
   nix.binaryCaches = [
