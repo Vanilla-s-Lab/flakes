@@ -3,9 +3,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-21.11";
 
-    # https://github.com/NixOS/nixpkgs/pull/160115
-    nixpkgs-jetbrains.url = "github:VergeDX/nixpkgs";
-
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 

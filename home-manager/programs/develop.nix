@@ -1,7 +1,6 @@
 { pkgs, config, inputs, system, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
-let pkgs_jetbrains = pkgsJB.jetbrains; in
 let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 {
   home.packages = with inputs; [
@@ -13,14 +12,14 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     (pkgs.python3.withPackages
       (p: with p; [ openpyxl mysql-connector ]))
 
-    pkgs_jetbrains.pycharm-professional
-    pkgs_jetbrains.idea-ultimate
-    pkgs_jetbrains.rider
+    pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.rider
 
     pkgs.dotnet-sdk
     pkgs.mono
 
-    pkgs_jetbrains.clion
+    pkgs.jetbrains.clion
 
     pkgs.rustup
     pkgs.gcc
@@ -30,12 +29,12 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.minikube
     pkgs.kubectl
 
-    pkgs_jetbrains.datagrip
+    pkgs.jetbrains.datagrip
 
     pkgs.docker-compose
     pkgs.podman-compose
 
-    pkgs_jetbrains.webstorm
+    pkgs.jetbrains.webstorm
 
     pkgs.nodejs
     pkgs.nodePackages.npm
