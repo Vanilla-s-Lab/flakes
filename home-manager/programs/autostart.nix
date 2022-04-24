@@ -13,10 +13,10 @@
       package = pkgs.albert;
     })
 
-    pkgs.kotatogram-desktop
+    pkgs.tdesktop
     (pkgs.makeAutostartItem {
-      name = "kotatogramdesktop";
-      package = pkgs.kotatogram-desktop;
+      name = "telegramdesktop";
+      package = pkgs.tdesktop;
     })
   ];
 
@@ -35,9 +35,9 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/albert";
 
-  home.file.".local/share/KotatogramDesktop".source =
+  home.file.".local/share/TelegramDesktop".source =
     config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/KotatogramDesktop";
+      "/persistent/dot/local/share/TelegramDesktop";
 
   home.activation."how-can-i-disable-my-webcam" = ''
     echo 0 | sudo /run/current-system/sw/bin/tee \
