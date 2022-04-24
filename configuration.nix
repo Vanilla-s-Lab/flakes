@@ -127,10 +127,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # https://nixos.wiki/wiki/Bluetooth#Enabling_extra_codecs
-  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
