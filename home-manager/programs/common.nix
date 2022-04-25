@@ -25,7 +25,13 @@
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
+
+    pkgs.osu-lazer
   ];
+
+  home.file.".local/share/osu".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/osu";
 
   home.file.".config/DingTalk".source =
     config.lib.file.mkOutOfStoreSymlink
