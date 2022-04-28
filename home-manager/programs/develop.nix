@@ -43,8 +43,6 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 
     pkgs.kubectl-tree
 
-    nvem.defaultPackage."${system}"
-
     pkgs.dig
 
     pkgs_nodogsplash
