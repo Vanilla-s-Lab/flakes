@@ -61,7 +61,7 @@
 
     "org/gnome/desktop/app-folders/folders/046ad3d2-1480-422d-89a4-f8bd19324788" = {
       name = "Autostart";
-      apps = [ "albert.desktop" "qv2ray.desktop" "telegramdesktop.desktop" ];
+      apps = [ "albert.desktop" "kotatogramdesktop.desktop" "qv2ray.desktop" ];
     };
 
     "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
