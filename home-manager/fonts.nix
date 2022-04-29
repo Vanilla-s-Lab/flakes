@@ -1,11 +1,12 @@
 { pkgs, lib, inputs, ... }:
 let Helvetica = pkgs.callPackage ./packages/fonts.nix { name = "Helvetica"; }; in
+let Heiti = pkgs.callPackage ./packages/fonts.nix { name = "Heiti"; }; in
 {
   home.packages = [
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
     pkgs.nur.repos.vanilla.Win10_LTSC_2021_fonts
     pkgs.nur.repos.vanilla.apple-fonts.SF-Compact
-  ] ++ [ pkgs.noto-fonts-cjk ] ++ [ Helvetica ];
+  ] ++ [ pkgs.noto-fonts-cjk ] ++ [ Helvetica Heiti ];
 
   # https://github.com/nix-community/home-manager/issues/1118
   fonts.fontconfig.enable = lib.mkForce true;
