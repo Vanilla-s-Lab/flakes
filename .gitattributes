@@ -1,7 +1,7 @@
 # From `iPhone_4.7_P3_13.0_17A577_Restore.ipsw`.
 # Path: /root/System/Library/Fonts/Core/Helvetica*.ttc
-fonts/Helvetica.ttc filter=lfs diff=lfs merge=lfs -text
-fonts/HelveticaNeue.ttc filter=lfs diff=lfs merge=lfs -text
-fonts/HelveticaNeueExtras.ttc filter=lfs diff=lfs merge=lfs -text
-fonts/HelveticaNeueInterface.ttc filter=lfs diff=lfs merge=lfs -text
-fonts/HelveticaNeueLights.ttc filter=lfs diff=lfs merge=lfs -text
+fonts/Helvetica/Helvetica.ttc filter=lfs diff=lfs merge=lfs -text
+fonts/Helvetica/HelveticaNeue.ttc filter=lfs diff=lfs merge=lfs -text
+fonts/Helvetica/HelveticaNeueExtras.ttc filter=lfs diff=lfs merge=lfs -text
+fonts/Helvetica/HelveticaNeueInterface.ttc filter=lfs diff=lfs merge=lfs -text
+fonts/Helvetica/HelveticaNeueLights.ttc filter=lfs diff=lfs merge=lfs -text

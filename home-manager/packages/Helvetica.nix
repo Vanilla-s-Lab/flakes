@@ -5,6 +5,6 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/share/fonts/opentype/
-    cp $src/*.ttc $out/share/fonts/opentype/
+    cp $src/$name/*.ttc $out/share/fonts/opentype/
   '';
 }
