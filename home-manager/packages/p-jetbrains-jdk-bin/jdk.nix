@@ -1,8 +1,30 @@
 { self, sources, ... }:
 let inherit (self) lib;
-in { stdenv, zlib, xorg, freetype, alsa-lib, atk, at-spi2-atk, at-spi2-core, cups, dbus
-, expat, fontconfig, glib, libdrm, libxkbcommon, mesa, nspr, nss, libglvnd, udev
-, setJavaClassPath, pango, cairo }:
+in
+{ stdenv
+, zlib
+, xorg
+, freetype
+, alsa-lib
+, atk
+, at-spi2-atk
+, at-spi2-core
+, cups
+, dbus
+, expat
+, fontconfig
+, glib
+, libdrm
+, libxkbcommon
+, mesa
+, nspr
+, nss
+, libglvnd
+, udev
+, setJavaClassPath
+, pango
+, cairo
+}:
 let
   result = stdenv.mkDerivation {
     pname = "p-jetbrains-jdk-bin";
@@ -79,4 +101,5 @@ let
     passthru.home = result;
     meta = with lib; { platforms = [ "x86_64-linux" ]; };
   };
-in result
+in
+result

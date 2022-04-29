@@ -1,5 +1,5 @@
 { pkgs, lib, inputs, ... }:
-let Helvetica = pkgs.callPackage ./packages/Helvetica.nix { }; in
+let Helvetica = pkgs.callPackage ./packages/fonts.nix { name = "Helvetica"; }; in
 {
   home.packages = [
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })

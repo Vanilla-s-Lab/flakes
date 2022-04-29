@@ -1,6 +1,6 @@
-{ stdenv, ... }:
-stdenv.mkDerivation rec {
-  name = "Helvetica";
+{ stdenv, name, ... }:
+stdenv.mkDerivation {
+  inherit name;
   src = ../../fonts;
 
   installPhase = ''
