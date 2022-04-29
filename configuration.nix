@@ -47,7 +47,7 @@
   boot.kernel.sysctl."net.core.default_qdisc" = "fq";
   boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr2";
   # https://nixos.wiki/wiki/NTFS
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = [ "ntfs" "apfs" ];
   # Required nvme kernel module to find disk.
   boot.initrd.availableKernelModules = [ "nvme" "tcp_bbr2" ];
 
