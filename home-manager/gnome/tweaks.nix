@@ -9,11 +9,12 @@
 
     # https://github.com/NixOS/nixpkgs/pull/169670
     (pkgs.flat-remix-gnome.overrideAttrs (old: {
+      version = "20220422";
       src = pkgs.fetchFromGitHub {
         owner = "daniruiz";
         repo = "${old.pname}";
-        rev = "20220421";
-        hash = "sha256-4ZZw6qhUi2l8GfFVwQexMSg7MChXYPYI0lgoUZYkpwk=";
+        rev = "20220422";
+        hash = "sha256-W/BNn10SggtBacelNljPh42jVMBfykJFRWBCaj/ar7U=";
       };
     }))
   ];
