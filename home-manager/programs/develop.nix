@@ -16,8 +16,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rider
 
-    pkgs.dotnet-sdk
-    pkgs.mono
+    pkgs.msbuild
+    pkgs.wine
 
     pkgs.jetbrains.clion
 
