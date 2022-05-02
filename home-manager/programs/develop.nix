@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, system, ... }: with inputs;
+{ pkgs, config, inputs, system, lib, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
 let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
@@ -16,8 +16,10 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rider
 
-    pkgs.msbuild
+    (lib.hiPrio pkgs.msbuild)
     pkgs.wine
+    (lib.lowPrio pkgs.mono)
+    pkgs.dotnet-sdk
 
     pkgs.jetbrains.clion
 
