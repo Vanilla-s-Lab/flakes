@@ -47,4 +47,8 @@
   home.file.".gnupg/private-keys-v1.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/gnupg/private-keys-v1.d";
+
+  home.file.".config/VirtualBox".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/VirtualBox";
 }
