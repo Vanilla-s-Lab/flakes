@@ -39,5 +39,9 @@
 
     ports = (lib.singleton "1433:1433");
     image = "mcr.microsoft.com/mssql/server:latest";
+
+    # Always remember do `sudo chmod 777 /persistent/var/opt/mssql`.
+    # https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure
+    volumes = (lib.singleton "/persistent/var/opt/mssql:/var/opt/mssql");
   };
 }
