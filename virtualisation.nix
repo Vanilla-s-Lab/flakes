@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 {
   # https://nixos.wiki/wiki/Virt-manager
   virtualisation.libvirtd.enable = true;
@@ -29,4 +29,15 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "vanilla" ];
   virtualisation.virtualbox.host.enableExtensionPack = true;
+
+  virtualisation.oci-containers.containers."mssql" = {
+    # https://hub.docker.com/_/microsoft-mssql-server
+    environment = {
+      ACCEPT_EULA = "Y";
+      SA_PASSWORD = "yourStrong(!)Password";
+    };
+
+    ports = (lib.singleton "1433:1433");
+    image = "mcr.microsoft.com/mssql/server:latest";
+  };
 }
