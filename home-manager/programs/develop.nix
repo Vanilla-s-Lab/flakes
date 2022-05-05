@@ -11,7 +11,8 @@ let pkgs_nodogsplash = pkgs.callPackage ../packages/nodogsplash.nix { }; in
 
     (pkgs.python3.withPackages
       (p: with p; [ openpyxl mysql-connector ] ++ [ setuptools pip ]
-        ++ [ pyqt5 ] ++ [ opencv4 matplotlib numpy pytesseract ]))
+        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]
+        ++ [ (opencv4.override { enableCuda = true; }) ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
