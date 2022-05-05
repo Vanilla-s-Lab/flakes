@@ -155,5 +155,7 @@
     "org/gnome/shell/extensions/vitals".include-public-ip = true;
     # Vitals - Sensors - Monitor battery - ON
     "org/gnome/shell/extensions/vitals".show-battery = true;
+    # Vitals Icon - Network - Device rx - OFF, [ Memory - Usage | System - Load 1m ] - ON
+    "org/gnome/shell/extensions/vitals".hot-sensors = [ "_memory_usage_" "_system_load_1m_" ];
   };
 }
