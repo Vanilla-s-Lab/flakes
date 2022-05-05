@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = [
     pkgs.gnome.nautilus
@@ -13,7 +13,16 @@
     pkgs.gnome.eog
 
     pkgs.evince
+    pkgs.thunderbird
   ];
+
+  home.file.".thunderbird".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/thunderbird";
+
+  home.file.".cache/thunderbird".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/thunderbird";
 
   dconf.settings = {
     # Nautilus - Scroll Down Twice.
