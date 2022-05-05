@@ -8,15 +8,8 @@
   programs.wireshark.package = pkgs.wireshark;
   users.users."vanilla".extraGroups = [ "wireshark" ];
 
-  networking.firewall.allowPing = false;
-  # https://www.garron.me/en/bits/iptables-open-port-for-specific-ip.html
-  networking.firewall.extraCommands = ''
-    iptables -A INPUT -p tcp -m iprange --src-range 192.168.49.2-192.168.49.4 --dport 8889 -j ACCEPT
-    iptables -A OUTPUT -p tcp -m iprange --src-range 192.168.49.2-192.168.49.4 --dport 8889 -j ACCEPT
-  '';
-
   # networking.firewall.enable = false;
-  networking.firewall.checkReversePath = "loose";
+  networking.firewall.allowPing = false;
 
   # https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/713#note_890189
   # https://unix.stackexchange.com/questions/67898/using-the-not-equal-operator-for-string-comparison

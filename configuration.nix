@@ -81,9 +81,7 @@
 
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain" + ","
-    # https://minikube.sigs.k8s.io/docs/handbook/vpn_and_proxy/
-    + "localhost,127.0.0.1,10.96.0.0/12,192.168.59.0/24,192.168.39.0/24";
+  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
