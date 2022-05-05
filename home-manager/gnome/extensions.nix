@@ -105,8 +105,9 @@
       + "28.6851715,115.9572763>青山湖区, 南昌市, 江西省, 中国 >-2";
     # OpenWeather - Units - Temperature Unit - °C
     "org/gnome/shell/extensions/openweather".unit = "celsius";
-    # OpenWeather - Layout - Position in Panel - Left
+    # OpenWeather - Layout - Position in Panel - Left, 5
     "org/gnome/shell/extensions/openweather".position-in-panel = "left";
+    "org/gnome/shell/extensions/openweather".position-index = 4;
     # OpenWeather - Layout - Conditions in Panel - ON
     "org/gnome/shell/extensions/openweather".show-comment-in-panel = true;
     # OpenWeather - Fix refresh weather issues after reboot.
