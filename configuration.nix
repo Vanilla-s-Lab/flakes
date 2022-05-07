@@ -3,6 +3,8 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, lib, ... }:
+let gdm = pkgs.gnome.gdm; in
+let cfg = config.services.xserver.displayManager; in
 {
   imports = [
     ./users.nix
@@ -99,6 +101,17 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  # https://github.com/NixOS/nixpkgs/pull/171730
+  services.xserver.displayManager.job = {
+    environment."XDG_DATA_DIRS" = lib.makeSearchPath "share" [
+      gdm
+      cfg.sessionData.desktops
+      pkgs.gnome.gnome-control-center
+      pkgs.gnome.adwaita-icon-theme
+      pkgs.hicolor-icon-theme
+    ];
+  };
 
   # nixos/modules/services/x11/desktop-managers/gnome.nix
   services.avahi.enable = false; # mkDefault true;
