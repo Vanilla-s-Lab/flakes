@@ -51,4 +51,9 @@
   home.file.".config/gtk-3.0/bookmarks".text = ''
     file:///home/vanilla/Projects Projects
   '';
+
+  # https://github.com/NixOS/nixpkgs/issues/163080
+  home.file.".face".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Pictures/avatar.png";
 }
