@@ -98,6 +98,8 @@
     "org/gnome/shell/extensions/espresso".user-enabled = true;
     # Espresso - Enable notifications - OFF
     "org/gnome/shell/extensions/espresso".show-notifications = false;
+    # Espresso - Enable when this device is charging - ON
+    "org/gnome/shell/extensions/espresso".enable-charging = true;
 
     # OpenWeather - Locations - [ Location + Provider ]
     "org/gnome/shell/extensions/openweather".city =
