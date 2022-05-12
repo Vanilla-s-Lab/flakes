@@ -6,6 +6,8 @@
 let gdm = pkgs.gnome.gdm; in
 let cfg = config.services.xserver.displayManager; in
 {
+  systemd.services."plymouth-quit".enable = false;
+
   imports = [
     ./users.nix
 
