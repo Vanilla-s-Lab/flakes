@@ -63,6 +63,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.gh
 
     deploy-rs.defaultPackage."${system}"
+
+    pkgs.redis
   ];
 
   home.file.".azure".source =

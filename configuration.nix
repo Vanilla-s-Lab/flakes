@@ -50,6 +50,8 @@ let cfg = config.services.xserver.displayManager; in
   boot.kernel.sysctl."kernel.sysrq" = 1;
   boot.kernel.sysctl."net.core.default_qdisc" = "fq";
   boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr2";
+  # https://redis.io/docs/manual/admin/
+  boot.kernel.sysctl."vm.overcommit_memory" = 1;
   # https://nixos.wiki/wiki/NTFS
   boot.supportedFilesystems = [ "ntfs" "apfs" ];
   # Required nvme kernel module to find disk.
