@@ -27,6 +27,9 @@
     pkgs.texlive.combined.scheme-full
 
     pkgs.osu-lazer
+
+    pkgs.unzip
+    pkgs.p7zip
   ];
 
   home.file.".local/share/osu".source =
