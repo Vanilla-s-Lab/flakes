@@ -70,6 +70,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     pkgs.mtr
     pkgs.traceroute
+
+    pkgs.whois
   ];
 
   home.file.".azure".source =
