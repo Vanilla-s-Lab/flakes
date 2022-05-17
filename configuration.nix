@@ -128,6 +128,8 @@ let cfg = config.services.xserver.displayManager; in
   services.gnome.core-developer-tools.enable = false;
   # Avoid ask password when open urls in JetBrains product.
   services.gnome.gnome-keyring.enable = lib.mkForce false;
+  # Core dump log floor in `journal -p 3 -xb`.
+  services.gvfs.enable = lib.mkForce false;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
