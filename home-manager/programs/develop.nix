@@ -67,6 +67,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.redis
 
     pkgs.curlHTTP3
+
+    pkgs.mtr
+    pkgs.traceroute
   ];
 
   home.file.".azure".source =
