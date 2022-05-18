@@ -12,6 +12,7 @@
 
   systemd.tmpfiles.rules = [
     "L /var/lib/docker - - - - /persistent/var/lib/docker"
+    "L /var/lib/containers - - - - /persistent/var/lib/containers"
   ];
 
   # The default KVM virtual storage location.
