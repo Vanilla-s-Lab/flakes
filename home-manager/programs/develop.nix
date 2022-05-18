@@ -74,6 +74,16 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.whois
   ];
 
+  # https://github.com/containers/podman/blob/main/troubleshooting.md
+  # podman/vendor/github.com/containers/storage/storage.conf
+  home.file.".config/containers/storage.conf".text = ''
+    [storage.options]
+    mount_program = "${pkgs.fuse-overlayfs}/bin/fuse-overlayfs"
+
+    [storage]
+    driver = "overlay"
+  '';
+
   home.file.".azure".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/azure";
