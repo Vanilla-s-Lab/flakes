@@ -1,0 +1,6 @@
+Name: quiche
+Description: quiche library
+URL: https://github.com/cloudflare/quiche
+Version: 0.13.0
+Libs: -Wl,-rpath,${libdir} -L${libdir} -lquiche
+Cflags: -I${includedir}

@@ -1,6 +1,7 @@
 { pkgs, config, inputs, system, lib, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
+let quiche = pkgs.callPackage ../packages/quiche { }; in
 {
   home.packages = with inputs; [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -66,12 +67,17 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     pkgs.redis
 
-    pkgs.curlHTTP3
-
     pkgs.mtr
     pkgs.traceroute
 
     pkgs.whois
+
+    # https://github.com/curl/curl/blob/master/docs/HTTP3.md#quiche-version
+    ((pkgs.curl.override { openssl = pkgs.boringssl; }).overrideAttrs (old: {
+      configureFlags = old.configureFlags ++ [ "--with-quiche=${quiche}" ]
+        # https://github.com/NixOS/nixpkgs/pull/167656#issuecomment-1092824189=
+        ++ [ "--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt" "--with-ca-path=/etc/ssl/certs" ];
+    }))
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
