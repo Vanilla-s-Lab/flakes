@@ -84,6 +84,10 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     driver = "overlay"
   '';
 
+  home.file.".local/share/containers".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/containers";
+
   home.file.".azure".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/azure";
