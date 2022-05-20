@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, system, lib, ... }: with inputs;
+{ pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
 {
@@ -77,6 +77,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
         # https://github.com/NixOS/nixpkgs/pull/167656#issuecomment-1092824189=
         ++ [ "--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt" "--with-ca-path=/etc/ssl/certs" ];
     }))
+
+    # Use sudo instead of adjust kernel.perf_event_paranoid!
+    nixosConfig.boot.kernelPackages.perf
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
