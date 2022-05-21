@@ -27,6 +27,12 @@ let enable_feature = feature_list: builtins.listToAttrs
 
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
+
+  programs.fish.functions = {
+    "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
+    "volume_67".body = "amixer sset Master 67%"; # https://unix.stackexchange.com/questions/32206
+  };
+
   # https://github.com/blackjid/plugin-kubectl
   programs.fish.plugins = [
     rec {
