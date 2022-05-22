@@ -124,4 +124,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     "/persistent/Projects/azure-nix/.envrc";
   home.file.".local/share/direnv/allow/${Digital_Image_Processing}".text =
     "/persistent/Projects/Digital_Image_Processing/.envrc";
+
+  programs.tmux.enable = true;
+  programs.nushell.enable = true;
 }
