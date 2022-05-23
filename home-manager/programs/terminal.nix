@@ -8,6 +8,9 @@ let Digital_Image_Processing = "fb8675f058d5c5216062b3f132802d6311e3bad75b78b984
 let enable_feature = feature_list: builtins.listToAttrs
   (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
     (x: { name = x; value = { disabled = false; }; })); in
+
+let oh-my-posh = pkgs.callPackage ../packages/oh-my-posh.nix { }; in
+let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -69,7 +72,23 @@ let enable_feature = feature_list: builtins.listToAttrs
 
     # https://github.com/MidAutumnMoon/Boxfish
     pkgs.bubblewrap
+
+    # https://ohmyposh.dev/docs/installation/prompt
+    oh-my-posh
   ];
+
+  home.file.".config/nushell/env.nu".text = "";
+  home.file.".config/nushell/kali.omp.json".source =
+    "${generated.oh-my-posh.src}/themes/kali.omp.json";
+
+  # https://github.com/nushell/nushell/pull/4966
+  home.activation."prepare_dot_omp_for_nushell" =
+    lib.hm.dag.entryAfter [ "dconfSettings" ]
+      "oh-my-posh init nu --config ~/.config/nushell/kali.omp.json";
+
+  # https://www.nushell.sh/book/3rdpartyprompts.html
+  home.file.".config/nushell/config.nu".text =
+    "source ~/.oh-my-posh.nu";
 
   # https://github.com/jhillyerd/plugin-git
   home.activation."fishPlugins.git" =
