@@ -3,13 +3,13 @@
 {
   oh-my-posh = {
     pname = "oh-my-posh";
-    version = "v7.90.1";
+    version = "v7.90.2";
     src = fetchFromGitHub ({
       owner = "JanDeDobbeleer";
       repo = "oh-my-posh";
-      rev = "v7.90.1";
+      rev = "v7.90.2";
       fetchSubmodules = false;
-      sha256 = "sha256-IwFr257DoK3bzn2Omi/L40V0jwCpTYqCDp+6KDJPboI=";
+      sha256 = "sha256-vjGDNrjAPlhUfeCRIrD4TR1xAFKOTPaWvp1HG5HpLvU=";
     });
   };
 }

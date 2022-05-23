@@ -12,10 +12,10 @@
       "name": null,
       "owner": "JanDeDobbeleer",
       "repo": "oh-my-posh",
-      "rev": "v7.90.1",
-      "sha256": "sha256-IwFr257DoK3bzn2Omi/L40V0jwCpTYqCDp+6KDJPboI=",
+      "rev": "v7.90.2",
+      "sha256": "sha256-vjGDNrjAPlhUfeCRIrD4TR1xAFKOTPaWvp1HG5HpLvU=",
       "type": "github"
     },
-    "version": "v7.90.1"
+    "version": "v7.90.2"
   }
 }
