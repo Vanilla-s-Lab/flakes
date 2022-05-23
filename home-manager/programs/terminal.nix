@@ -15,10 +15,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
   programs.alacritty.settings = {
-    import = lib.singleton (pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/rose-pine-dawn.yml";
-      sha256 = "sha256-/1y/sYIugR27QgbM2rG4WganTPbdqbAgnbrjkDXIgUg=";
-    });
+    import = lib.singleton
+      (generated.rose-pine.src
+        + "/dist/rose-pine-dawn.yml");
 
     font = {
       normal = { family = "Hack Nerd Font"; style = "Regular"; };

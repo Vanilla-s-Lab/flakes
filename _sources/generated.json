@@ -17,5 +17,23 @@
       "type": "github"
     },
     "version": "v7.90.2"
+  },
+  "rose-pine": {
+    "cargoLocks": null,
+    "extract": null,
+    "name": "rose-pine",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "rev": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a",
+      "sha256": "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=",
+      "type": "git",
+      "url": "https://github.com/rose-pine/alacritty"
+    },
+    "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
   }
 }
