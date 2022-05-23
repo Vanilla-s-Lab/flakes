@@ -83,6 +83,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     # Use sudo instead of adjust kernel.perf_event_paranoid!
     nixosConfig.boot.kernelPackages.perf
+
+    pkgs.nvfetcher
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
