@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   dconf.settings = {
     # Network - Network Proxy - Automatic
@@ -40,8 +40,12 @@
     "org/gnome/desktop/interface".clock-format = "12h";
 
     # Settings - Last panel set to Sound, until pereiet.
-    "org/gnome/control-center".last-panel = "sound";
+    "org/gnome/control-center".last-panel = "display";
   };
+
+  home.file.".config/monitors.xml".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/monitors.xml";
 
   # https://wiki.archlinux.org/title/backlight
   home.activation."backlight_set_to_60000" =
