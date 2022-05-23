@@ -76,6 +76,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
       configureFlags = old.configureFlags ++ [ ]
         # https://github.com/NixOS/nixpkgs/pull/167656#issuecomment-1092824189=
         ++ [ "--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt" "--with-ca-path=/etc/ssl/certs" ];
+
+      # Tooks too long to build!
+      doCheck = false;
     }))
 
     # Use sudo instead of adjust kernel.perf_event_paranoid!
