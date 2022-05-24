@@ -100,6 +100,12 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     # https://superuser.com/questions/1193701
     pkgs.jc # pkgs.jq | Use jc -p instead!
+
+    (pkgs.procps.overrideAttrs (old: {
+      # doCheck = false;
+      configureFlags = old.configureFlags
+        ++ [ "--enable-watch8bit" ];
+    }))
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
