@@ -1,4 +1,5 @@
 { inputs, system, pkgs, config, ... }:
+let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
@@ -30,6 +31,8 @@
 
     pkgs.unzip
     pkgs.p7zip
+
+    pkgs_hwatch
   ];
 
   home.file.".local/share/osu".source =
