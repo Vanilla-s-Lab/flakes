@@ -81,7 +81,8 @@ let wxid = "wxid_2tafg8vy4onr22"; in
     oh-my-posh
   ];
 
-  home.file.".config/nushell/env.nu".text = "";
+  home.file.".config/nushell/env.nu".source =
+    "${pkgs.nushell.src}/docs/sample_config/default_config.nu";
   home.file.".config/nushell/kali.omp.json".source =
     "${generated.oh-my-posh.src}/themes/kali.omp.json";
 
