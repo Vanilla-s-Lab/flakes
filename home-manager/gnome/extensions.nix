@@ -89,6 +89,8 @@
     "org/gnome/shell/extensions/dash-to-dock".click-action = "minimize";
     # Dash to Dock - Behavior - Scroll action - Cycle through windows
     "org/gnome/shell/extensions/dash-to-dock".scroll-action = "cycle-windows";
+    # Dash to Dock - Appearance - Customize windows counter indicators - Dots
+    "org/gnome/shell/extensions/dash-to-dock".running-indicator-style = "DOTS";
     # Dash to Dock - Appearance - Customize the dash color - ON
     "org/gnome/shell/extensions/dash-to-dock".custom-background-color = true;
     # https://matkl.github.io/average-color/ + ~/Pictures/bg.jpg
