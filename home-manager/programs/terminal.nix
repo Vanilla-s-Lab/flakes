@@ -10,6 +10,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     (x: { name = x; value = { disabled = false; }; })); in
 
 let oh-my-posh = pkgs.callPackage ../packages/oh-my-posh.nix { }; in
+let pkgs_nushell = pkgs.callPackage ../packages/nushell { }; in
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
 # WeChat ID: My_Aim_Sucks
@@ -151,4 +152,5 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 
   programs.tmux.enable = true;
   programs.nushell.enable = true;
+  programs.nushell.package = pkgs_nushell;
 }
