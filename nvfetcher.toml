@@ -10,3 +10,7 @@ fetch.git = "https://github.com/rose-pine/alacritty"
 # the given path has multiple possibilities
 src.git = "https://github.com/blacknon/hwatch"
 fetch.git = "https://github.com/blacknon/hwatch"
+
+[nushell]
+src.github = "nushell/nushell"
+fetch.github = "nushell/nushell"

@@ -13,6 +13,17 @@
       sha256 = "sha256-I8i7lyD//vLGU2BcKMf2h5qydV6LRefzYcgBFxLbFCg=";
     };
   };
+  nushell = {
+    pname = "nushell";
+    version = "0.63.0";
+    src = fetchFromGitHub ({
+      owner = "nushell";
+      repo = "nushell";
+      rev = "0.63.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-4thvUSOSvH/bv0aW7hGGQMvtXdS+yDfZzPRLZmPZQMQ=";
+    });
+  };
   oh-my-posh = {
     pname = "oh-my-posh";
     version = "v7.91.0";

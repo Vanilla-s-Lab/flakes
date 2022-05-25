@@ -17,6 +17,25 @@
     },
     "version": "ab82e1242ba4d44c46a1267e8dd6ebe81ef94964"
   },
+  "nushell": {
+    "cargoLocks": null,
+    "extract": null,
+    "name": "nushell",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "nushell",
+      "repo": "nushell",
+      "rev": "0.63.0",
+      "sha256": "sha256-4thvUSOSvH/bv0aW7hGGQMvtXdS+yDfZzPRLZmPZQMQ=",
+      "type": "github"
+    },
+    "version": "0.63.0"
+  },
   "oh-my-posh": {
     "cargoLocks": null,
     "extract": null,
