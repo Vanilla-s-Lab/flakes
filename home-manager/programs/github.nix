@@ -61,4 +61,14 @@
   programs.git.extraConfig = {
     init.defaultBranch = "master";
   };
+
+  home.packages = [ pkgs.difftastic ];
+
+  # https://difftastic.wilfred.me.uk/git.html
+  programs.git.extraConfig."diff" = { tool = "difftastic"; };
+  programs.git.extraConfig."difftool" = { prompt = false; };
+  programs.git.extraConfig."difftool \"difftastic\"" = { cmd = "difft $LOCAL $REMOTE"; };
+
+  programs.git.extraConfig."pager" = { difftool = true; };
+  programs.git.extraConfig."alias" = { dft = "difftool"; };
 }
