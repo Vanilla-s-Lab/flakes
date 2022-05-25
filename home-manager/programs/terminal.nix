@@ -82,7 +82,7 @@ let wxid = "wxid_2tafg8vy4onr22"; in
   ];
 
   home.file.".config/nushell/env.nu".source =
-    "${pkgs.nushell.src}/docs/sample_config/default_config.nu";
+    "${generated.nushell.src}/docs/sample_config/default_config.nu";
   home.file.".config/nushell/kali.omp.json".source =
     "${generated.oh-my-posh.src}/themes/kali.omp.json";
 
