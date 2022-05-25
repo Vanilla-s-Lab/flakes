@@ -1,5 +1,5 @@
 { callPackage, rustPlatform, pkg-config, openssl, ... }:
-let generated = callPackage ../../_sources/generated.nix { }; in
+let generated = callPackage ../../../_sources/generated.nix { }; in
 rustPlatform.buildRustPackage {
   pname = generated.nushell.pname;
   version = generated.nushell.version;
@@ -11,5 +11,6 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ openssl ];
 
+  patches = [ ./table-add-flag-w.patch ];
   doCheck = false;
 }
