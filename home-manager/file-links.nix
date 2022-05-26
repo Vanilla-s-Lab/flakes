@@ -51,4 +51,7 @@
   home.file.".config/VirtualBox".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/VirtualBox";
+
+  # Used in newer version of IntelliJ IDEA - Catalog.
+  home.file.".m2/repository/.placeholder".text = "";
 }
