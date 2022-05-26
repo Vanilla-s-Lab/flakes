@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
     owner = "cilynx";
     repo = "${repo}";
     rev = "${rev}";
-    hash = "sha256-urDG898qwb+1WmR/V2PPCxSw0ReXiaBpxhzCKmhxQ2I=";
+    hash = "sha256-RJbnWgze/+nN+sNiIA9tkUyfqqzEIWAHC5dJ5gB2S94=";
   };
 
   # https://github.com/cilynx/rtl88x2bu/blob/5.8.7.1_35809.20191129_COEX20191120-7777/Makefile#L1355=
