@@ -17,11 +17,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
 
     pkgs.playonlinux
 
-    (pkgs.nur.repos.xddxdd.dingtalk.overrideAttrs (old: {
-      buildInputs = old.buildInputs ++ [ pkgs.krb5 ];
-    }))
-    # nixos-cn.legacyPackages."${system}".dingtalk
-
     pkgs.alsa-utils
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
@@ -38,10 +33,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
   home.file.".local/share/osu".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/osu";
-
-  home.file.".config/DingTalk".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/DingTalk";
 
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
