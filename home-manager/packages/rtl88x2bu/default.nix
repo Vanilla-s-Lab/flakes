@@ -1,17 +1,10 @@
-{ stdenv, kernel, fetchFromGitHub, bc, lib, ... }:
+{ callPackage, stdenv, kernel, fetchFromGitHub, bc, lib, ... }:
+let generated = callPackage ../../../_sources/generated.nix { }; in
 stdenv.mkDerivation rec {
-  repo = "rtl88x2bu";
-  rev = "5.8.7.1_35809.20191129_COEX20191120-7777";
+  pname = generated.rtl88x2bu.pname;
+  version = generated.rtl88x2bu.version;
 
-  pname = "${repo}-${rev}-${kernel.version}";
-  version = "${rev}";
-
-  src = fetchFromGitHub {
-    owner = "cilynx";
-    repo = "${repo}";
-    rev = "${rev}";
-    hash = "sha256-RJbnWgze/+nN+sNiIA9tkUyfqqzEIWAHC5dJ5gB2S94=";
-  };
+  src = generated.rtl88x2bu.src;
 
   # https://github.com/cilynx/rtl88x2bu/blob/5.8.7.1_35809.20191129_COEX20191120-7777/Makefile#L1355=
   patches = [ ./nix_install.patch ./no-depmod.patch ]; # [1] related to [0]!

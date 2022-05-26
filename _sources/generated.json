@@ -72,5 +72,23 @@
       "url": "https://github.com/rose-pine/alacritty"
     },
     "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
+  },
+  "rtl88x2bu": {
+    "cargoLocks": null,
+    "extract": null,
+    "name": "rtl88x2bu",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "rev": "9957138ac30529a06bfcbc36eb51006a948b0967",
+      "sha256": "sha256-RJbnWgze/+nN+sNiIA9tkUyfqqzEIWAHC5dJ5gB2S94=",
+      "type": "git",
+      "url": "https://github.com/cilynx/rtl88x2bu"
+    },
+    "version": "9957138ac30529a06bfcbc36eb51006a948b0967"
   }
 }

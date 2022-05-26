@@ -14,3 +14,7 @@ fetch.git = "https://github.com/blacknon/hwatch"
 [nushell]
 src.github = "nushell/nushell"
 fetch.github = "nushell/nushell"
+
+[rtl88x2bu]
+src.git = "https://github.com/cilynx/rtl88x2bu"
+fetch.git = "https://github.com/cilynx/rtl88x2bu"

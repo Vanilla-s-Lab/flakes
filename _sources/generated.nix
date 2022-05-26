@@ -47,4 +47,16 @@
       sha256 = "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=";
     };
   };
+  rtl88x2bu = {
+    pname = "rtl88x2bu";
+    version = "9957138ac30529a06bfcbc36eb51006a948b0967";
+    src = fetchgit {
+      url = "https://github.com/cilynx/rtl88x2bu";
+      rev = "9957138ac30529a06bfcbc36eb51006a948b0967";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-RJbnWgze/+nN+sNiIA9tkUyfqqzEIWAHC5dJ5gB2S94=";
+    };
+  };
 }
