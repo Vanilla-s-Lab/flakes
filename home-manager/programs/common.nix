@@ -22,17 +22,11 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
 
-    pkgs.osu-lazer
-
     pkgs.unzip
     pkgs.p7zip
 
     pkgs_hwatch
   ];
-
-  home.file.".local/share/osu".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/osu";
 
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
