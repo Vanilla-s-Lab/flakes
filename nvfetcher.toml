@@ -1,5 +1,5 @@
 [oh-my-posh]
-src.github = "JanDeDobbeleer/oh-my-posh"
+src.github_tag = "JanDeDobbeleer/oh-my-posh"
 fetch.github = "JanDeDobbeleer/oh-my-posh"
 
 [rose-pine]

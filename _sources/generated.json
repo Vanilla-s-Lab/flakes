@@ -49,11 +49,11 @@
       "name": null,
       "owner": "JanDeDobbeleer",
       "repo": "oh-my-posh",
-      "rev": "v7.91.3",
-      "sha256": "sha256-cS2MODoNvDVySdVqIfbSBSc7R/eXYQLopI8dD0Casoo=",
+      "rev": "v7.92.0",
+      "sha256": "sha256-GvPTTq2ljEoeVHnOuokRne2ffoz1ka7bE1SAB9wdZ7g=",
       "type": "github"
     },
-    "version": "v7.91.3"
+    "version": "v7.92.0"
   },
   "rose-pine": {
     "cargoLocks": null,
