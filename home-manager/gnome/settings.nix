@@ -40,7 +40,7 @@
     "org/gnome/desktop/interface".clock-format = "12h";
 
     # Settings - Last panel set to Sound, until pereiet.
-    "org/gnome/control-center".last-panel = "display";
+    "org/gnome/control-center".last-panel = "sound";
   };
 
   home.file.".config/monitors.xml".source =
