@@ -106,6 +106,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
       configureFlags = old.configureFlags
         ++ [ "--enable-watch8bit" ];
     }))
+
+    pkgs.ethtool
+    pkgs.lynis
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
