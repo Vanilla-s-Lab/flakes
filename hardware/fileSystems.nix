@@ -23,4 +23,7 @@
     # /etc/ssh -> /persistent
     neededForBoot = true;
   };
+
+  # https://github.com/NixOS/nixpkgs/pull/146497/files
+  systemd.generators = { systemd-gpt-auto-generator = "/dev/null"; };
 }
