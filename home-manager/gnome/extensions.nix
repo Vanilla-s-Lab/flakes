@@ -74,11 +74,9 @@
     "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-icon-on = false;
 
     # Blur my shell - Panel - Panel blur - OFF
-    "org/gnome/shell/extensions/blur-my-shell".panel-blur = false;
+    "org/gnome/shell/extensions/blur-my-shell/panel".blur = false;
     # Blur my shell - Dash - Dash to Dock blur - OFF
-    "org/gnome/shell/extensions/blur-my-shell".dash-to-dock-blur = false;
-    # Blur my shell - Other - Window list extension blur - OFF
-    "org/gnome/shell/extensions/blur-my-shell".blur-window-list = false;
+    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock".blur = false;
 
     # Dash to Dock - Position and size - Show on all monitors.
     "org/gnome/shell/extensions/dash-to-dock".multi-monitor = true;
