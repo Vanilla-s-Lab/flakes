@@ -26,7 +26,14 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
     pkgs.p7zip
 
     pkgs_hwatch
+
+    # https://github.com/msojocs/bilibili-linux
+    pkgs.appimage-run
   ];
+
+  home.file.".config/bilibili".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/bilibili";
 
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
