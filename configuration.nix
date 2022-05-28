@@ -40,7 +40,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/Linux_kernel
-  boot.kernelPackages = pkgs.linuxPackages_lqx;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   # https://bugzilla.kernel.org/show_bug.cgi?id=203637
   hardware.cpu.intel.updateMicrocode = true;
 
@@ -79,9 +79,6 @@
 
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
   hardware.firmware = [ pkgs.linux-firmware ];
-  boot.extraModulePackages = lib.singleton
-    (pkgs.callPackage ./home-manager/packages/rtl88x2bu
-      { kernel = config.boot.kernelPackages.kernel; });
 
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";
