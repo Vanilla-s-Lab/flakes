@@ -109,6 +109,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     pkgs.ethtool
     pkgs.lynis
+
+    pkgs.dsniff
+    pkgs.conntrack-tools
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
