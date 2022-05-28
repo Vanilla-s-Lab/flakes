@@ -26,9 +26,9 @@
   virtualisation.podman.enable = true;
 
   # https://nixos.wiki/wiki/VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "vanilla" ];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # users.extraGroups.vboxusers.members = [ "vanilla" ];
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # virtualisation.oci-containers.containers."mssql" = {
   #   # https://hub.docker.com/_/microsoft-mssql-server

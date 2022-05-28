@@ -79,7 +79,11 @@
 
     "org/gnome/desktop/app-folders/folders/e644c5d3-83a7-463c-bbef-e0dbbea16076" = {
       name = "Virtualisation";
-      apps = [ "virtualbox.desktop" "playonlinux.desktop" "virt-manager.desktop" ];
+      apps = [
+        # "virtualbox.desktop"
+        "playonlinux.desktop"
+        "virt-manager.desktop"
+      ];
     };
 
     "org/gnome/desktop/app-folders/folders/216c8193-f990-444b-8882-ea9d773441ef" = {
