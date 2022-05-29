@@ -11,6 +11,8 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     flake-utils.url = "github:numtide/flake-utils";
+    flake-compat.url = "github:edolstra/flake-compat";
+    flake-compat.flake = false;
 
     nixos-cn.url = "github:nixos-cn/flakes";
     nixos-cn.inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +26,7 @@
 
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
+    deploy-rs.inputs.flake-compat.follows = "flake-compat";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
     deploy-rs.inputs.utils.follows = "flake-utils";
   };
