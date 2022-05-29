@@ -26,13 +26,13 @@
   };
   oh-my-posh = {
     pname = "oh-my-posh";
-    version = "v7.93.0";
+    version = "v7.93.1";
     src = fetchFromGitHub ({
       owner = "JanDeDobbeleer";
       repo = "oh-my-posh";
-      rev = "v7.93.0";
+      rev = "v7.93.1";
       fetchSubmodules = false;
-      sha256 = "sha256-4CfvyFoMDlHS1S29eQikpBp+pFZZMrZLLqI8oa0jWGs=";
+      sha256 = "sha256-sldYhha1FD4IJnOE/4gjFW66zzC0NRUADjxg2otkJMg=";
     });
   };
   rose-pine = {
