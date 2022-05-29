@@ -112,6 +112,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     pkgs.dsniff
     pkgs.conntrack-tools
+
+    pkgs.ansible
   ];
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md

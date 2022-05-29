@@ -156,4 +156,14 @@
     [ProxyList]
     socks5 127.0.0.1 1080
   '';
+
+  environment.etc."ansible/ansible.cfg".text = ''
+    [defaults]
+    interpreter_python = auto_silent
+  '';
+
+  environment.etc."ansible/hosts".text = ''
+    [azure]
+    root@20.24.195.187
+  '';
 }
