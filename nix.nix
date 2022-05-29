@@ -27,7 +27,4 @@
     "nixosimages.cachix.org-1:/sgrtqsOnoD0piDCi3XE08jw+IkPslY6iovVbDRZYoQ="
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
   ];
-
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-  nix.registry."nixpkgs-unfree".flake = nixpkgs-unfree;
 }
