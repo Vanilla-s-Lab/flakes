@@ -9,7 +9,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     (x: { name = x; value = { disabled = false; }; })); in
 
 let oh-my-posh = pkgs.callPackage ../packages/oh-my-posh.nix { }; in
-let pkgs_nushell = pkgs.callPackage ../packages/nushell { }; in
+let pkgs_nushell = pkgs.callPackage ../packages/nushell.nix { }; in
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
 # WeChat ID: My_Aim_Sucks

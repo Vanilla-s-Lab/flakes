@@ -30,11 +30,11 @@
       "name": null,
       "owner": "nushell",
       "repo": "nushell",
-      "rev": "0.63.0",
-      "sha256": "sha256-4thvUSOSvH/bv0aW7hGGQMvtXdS+yDfZzPRLZmPZQMQ=",
+      "rev": "0.63.1",
+      "sha256": "sha256-wzrR4yeMOZgqKU1G+yfdTByooXTPeoo8mCfrMfNu++I=",
       "type": "github"
     },
-    "version": "0.63.0"
+    "version": "0.63.1"
   },
   "oh-my-posh": {
     "cargoLocks": null,

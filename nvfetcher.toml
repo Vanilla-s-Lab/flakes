@@ -12,7 +12,7 @@ src.git = "https://github.com/blacknon/hwatch"
 fetch.git = "https://github.com/blacknon/hwatch"
 
 [nushell]
-src.github = "nushell/nushell"
+src.github_tag = "nushell/nushell"
 fetch.github = "nushell/nushell"
 
 [rtl88x2bu]
