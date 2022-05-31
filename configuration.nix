@@ -128,9 +128,15 @@
     "L /var/lib/cups - - - - /persistent/var/lib/cups"
   ];
 
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  security.rtkit.enable = true;
+
+  # https://nixos.wiki/wiki/PipeWire
+  hardware.pulseaudio.enable = false;
+  services.pipewire.enable = true;
+
+  services.pipewire.alsa.enable = true;
+  services.pipewire.alsa.support32Bit = true;
+  services.pipewire.pulse.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
