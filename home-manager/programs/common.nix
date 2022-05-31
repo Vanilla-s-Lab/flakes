@@ -17,8 +17,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
 
     pkgs.playonlinux
 
-    pkgs.alsa-utils
-
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
 
