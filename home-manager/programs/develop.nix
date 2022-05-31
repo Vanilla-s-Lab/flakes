@@ -82,7 +82,10 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     }))
 
     # Use sudo instead of adjust kernel.perf_event_paranoid!
-    nixosConfig.boot.kernelPackages.perf
+    # nixosConfig.boot.kernelPackages.perf
+    nixosConfig.boot.kernelPackages.bcc
+    # nixosConfig.boot.kernelPackages.bpftrace
+    nixosConfig.boot.kernelPackages.systemtap
     pkgs.flamegraph
 
     pkgs.nvfetcher
@@ -112,6 +115,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     pkgs.dsniff
     pkgs.conntrack-tools
+
+    pkgs.smartmontools
+    pkgs.pcstat
 
     pkgs.ansible
   ];
