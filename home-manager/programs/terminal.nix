@@ -3,6 +3,7 @@ let myh2o_backup = "098ed3541f61e477d9c9185fad15605b91644dcc34819ac700585abc27fb
 let Videos = "59682d0a8bc570a588c66fff6d2f6b03ef4afc5e9c2eac86ee770beafa61328f"; in
 let chaoxing_auto_sign = "187e3c25d7c87f426bee0324ad1ad5a285360a1a4947cbc9983147e3b9573880"; in
 let Digital_Image_Processing = "fb8675f058d5c5216062b3f132802d6311e3bad75b78b9844e30a368faabd1e4"; in
+let myh2o_word_cloud = "6989b51c7a1de56e57bfe529393c96b45a6f7bc38dce98f45fc7a9f8b9a66dc2"; in
 
 let enable_feature = feature_list: builtins.listToAttrs
   (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
@@ -146,6 +147,8 @@ let wxid = "wxid_2tafg8vy4onr22"; in
     "/persistent/Documents/chaoxing_auto_sign/.envrc";
   home.file.".local/share/direnv/allow/${Digital_Image_Processing}".text =
     "/persistent/Projects/Digital_Image_Processing/.envrc";
+  home.file.".local/share/direnv/allow/${myh2o_word_cloud}".text =
+    "/persistent/Projects/myh2o_word_cloud/.envrc";
 
   programs.tmux.enable = true;
   programs.nushell.enable = true;
