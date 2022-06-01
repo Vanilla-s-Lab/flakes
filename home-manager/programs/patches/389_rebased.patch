@@ -1,0 +1,54 @@
+diff --git a/wordcloud/wordcloud.py b/wordcloud/wordcloud.py
+index 26b0d54..93dc6b1 100644
+--- a/wordcloud/wordcloud.py
++++ b/wordcloud/wordcloud.py
+@@ -311,7 +311,7 @@ class WordCloud(object):
+                  max_font_size=None, font_step=1, mode="RGB",
+                  relative_scaling='auto', regexp=None, collocations=True,
+                  colormap=None, normalize_plurals=True, contour_width=0,
+-                 contour_color='black', repeat=False,
++                 contour_color=None, repeat=False,
+                  include_numbers=False, min_word_length=0, collocation_threshold=30):
+         if font_path is None:
+             font_path = FONT_PATH
+@@ -1006,7 +1006,7 @@ class WordCloud(object):
+ 
+     def _draw_contour(self, img):
+         """Draw mask contour on a pillow image."""
+-        if self.mask is None or self.contour_width == 0:
++        if self.mask is None or self.contour_color is None or self.contour_width == 0:
+             return img
+ 
+         mask = self._get_bolean_mask(self.mask) * 255
+@@ -1024,12 +1024,14 @@ class WordCloud(object):
+         contour = Image.fromarray(contour)
+         contour = contour.filter(ImageFilter.GaussianBlur(radius=radius))
+         contour = np.array(contour) > 0
+-        contour = np.dstack((contour, contour, contour))
++        if img.mode == 'RGBA':
++            contour = np.dstack((contour, contour, contour, contour))
++        else:
++            contour = np.dstack((contour, contour, contour))
+ 
+         # color the contour
+         ret = np.array(img) * np.invert(contour)
+-        if self.contour_color != 'black':
+-            color = Image.new(img.mode, img.size, self.contour_color)
+-            ret += np.array(color) * contour
++        color = np.array(Image.new(img.mode, img.size, self.contour_color))
++        ret += color * contour
+ 
+         return Image.fromarray(ret)
+diff --git a/wordcloud/wordcloud_cli.py b/wordcloud/wordcloud_cli.py
+index 125a86f..03c7db6 100644
+--- a/wordcloud/wordcloud_cli.py
++++ b/wordcloud/wordcloud_cli.py
+@@ -126,7 +126,7 @@ def make_parser():
+         dest='contour_width',
+         help='if greater than 0, draw mask contour (default: 0)')
+     parser.add_argument(
+-        '--contour_color', metavar='color', default='black', type=str,
++        '--contour_color', metavar='color', default=None, type=str,
+         dest='contour_color',
+         help='use given color as mask contour color -'
+              ' accepts any value from PIL.ImageColor.getcolor')

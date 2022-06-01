@@ -1,6 +1,11 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
+
+let wordcloud = pkgs.python3Packages.wordcloud.overrideAttrs (old: {
+  # https://github.com/amueller/word_cloud/pull/389/files
+  patches = old.patches ++ lib.singleton (./patches/389_rebased.patch);
+}); in
 {
   home.packages = with inputs; [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
