@@ -38,7 +38,7 @@
   programs.firefox.profiles."dev-edition-default" = {
     name = "dev-edition-default";
 
-    settings = {
+    settings = ({
       # https://kb.mozillazine.org/Browser.startup.page
       "browser.startup.page" = 3;
       "browser.shell.checkDefaultBrowser" = false;
@@ -53,6 +53,10 @@
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
 
       "network.proxy.type" = 4;
-    };
+    } // {
+      # Settings - Home - Firefox Home Content - Enable All
+      "browser.newtabpage.activity-stream.feeds.section.highlights" = true;
+      "browser.newtabpage.activity-stream.feeds.snippets" = true;
+    });
   };
 }
