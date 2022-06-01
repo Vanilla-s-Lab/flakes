@@ -33,4 +33,26 @@
   programs.firefox.enable = true;
   # https://www.mozilla.org/en-US/firefox/developer/
   programs.firefox.package = pkgs.firefox-devedition-bin;
+
+  # https://nix-community.github.io/home-manager/options.html
+  programs.firefox.profiles."dev-edition-default" = {
+    name = "dev-edition-default";
+
+    settings = {
+      # https://kb.mozillazine.org/Browser.startup.page
+      "browser.startup.page" = 3;
+      "browser.shell.checkDefaultBrowser" = false;
+
+      # https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideContentColorScheme
+      "layout.css.prefers-color-scheme.content-override" = 2;
+      "browser.display.use_system_colors" = true; # Manage Colors
+      "media.eme.enabled" = true; # Play DRM-controlled content
+
+      # Recommend [ extensions | features ] as you browse
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
+
+      "network.proxy.type" = 4;
+    };
+  };
 }
