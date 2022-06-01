@@ -57,6 +57,13 @@
       # Settings - Home - Firefox Home Content - Enable All
       "browser.newtabpage.activity-stream.feeds.section.highlights" = true;
       "browser.newtabpage.activity-stream.feeds.snippets" = true;
+    } // {
+      "browser.contentblocking.category" = "strict";
+      "privacy.donottrackheader.enabled" = true;
+
+      # Firefox Developer Edition Data Collection and Use
+      "datareporting.healthreport.uploadEnabled" = false;
+      "app.shield.optoutstudies.enabled" = false;
     });
   };
 }
