@@ -90,6 +90,7 @@
       name = "Internet";
       apps = [
         "chromium-browser.desktop"
+        "firefox.desktop"
         "torbrowser.desktop"
         "org.wireshark.Wireshark.desktop"
       ];

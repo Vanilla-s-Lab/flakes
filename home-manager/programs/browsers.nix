@@ -29,4 +29,8 @@
   home.file.".cache/chromium".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/cache/chromium";
+
+  programs.firefox.enable = true;
+  # https://www.mozilla.org/en-US/firefox/developer/
+  programs.firefox.package = pkgs.firefox-devedition-bin;
 }
