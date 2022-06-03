@@ -85,7 +85,14 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     nixosConfig.boot.kernelPackages.bcc
     # nixosConfig.boot.kernelPackages.bpftrace
     nixosConfig.boot.kernelPackages.systemtap
+    # https://vstinner.github.io/intel-cpus.html
+    nixosConfig.boot.kernelPackages.turbostat
+    nixosConfig.boot.kernelPackages.cpupower
     pkgs.flamegraph
+    pkgs.msr-tools
+
+    pkgs.powertop
+    pkgs.hwloc
 
     pkgs.nvfetcher
     pkgs.wget
