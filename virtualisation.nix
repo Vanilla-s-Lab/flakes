@@ -44,4 +44,8 @@
   #   # https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure
   #   volumes = (lib.singleton "/persistent/var/opt/mssql:/var/opt/mssql");
   # };
+
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ 1433 ];
+  # networking.firewall.allowedUDPPorts = [ 1433 ];
 }
