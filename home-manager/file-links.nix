@@ -54,4 +54,8 @@
 
   # Used in newer version of IntelliJ IDEA - Catalog.
   home.file.".m2/repository/.placeholder".text = "";
+
+  home.file.".local/state/wireplumber".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/state/wireplumber";
 }
