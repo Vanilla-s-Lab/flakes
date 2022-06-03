@@ -26,7 +26,6 @@
     ./config/sops.nix
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
-    ./config/access_tokens.nix
   ];
 
   home.packages = [ pkgs.nixpkgs-fmt ];

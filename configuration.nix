@@ -25,7 +25,6 @@
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
-    ./sops-config/access-tokens.nix
 
     ./security.nix
     ./steam.nix
