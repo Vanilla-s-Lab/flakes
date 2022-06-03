@@ -92,7 +92,9 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.msr-tools
 
     pkgs.powertop
-    pkgs.hwloc
+    (pkgs.hwloc.override {
+      x11Support = true;
+    })
 
     pkgs.nvfetcher
     pkgs.wget
