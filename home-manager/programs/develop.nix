@@ -128,7 +128,10 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.pcstat
 
     pkgs.ansible
-  ];
+  ]; # ++ [ pkgs.pkg-config ];
+  # home.sessionVariables = {
+  #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+  # };
 
   # https://github.com/containers/podman/blob/main/troubleshooting.md
   # podman/vendor/github.com/containers/storage/storage.conf
