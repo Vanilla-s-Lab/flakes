@@ -25,7 +25,10 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.jetbrains.clion
 
     pkgs.rustup
-    pkgs.gcc
+    pkgs.evcxr
+    (lib.hiPrio pkgs.gcc)
+    pkgs.bintools
+    pkgs.patchelf
 
     pkgs.android-studio
 
