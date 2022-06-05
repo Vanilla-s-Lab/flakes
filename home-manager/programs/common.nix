@@ -13,8 +13,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
     pkgs.pciutils
     pkgs.usbutils
 
-    pkgs.cawbird
-
     pkgs.playonlinux
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
@@ -53,15 +51,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
   dconf.settings."org/virt-manager/virt-manager/connections" = {
     autoconnect = [ "qemu:///system" ];
     uris = [ "qemu:///system" ];
-  };
-
-  home.file.".config/cawbird".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/cawbird";
-
-  dconf.settings."uk.co.ibboard.cawbird" = {
-    hide-nsfw-content = false;
-    startup-accounts = [ "osu_Vanilla" ];
   };
 
   home.file.".config/Kingsoft/Office.conf".text = ''
