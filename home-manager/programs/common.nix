@@ -24,7 +24,9 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
     pkgs_hwatch
 
     # https://github.com/msojocs/bilibili-linux
-    pkgs.appimage-run
+    (pkgs.appimage-run.override {
+      extraPkgs = pkgs: [ pkgs.icu ];
+    })
   ];
 
   home.file.".config/bilibili".source =
