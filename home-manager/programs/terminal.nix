@@ -66,9 +66,6 @@ let wxid = "wxid_2tafg8vy4onr22"; in
     # https://github.com/BurntSushi/ripgrep
     pkgs.ripgrep
 
-    # https://github.com/nvbn/thefuck#installation=
-    pkgs.thefuck
-
     # https://github.com/MidAutumnMoon/Boxfish
     pkgs.bubblewrap
 
@@ -121,13 +118,6 @@ let wxid = "wxid_2tafg8vy4onr22"; in
   home.activation."rose_pine-dawn" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
       ''fish -c "rose_pine dawn" > /dev/null || true'';
-
-  # https://github.com/haslersn/any-nix-shell
-  # https://github.com/nvbn/thefuck/wiki/Shell-aliases#fish=
-  programs.fish.interactiveShellInit = ''
-    any-nix-shell fish --info-right | source
-    thefuck --alias | source
-  '';
 
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
