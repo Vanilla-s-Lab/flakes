@@ -6,6 +6,6 @@ buildGoModule {
 
   src = generated.oh-my-posh.src;
 
-  vendorSha256 = "sha256-trG+w+xUlfsBkMfkM7vRxO41vXdymPFp5IYILR7hlQc=";
+  vendorSha256 = "sha256-iBVehyfJ2WX/nSBbXeOD0ozjLSVn5LKDNgbYVopIr4w=";
   modRoot = "./src";
 }
