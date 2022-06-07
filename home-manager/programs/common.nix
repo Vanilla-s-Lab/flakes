@@ -1,5 +1,4 @@
 { inputs, system, pkgs, config, ... }:
-let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
@@ -20,8 +19,6 @@ let pkgs_hwatch = pkgs.callPackage ../packages/hwatch { }; in
 
     pkgs.unzip
     pkgs.p7zip
-
-    pkgs_hwatch
 
     # https://github.com/msojocs/bilibili-linux
     (pkgs.appimage-run.override {

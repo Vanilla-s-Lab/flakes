@@ -1,22 +1,4 @@
 {
-  "hwatch": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "hwatch",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "ab82e1242ba4d44c46a1267e8dd6ebe81ef94964",
-      "sha256": "sha256-I8i7lyD//vLGU2BcKMf2h5qydV6LRefzYcgBFxLbFCg=",
-      "type": "git",
-      "url": "https://github.com/blacknon/hwatch"
-    },
-    "version": "ab82e1242ba4d44c46a1267e8dd6ebe81ef94964"
-  },
   "nushell": {
     "cargoLocks": null,
     "extract": null,

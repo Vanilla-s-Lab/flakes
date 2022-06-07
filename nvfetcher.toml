@@ -6,11 +6,6 @@ fetch.github = "JanDeDobbeleer/oh-my-posh"
 src.git = "https://github.com/rose-pine/alacritty"
 fetch.git = "https://github.com/rose-pine/alacritty"
 
-[hwatch]
-# the given path has multiple possibilities
-src.git = "https://github.com/blacknon/hwatch"
-fetch.git = "https://github.com/blacknon/hwatch"
-
 [nushell]
 src.github_tag = "nushell/nushell"
 fetch.github = "nushell/nushell"
