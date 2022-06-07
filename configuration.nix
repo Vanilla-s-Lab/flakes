@@ -6,6 +6,10 @@
 {
   systemd.services."plymouth-quit".enable = false;
 
+  # https://wiki.archlinux.org/title/improving_performance#Watchdogs
+  boot.kernelParams = [ "nowatchdog" ];
+  boot.blacklistedKernelModules = [ "iTCO_wdt" ];
+
   imports = [
     ./users.nix
 
