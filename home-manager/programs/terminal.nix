@@ -37,22 +37,8 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 
   # https://github.com/blackjid/plugin-kubectl
   programs.fish.plugins = [
-    rec {
-      name = "plugin-kubectl";
-      src = pkgs.fetchgit {
-        url = "https://github.com/blackjid/${name}";
-        rev = "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8";
-        hash = "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=";
-      };
-    }
-    rec {
-      name = "Boxfish";
-      src = pkgs.fetchgit {
-        url = "https://github.com/MidAutumnMoon/${name}";
-        rev = "38f6eb04f24e1795ed9b9d7dbf777903d4e0f5dd";
-        hash = "sha256-gJcYNIbJXtysgno9cHA5UhMYxWVcwx22vtarK1TF3o4=";
-      };
-    }
+    rec { name = "plugin-kubectl"; src = generated."${name}".src; }
+    rec { name = "Boxfish"; src = generated."${name}".src; }
   ];
 
   home.packages = [
