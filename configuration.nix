@@ -114,8 +114,6 @@
   # Disable most of GNOME bundled tools.
   services.gnome.core-utilities.enable = false;
   services.gnome.core-developer-tools.enable = false;
-  # Avoid ask password when open urls in JetBrains product.
-  services.gnome.gnome-keyring.enable = lib.mkForce false;
   # Core dump log floor in `journal -p 3 -xb`.
   services.gvfs.enable = lib.mkForce false;
 
