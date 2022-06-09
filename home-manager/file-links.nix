@@ -36,10 +36,6 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/yubico";
 
-  home.file."VirtualBox VMs".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/VirtualBox VMs";
-
   home.file.".cache/nix".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/cache/nix";
@@ -47,10 +43,6 @@
   home.file.".gnupg/private-keys-v1.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/gnupg/private-keys-v1.d";
-
-  home.file.".config/VirtualBox".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/VirtualBox";
 
   # Used in newer version of IntelliJ IDEA - Catalog.
   home.file.".m2/repository/.placeholder".text = "";
