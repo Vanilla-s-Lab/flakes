@@ -80,7 +80,7 @@
     "org/gnome/desktop/app-folders/folders/e644c5d3-83a7-463c-bbef-e0dbbea16076" = {
       name = "Virtualisation";
       apps = [
-        # "virtualbox.desktop"
+        "virtualbox.desktop"
         "playonlinux.desktop"
         "virt-manager.desktop"
       ];

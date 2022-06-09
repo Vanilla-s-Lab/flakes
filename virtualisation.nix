@@ -26,26 +26,7 @@
   virtualisation.podman.enable = true;
 
   # https://nixos.wiki/wiki/VirtualBox
-  # virtualisation.virtualbox.host.enable = true;
-  # users.extraGroups.vboxusers.members = [ "vanilla" ];
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-
-  # virtualisation.oci-containers.containers."mssql" = {
-  #   # https://hub.docker.com/_/microsoft-mssql-server
-  #   environment = {
-  #     ACCEPT_EULA = "Y";
-  #     SA_PASSWORD = "yourStrong(!)Password";
-  #   };
-
-  #   ports = (lib.singleton "1433:1433");
-  #   image = "mcr.microsoft.com/mssql/server:latest";
-
-  #   # Always remember do `sudo chmod 777 /persistent/var/opt/mssql`.
-  #   # https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure
-  #   volumes = (lib.singleton "/persistent/var/opt/mssql:/var/opt/mssql");
-  # };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ 1433 ];
-  # networking.firewall.allowedUDPPorts = [ 1433 ];
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "vanilla" ];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 }
