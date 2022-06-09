@@ -6,6 +6,14 @@
 {
   systemd.services."plymouth-quit".enable = false;
 
+  services.timesyncd.enable = true;
+  services.timesyncd.servers = [
+    "0.cn.pool.ntp.org"
+    "1.cn.pool.ntp.org"
+    "2.cn.pool.ntp.org"
+    "3.cn.pool.ntp.org"
+  ];
+
   # https://wiki.archlinux.org/title/improving_performance#Watchdogs
   boot.kernelParams = [ "nowatchdog" ] # https://access.redhat.com/sites/default/files/attachments/201501-perf-brief-low-latency-tuning-rhel7-v2.1.pdf
     ++ [ "mce=ignore_ce" "nosoftlockup" "audit=0" /* SELinux */ "idle=poll" /* isolcpus= */ "skew_tick=1" "intel_pstate=disable" /* nohz_full= */ ];
