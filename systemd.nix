@@ -7,4 +7,7 @@
     "2.cn.pool.ntp.org"
     "3.cn.pool.ntp.org"
   ];
+
+  systemd.coredump.enable = true;
+  systemd.coredump.extraConfig = "Storage=none";
 }
