@@ -10,6 +10,8 @@
     ./programs/common.nix
     ./programs/develop.nix
 
+    ./programs/vscode.nix
+
     ./file-links.nix
     ./fonts.nix
 
