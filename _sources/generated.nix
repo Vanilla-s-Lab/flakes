@@ -26,13 +26,13 @@
   };
   oh-my-posh = {
     pname = "oh-my-posh";
-    version = "v8.3.1";
+    version = "v8.3.2";
     src = fetchFromGitHub ({
       owner = "JanDeDobbeleer";
       repo = "oh-my-posh";
-      rev = "v8.3.1";
+      rev = "v8.3.2";
       fetchSubmodules = false;
-      sha256 = "sha256-2L9V2aS3zejcaqQ1lXNBvPgbhyVILWrWB/fU7G0zjpk=";
+      sha256 = "sha256-XoKvCfeQgW9PlH2vCTFEgsZD1Tc6+cKxwcnoWMeg02o=";
     });
   };
   plugin-kubectl = {

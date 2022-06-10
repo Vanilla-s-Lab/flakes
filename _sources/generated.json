@@ -49,11 +49,11 @@
       "name": null,
       "owner": "JanDeDobbeleer",
       "repo": "oh-my-posh",
-      "rev": "v8.3.1",
-      "sha256": "sha256-2L9V2aS3zejcaqQ1lXNBvPgbhyVILWrWB/fU7G0zjpk=",
+      "rev": "v8.3.2",
+      "sha256": "sha256-XoKvCfeQgW9PlH2vCTFEgsZD1Tc6+cKxwcnoWMeg02o=",
       "type": "github"
     },
-    "version": "v8.3.1"
+    "version": "v8.3.2"
   },
   "plugin-kubectl": {
     "cargoLocks": null,
