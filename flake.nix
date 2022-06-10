@@ -28,6 +28,11 @@
     deploy-rs.inputs.flake-compat.follows = "flake-compat";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
     deploy-rs.inputs.utils.follows = "flake-utils";
+
+    # https://github.com/VanCoding/nix-vscode-extension-manager
+    nvem.url = "github:VanCoding/nix-vscode-extension-manager";
+    nvem.inputs.flake-utils.follows = "flake-utils";
+    # nvem.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, ... }@inputs: with inputs;

@@ -2,9 +2,10 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, ... }:
-{
+{ config, pkgs, inputs, lib, system, ... }:
+with inputs; {
   systemd.services."plymouth-quit".enable = false;
+  environment.systemPackages = [ nvem.defaultPackage."${system}" ];
 
   imports = [
     ./users.nix
