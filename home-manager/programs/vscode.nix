@@ -10,10 +10,9 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
   # https://github.com/nix-community/home-manager/issues/2798
   programs.vscode.mutableExtensionsDir = false;
 
-  programs.vscode.extensions = [
-    (vscExt "GitHub.copilot")
-    (vscExt "GitHub.copilot-labs")
-  ];
+  programs.vscode.extensions = [ (vscExt "GitHub.copilot") (vscExt "GitHub.copilot-labs") ]
+    # https://material-theme.com/docs/acknowledgements/#material-icon-theme-for-visual-studio-code
+    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ];
 
   # https://code.visualstudio.com/docs/supporting/FAQ
 
@@ -28,6 +27,11 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
     "editor.inlineSuggest.enabled" = true;
     "github.copilot.enable" = ({ "*" = true; } // # Enable All
       { "yaml" = true; "plaintext" = true; "markdown" = true; });
+
+    # https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+    "workbench.iconTheme" = "material-icon-theme";
+    # https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme
+    "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
   };
 
   home.file.".vscode/argv.json".text = builtins.toJSON {

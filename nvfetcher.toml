@@ -27,3 +27,11 @@ fetch.vsmarketplace = "GitHub.copilot"
 ["GitHub.copilot-labs"]
 src.vsmarketplace = "GitHub.copilot-labs"
 fetch.vsmarketplace = "GitHub.copilot-labs"
+
+["unthrottled.doki-theme"]
+src.vsmarketplace = "unthrottled.doki-theme"
+fetch.vsmarketplace = "unthrottled.doki-theme"
+
+["PKief.material-icon-theme"]
+src.vsmarketplace = "PKief.material-icon-theme"
+fetch.vsmarketplace = "PKief.material-icon-theme"

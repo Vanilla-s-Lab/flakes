@@ -19,6 +19,24 @@
       sha256 = "sha256-nMGXgfeMOi6GoJZemQMNz9hB0cy4JSXKkmv3Fw98BOI=";
     };
   };
+  "\"PKief.material-icon-theme\"" = {
+    pname = "\"PKief.material-icon-theme\"";
+    version = "4.18.1";
+    src = fetchurl {
+      url = "https://PKief.gallery.vsassets.io/_apis/public/gallery/publisher/PKief/extension/material-icon-theme/4.18.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "material-icon-theme-4.18.1.zip";
+      sha256 = "sha256-g+741XXYjL0RnrpUquHckK6sf61BpHpAd8S3QiIB5dY=";
+    };
+  };
+  "\"unthrottled.doki-theme\"" = {
+    pname = "\"unthrottled.doki-theme\"";
+    version = "78.1.5";
+    src = fetchurl {
+      url = "https://unthrottled.gallery.vsassets.io/_apis/public/gallery/publisher/unthrottled/extension/doki-theme/78.1.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "doki-theme-78.1.5.zip";
+      sha256 = "sha256-u1/20wvQC1j1UZlfCs29vDbFDGL7TGL4hXwj3knuf1U=";
+    };
+  };
   Boxfish = {
     pname = "Boxfish";
     version = "385c04e685ac6a5130f3f12aaca13642ee0dd3ba";
