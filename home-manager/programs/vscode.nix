@@ -27,13 +27,13 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
 
     # https://github.com/microsoft/vscode/issues/128454
     "editor.inlineSuggest.enabled" = true;
-    "github.copilot.enable" = ({ "*" = true; } // # Enable All
+    "github.copilot.enable" = ({ "*" = true; } // # Enable all.
       { "yaml" = true; "plaintext" = true; "markdown" = true; });
 
-    # https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
-    "workbench.iconTheme" = "material-icon-theme";
     # https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme
     "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
+    # https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+    "workbench.iconTheme" = "material-icon-theme";
   };
 
   home.file.".vscode/argv.json".text = builtins.toJSON {

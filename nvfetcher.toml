@@ -28,8 +28,8 @@ fetch.vsmarketplace = "GitHub.copilot"
 src.vsmarketplace = "GitHub.copilot-labs"
 fetch.vsmarketplace = "GitHub.copilot-labs"
 
-# I use doki emilia theme +
-# Material Icon from doki.
+# The Doki Theme
+# Material Icon Theme
 
 ["unthrottled.doki-theme"]
 src.vsmarketplace = "unthrottled.doki-theme"
