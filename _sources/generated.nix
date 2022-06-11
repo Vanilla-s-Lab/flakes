@@ -28,6 +28,42 @@
       sha256 = "sha256-g+741XXYjL0RnrpUquHckK6sf61BpHpAd8S3QiIB5dY=";
     };
   };
+  "\"bungcip.better-toml\"" = {
+    pname = "\"bungcip.better-toml\"";
+    version = "0.3.2";
+    src = fetchurl {
+      url = "https://bungcip.gallery.vsassets.io/_apis/public/gallery/publisher/bungcip/extension/better-toml/0.3.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "better-toml-0.3.2.zip";
+      sha256 = "sha256-g+LfgjAnSuSj/nSmlPdB0t29kqTmegZB5B1cYzP8kCI=";
+    };
+  };
+  "\"rust-lang.rust-analyzer\"" = {
+    pname = "\"rust-lang.rust-analyzer\"";
+    version = "0.4.1088";
+    src = fetchurl {
+      url = "https://rust-lang.gallery.vsassets.io/_apis/public/gallery/publisher/rust-lang/extension/rust-analyzer/0.4.1088/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "rust-analyzer-0.4.1088.zip";
+      sha256 = "sha256-fuMiO/DuxZRF5fK4IPkFGPRxUpFNC6TQlkTaQGiRysA=";
+    };
+  };
+  "\"serayuzgur.crates\"" = {
+    pname = "\"serayuzgur.crates\"";
+    version = "0.5.10";
+    src = fetchurl {
+      url = "https://serayuzgur.gallery.vsassets.io/_apis/public/gallery/publisher/serayuzgur/extension/crates/0.5.10/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "crates-0.5.10.zip";
+      sha256 = "sha256-bY/dphiEPPgTg1zMjvxx4b0Ska2XggRucnZxtbppcLU=";
+    };
+  };
+  "\"swellaby.rust-pack\"" = {
+    pname = "\"swellaby.rust-pack\"";
+    version = "0.3.3";
+    src = fetchurl {
+      url = "https://swellaby.gallery.vsassets.io/_apis/public/gallery/publisher/swellaby/extension/rust-pack/0.3.3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "rust-pack-0.3.3.zip";
+      sha256 = "sha256-P4BvBq77AuxODI2kQ4dYOe4FgIDN3FpgURkvSvSgDAw=";
+    };
+  };
   "\"unthrottled.doki-theme\"" = {
     pname = "\"unthrottled.doki-theme\"";
     version = "78.1.5";

@@ -18,7 +18,7 @@ fetch.git = "https://github.com/blackjid/plugin-kubectl"
 src.git = "https://github.com/MidAutumnMoon/Boxfish"
 fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
 
-# VSCode Extensions
+# https://marketplace.visualstudio.com/
 
 ["GitHub.copilot"]
 src.vsmarketplace = "GitHub.copilot"
@@ -35,3 +35,21 @@ fetch.vsmarketplace = "unthrottled.doki-theme"
 ["PKief.material-icon-theme"]
 src.vsmarketplace = "PKief.material-icon-theme"
 fetch.vsmarketplace = "PKief.material-icon-theme"
+
+# https://github.com/swellaby/vscode-rust-pack#included-extensions=
+
+["swellaby.rust-pack"]
+src.vsmarketplace = "swellaby.rust-pack"
+fetch.vsmarketplace = "swellaby.rust-pack"
+
+["rust-lang.rust-analyzer"]
+src.vsmarketplace = "rust-lang.rust-analyzer"
+fetch.vsmarketplace = "rust-lang.rust-analyzer"
+
+["serayuzgur.crates"]
+src.vsmarketplace = "serayuzgur.crates"
+fetch.vsmarketplace = "serayuzgur.crates"
+
+["bungcip.better-toml"]
+src.vsmarketplace = "bungcip.better-toml"
+fetch.vsmarketplace = "bungcip.better-toml"

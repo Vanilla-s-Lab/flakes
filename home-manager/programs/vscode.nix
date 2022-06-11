@@ -6,13 +6,16 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
 }); in
 {
   programs.vscode.enable = true;
+  # https://nixos.wiki/wiki/Visual_Studio_Code#Use_VSCode_extensions_without_additional_configuration
+  # programs.vscode.package = pkgs.vscode-fhsWithPackages (ps: with ps; [ rust-analyzer ]);
 
   # https://github.com/nix-community/home-manager/issues/2798
   programs.vscode.mutableExtensionsDir = false;
 
   programs.vscode.extensions = [ (vscExt "GitHub.copilot") (vscExt "GitHub.copilot-labs") ]
     # https://material-theme.com/docs/acknowledgements/#material-icon-theme-for-visual-studio-code
-    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ];
+    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ] ++ [ (vscExt "swellaby.rust-pack") ]
+    ++ [ (vscExt "rust-lang.rust-analyzer") (vscExt "serayuzgur.crates") (vscExt "bungcip.better-toml") ];
 
   # https://code.visualstudio.com/docs/supporting/FAQ
 
@@ -32,6 +35,11 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
     "workbench.iconTheme" = "material-icon-theme";
     # https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme
     "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
+
+    # https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
+    "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+    # https://github.com/rust-lang/rust-analyzer/issues/12321
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = true;
   };
 
   home.file.".vscode/argv.json".text = builtins.toJSON {

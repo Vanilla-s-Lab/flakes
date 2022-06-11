@@ -41,6 +41,62 @@
         },
         "version": "4.18.1"
     },
+    "\"bungcip.better-toml\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"bungcip.better-toml\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "better-toml-0.3.2.zip",
+            "sha256": "sha256-g+LfgjAnSuSj/nSmlPdB0t29kqTmegZB5B1cYzP8kCI=",
+            "type": "url",
+            "url": "https://bungcip.gallery.vsassets.io/_apis/public/gallery/publisher/bungcip/extension/better-toml/0.3.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.3.2"
+    },
+    "\"rust-lang.rust-analyzer\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"rust-lang.rust-analyzer\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "rust-analyzer-0.4.1088.zip",
+            "sha256": "sha256-fuMiO/DuxZRF5fK4IPkFGPRxUpFNC6TQlkTaQGiRysA=",
+            "type": "url",
+            "url": "https://rust-lang.gallery.vsassets.io/_apis/public/gallery/publisher/rust-lang/extension/rust-analyzer/0.4.1088/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.4.1088"
+    },
+    "\"serayuzgur.crates\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"serayuzgur.crates\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "crates-0.5.10.zip",
+            "sha256": "sha256-bY/dphiEPPgTg1zMjvxx4b0Ska2XggRucnZxtbppcLU=",
+            "type": "url",
+            "url": "https://serayuzgur.gallery.vsassets.io/_apis/public/gallery/publisher/serayuzgur/extension/crates/0.5.10/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.5.10"
+    },
+    "\"swellaby.rust-pack\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"swellaby.rust-pack\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "rust-pack-0.3.3.zip",
+            "sha256": "sha256-P4BvBq77AuxODI2kQ4dYOe4FgIDN3FpgURkvSvSgDAw=",
+            "type": "url",
+            "url": "https://swellaby.gallery.vsassets.io/_apis/public/gallery/publisher/swellaby/extension/rust-pack/0.3.3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.3.3"
+    },
     "\"unthrottled.doki-theme\"": {
         "cargoLocks": null,
         "extract": null,
