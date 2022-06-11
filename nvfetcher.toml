@@ -17,3 +17,13 @@ fetch.git = "https://github.com/blackjid/plugin-kubectl"
 [Boxfish]
 src.git = "https://github.com/MidAutumnMoon/Boxfish"
 fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
+
+# VSCode Extensions
+
+["GitHub.copilot"]
+src.vsmarketplace = "GitHub.copilot"
+fetch.vsmarketplace = "GitHub.copilot"
+
+["GitHub.copilot-labs"]
+src.vsmarketplace = "GitHub.copilot-labs"
+fetch.vsmarketplace = "GitHub.copilot-labs"

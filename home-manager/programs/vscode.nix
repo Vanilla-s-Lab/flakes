@@ -1,10 +1,19 @@
 { pkgs, ... }:
+let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
+let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
+  inherit name; src = generated."\"${name}\"".src;
+  vscodeExtUniqueId = name;
+}); in
 {
   programs.vscode.enable = true;
-  programs.vscode.package = ((pkgs.vscode-with-extensions.override {
-    vscodeExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace
-      (builtins.fromJSON (builtins.readFile ../../vscode-extensions.json));
-  }).overrideAttrs (old: { pname = "vscode"; })); # Required by userSettings.
+
+  # https://github.com/nix-community/home-manager/issues/2798
+  programs.vscode.mutableExtensionsDir = false;
+
+  programs.vscode.extensions = [
+    (vscExt "GitHub.copilot")
+    (vscExt "GitHub.copilot-labs")
+  ];
 
   # https://code.visualstudio.com/docs/supporting/FAQ
 
