@@ -5,7 +5,6 @@
 { config, pkgs, inputs, lib, system, ... }:
 with inputs; {
   systemd.services."plymouth-quit".enable = false;
-  environment.systemPackages = [ nvem.defaultPackage."${system}" ];
 
   imports = [
     ./users.nix
