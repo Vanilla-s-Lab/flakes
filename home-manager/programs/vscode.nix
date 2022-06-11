@@ -14,6 +14,11 @@
 
     "update.mode" = "none";
     "extensions.autoUpdate" = false;
+
+    # https://github.com/microsoft/vscode/issues/128454
+    "editor.inlineSuggest.enabled" = true;
+    "github.copilot.enable" = ({ "*" = true; } // # Enable All
+      { "yaml" = true; "plaintext" = true; "markdown" = true; });
   };
 
   home.file.".vscode/argv.json".text = builtins.toJSON {
