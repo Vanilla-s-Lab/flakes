@@ -1,122 +1,122 @@
 {
-  "\"GitHub.copilot\"": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "\"GitHub.copilot\"",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": "copilot-1.28.6134.zip",
-      "sha256": "sha256-o/vh80eTAquu82+nm1wDn/ZAaJwo6S39bNZVgjpuFxA=",
-      "type": "url",
-      "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.28.6134/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+    "\"GitHub.copilot\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"GitHub.copilot\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "copilot-1.28.6134.zip",
+            "sha256": "sha256-o/vh80eTAquu82+nm1wDn/ZAaJwo6S39bNZVgjpuFxA=",
+            "type": "url",
+            "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.28.6134/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "1.28.6134"
     },
-    "version": "1.28.6134"
-  },
-  "\"GitHub.copilot-labs\"": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "\"GitHub.copilot-labs\"",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": "copilot-labs-0.1.176.zip",
-      "sha256": "sha256-nMGXgfeMOi6GoJZemQMNz9hB0cy4JSXKkmv3Fw98BOI=",
-      "type": "url",
-      "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot-labs/0.1.176/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+    "\"GitHub.copilot-labs\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"GitHub.copilot-labs\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "copilot-labs-0.1.176.zip",
+            "sha256": "sha256-nMGXgfeMOi6GoJZemQMNz9hB0cy4JSXKkmv3Fw98BOI=",
+            "type": "url",
+            "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot-labs/0.1.176/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.1.176"
     },
-    "version": "0.1.176"
-  },
-  "Boxfish": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "Boxfish",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba",
-      "sha256": "sha256-ohBwPRuAHLVwESvtHyRb/VobwtHg7S7+Pi6fk2SD2EU=",
-      "type": "git",
-      "url": "https://github.com/MidAutumnMoon/Boxfish"
+    "Boxfish": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "Boxfish",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba",
+            "sha256": "sha256-ohBwPRuAHLVwESvtHyRb/VobwtHg7S7+Pi6fk2SD2EU=",
+            "type": "git",
+            "url": "https://github.com/MidAutumnMoon/Boxfish"
+        },
+        "version": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba"
     },
-    "version": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba"
-  },
-  "nushell": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "nushell",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "nushell",
-      "repo": "nushell",
-      "rev": "0.63.1",
-      "sha256": "sha256-wzrR4yeMOZgqKU1G+yfdTByooXTPeoo8mCfrMfNu++I=",
-      "type": "github"
+    "nushell": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nushell",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nushell",
+            "repo": "nushell",
+            "rev": "0.63.1",
+            "sha256": "sha256-wzrR4yeMOZgqKU1G+yfdTByooXTPeoo8mCfrMfNu++I=",
+            "type": "github"
+        },
+        "version": "0.63.1"
     },
-    "version": "0.63.1"
-  },
-  "oh-my-posh": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "oh-my-posh",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "JanDeDobbeleer",
-      "repo": "oh-my-posh",
-      "rev": "v8.4.0",
-      "sha256": "sha256-Ge2iotlkVsLBOHwfKXPqpR0aY/IZaldnrou2P+VHctY=",
-      "type": "github"
+    "oh-my-posh": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "oh-my-posh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "JanDeDobbeleer",
+            "repo": "oh-my-posh",
+            "rev": "v8.4.0",
+            "sha256": "sha256-Ge2iotlkVsLBOHwfKXPqpR0aY/IZaldnrou2P+VHctY=",
+            "type": "github"
+        },
+        "version": "v8.4.0"
     },
-    "version": "v8.4.0"
-  },
-  "plugin-kubectl": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "plugin-kubectl",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8",
-      "sha256": "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=",
-      "type": "git",
-      "url": "https://github.com/blackjid/plugin-kubectl"
+    "plugin-kubectl": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "plugin-kubectl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8",
+            "sha256": "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=",
+            "type": "git",
+            "url": "https://github.com/blackjid/plugin-kubectl"
+        },
+        "version": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8"
     },
-    "version": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8"
-  },
-  "rose-pine": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "rose-pine",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a",
-      "sha256": "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=",
-      "type": "git",
-      "url": "https://github.com/rose-pine/alacritty"
-    },
-    "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
-  }
+    "rose-pine": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "rose-pine",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a",
+            "sha256": "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=",
+            "type": "git",
+            "url": "https://github.com/rose-pine/alacritty"
+        },
+        "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
+    }
 }
