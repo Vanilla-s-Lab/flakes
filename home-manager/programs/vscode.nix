@@ -14,10 +14,7 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
 
   programs.vscode.extensions = [ (vscExt "GitHub.copilot") (vscExt "GitHub.copilot-labs") ]
     # https://material-theme.com/docs/acknowledgements/#material-icon-theme-for-visual-studio-code
-    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ] ++ [ (vscExt "swellaby.rust-pack") ]
-    ++ [ (vscExt "rust-lang.rust-analyzer") (vscExt "serayuzgur.crates") (vscExt "bungcip.better-toml") ] ++
-    # https://marketplace.visualstudio.com/items?itemName=pinage404.nix-extension-pack
-    [ (vscExt "pinage404.nix-extension-pack") (vscExt "arrterian.nix-env-selector") (vscExt "jnoortheen.nix-ide") (vscExt "mkhl.direnv") (vscExt "jamesottaway.nix-develop") ];
+    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ];
 
   # https://code.visualstudio.com/docs/supporting/FAQ
 
@@ -37,14 +34,6 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
     "workbench.iconTheme" = "material-icon-theme";
     # https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme
     "workbench.colorTheme" = "e828aaae-aa8c-4084-8993-d64697146930";
-
-    # https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
-    "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-    # https://github.com/rust-lang/rust-analyzer/issues/12321
-    "rust-analyzer.inlayHints.closureReturnTypeHints.enable" = true;
-
-    # https://marketplace.visualstudio.com/items?itemName=pinage404.nix-extension-pack
-    "nix.enableLanguageServer" = true;
   };
 
   home.file.".vscode/argv.json".text = builtins.toJSON {
