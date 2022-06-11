@@ -41,6 +41,20 @@
         },
         "version": "4.18.1"
     },
+    "\"arrterian.nix-env-selector\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"arrterian.nix-env-selector\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "nix-env-selector-1.0.9.zip",
+            "sha256": "sha256-TkxqWZ8X+PAonzeXQ+sI9WI+XlqUHll7YyM7N9uErk0=",
+            "type": "url",
+            "url": "https://arrterian.gallery.vsassets.io/_apis/public/gallery/publisher/arrterian/extension/nix-env-selector/1.0.9/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "1.0.9"
+    },
     "\"bungcip.better-toml\"": {
         "cargoLocks": null,
         "extract": null,
@@ -54,6 +68,62 @@
             "url": "https://bungcip.gallery.vsassets.io/_apis/public/gallery/publisher/bungcip/extension/better-toml/0.3.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
         "version": "0.3.2"
+    },
+    "\"jamesottaway.nix-develop\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"jamesottaway.nix-develop\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "nix-develop-0.0.1.zip",
+            "sha256": "sha256-ldD907spPCgHQ10XphaRAbgkNcYdzACqUOr2Cf5o8zU=",
+            "type": "url",
+            "url": "https://jamesottaway.gallery.vsassets.io/_apis/public/gallery/publisher/jamesottaway/extension/nix-develop/0.0.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.0.1"
+    },
+    "\"jnoortheen.nix-ide\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"jnoortheen.nix-ide\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "nix-ide-0.1.20.zip",
+            "sha256": "sha256-Q6X41I68m0jaCXaQGEFOoAbSUrr/wFhfCH5KrduOtZo=",
+            "type": "url",
+            "url": "https://jnoortheen.gallery.vsassets.io/_apis/public/gallery/publisher/jnoortheen/extension/nix-ide/0.1.20/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.1.20"
+    },
+    "\"mkhl.direnv\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"mkhl.direnv\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "direnv-0.6.1.zip",
+            "sha256": "sha256-5/Tqpn/7byl+z2ATflgKV1+rhdqj+XMEZNbGwDmGwLQ=",
+            "type": "url",
+            "url": "https://mkhl.gallery.vsassets.io/_apis/public/gallery/publisher/mkhl/extension/direnv/0.6.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.6.1"
+    },
+    "\"pinage404.nix-extension-pack\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"pinage404.nix-extension-pack\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "nix-extension-pack-2.0.0.zip",
+            "sha256": "sha256-d73mbgv/E3ux9nwSFCkw8K9ayE96s0v4iC4uX66gzpw=",
+            "type": "url",
+            "url": "https://pinage404.gallery.vsassets.io/_apis/public/gallery/publisher/pinage404/extension/nix-extension-pack/2.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "2.0.0"
     },
     "\"rust-lang.rust-analyzer\"": {
         "cargoLocks": null,

@@ -53,3 +53,25 @@ fetch.vsmarketplace = "serayuzgur.crates"
 ["bungcip.better-toml"]
 src.vsmarketplace = "bungcip.better-toml"
 fetch.vsmarketplace = "bungcip.better-toml"
+
+# https://marketplace.visualstudio.com/items?itemName=pinage404.nix-extension-pack
+
+["pinage404.nix-extension-pack"]
+src.vsmarketplace = "pinage404.nix-extension-pack"
+fetch.vsmarketplace = "pinage404.nix-extension-pack"
+
+["arrterian.nix-env-selector"]
+src.vsmarketplace = "arrterian.nix-env-selector"
+fetch.vsmarketplace = "arrterian.nix-env-selector"
+
+["jnoortheen.nix-ide"]
+src.vsmarketplace = "jnoortheen.nix-ide"
+fetch.vsmarketplace = "jnoortheen.nix-ide"
+
+["mkhl.direnv"]
+src.vsmarketplace = "mkhl.direnv"
+fetch.vsmarketplace = "mkhl.direnv"
+
+["jamesottaway.nix-develop"]
+src.vsmarketplace = "jamesottaway.nix-develop"
+fetch.vsmarketplace = "jamesottaway.nix-develop"
