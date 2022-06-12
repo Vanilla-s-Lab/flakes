@@ -11,10 +11,21 @@
     pkgs.gnomeExtensions.lock-keys
     pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.runcat
+
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot
-    pkgs.gnomeExtensions.sensory-perception
+
+    # https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception#compatibility=
+    (pkgs.gnomeExtensions.sensory-perception.overrideAttrs (old: {
+      version = "v18";
+      src = pkgs.fetchgit {
+        url = "https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception";
+        rev = "v18";
+        sha256 = "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=";
+      };
+    }))
     pkgs.lm_sensors
+
     pkgs.gnomeExtensions.simple-net-speed
     pkgs.gnomeExtensions.sound-output-device-chooser
     pkgs.gnomeExtensions.status-area-horizontal-spacing
