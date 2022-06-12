@@ -26,10 +26,6 @@
     })
   ];
 
-  home.file.".config/bilibili".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/bilibili";
-
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/PlayOnLinux";
