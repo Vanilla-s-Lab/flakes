@@ -72,7 +72,7 @@
     common\system_check\no_necessary_symbol_fonts=false
 
     [UnixUpdateInfo]
-    UserRejectUpdateVersion=11.1.0.10976
+    UserRejectUpdateVersion=11.1.0.11664
   '';
 
   home.file.".local/share/Kingsoft/office6/skins/default/histroy.ini".text = ''
