@@ -6,9 +6,6 @@ let enable_feature = feature_list: builtins.listToAttrs
 let oh-my-posh = pkgs.callPackage ../packages/oh-my-posh.nix { }; in
 let pkgs_nushell = pkgs.callPackage ../packages/nushell.nix { }; in
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
-
-# WeChat ID: My_Aim_Sucks
-let wxid = "wxid_2tafg8vy4onr22"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -32,7 +29,6 @@ let wxid = "wxid_2tafg8vy4onr22"; in
     "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
     "volume_67".body = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.67"; # GitLab - PipeWire - issues/976.
     "ssh_azure".body = "ssh root@20.24.195.187"; # Fail2ban enable! Make sure Yubikeys already plugged in!
-    "wechat_file".body = "open ~/.local/lib/wine-wechat/default/drive_c/WeChat\\ Files/${wxid}/FileStorage/File";
   };
 
   # https://github.com/blackjid/plugin-kubectl

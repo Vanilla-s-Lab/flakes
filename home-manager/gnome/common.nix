@@ -1,4 +1,6 @@
 { pkgs, config, ... }:
+# WeChat ID: My_Aim_Sucks
+let wxid = "wxid_2tafg8vy4onr22"; in
 {
   home.packages = [
     pkgs.gnome.nautilus
@@ -48,8 +50,10 @@
     ];
   };
 
+  # Caution: Whitespace should replaced by '%20'.
   home.file.".config/gtk-3.0/bookmarks".text = ''
     file:///home/vanilla/Projects Projects
+    file:///home/vanilla/.local/lib/wine-wechat/default/drive_c/WeChat%20Files/${wxid}/FileStorage/File wechat_file
   '';
 
   # https://github.com/NixOS/nixpkgs/issues/163080
