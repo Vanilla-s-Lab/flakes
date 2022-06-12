@@ -69,6 +69,7 @@
       apps = [
         "android-studio.desktop"
         "clion.desktop"
+        "code.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
         "pycharm-professional.desktop"
