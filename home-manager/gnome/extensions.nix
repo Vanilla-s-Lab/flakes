@@ -32,7 +32,13 @@
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
-  ] ++ [ pkgs.gnomeExtensions.gtile ];
+
+    pkgs.gnomeExtensions.gtile
+
+    pkgs.gnomeExtensions.clipboard-indicator
+    # https://extensions.gnome.org/extension/943/workspace-scroll/
+    pkgs.gnomeExtensions.top-panel-workspace-scroll
+  ];
 
   dconf.settings = {
     "org/gnome/shell".enabled-extensions = [
@@ -64,7 +70,12 @@
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
       "windowIsReady_Remover@nunofarruca@gmail.com"
-    ] ++ [ "gTile@vibou" ];
+
+      "gTile@vibou"
+
+      "clipboard-indicator@tudmotu.com"
+      "scroll-workspaces@gfxmonk.net"
+    ];
 
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
     "org/gnome/shell/extensions/arcmenu".menu-button-appearance = "Icon_Text";

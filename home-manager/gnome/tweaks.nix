@@ -20,7 +20,10 @@
     "org/gnome/desktop/interface".gtk-theme = "Layan-light-solid";
     "org/gnome/desktop/interface".cursor-theme = "breeze_cursors";
     "org/gnome/desktop/interface".icon-theme = "Tela-pink";
-    "org/gnome/shell/extensions/user-theme".name = "Flat-Remix-Blue-Light";
+
+    # With extension "Workspace Scroll", compact.
+    "org/gnome/shell/extensions/user-theme".name =
+      ("Flat-Remix-Blue-Light" + "-fullPanel");
 
     # Appearance - [ Background | Lock Screen ] - Image
     "org/gnome/desktop/background".picture-uri = "file:///home/vanilla/Pictures/bg.jpg";
