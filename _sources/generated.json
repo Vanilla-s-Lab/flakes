@@ -73,6 +73,25 @@
         },
         "version": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba"
     },
+    "nautilus-admin": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nautilus-admin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "brunonova",
+            "repo": "nautilus-admin",
+            "rev": "v1.1.9",
+            "sha256": "sha256-aJhjV/sN9RPLttYoKADr9b9VqRW7zXKAHFDdz3Jp8n0=",
+            "type": "github"
+        },
+        "version": "v1.1.9"
+    },
     "nushell": {
         "cargoLocks": null,
         "extract": null,

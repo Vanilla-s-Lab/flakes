@@ -2,12 +2,18 @@
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
 
+let callPackage = pkgs.callPackage; in
+let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
+{
   home.packages = [
     # https://github.com/Stunkymonkey/nixos/blob/master/nixos/modules/nautilus.nix
     (pkgs.gnome.nautilus.overrideAttrs (old: {
       preFixup = old.preFixup + ''
         gappsWrapperArgs+=(
           --prefix NAUTILUS_EXTENSION_DIR : "${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0"
+
+          # https://github.com/GNOME/nautilus-python
+          --prefix XDG_DATA_DIRS : "${nautilus-admin}/usr/share"
         )
       '';
     }))

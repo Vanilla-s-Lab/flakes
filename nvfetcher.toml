@@ -38,3 +38,9 @@ fetch.vsmarketplace = "unthrottled.doki-theme"
 ["PKief.material-icon-theme"]
 src.vsmarketplace = "PKief.material-icon-theme"
 fetch.vsmarketplace = "PKief.material-icon-theme"
+
+# https://github.com/brunonova/nautilus-admin
+
+[nautilus-admin]
+src.github_tag = "brunonova/nautilus-admin"
+fetch.github = "brunonova/nautilus-admin"

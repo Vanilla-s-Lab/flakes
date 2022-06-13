@@ -49,6 +49,17 @@
       sha256 = "sha256-ohBwPRuAHLVwESvtHyRb/VobwtHg7S7+Pi6fk2SD2EU=";
     };
   };
+  nautilus-admin = {
+    pname = "nautilus-admin";
+    version = "v1.1.9";
+    src = fetchFromGitHub ({
+      owner = "brunonova";
+      repo = "nautilus-admin";
+      rev = "v1.1.9";
+      fetchSubmodules = false;
+      sha256 = "sha256-aJhjV/sN9RPLttYoKADr9b9VqRW7zXKAHFDdz3Jp8n0=";
+    });
+  };
   nushell = {
     pname = "nushell";
     version = "0.63.1";
