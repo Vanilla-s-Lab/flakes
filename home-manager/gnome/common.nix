@@ -4,13 +4,24 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 
 let callPackage = pkgs.callPackage; in
 let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
+let nautilus-bluetooth = callPackage ../packages/nautilus-bluetooth.nix { }; in
+
+let extensions = pkgs.runCommand "extensions" { } ''
+  mkdir -p $out
+
+  cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.la $out
+  cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.so $out
+
+  cp ${nautilus-bluetooth}/*.la $out
+  cp ${nautilus-bluetooth}/*.so $out
+''; in
 {
   home.packages = [
     # https://github.com/Stunkymonkey/nixos/blob/master/nixos/modules/nautilus.nix
     (pkgs.gnome.nautilus.overrideAttrs (old: {
       preFixup = old.preFixup + ''
         gappsWrapperArgs+=(
-          --prefix NAUTILUS_EXTENSION_DIR : "${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0"
+          --prefix NAUTILUS_EXTENSION_DIR : "${extensions}"
 
           # https://github.com/GNOME/nautilus-python
           --prefix XDG_DATA_DIRS : "${nautilus-admin}/usr/share"

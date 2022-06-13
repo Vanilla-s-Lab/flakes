@@ -44,3 +44,9 @@ fetch.vsmarketplace = "PKief.material-icon-theme"
 [nautilus-admin]
 src.github_tag = "brunonova/nautilus-admin"
 fetch.github = "brunonova/nautilus-admin"
+
+# https://github.com/madmurphy/nautilus-bluetooth
+
+[nautilus-bluetooth]
+src.github_tag = "madmurphy/nautilus-bluetooth"
+fetch.github = "madmurphy/nautilus-bluetooth"

@@ -92,6 +92,25 @@
         },
         "version": "v1.1.9"
     },
+    "nautilus-bluetooth": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nautilus-bluetooth",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "madmurphy",
+            "repo": "nautilus-bluetooth",
+            "rev": "1.0.5",
+            "sha256": "sha256-I+UH2tO6WO72UptM8sMHJfvqX0492w2yW2mrzv5U/WU=",
+            "type": "github"
+        },
+        "version": "1.0.5"
+    },
     "nushell": {
         "cargoLocks": null,
         "extract": null,

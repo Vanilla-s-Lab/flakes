@@ -60,6 +60,17 @@
       sha256 = "sha256-aJhjV/sN9RPLttYoKADr9b9VqRW7zXKAHFDdz3Jp8n0=";
     });
   };
+  nautilus-bluetooth = {
+    pname = "nautilus-bluetooth";
+    version = "1.0.5";
+    src = fetchFromGitHub ({
+      owner = "madmurphy";
+      repo = "nautilus-bluetooth";
+      rev = "1.0.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-I+UH2tO6WO72UptM8sMHJfvqX0492w2yW2mrzv5U/WU=";
+    });
+  };
   nushell = {
     pname = "nushell";
     version = "0.63.1";
