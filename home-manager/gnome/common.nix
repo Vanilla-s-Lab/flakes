@@ -1,16 +1,16 @@
 { pkgs, config, ... }:
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
-{
-  home.sessionVariables = {
-    # https://github.com/Stunkymonkey/nixos/blob/master/nixos/modules/nautilus.nix
-    NAUTILUS_EXTENSION_DIR = "${config.home.homeDirectory}"
-      + "/.nix-profile/lib/nautilus/extensions-3.0";
-  };
 
   home.packages = [
-    pkgs.gnome.nautilus
-    pkgs.gnome.nautilus-python
+    # https://github.com/Stunkymonkey/nixos/blob/master/nixos/modules/nautilus.nix
+    (pkgs.gnome.nautilus.overrideAttrs (old: {
+      preFixup = old.preFixup + ''
+        gappsWrapperArgs+=(
+          --prefix NAUTILUS_EXTENSION_DIR : "${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0"
+        )
+      '';
+    }))
 
     pkgs.gnome.sushi
     pkgs.gnome.gedit
