@@ -26,22 +26,7 @@
     (pkgs.appimage-run.override {
       extraPkgs = pkgs: [ pkgs.icu ];
     })
-
-    # https://github.com/VergeDX/config-nixpkgs/commit/a01f0549903df3d6b18602ed7e1554a79d215913
-    (pkgs.runCommandLocal "Discord" { nativeBuildInputs = [ pkgs.makeWrapper ]; }
-      ''
-        mkdir -p $out
-        ${pkgs.xorg.lndir}/bin/lndir -silent ${pkgs.discord} $out
-        wrapProgram $out/opt/Discord/Discord \
-          --add-flags '--proxy-server=http://127.0.0.1:8889'
-      '')
-
-    pkgs.betterdiscordctl
   ];
-
-  home.file.".config/discord".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/discord";
 
   home.file.".PlayOnLinux".source =
     config.lib.file.mkOutOfStoreSymlink
