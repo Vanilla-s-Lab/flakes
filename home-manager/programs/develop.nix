@@ -10,8 +10,7 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     (pkgs.python3.withPackages
       (p: with p; [ openpyxl mysql-connector ] ++ [ setuptools pip ]
-        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]
-        ++ [ (opencv4.override { enableCuda = true; }) ]))
+        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
