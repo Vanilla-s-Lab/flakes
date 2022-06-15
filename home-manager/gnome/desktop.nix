@@ -62,6 +62,7 @@
     "org/gnome/desktop/app-folders/folders/046ad3d2-1480-422d-89a4-f8bd19324788" = {
       name = "Autostart";
       apps = [
+        "org.arktoria.across.desktop"
         "albert.desktop"
         "discord.desktop"
         "kotatogramdesktop.desktop"
