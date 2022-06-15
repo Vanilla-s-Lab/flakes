@@ -71,6 +71,17 @@
       sha256 = "sha256-I+UH2tO6WO72UptM8sMHJfvqX0492w2yW2mrzv5U/WU=";
     });
   };
+  nautilus-terminal = {
+    pname = "nautilus-terminal";
+    version = "v4.0.4";
+    src = fetchFromGitHub ({
+      owner = "flozz";
+      repo = "nautilus-terminal";
+      rev = "v4.0.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-cMnxAYCWaye1/3j02bbO4hQba2dLkZXuYK2VkZ4oFKs=";
+    });
+  };
   nushell = {
     pname = "nushell";
     version = "0.64.0";

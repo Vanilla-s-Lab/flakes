@@ -5,6 +5,7 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 let callPackage = pkgs.callPackage; in
 let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
 let nautilus-bluetooth = callPackage ../packages/nautilus-bluetooth.nix { }; in
+let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { }; in
 
 let extensions = pkgs.runCommand "extensions" { } ''
   mkdir -p $out
@@ -25,6 +26,9 @@ let extensions = pkgs.runCommand "extensions" { } ''
 
           # https://github.com/GNOME/nautilus-python
           --prefix XDG_DATA_DIRS : "${nautilus-admin}/usr/share"
+          --prefix XDG_DATA_DIRS : "${nautilus-terminal}/.local/share"
+
+          --prefix GI_TYPELIB_PATH : "${pkgs.vte}/lib/girepository-1.0"
         )
       '';
     }))

@@ -1,6 +1,7 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
 let pkgsJB = import inputs.nixpkgs-jetbrains
   { inherit system; config.allowUnfree = true; }; in
+let nautilus-terminal = pkgs.callPackage ../packages/nautilus-terminal.nix { }; in
 {
   home.packages = with inputs; [
     # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
@@ -10,7 +11,7 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
 
     (pkgs.python3.withPackages
       (p: with p; [ openpyxl mysql-connector ] ++ [ setuptools pip ]
-        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]))
+        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ] ++ [ nautilus-terminal ]))
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
