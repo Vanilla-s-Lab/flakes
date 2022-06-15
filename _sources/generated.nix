@@ -3,11 +3,11 @@
 {
   "\"GitHub.copilot\"" = {
     pname = "\"GitHub.copilot\"";
-    version = "1.28.6134";
+    version = "1.29.6152";
     src = fetchurl {
-      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.28.6134/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "copilot-1.28.6134.zip";
-      sha256 = "sha256-o/vh80eTAquu82+nm1wDn/ZAaJwo6S39bNZVgjpuFxA=";
+      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.29.6152/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "copilot-1.29.6152.zip";
+      sha256 = "sha256-JB1SNyC87sImIeweAixdAOUknWJr9L1zIHbpVTM0rlo=";
     };
   };
   "\"GitHub.copilot-labs\"" = {
