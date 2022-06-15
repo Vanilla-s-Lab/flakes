@@ -73,13 +73,13 @@
   };
   nushell = {
     pname = "nushell";
-    version = "0.63.1";
+    version = "0.64.0";
     src = fetchFromGitHub ({
       owner = "nushell";
       repo = "nushell";
-      rev = "0.63.1";
+      rev = "0.64.0";
       fetchSubmodules = false;
-      sha256 = "sha256-wzrR4yeMOZgqKU1G+yfdTByooXTPeoo8mCfrMfNu++I=";
+      sha256 = "sha256-mDKoZVen3g8GujWF8WILEqdlHFDx2BxGyBJJFmK9Mdw=";
     });
   };
   oh-my-posh = {
