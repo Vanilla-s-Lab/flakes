@@ -7,6 +7,7 @@ let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
 let nautilus-bluetooth = callPackage ../packages/nautilus-bluetooth.nix { }; in
 let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { }; in
 let nautilus-git = callPackage ../packages/nautilus-git.nix { }; in
+let seahorse-nautilus = callPackage ../packages/seahorse-nautilus { }; in
 
 let extensions = pkgs.runCommand "extensions" { } ''
   mkdir -p $out
@@ -16,6 +17,9 @@ let extensions = pkgs.runCommand "extensions" { } ''
 
   cp ${nautilus-bluetooth}/*.la $out
   cp ${nautilus-bluetooth}/*.so $out
+
+  # cp ${seahorse-nautilus}/lib/nautilus/extensions-3.0/*.la $out
+  cp ${seahorse-nautilus}/lib/nautilus/extensions-3.0/*.so $out
 ''; in
 {
   home.packages = [
@@ -38,6 +42,7 @@ let extensions = pkgs.runCommand "extensions" { } ''
 
           # Otherwise, `nautilus` will fallback to use system Python.
           --prefix PATH : "${pkgs.python3.withPackages (p: [ nautilus-terminal ])}/bin"
+          --prefix PATH : "${seahorse-nautilus}/bin" # `seahorse-tool` is a helper.
         )
       '';
     }))

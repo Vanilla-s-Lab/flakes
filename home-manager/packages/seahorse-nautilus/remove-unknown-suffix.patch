@@ -1,0 +1,13 @@
+diff --git a/autogen.sh b/autogen.sh
+index 9b361581..d5cccd2a 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -266,7 +266,7 @@ if [ "$myhost" = "find-version" ]; then
+     else
+       ingit=no
+       beta=yes
+-      tmp="-unknown"
++      tmp=""
+       rev="0000000"
+       rvd="0"
+     fi

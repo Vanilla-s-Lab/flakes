@@ -140,4 +140,16 @@
       sha256 = "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=";
     };
   };
+  seahorse-nautilus = {
+    pname = "seahorse-nautilus";
+    version = "86214b89bc6f605e28025df896a3a306bf3c5f52";
+    src = fetchgit {
+      url = "https://gitlab.gnome.org/GNOME/seahorse-nautilus";
+      rev = "86214b89bc6f605e28025df896a3a306bf3c5f52";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-R0WD29rw/LoDC5VPFNV9q2bvK+kw2zRRvHTFhRjVrQQ=";
+    };
+  };
 }

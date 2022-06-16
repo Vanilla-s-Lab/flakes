@@ -1,0 +1,13 @@
+diff --git a/meson.build b/meson.build
+index 2fe05ee..ced97eb 100644
+--- a/meson.build
++++ b/meson.build
+@@ -25,7 +25,7 @@ config_h_dir = include_directories('.')
+ # Dependencies
+ min_glib_version = '2.44'
+ min_gtk_version = '3.18'
+-accepted_gpg_versions= ['1.2.0', '1.4.0', '2.0.0', '2.1.0', '2.2.0' ]
++accepted_gpg_versions= ['1.2.0', '1.4.0', '2.0.0', '2.1.0', '2.2.0', '2.3.0']
+ min_gpgme_version = '1.0.0'
+ 
+ libnautilus_extension = dependency('libnautilus-extension', version: '>= 2.12.0')

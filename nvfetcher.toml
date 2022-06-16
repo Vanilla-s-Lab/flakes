@@ -62,3 +62,9 @@ fetch.github = "flozz/nautilus-terminal"
 [nautilus-git]
 src.git = "https://github.com/bilelmoussaoui/nautilus-git"
 fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"
+
+# https://gitlab.gnome.org/GNOME/seahorse-nautilus
+
+[seahorse-nautilus]
+src.git = "https://gitlab.gnome.org/GNOME/seahorse-nautilus"
+fetch.git = "https://gitlab.gnome.org/GNOME/seahorse-nautilus"

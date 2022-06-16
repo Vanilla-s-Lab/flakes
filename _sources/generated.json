@@ -221,5 +221,23 @@
             "url": "https://github.com/rose-pine/alacritty"
         },
         "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
+    },
+    "seahorse-nautilus": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "seahorse-nautilus",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "86214b89bc6f605e28025df896a3a306bf3c5f52",
+            "sha256": "sha256-R0WD29rw/LoDC5VPFNV9q2bvK+kw2zRRvHTFhRjVrQQ=",
+            "type": "git",
+            "url": "https://gitlab.gnome.org/GNOME/seahorse-nautilus"
+        },
+        "version": "86214b89bc6f605e28025df896a3a306bf3c5f52"
     }
 }
