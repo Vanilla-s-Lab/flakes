@@ -35,6 +35,9 @@ let extensions = pkgs.runCommand "extensions" { } ''
           # https://github.com/NixOS/nixpkgs/issues/64970
           # https://github.com/NixOS/nixpkgs/pull/64627/commits
           --prefix GI_TYPELIB_PATH : "${pkgs.gtksourceview}/lib/girepository-1.0"
+
+          # Otherwise, `nautilus` will fallback to use system Python.
+          --prefix PATH : "${pkgs.python3.withPackages (p: [ nautilus-terminal ])}/bin"
         )
       '';
     }))
