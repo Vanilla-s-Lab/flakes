@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
 
@@ -46,6 +46,18 @@ let extensions = pkgs.runCommand "extensions" { } ''
     pkgs.evince
     pkgs.thunderbird
   ];
+
+  # https://github.com/flozz/nautilus-terminal/tree/v4.0.4#configuring=
+  # @see `nautilus_terminal/nautilus_terminal.py`, Soft != clear.
+  dconf.settings."org/flozz/nautilus-terminal".auto-clean = "Soft";
+
+  # https://github.com/rose-pine/alacritty/blob/main/dist/rose-pine-dawn.yml
+  dconf.settings."org/flozz/nautilus-terminal".background-color = "#faf4ed";
+  dconf.settings."org/flozz/nautilus-terminal".foreground-color = "#575279";
+
+  # https://github.com/nix-community/home-manager/blob/master/modules/lib/gvariant.nix # 9, ⑨!
+  dconf.settings."org/flozz/nautilus-terminal".min-terminal-height = (lib.hm.gvariant.mkUint32 (5 + (2 * 2)));
+  dconf.settings."org/flozz/nautilus-terminal".terminal-bottom = true;
 
   home.file.".thunderbird".source =
     config.lib.file.mkOutOfStoreSymlink
