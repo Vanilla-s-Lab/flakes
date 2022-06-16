@@ -1,4 +1,19 @@
-{ callPackage, stdenv, meson, pkg-config, cmake, gnome, gtk3, libcryptui, gcr, libnotify, gnupg, gpgme, python3, ninja, ... }:
+{ callPackage
+, stdenv
+, meson
+, pkg-config
+, cmake
+, gnome
+, gtk3
+, libcryptui
+, gcr
+, libnotify
+, gnupg
+, gpgme
+, python3
+, ninja
+, wrapGAppsHook
+}:
 let generated = callPackage ../../../_sources/generated.nix { }; in
 stdenv.mkDerivation rec {
   pname = generated.seahorse-nautilus.pname;
@@ -11,6 +26,7 @@ stdenv.mkDerivation rec {
     pkg-config
     cmake
     ninja
+    wrapGAppsHook
   ];
 
   buildInputs = [
