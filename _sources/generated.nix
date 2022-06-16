@@ -71,6 +71,18 @@
       sha256 = "sha256-I+UH2tO6WO72UptM8sMHJfvqX0492w2yW2mrzv5U/WU=";
     });
   };
+  nautilus-git = {
+    pname = "nautilus-git";
+    version = "5389549b4bcde91cf8d691e61a4a28d3428ddb3c";
+    src = fetchgit {
+      url = "https://github.com/bilelmoussaoui/nautilus-git";
+      rev = "5389549b4bcde91cf8d691e61a4a28d3428ddb3c";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-p6Txm8EsFjEULVLrsMqPKrDpZPny+4+k6QnMhG84oDw=";
+    };
+  };
   nautilus-terminal = {
     pname = "nautilus-terminal";
     version = "v4.0.4";

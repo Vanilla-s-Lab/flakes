@@ -56,3 +56,9 @@ fetch.github = "madmurphy/nautilus-bluetooth"
 [nautilus-terminal]
 src.github_tag = "flozz/nautilus-terminal"
 fetch.github = "flozz/nautilus-terminal"
+
+# https://github.com/bilelmoussaoui/nautilus-git/pull/45
+
+[nautilus-git]
+src.git = "https://github.com/bilelmoussaoui/nautilus-git"
+fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"

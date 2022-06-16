@@ -111,6 +111,24 @@
         },
         "version": "1.0.5"
     },
+    "nautilus-git": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "nautilus-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "5389549b4bcde91cf8d691e61a4a28d3428ddb3c",
+            "sha256": "sha256-p6Txm8EsFjEULVLrsMqPKrDpZPny+4+k6QnMhG84oDw=",
+            "type": "git",
+            "url": "https://github.com/bilelmoussaoui/nautilus-git"
+        },
+        "version": "5389549b4bcde91cf8d691e61a4a28d3428ddb3c"
+    },
     "nautilus-terminal": {
         "cargoLocks": null,
         "extract": null,
