@@ -76,8 +76,15 @@ let extensions = pkgs.runCommand "extensions" { } ''
   dconf.settings = {
     # Nautilus - Scroll Down Twice.
     "org/gnome/nautilus/icon-view".default-zoom-level = "small";
-    # Nautilus - Let sidebar contains '[ip]:...' of ftp.
-    "org/gnome/nautilus/window-state".sidebar-width = 211;
+
+    "org/gnome/nautilus/window-state" = {
+      # Nautilus - Let sidebar contains '[ip]:...' of ftp.
+      sidebar-width = 211;
+
+      # Type: (ii), Default value: (890, 550).
+      initial-size = (lib.hm.gvariant.mkTuple
+        [ 890 (550 + (117 - 69)) ]);
+    };
 
     # Text Editor - Preferences - Font & Colors - Color Scheme - Flat-Remix
     "org/gnome/gedit/preferences/editor".scheme = "Flat-Remix";
