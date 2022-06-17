@@ -1,6 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-21.11";
+
     home-manager.url = "github:nix-community/home-manager/release-22.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -50,5 +52,8 @@
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
       };
+
+      pkgs = import nixpkgs { inherit system; };
+      pkgsOld = import nixpkgs-old { inherit system; };
     };
 }
