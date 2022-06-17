@@ -156,8 +156,8 @@
     # Sound IO Device Chooser - Icons - Icon Theme - None
     "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
 
-    # Status Area Horizontal Spacing - Right key * 3 times. # More compact now.
-    "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 5 - 2;
+    # Status Area Horizontal Spacing - Right key * (?) times. # More compact now.
+    "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 1 + 1;
 
     # Unite - General - Expand top bar left box - OFF
     "org/gnome/shell/extensions/unite".extend-left-box = false;
