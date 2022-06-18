@@ -4,6 +4,8 @@
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-21.11";
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
+    nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
+
     home-manager.url = "github:nix-community/home-manager/release-22.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 

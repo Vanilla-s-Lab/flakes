@@ -8,6 +8,10 @@ let pkgsMaster = import nixpkgs-master ({ inherit system; }
 {
   systemd.services."plymouth-quit".enable = false;
 
+  programs.command-not-found.enable = true;
+  programs.command-not-found.dbPath =
+    "${nix-channel}/programs.sqlite";
+
   imports = [
     ./users.nix
 
