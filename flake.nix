@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-21.11";
+    nixpkgs-master.url = "github:nixos/nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/release-22.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -55,5 +56,6 @@
 
       pkgs = import nixpkgs { inherit system; };
       pkgsOld = import nixpkgs-old { inherit system; };
+      pkgsMaster = import nixpkgs-master { inherit system; };
     };
 }
