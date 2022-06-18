@@ -2,8 +2,10 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, system, ... }:
-with inputs; {
+{ config, pkgs, inputs, lib, system, ... }: with inputs;
+let pkgsMaster = import nixpkgs-master ({ inherit system; }
+  // { config.allowUnfree = true; }); in
+{
   systemd.services."plymouth-quit".enable = false;
 
   imports = [
@@ -41,7 +43,7 @@ with inputs; {
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/Linux_kernel
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgsMaster.linuxPackages_zen;
   # https://bugzilla.kernel.org/show_bug.cgi?id=203637
   hardware.cpu.intel.updateMicrocode = true;
 
