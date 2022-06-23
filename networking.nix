@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 {
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
@@ -22,4 +22,8 @@
 
     type = "basic";
   };
+
+  environment.systemPackages = [ pkgs.openfortivpn ];
+  environment.etc."openfortivpn/config".source =
+    config.sops.templates.openfortivpn.path;
 }
