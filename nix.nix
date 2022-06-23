@@ -27,4 +27,7 @@
     "across.cachix.org-1:gbHoNiu6UQBGwgEF+zAA00ovBCn5ObAER4KPqGQVI9A="
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
   ];
+
+  # Used for impure `<nixpkgs>`.
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }
