@@ -31,6 +31,7 @@ let pkgsMaster = import nixpkgs-master ({ inherit system; }
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
+    ./sops-config/openfortivpn.nix
 
     ./security.nix
     ./steam.nix
