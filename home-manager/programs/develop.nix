@@ -71,16 +71,7 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.traceroute
 
     pkgs.whois
-
-    # https://github.com/curl/curl/blob/master/docs/HTTP3.md#quiche-version
-    (pkgs.curlHTTP3.overrideAttrs (old: {
-      configureFlags = old.configureFlags ++ [ ]
-        # https://github.com/NixOS/nixpkgs/pull/167656#issuecomment-1092824189=
-        ++ [ "--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt" "--with-ca-path=/etc/ssl/certs" ];
-
-      # Tooks too long to build!
-      doCheck = false;
-    }))
+    pkgs.curl
 
     # Use sudo instead of adjust kernel.perf_event_paranoid!
     # nixosConfig.boot.kernelPackages.perf
