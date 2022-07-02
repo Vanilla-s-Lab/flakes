@@ -1,8 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
-    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-21.11";
-    nixpkgs-master.url = "github:nixos/nixpkgs";
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
 
@@ -52,7 +50,5 @@
       };
 
       pkgs = import nixpkgs { inherit system; };
-      pkgsOld = import nixpkgs-old { inherit system; };
-      pkgsMaster = import nixpkgs-master { inherit system; };
     };
 }

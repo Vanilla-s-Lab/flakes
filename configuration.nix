@@ -3,8 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, lib, system, ... }: with inputs;
-let pkgsMaster = import nixpkgs-master ({ inherit system; }
-  // { config.allowUnfree = true; }); in
 {
   systemd.services."plymouth-quit".enable = false;
 
@@ -48,7 +46,7 @@ let pkgsMaster = import nixpkgs-master ({ inherit system; }
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/Linux_kernel
-  boot.kernelPackages = pkgsMaster.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   # https://bugzilla.kernel.org/show_bug.cgi?id=203637
   hardware.cpu.intel.updateMicrocode = true;
 
