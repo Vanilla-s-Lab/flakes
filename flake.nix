@@ -33,11 +33,6 @@
     deploy-rs.inputs.flake-compat.follows = "flake-compat";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
     deploy-rs.inputs.utils.follows = "flake-utils";
-
-    # https://github.com/ArkToria/ACross
-    ACross.url = "github:ArkToria/ACross";
-    ACross.inputs.flake-utils.follows = "flake-utils";
-    ACross.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -50,7 +45,7 @@
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
-          ++ [{ nixpkgs.overlays = [ nur.overlay ACross.overlay ]; }]
+          ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
           ++ [ sops-nix.nixosModules.sops ]
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];

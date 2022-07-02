@@ -29,10 +29,6 @@
       '')
 
     pkgs.betterdiscordctl
-    (pkgs.across.overrideAttrs (old: {
-      # https://github.com/mozilla-mobile/mozilla-vpn-client/issues/3367
-      qtWrapperArgs = [ "--unset QT_STYLE_OVERRIDE" ];
-    }))
   ];
 
   home.file.".config/discord".source =
