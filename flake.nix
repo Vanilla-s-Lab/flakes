@@ -1,6 +1,9 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # https://github.com/NixOS/nixpkgs/commits/nixos-22.05/nixos/modules/services/hardware/udev.nix
+    nixpkgs-udev-fix.url = "github:nixos/nixpkgs/89ace3967e0fefef19666366d64d315bae9b8f19";
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
 
@@ -38,7 +41,7 @@
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       nixosConfig = nixpkgs.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit inputs self system; };
+        inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
@@ -50,5 +53,7 @@
       };
 
       pkgs = import nixpkgs { inherit system; };
+      pkgsUnstable = import nixpkgs-unstable
+        { inherit system; config.allowUnfree = true; };
     };
 }
