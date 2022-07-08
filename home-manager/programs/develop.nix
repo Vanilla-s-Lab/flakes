@@ -9,7 +9,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     #   ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
 
     (pkgs.python3.withPackages
-      (p: with p; [ openpyxl mysql-connector ] ++ [ setuptools pip ]
+      # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html
+      (p: with p; [ openpyxl mysql-connector ] ++ [ pip virtualenv setuptools ]
         ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]))
 
     pkgs.jetbrains.pycharm-professional
