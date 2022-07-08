@@ -50,4 +50,8 @@
   home.file.".local/state/wireplumber".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/state/wireplumber";
+
+  home.file."Works".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Works";
 }
