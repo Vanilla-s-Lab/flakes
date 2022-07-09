@@ -114,6 +114,7 @@ let extensions = pkgs.runCommand "extensions" { } ''
 
   # Caution: Whitespace should replaced by '%20'.
   home.file.".config/gtk-3.0/bookmarks".text = ''
+    file:///home/vanilla/Works Works
     file:///home/vanilla/Projects Projects
     file:///home/vanilla/.local/lib/wine-wechat/default/drive_c/WeChat%20Files/${wxid}/FileStorage/File wechat_file
   '';
