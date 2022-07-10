@@ -3,29 +3,29 @@
 {
   "\"GitHub.copilot\"" = {
     pname = "\"GitHub.copilot\"";
-    version = "1.29.6152";
+    version = "1.31.6194";
     src = fetchurl {
-      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.29.6152/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "copilot-1.29.6152.zip";
-      sha256 = "sha256-JB1SNyC87sImIeweAixdAOUknWJr9L1zIHbpVTM0rlo=";
+      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.31.6194/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "copilot-1.31.6194.zip";
+      sha256 = "sha256-obUu3pHvdwzWBejVWl94Ki8YN7ujHukNX0gvRdWhBYw=";
     };
   };
   "\"GitHub.copilot-labs\"" = {
     pname = "\"GitHub.copilot-labs\"";
-    version = "0.1.176";
+    version = "0.2.221";
     src = fetchurl {
-      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot-labs/0.1.176/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "copilot-labs-0.1.176.zip";
-      sha256 = "sha256-nMGXgfeMOi6GoJZemQMNz9hB0cy4JSXKkmv3Fw98BOI=";
+      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot-labs/0.2.221/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "copilot-labs-0.2.221.zip";
+      sha256 = "sha256-96rQBwm6KhRiHSrqe00yaF3UY/qavXHnXhSESgUtfdU=";
     };
   };
   "\"PKief.material-icon-theme\"" = {
     pname = "\"PKief.material-icon-theme\"";
-    version = "4.18.1";
+    version = "4.19.0";
     src = fetchurl {
-      url = "https://PKief.gallery.vsassets.io/_apis/public/gallery/publisher/PKief/extension/material-icon-theme/4.18.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "material-icon-theme-4.18.1.zip";
-      sha256 = "sha256-g+741XXYjL0RnrpUquHckK6sf61BpHpAd8S3QiIB5dY=";
+      url = "https://PKief.gallery.vsassets.io/_apis/public/gallery/publisher/PKief/extension/material-icon-theme/4.19.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "material-icon-theme-4.19.0.zip";
+      sha256 = "sha256-RBXs7S0iyuutUn11hFqc0VyTs4NFDFLBRvY0u8id86s=";
     };
   };
   "\"unthrottled.doki-theme\"" = {
