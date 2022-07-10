@@ -7,6 +7,11 @@
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
 
+    nvfetcher.url = "github:berberman/nvfetcher/master";
+    nvfetcher.inputs.flake-compat.follows = "flake-compat";
+    nvfetcher.inputs.flake-utils.follows = "flake-utils";
+    nvfetcher.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
     home-manager.url = "github:nix-community/home-manager/release-22.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 

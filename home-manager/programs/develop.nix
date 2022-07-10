@@ -90,7 +90,8 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
       x11Support = true;
     })
 
-    pkgs.nvfetcher
+    inputs.nvfetcher.defaultPackage."${system}"
+
     pkgs.wget
 
     pkgs.stress
