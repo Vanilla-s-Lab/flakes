@@ -28,6 +28,33 @@
       sha256 = "sha256-RBXs7S0iyuutUn11hFqc0VyTs4NFDFLBRvY0u8id86s=";
     };
   };
+  "\"ms-python.python\"" = {
+    pname = "\"ms-python.python\"";
+    version = "2022.11.11891004";
+    src = fetchurl {
+      url = "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11891004/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "python-2022.11.11891004.zip";
+      sha256 = "sha256-T+TcjbV94/TykdXOR8xuqwP8AuGPyM8sHB+PnH1x/fk=";
+    };
+  };
+  "\"redhat.ansible\"" = {
+    pname = "\"redhat.ansible\"";
+    version = "0.10.0";
+    src = fetchurl {
+      url = "https://redhat.gallery.vsassets.io/_apis/public/gallery/publisher/redhat/extension/ansible/0.10.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "ansible-0.10.0.zip";
+      sha256 = "sha256-cXDr0vNDjn3HZdKdFhE0yXo8dLS78LIqhZ5tY//2EDo=";
+    };
+  };
+  "\"redhat.vscode-yaml\"" = {
+    pname = "\"redhat.vscode-yaml\"";
+    version = "1.8.0";
+    src = fetchurl {
+      url = "https://redhat.gallery.vsassets.io/_apis/public/gallery/publisher/redhat/extension/vscode-yaml/1.8.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-yaml-1.8.0.zip";
+      sha256 = "sha256-GwdpuZjFGbffa+G0U7xOQuChPmQ5S5x9fDRnZ3slTbY=";
+    };
+  };
   "\"unthrottled.doki-theme\"" = {
     pname = "\"unthrottled.doki-theme\"";
     version = "78.1.5";

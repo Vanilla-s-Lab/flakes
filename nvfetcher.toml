@@ -31,6 +31,18 @@ fetch.vsmarketplace = "unthrottled.doki-theme"
 src.vsmarketplace = "PKief.material-icon-theme"
 fetch.vsmarketplace = "PKief.material-icon-theme"
 
+["redhat.ansible"]
+src.vsmarketplace = "redhat.ansible"
+fetch.vsmarketplace = "redhat.ansible"
+
+["ms-python.python"]
+src.vsmarketplace = "ms-python.python"
+fetch.vsmarketplace = "ms-python.python"
+
+["redhat.vscode-yaml"]
+src.vsmarketplace = "redhat.vscode-yaml"
+fetch.vsmarketplace = "redhat.vscode-yaml"
+
 # https://github.com/brunonova/nautilus-admin
 
 [nautilus-admin]

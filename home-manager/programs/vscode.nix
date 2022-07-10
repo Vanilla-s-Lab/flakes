@@ -14,7 +14,8 @@ let vscExt = name: (pkgs.vscode-utils.buildVscodeExtension rec {
 
   programs.vscode.extensions = [ (vscExt "GitHub.copilot") (vscExt "GitHub.copilot-labs") ]
     # https://material-theme.com/docs/acknowledgements/#material-icon-theme-for-visual-studio-code
-    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ];
+    ++ [ (vscExt "unthrottled.doki-theme") (vscExt "PKief.material-icon-theme") ]
+    ++ [ (vscExt "redhat.ansible") (vscExt "ms-python.python") (vscExt "redhat.vscode-yaml") ];
 
   # https://code.visualstudio.com/docs/supporting/FAQ
 
