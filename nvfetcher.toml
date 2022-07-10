@@ -1,14 +1,6 @@
-[oh-my-posh]
-src.github_tag = "JanDeDobbeleer/oh-my-posh"
-fetch.github = "JanDeDobbeleer/oh-my-posh"
-
 [rose-pine]
 src.git = "https://github.com/rose-pine/alacritty"
 fetch.git = "https://github.com/rose-pine/alacritty"
-
-[nushell]
-src.github_tag = "nushell/nushell"
-fetch.github = "nushell/nushell"
 
 [plugin-kubectl]
 src.git = "https://github.com/blackjid/plugin-kubectl"

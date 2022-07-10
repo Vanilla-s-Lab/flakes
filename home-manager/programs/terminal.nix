@@ -3,8 +3,6 @@ let enable_feature = feature_list: builtins.listToAttrs
   (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
     (x: { name = x; value = { disabled = false; }; })); in
 
-let oh-my-posh = pkgs.callPackage ../packages/oh-my-posh.nix { }; in
-let pkgs_nushell = pkgs.callPackage ../packages/nushell.nix { }; in
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   # https://github.com/alacritty/alacritty
@@ -50,24 +48,10 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
     # https://github.com/MidAutumnMoon/Boxfish
     pkgs.bubblewrap
-
-    # https://ohmyposh.dev/docs/installation/prompt
-    oh-my-posh
   ];
 
-  home.file.".config/nushell/env.nu".source =
-    "${generated.nushell.src}/docs/sample_config/default_config.nu";
-  home.file.".config/nushell/kali.omp.json".source =
-    "${generated.oh-my-posh.src}/themes/kali.omp.json";
-
-  # https://github.com/nushell/nushell/pull/4966
-  home.activation."prepare_dot_omp_for_nushell" =
-    lib.hm.dag.entryAfter [ "dconfSettings" ]
-      "oh-my-posh init nu --config ~/.config/nushell/kali.omp.json";
-
-  # https://www.nushell.sh/book/3rdpartyprompts.html
-  home.file.".config/nushell/config.nu".text =
-    "source ~/.oh-my-posh.nu";
+  home.file.".config/nushell/env.nu".text = "";
+  home.file.".config/nushell/config.nu".text = "";
 
   # https://github.com/jhillyerd/plugin-git
   home.activation."fishPlugins.git" =
@@ -107,5 +91,5 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
   programs.tmux.enable = true;
   programs.nushell.enable = true;
-  programs.nushell.package = pkgs_nushell;
+  programs.nushell.package = pkgs.nushell;
 }

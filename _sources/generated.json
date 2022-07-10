@@ -148,44 +148,6 @@
         },
         "version": "v4.0.4"
     },
-    "nushell": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "nushell",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nushell",
-            "repo": "nushell",
-            "rev": "0.64.0",
-            "sha256": "sha256-mDKoZVen3g8GujWF8WILEqdlHFDx2BxGyBJJFmK9Mdw=",
-            "type": "github"
-        },
-        "version": "0.64.0"
-    },
-    "oh-my-posh": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "oh-my-posh",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "JanDeDobbeleer",
-            "repo": "oh-my-posh",
-            "rev": "v8.5.0",
-            "sha256": "sha256-s00k+GvV1UNYEbXlUIPF5QcgVcyPjRlO02xiZW+r/pM=",
-            "type": "github"
-        },
-        "version": "v8.5.0"
-    },
     "plugin-kubectl": {
         "cargoLocks": null,
         "extract": null,

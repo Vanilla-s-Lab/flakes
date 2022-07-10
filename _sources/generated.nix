@@ -94,28 +94,6 @@
       sha256 = "sha256-cMnxAYCWaye1/3j02bbO4hQba2dLkZXuYK2VkZ4oFKs=";
     });
   };
-  nushell = {
-    pname = "nushell";
-    version = "0.64.0";
-    src = fetchFromGitHub ({
-      owner = "nushell";
-      repo = "nushell";
-      rev = "0.64.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-mDKoZVen3g8GujWF8WILEqdlHFDx2BxGyBJJFmK9Mdw=";
-    });
-  };
-  oh-my-posh = {
-    pname = "oh-my-posh";
-    version = "v8.5.0";
-    src = fetchFromGitHub ({
-      owner = "JanDeDobbeleer";
-      repo = "oh-my-posh";
-      rev = "v8.5.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-s00k+GvV1UNYEbXlUIPF5QcgVcyPjRlO02xiZW+r/pM=";
-    });
-  };
   plugin-kubectl = {
     pname = "plugin-kubectl";
     version = "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8";
