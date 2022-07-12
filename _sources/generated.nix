@@ -30,11 +30,11 @@
   };
   "\"ms-python.python\"" = {
     pname = "\"ms-python.python\"";
-    version = "2022.11.11891004";
+    version = "2022.11.11921007";
     src = fetchurl {
-      url = "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11891004/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "python-2022.11.11891004.zip";
-      sha256 = "sha256-T+TcjbV94/TykdXOR8xuqwP8AuGPyM8sHB+PnH1x/fk=";
+      url = "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11921007/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "python-2022.11.11921007.zip";
+      sha256 = "sha256-p5TTzMPW2UhA2M93gxMLa6C3acuRo1QDBhg2dh2JLEY=";
     };
   };
   "\"redhat.ansible\"" = {
