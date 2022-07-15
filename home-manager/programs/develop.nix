@@ -30,8 +30,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.bintools
     pkgs.patchelf
 
-    pkgs.android-studio
-
     pkgs.talosctl
     pkgs.kubectl
 
@@ -161,10 +159,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
   programs.fish.interactiveShellInit = ''
     kubectl completion fish | source
   '';
-
-  home.file."Android".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/Android";
 
   home.file.".cache/Google".source =
     config.lib.file.mkOutOfStoreSymlink
