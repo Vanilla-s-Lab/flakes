@@ -195,7 +195,4 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/java/dot/userPrefs/jetbrains";
-
-  programs.java.enable = true;
-  programs.java.package = pkgs.jdk17_headless;
 }
