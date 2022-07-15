@@ -66,7 +66,6 @@
       name = "Autostart";
       apps = [
         "albert.desktop"
-        "discord.desktop"
         "kotatogramdesktop.desktop"
         "qv2ray.desktop"
       ];
