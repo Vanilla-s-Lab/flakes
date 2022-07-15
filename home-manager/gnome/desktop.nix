@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, config, ... }:
 {
   dconf.settings = {
     "org/gnome/shell".favorite-apps = [
@@ -40,6 +40,9 @@
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
         "wemeetapp.desktop"
+
+        "org.remmina.Remmina.desktop"
+        "org.gnome.DiskUtility.desktop"
       ];
     };
 
@@ -106,4 +109,17 @@
       apps = [ "org.gnome.Evince.desktop" "nixos-manual.desktop" ];
     };
   };
+
+  home.packages = [
+    pkgs.remmina
+    pkgs.gnome.gnome-disk-utility
+  ];
+
+  home.file.".config/remmina".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/remmina";
+
+  home.file.".local/share/remmina".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/remmina";
 }
