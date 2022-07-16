@@ -48,12 +48,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "python-2022.11.11921007.zip",
-            "sha256": "sha256-p5TTzMPW2UhA2M93gxMLa6C3acuRo1QDBhg2dh2JLEY=",
+            "name": "python-2022.11.11961004.zip",
+            "sha256": "sha256-TCSzYhu/FH1b75rX5lbfvMBtpAqe7lweHMel7fFKJoE=",
             "type": "url",
-            "url": "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11921007/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11961004/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "2022.11.11921007"
+        "version": "2022.11.11961004"
     },
     "\"redhat.ansible\"": {
         "cargoLocks": null,
@@ -76,12 +76,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscode-yaml-1.8.0.zip",
-            "sha256": "sha256-GwdpuZjFGbffa+G0U7xOQuChPmQ5S5x9fDRnZ3slTbY=",
+            "name": "vscode-yaml-1.9.1.zip",
+            "sha256": "sha256-XFg6L+DYhq7cmbnYPkRaZJK5zPTp4yeQR24fCpUGp4I=",
             "type": "url",
-            "url": "https://redhat.gallery.vsassets.io/_apis/public/gallery/publisher/redhat/extension/vscode-yaml/1.8.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://redhat.gallery.vsassets.io/_apis/public/gallery/publisher/redhat/extension/vscode-yaml/1.9.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "1.8.0"
+        "version": "1.9.1"
     },
     "\"unthrottled.doki-theme\"": {
         "cargoLocks": null,
