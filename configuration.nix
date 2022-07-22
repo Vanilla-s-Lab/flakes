@@ -34,6 +34,7 @@ with inputs;
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
     ./sops-config/openfortivpn.nix
+    ./sops-config/Vanilla_maFile.nix
 
     ./security.nix
     ./steam.nix
