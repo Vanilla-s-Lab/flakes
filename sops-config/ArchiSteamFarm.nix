@@ -6,9 +6,8 @@
   sops.templates.ArchiSteamFarm.owner = "vanilla";
   # sops.templates.ArchiSteamFarm.group = "users";
 
-  sops.templates.ArchiSteamFarm.content = builtins.toJSON {
+  sops.templates.ArchiSteamFarm.content = builtins.toJSON ({
     SteamLogin = config.sops.placeholder."ArchiSteamFarm/Login";
     SteamPassword = config.sops.placeholder."ArchiSteamFarm/Password";
-    Enabled = true;
-  };
+  } // { Enabled = true; OnlineStatus = 2; });
 }
