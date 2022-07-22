@@ -154,18 +154,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     kubectl completion fish | source
   '';
 
-  home.file.".cache/Google".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/cache/Google";
-
-  home.file.".config/Google".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/Google";
-
-  home.file.".local/share/Google".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/Google";
-
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/rustup";
