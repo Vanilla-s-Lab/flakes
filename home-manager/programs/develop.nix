@@ -60,8 +60,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.azure-cli
     pkgs.azure-storage-azcopy
 
-    pkgs.gh
-
     deploy-rs.defaultPackage."${system}"
 
     pkgs.redis
@@ -147,10 +145,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
   home.file.".terraform.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/terraform.d";
-
-  home.file.".config/gh".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/gh";
 
   home.file.".gradle".source =
     config.lib.file.mkOutOfStoreSymlink
