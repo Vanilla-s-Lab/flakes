@@ -24,4 +24,8 @@
 
   # https://nixos.wiki/wiki/Podman
   virtualisation.podman.enable = true;
+
+  # https://nixos.wiki/wiki/VirtualBox
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 }
