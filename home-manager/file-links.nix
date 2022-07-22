@@ -58,4 +58,8 @@
   home.file."VirtualBox VMs".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/VirtualBox VMs";
+
+  home.file.".config/VirtualBox".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/VirtualBox";
 }
