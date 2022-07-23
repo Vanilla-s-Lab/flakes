@@ -6,9 +6,9 @@ fetch.git = "https://github.com/rose-pine/alacritty"
 src.git = "https://github.com/blackjid/plugin-kubectl"
 fetch.git = "https://github.com/blackjid/plugin-kubectl"
 
-[Boxfish]
-src.git = "https://github.com/MidAutumnMoon/Boxfish"
-fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
+# [Boxfish]
+# src.git = "https://github.com/MidAutumnMoon/Boxfish"
+# fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
 
 # https://marketplace.visualstudio.com/
 

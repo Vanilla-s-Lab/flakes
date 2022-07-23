@@ -3,11 +3,11 @@
 {
   "\"GitHub.copilot\"" = {
     pname = "\"GitHub.copilot\"";
-    version = "1.31.6194";
+    version = "1.34.6280";
     src = fetchurl {
-      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.31.6194/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "copilot-1.31.6194.zip";
-      sha256 = "sha256-obUu3pHvdwzWBejVWl94Ki8YN7ujHukNX0gvRdWhBYw=";
+      url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.34.6280/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "copilot-1.34.6280.zip";
+      sha256 = "sha256-yMemm2hIowznjHostr3BTlu5oh1nSr910MqpJ78x0Bc=";
     };
   };
   "\"GitHub.copilot-labs\"" = {
@@ -30,11 +30,11 @@
   };
   "\"ms-python.python\"" = {
     pname = "\"ms-python.python\"";
-    version = "2022.11.11961004";
+    version = "2022.11.12031009";
     src = fetchurl {
-      url = "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11961004/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "python-2022.11.11961004.zip";
-      sha256 = "sha256-TCSzYhu/FH1b75rX5lbfvMBtpAqe7lweHMel7fFKJoE=";
+      url = "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.12031009/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "python-2022.11.12031009.zip";
+      sha256 = "sha256-PXfXleapwhjbiLeernLAkJgr7C5jJgW8I4mliRlZlqM=";
     };
   };
   "\"redhat.ansible\"" = {
@@ -57,23 +57,11 @@
   };
   "\"unthrottled.doki-theme\"" = {
     pname = "\"unthrottled.doki-theme\"";
-    version = "78.1.5";
+    version = "84.1.6";
     src = fetchurl {
-      url = "https://unthrottled.gallery.vsassets.io/_apis/public/gallery/publisher/unthrottled/extension/doki-theme/78.1.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "doki-theme-78.1.5.zip";
-      sha256 = "sha256-u1/20wvQC1j1UZlfCs29vDbFDGL7TGL4hXwj3knuf1U=";
-    };
-  };
-  Boxfish = {
-    pname = "Boxfish";
-    version = "385c04e685ac6a5130f3f12aaca13642ee0dd3ba";
-    src = fetchgit {
-      url = "https://github.com/MidAutumnMoon/Boxfish";
-      rev = "385c04e685ac6a5130f3f12aaca13642ee0dd3ba";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-ohBwPRuAHLVwESvtHyRb/VobwtHg7S7+Pi6fk2SD2EU=";
+      url = "https://unthrottled.gallery.vsassets.io/_apis/public/gallery/publisher/unthrottled/extension/doki-theme/84.1.6/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "doki-theme-84.1.6.zip";
+      sha256 = "sha256-PffmRzAYR9/pLpE5Qehpyu4RnJDV7zh6WLdWcb7jwSY=";
     };
   };
   nautilus-admin = {

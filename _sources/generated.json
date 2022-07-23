@@ -6,12 +6,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "copilot-1.31.6194.zip",
-            "sha256": "sha256-obUu3pHvdwzWBejVWl94Ki8YN7ujHukNX0gvRdWhBYw=",
+            "name": "copilot-1.34.6280.zip",
+            "sha256": "sha256-yMemm2hIowznjHostr3BTlu5oh1nSr910MqpJ78x0Bc=",
             "type": "url",
-            "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.31.6194/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/copilot/1.34.6280/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "1.31.6194"
+        "version": "1.34.6280"
     },
     "\"GitHub.copilot-labs\"": {
         "cargoLocks": null,
@@ -48,12 +48,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "python-2022.11.11961004.zip",
-            "sha256": "sha256-TCSzYhu/FH1b75rX5lbfvMBtpAqe7lweHMel7fFKJoE=",
+            "name": "python-2022.11.12031009.zip",
+            "sha256": "sha256-PXfXleapwhjbiLeernLAkJgr7C5jJgW8I4mliRlZlqM=",
             "type": "url",
-            "url": "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.11961004/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://ms-python.gallery.vsassets.io/_apis/public/gallery/publisher/ms-python/extension/python/2022.11.12031009/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "2022.11.11961004"
+        "version": "2022.11.12031009"
     },
     "\"redhat.ansible\"": {
         "cargoLocks": null,
@@ -90,30 +90,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "doki-theme-78.1.5.zip",
-            "sha256": "sha256-u1/20wvQC1j1UZlfCs29vDbFDGL7TGL4hXwj3knuf1U=",
+            "name": "doki-theme-84.1.6.zip",
+            "sha256": "sha256-PffmRzAYR9/pLpE5Qehpyu4RnJDV7zh6WLdWcb7jwSY=",
             "type": "url",
-            "url": "https://unthrottled.gallery.vsassets.io/_apis/public/gallery/publisher/unthrottled/extension/doki-theme/78.1.5/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://unthrottled.gallery.vsassets.io/_apis/public/gallery/publisher/unthrottled/extension/doki-theme/84.1.6/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "78.1.5"
-    },
-    "Boxfish": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "Boxfish",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba",
-            "sha256": "sha256-ohBwPRuAHLVwESvtHyRb/VobwtHg7S7+Pi6fk2SD2EU=",
-            "type": "git",
-            "url": "https://github.com/MidAutumnMoon/Boxfish"
-        },
-        "version": "385c04e685ac6a5130f3f12aaca13642ee0dd3ba"
+        "version": "84.1.6"
     },
     "nautilus-admin": {
         "cargoLocks": null,

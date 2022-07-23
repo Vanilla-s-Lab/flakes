@@ -32,7 +32,7 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/blackjid/plugin-kubectl
   programs.fish.plugins = [
     rec { name = "plugin-kubectl"; src = generated."${name}".src; }
-    rec { name = "Boxfish"; src = generated."${name}".src; }
+    # rec { name = "Boxfish"; src = generated."${name}".src; }
   ];
 
   home.packages = [
@@ -47,7 +47,7 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     pkgs.ripgrep
 
     # https://github.com/MidAutumnMoon/Boxfish
-    pkgs.bubblewrap
+    # pkgs.bubblewrap
   ];
 
   home.file.".config/nushell/env.nu".text = "";
