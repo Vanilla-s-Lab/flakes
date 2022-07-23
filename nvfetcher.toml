@@ -10,39 +10,6 @@ fetch.git = "https://github.com/blackjid/plugin-kubectl"
 # src.git = "https://github.com/MidAutumnMoon/Boxfish"
 # fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
 
-# https://marketplace.visualstudio.com/
-
-["GitHub.copilot"]
-src.vsmarketplace = "GitHub.copilot"
-fetch.vsmarketplace = "GitHub.copilot"
-
-["GitHub.copilot-labs"]
-src.vsmarketplace = "GitHub.copilot-labs"
-fetch.vsmarketplace = "GitHub.copilot-labs"
-
-# The Doki Theme
-# Material Icon Theme
-
-["unthrottled.doki-theme"]
-src.vsmarketplace = "unthrottled.doki-theme"
-fetch.vsmarketplace = "unthrottled.doki-theme"
-
-["PKief.material-icon-theme"]
-src.vsmarketplace = "PKief.material-icon-theme"
-fetch.vsmarketplace = "PKief.material-icon-theme"
-
-["redhat.ansible"]
-src.vsmarketplace = "redhat.ansible"
-fetch.vsmarketplace = "redhat.ansible"
-
-["ms-python.python"]
-src.vsmarketplace = "ms-python.python"
-fetch.vsmarketplace = "ms-python.python"
-
-["redhat.vscode-yaml"]
-src.vsmarketplace = "redhat.vscode-yaml"
-fetch.vsmarketplace = "redhat.vscode-yaml"
-
 # https://github.com/brunonova/nautilus-admin
 
 [nautilus-admin]
@@ -66,9 +33,3 @@ fetch.github = "flozz/nautilus-terminal"
 [nautilus-git]
 src.git = "https://github.com/bilelmoussaoui/nautilus-git"
 fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"
-
-# https://gitlab.gnome.org/GNOME/seahorse-nautilus
-
-[seahorse-nautilus]
-src.git = "https://gitlab.gnome.org/GNOME/seahorse-nautilus"
-fetch.git = "https://gitlab.gnome.org/GNOME/seahorse-nautilus"
