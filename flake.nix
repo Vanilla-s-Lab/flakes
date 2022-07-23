@@ -8,8 +8,6 @@
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
 
     nvfetcher.url = "github:berberman/nvfetcher/master";
-    nvfetcher.inputs.flake-compat.follows = "flake-compat";
-    nvfetcher.inputs.flake-utils.follows = "flake-utils";
     nvfetcher.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     home-manager.url = "github:nix-community/home-manager/release-22.05";
@@ -20,13 +18,8 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    flake-utils.url = "github:numtide/flake-utils";
-    flake-compat.url = "github:edolstra/flake-compat";
-    flake-compat.flake = false;
-
     nixos-cn.url = "github:nixos-cn/flakes";
     nixos-cn.inputs.nixpkgs.follows = "nixpkgs";
-    nixos-cn.inputs.flake-utils.follows = "flake-utils";
 
     impermanence.url = "github:nix-community/impermanence";
 
@@ -36,9 +29,7 @@
 
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
-    deploy-rs.inputs.flake-compat.follows = "flake-compat";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
-    deploy-rs.inputs.utils.follows = "flake-utils";
   };
 
   outputs = { self, ... }@inputs: with inputs;
