@@ -63,6 +63,7 @@
       name = "Autostart";
       apps = [
         "albert.desktop"
+        "clash-for-windows.desktop"
         "kotatogramdesktop.desktop"
         "qv2ray.desktop"
       ];

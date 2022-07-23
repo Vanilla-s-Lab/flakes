@@ -18,6 +18,12 @@
       name = "kotatogramdesktop";
       package = pkgs.kotatogram-desktop;
     })
+
+    pkgs.nur.repos.linyinfeng.clash-for-windows
+    (pkgs.makeAutostartItem {
+      name = "clash-for-windows";
+      package = pkgs.nur.repos.linyinfeng.clash-for-windows;
+    })
   ];
 
   home.file.".config/qv2ray-vcore".source =
