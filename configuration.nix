@@ -7,9 +7,6 @@ with inputs;
 {
   systemd.services."plymouth-quit".enable = false;
 
-  services.influxdb2.enable = true;
-  environment.systemPackages = [ pkgsUnstable.telegraf ];
-
   programs.command-not-found.enable = true;
   programs.command-not-found.dbPath =
     "${nix-channel}/programs.sqlite";
