@@ -22,8 +22,4 @@
 
     type = "basic";
   };
-
-  environment.systemPackages = [ pkgs.openfortivpn ];
-  environment.etc."openfortivpn/config".source =
-    config.sops.templates.openfortivpn.path;
 }
