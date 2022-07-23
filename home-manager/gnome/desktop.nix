@@ -72,7 +72,6 @@
       name = "IDEs";
       apps = [
         "clion.desktop"
-        "code.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
         "pycharm-professional.desktop"
