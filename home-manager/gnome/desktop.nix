@@ -35,6 +35,7 @@
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
+        "org.remmina.Remmina.desktop"
         "wine-wechat.desktop"
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
@@ -103,4 +104,20 @@
       apps = [ "org.gnome.Evince.desktop" "nixos-manual.desktop" ];
     };
   };
+
+  home.packages = [
+    pkgs.remmina
+  ];
+
+  home.file.".cache/remmina".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/remmina";
+
+  home.file.".config/remmina".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/remmina";
+
+  home.file.".local/share/remmina".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/remmina";
 }
