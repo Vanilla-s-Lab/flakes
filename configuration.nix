@@ -62,11 +62,6 @@ with inputs;
   # Required nvme kernel module to find disk.
   boot.initrd.availableKernelModules = [ "nvme" "tcp_bbr2" ];
 
-  # https://wiki.archlinux.org/title/improving_performance#Watchdogs
-  boot.kernelParams = [ "nowatchdog" ] # https://access.redhat.com/sites/default/files/attachments/201501-perf-brief-low-latency-tuning-rhel7-v2.1.pdf
-    ++ [ "mce=ignore_ce" "nosoftlockup" "audit=0" /* SELinux */ "idle=poll" /* isolcpus= */ "skew_tick=1" "intel_pstate=disable" /* nohz_full= */ ];
-  boot.blacklistedKernelModules = [ "iTCO_wdt" ];
-
   # Define your hostname.
   networking.hostName = "NixOS-RoT";
   networking.domain = "vanilla.local";
