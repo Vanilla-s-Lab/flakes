@@ -88,8 +88,4 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
-
-  programs.tmux.enable = true;
-  programs.nushell.enable = true;
-  programs.nushell.package = pkgs.nushell;
 }
