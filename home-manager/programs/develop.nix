@@ -70,17 +70,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.whois
     pkgs.curl
 
-    # Use sudo instead of adjust kernel.perf_event_paranoid!
-    # nixosConfig.boot.kernelPackages.perf
-    nixosConfig.boot.kernelPackages.bcc
-    # nixosConfig.boot.kernelPackages.bpftrace
-    nixosConfig.boot.kernelPackages.systemtap
-    # https://vstinner.github.io/intel-cpus.html
-    nixosConfig.boot.kernelPackages.turbostat
-    nixosConfig.boot.kernelPackages.cpupower
-    pkgs.flamegraph
-    pkgs.msr-tools
-
     pkgs.powertop
     (pkgs.hwloc.override {
       x11Support = true;
