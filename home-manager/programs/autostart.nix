@@ -50,4 +50,12 @@
       /sys/bus/usb/devices/1-8/bConfigurationValue \
       > /dev/null || true
   '';
+
+  home.file.".config/clash".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/clash";
+
+  home.file.".config/clash_win".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/clash_win";
 }
