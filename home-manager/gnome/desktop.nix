@@ -35,7 +35,6 @@
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
-        "dingtalk.desktop"
         "wine-wechat.desktop"
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
