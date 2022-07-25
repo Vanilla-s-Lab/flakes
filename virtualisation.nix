@@ -7,8 +7,6 @@
   users.users."vanilla".extraGroups = [ "libvirtd" ]
     ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
-  virtualisation.docker.daemon.settings =
-    { fixed-cidr-v6 = "fd00::/80"; ipv6 = true; };
 
   systemd.tmpfiles.rules = [
     "L /var/lib/docker - - - - /persistent/var/lib/docker"
