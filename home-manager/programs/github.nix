@@ -51,12 +51,6 @@
     127.0.0.1 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIzKaLzzMh2MvYRcDSvkyB7YXGNIP3IlBUda9ODxd2PX
   '';
 
-  # https://nixos.wiki/wiki/Git#git-gc
-  programs.git.extraConfig."pack" = {
-    windowMemory = "2g";
-    packSizeLimit = "1g";
-  };
-
   # https://cms-sw.github.io/tutorial-proxy.html
   programs.ssh.matchBlocks."github.com" = {
     host = "github.com";
