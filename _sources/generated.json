@@ -68,11 +68,11 @@
             "name": null,
             "owner": "flozz",
             "repo": "nautilus-terminal",
-            "rev": "v4.0.4",
-            "sha256": "sha256-cMnxAYCWaye1/3j02bbO4hQba2dLkZXuYK2VkZ4oFKs=",
+            "rev": "v4.0.6",
+            "sha256": "sha256-jVbvJZ0/Tuor6d4t9Hv22h5MLf2bJasguNiFkVBLoqw=",
             "type": "github"
         },
-        "version": "v4.0.4"
+        "version": "v4.0.6"
     },
     "plugin-kubectl": {
         "cargoLocks": null,

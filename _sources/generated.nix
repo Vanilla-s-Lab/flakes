@@ -37,13 +37,13 @@
   };
   nautilus-terminal = {
     pname = "nautilus-terminal";
-    version = "v4.0.4";
+    version = "v4.0.6";
     src = fetchFromGitHub ({
       owner = "flozz";
       repo = "nautilus-terminal";
-      rev = "v4.0.4";
+      rev = "v4.0.6";
       fetchSubmodules = false;
-      sha256 = "sha256-cMnxAYCWaye1/3j02bbO4hQba2dLkZXuYK2VkZ4oFKs=";
+      sha256 = "sha256-jVbvJZ0/Tuor6d4t9Hv22h5MLf2bJasguNiFkVBLoqw=";
     });
   };
   plugin-kubectl = {
