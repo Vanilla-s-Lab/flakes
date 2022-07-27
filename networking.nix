@@ -29,4 +29,7 @@
     ++ Moka
     host = mokahr.com
   '';
+
+  # services/x11/desktop-managers/gnome.nix
+  services.avahi.enable = false; # [ 5353 ]
 }
