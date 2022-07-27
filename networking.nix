@@ -26,8 +26,11 @@
 
     ++ Baidu
     host = baidu.com
-
     ++ JumpServer
     host = 10.0.100.204
+    ++ Sina
+    host = sina.com.cn
+    ++ Moka
+    host = mokahr.com
   '';
 }
