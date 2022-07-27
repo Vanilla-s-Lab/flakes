@@ -75,7 +75,7 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
       x11Support = true;
     })
 
-    inputs.nvfetcher.defaultPackage."${system}"
+    pkgs.nvfetcher
 
     pkgs.wget
 
