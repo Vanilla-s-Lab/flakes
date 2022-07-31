@@ -43,8 +43,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
     pkgs.nodejs
     pkgs.nodePackages.npm
 
-    pkgs.gradle
-
     pkgs.kubectl-tree
 
     pkgs.dig
@@ -124,10 +122,6 @@ let pkgsJB = import inputs.nixpkgs-jetbrains
   home.file.".terraform.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/terraform.d";
-
-  home.file.".gradle".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/gradle";
 
   programs.fish.interactiveShellInit = ''
     kubectl completion fish | source
