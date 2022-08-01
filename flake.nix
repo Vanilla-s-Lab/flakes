@@ -5,6 +5,10 @@
     # https://github.com/NixOS/nixpkgs/commits/nixos-22.05/nixos/modules/services/hardware/udev.nix
     nixpkgs-udev-fix.url = "github:nixos/nixpkgs/89ace3967e0fefef19666366d64d315bae9b8f19";
 
+    # https://github.com/NixOS/nixpkgs/pull/133672/files
+    nixpkgs-playwright-chromium.url = "github:jlesquembre/nixpkgs/playwright";
+    nixpkgs-playwright-chromium.flake = false;
+
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
 
     home-manager.url = "github:nix-community/home-manager/release-22.05";
