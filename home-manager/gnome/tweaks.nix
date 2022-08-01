@@ -6,7 +6,19 @@
     pkgs.layan-gtk-theme
     pkgs.breeze-gtk
     pkgs.tela-icon-theme
-    pkgs.flat-remix-gnome
+
+    # https://github.com/NixOS/nixpkgs/pull/184000
+    (pkgs.flat-remix-gnome.overrideAttrs (old: rec {
+      pname = "flat-remix-gnome";
+      version = "20220622";
+
+      src = pkgs.fetchFromGitHub {
+        repo = "${pname}";
+        owner = "daniruiz";
+        rev = "${version}";
+        hash = "sha256-fm1YOKI6TLkCnkkPZkp8I0xWkNrZt4sVktYZyD5foKU=";
+      };
+    }))
   ];
 
   dconf.settings = {
