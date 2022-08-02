@@ -107,6 +107,10 @@
     };
   };
 
+  home.file.".vagrant.d".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/vagrant.d";
+
   home.packages = [
     pkgs.remmina
     pkgs.vagrant
