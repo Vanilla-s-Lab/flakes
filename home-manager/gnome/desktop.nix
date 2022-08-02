@@ -111,6 +111,14 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/vagrant.d";
 
+  home.file.".config/VirtualBox".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/VirtualBox";
+
+  home.file."VirtualBox VMs".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/VirtualBox VMs";
+
   home.packages = [
     pkgs.remmina
     pkgs.vagrant
