@@ -33,6 +33,10 @@
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
+
+    # https://nixos.wiki/wiki/Rust
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -45,7 +49,7 @@
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
           ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
-          ++ [{ nixpkgs.overlays = [ nur.overlay ]; }]
+          ++ [{ nixpkgs.overlays = [ nur.overlay rust-overlay.overlays.default ]; }]
           ++ [ sops-nix.nixosModules.sops ]
           ++ [ nixos-cn.nixosModules.nixos-cn ]
           ++ [ impermanence.nixosModules.impermanence ];
