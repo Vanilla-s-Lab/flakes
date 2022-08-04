@@ -3,15 +3,6 @@
   # https://nixos.wiki/wiki/FAQ
   nixpkgs.config.allowUnfree = true;
 
-  # https://github.com/NixOS/nixpkgs/pull/172660#issuecomment-1159465063=
-  disabledModules = [ "hardware/video/nvidia.nix" "services/hardware/udev.nix" ];
-  imports = [ "${nixpkgs-unstable}/nixos/modules/hardware/video/nvidia.nix" ]
-    ++ [ "${nixpkgs-udev-fix}/nixos/modules/services/hardware/udev.nix" ];
-
-  # https://github.com/NixOS/nixpkgs/pull/172660#issuecomment-1124584578=
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
-  hardware.nvidia.open = true; # We finally packaged `nvidia-open` by @NickCao!
-
   # https://nixos.wiki/wiki/Nvidia
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
