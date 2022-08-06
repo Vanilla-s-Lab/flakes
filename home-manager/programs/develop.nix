@@ -1,6 +1,4 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
-let pkgsJB = import inputs.nixpkgs-jetbrains
-  { inherit system; config.allowUnfree = true; }; in
 let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium}/pkgs/development/web/playwright" { }; in
 {
   home.sessionVariables."LD_LIBRARY_PATH" = "${pkgs.xorg.libX11}/lib:${pkgs.xorg.libXext}/lib:${pkgs.xorg.libxcb}/lib";
