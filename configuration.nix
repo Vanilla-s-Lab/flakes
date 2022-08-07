@@ -2,8 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, system, ... }: with inputs;
-let pkgsUnstable = import nixpkgs-unstable { inherit system; }; in
+{ config, pkgs, inputs, lib, system, pkgsUnstable, ... }:
+with inputs;
 {
   systemd.services."plymouth-quit".enable = false;
 

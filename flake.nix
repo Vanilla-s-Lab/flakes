@@ -40,10 +40,10 @@
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       nixosConfig = nixpkgs.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit inputs self system; };
+        inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
         modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
           ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system; }; }]
+          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
           ++ [{ home-manager.useGlobalPkgs = true; }]
           ++ [{ nixpkgs.overlays = [ nur.overlay rust-overlay.overlays.default ]; }]
           ++ [ sops-nix.nixosModules.sops ]

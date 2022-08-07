@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, pkgsUnstable, ... }:
 {
   dconf.settings = {
     "org/gnome/shell".favorite-apps = [
@@ -137,7 +137,8 @@
       "/persistent/dot/local/share/Google";
 
   home.packages = [
-    pkgs.android-studio
+    # pkgs.android-studio | 2021.2.1
+    pkgsUnstable.android-studio
 
     pkgs.remmina
     pkgs.vagrant
