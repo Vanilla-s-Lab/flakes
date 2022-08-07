@@ -2,8 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, system, ... }:
-with inputs;
+{ config, pkgs, inputs, lib, system, ... }: with inputs;
+let pkgsUnstable = import nixpkgs-unstable { inherit system; }; in
 {
   systemd.services."plymouth-quit".enable = false;
 
@@ -83,7 +83,7 @@ with inputs;
   networking.resolvconf.enable = false;
 
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
-  hardware.firmware = [ pkgs.linux-firmware ];
+  hardware.firmware = [ pkgsUnstable.linux-firmware ];
 
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";
