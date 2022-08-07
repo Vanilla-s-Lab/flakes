@@ -149,6 +149,10 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Android";
 
+  home.file.".gradle".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/gradle";
+
   home.file.".cache/remmina".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/cache/remmina";
