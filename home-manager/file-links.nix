@@ -54,4 +54,8 @@
   home.file."Works".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Works";
+
+  home.file.".android".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/android/";
 }
