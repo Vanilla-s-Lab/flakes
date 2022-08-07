@@ -73,6 +73,7 @@
     "org/gnome/desktop/app-folders/folders/22647c69-a025-4142-ace6-9ea9a0cbdca1" = {
       name = "IDEs";
       apps = [
+        "android-studio.desktop"
         "clion.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
@@ -119,12 +120,34 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/VirtualBox VMs";
 
+  home.file.".cache/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/Google";
+
+  home.file.".config/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/Google";
+
+  home.file.".java/.userPrefs/google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/java/dot/userPrefs/google";
+
+  home.file.".local/share/Google".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/Google";
+
   home.packages = [
+    pkgs.android-studio
+
     pkgs.remmina
     pkgs.vagrant
 
     pkgs.gnome.gnome-disk-utility
   ];
+
+  home.file."Android".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Android";
 
   home.file.".cache/remmina".source =
     config.lib.file.mkOutOfStoreSymlink
