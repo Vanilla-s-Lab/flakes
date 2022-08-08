@@ -112,6 +112,8 @@ let extensions = pkgs.runCommand "extensions" { } ''
     file:///home/vanilla/Works Works
     file:///home/vanilla/Projects Projects
     file:///home/vanilla/.local/lib/wine-wechat/default/drive_c/WeChat%20Files/${wxid}/FileStorage/File wechat_file
+    file:///Games Games
+    file:///Repos Repos
   '';
 
   # https://github.com/NixOS/nixpkgs/issues/163080

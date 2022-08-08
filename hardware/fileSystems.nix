@@ -24,6 +24,16 @@
     neededForBoot = true;
   };
 
+  fileSystems."/Games" = {
+    device = "/dev/disk/by-label/Games";
+    fsType = "ext4";
+  };
+
+  fileSystems."/Repos" = {
+    device = "/dev/disk/by-label/Repos";
+    fsType = "ext4";
+  };
+
   # https://github.com/NixOS/nixpkgs/pull/146497/files
   systemd.generators = { systemd-gpt-auto-generator = "/dev/null"; };
 
