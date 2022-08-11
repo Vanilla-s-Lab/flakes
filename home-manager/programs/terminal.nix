@@ -88,10 +88,4 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
-
-  programs.ssh.matchBlocks."20.24.195.187" = {
-    host = "20.24.195.187";
-    user = "root";
-    proxyCommand = "nc -x localhost:7890 %h %p";
-  };
 }
