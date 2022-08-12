@@ -26,7 +26,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   programs.fish.functions = {
     "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
     "volume_67".body = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.67"; # GitLab - PipeWire - issues/976.
-    "ssh_azure".body = "ssh root@20.24.195.187"; # Fail2ban enable! Make sure Yubikeys already plugged in!
   };
 
   # https://github.com/blackjid/plugin-kubectl

@@ -62,6 +62,12 @@
     proxyCommand = "nc -x localhost:1089 %h %p";
   };
 
+  programs.ssh.matchBlocks."azure" = {
+    host = "azure";
+    hostname = "20.24.195.187";
+    user = "root";
+  };
+
   programs.git.extraConfig = {
     init.defaultBranch = "master";
   };
