@@ -34,23 +34,28 @@
     # https://nixos.wiki/wiki/Rust
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
+    # https://github.com/nix-community/neovim-nightly-overlay
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = { self, ... }@inputs: with inputs;
     let system = "x86_64-linux"; in
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
-      nixosConfig = nixpkgs.lib.nixosSystem rec {
-        inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
-        modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
-          ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-          ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
-          ++ [{ home-manager.useGlobalPkgs = true; }]
-          ++ [{ nixpkgs.overlays = [ nur.overlay rust-overlay.overlays.default ]; }]
-          ++ [ sops-nix.nixosModules.sops ]
-          ++ [ nixos-cn.nixosModules.nixos-cn ]
-          ++ [ impermanence.nixosModules.impermanence ];
-      };
+      # https://github.com/nix-community/neovim-nightly-overlay
+      nixosConfig = let overlays = [ nur.overlay rust-overlay.overlays.default neovim-nightly-overlay.overlay ]; in
+        nixpkgs.lib.nixosSystem rec {
+          inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
+          modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
+            ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
+            ++ [{ home-manager.useGlobalPkgs = true; }]
+            ++ [{ nixpkgs.overlays = overlays; }]
+            ++ [ sops-nix.nixosModules.sops ]
+            ++ [ nixos-cn.nixosModules.nixos-cn ]
+            ++ [ impermanence.nixosModules.impermanence ];
+        };
 
       pkgs = import nixpkgs { inherit system; };
       pkgsUnstable = import nixpkgs-unstable
