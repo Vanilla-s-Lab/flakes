@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.flake = false;
 
     # https://github.com/NixOS/nixpkgs/pull/133672/files
     nixpkgs-playwright-chromium.url = "github:jlesquembre/nixpkgs/playwright";
