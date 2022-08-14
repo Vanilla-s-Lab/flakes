@@ -66,15 +66,13 @@ let generated = callPackage ../../_sources/generated.nix { }; in
       "datareporting.healthreport.uploadEnabled" = false;
       "app.shield.optoutstudies.enabled" = false;
     });
+
+    userChrome = ''@import "firefox-gnome-theme/userChrome.css";'';
+    userContent = ''@import "firefox-gnome-theme/userContent.css";'';
+    extraConfig = builtins.readFile "${generated.firefox-gnome-theme.src}/configuration/user.js";
   };
 
   # https://github.com/rafaelmardojai/firefox-gnome-theme#manual-installation
   home.file.".mozilla/firefox/dev-edition-default/chrome/firefox-gnome-theme".source =
     "${generated.firefox-gnome-theme.src}";
-  home.file.".mozilla/firefox/dev-edition-default/chrome/userChrome.css".text =
-    ''@import "firefox-gnome-theme/userChrome.css";'';
-  home.file.".mozilla/firefox/dev-edition-default/chrome/userContent.css".text =
-    ''@import "firefox-gnome-theme/userContent.css";'';
-  home.file.".mozilla/firefox/dev-edition-default/user.js".source =
-    "${generated.firefox-gnome-theme.src}/configuration/user.js";
 }
