@@ -33,3 +33,9 @@ fetch.github = "flozz/nautilus-terminal"
 [nautilus-git]
 src.git = "https://github.com/bilelmoussaoui/nautilus-git"
 fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"
+
+# https://github.com/rafaelmardojai/firefox-gnome-theme
+
+[firefox-gnome-theme]
+src.github_tag = "rafaelmardojai/firefox-gnome-theme"
+fetch.github = "rafaelmardojai/firefox-gnome-theme"

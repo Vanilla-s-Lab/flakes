@@ -1,4 +1,23 @@
 {
+    "firefox-gnome-theme": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "firefox-gnome-theme",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rafaelmardojai",
+            "repo": "firefox-gnome-theme",
+            "rev": "v102",
+            "sha256": "sha256-LwHDZV688YVkddgWVUIk07FUeT0Z+E+mETWmOZ7U73k=",
+            "type": "github"
+        },
+        "version": "v102"
+    },
     "nautilus-admin": {
         "cargoLocks": null,
         "extract": null,

@@ -1,4 +1,5 @@
-{ pkgs, config, inputs, system, ... }:
+{ pkgs, config, inputs, system, ... }: with pkgs;
+let generated = callPackage ../../_sources/generated.nix { }; in
 {
   programs.chromium.enable = true;
   programs.chromium.commandLineArgs =
@@ -66,4 +67,14 @@
       "app.shield.optoutstudies.enabled" = false;
     });
   };
+
+  # https://github.com/rafaelmardojai/firefox-gnome-theme#manual-installation
+  home.file.".mozilla/firefox/dev-edition-default/chrome/firefox-gnome-theme".source =
+    "${generated.firefox-gnome-theme.src}";
+  home.file.".mozilla/firefox/dev-edition-default/chrome/userChrome.css".text =
+    ''@import "firefox-gnome-theme/userChrome.css";'';
+  home.file.".mozilla/firefox/dev-edition-default/chrome/userContent.css".text =
+    ''@import "firefox-gnome-theme/userContent.css";'';
+  home.file.".mozilla/firefox/dev-edition-default/user.js".source =
+    "${generated.firefox-gnome-theme.src}/configuration/user.js";
 }
