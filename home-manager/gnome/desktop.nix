@@ -152,7 +152,11 @@ let androidStudioPackages = lib.recurseIntoAttrs
     androidStudioPackages.stable
 
     pkgs.remmina
-    pkgs.vagrant
+    (pkgs.vagrant.overrideAttrs (old: {
+      installPhase = old.installPhase + ''
+        rm $out/bin/vagrant.orig
+      '';
+    }))
 
     pkgs.gnome.gnome-disk-utility
   ];
