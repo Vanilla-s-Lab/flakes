@@ -62,8 +62,6 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
 
     deploy-rs.defaultPackage."${system}"
 
-    pkgs.redis
-
     pkgs.mtr
     pkgs.traceroute
 
@@ -108,6 +106,7 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
     pkgs.pcstat
 
     pkgs.ansible
+    pkgs.nix-tree
   ]; # ++ [ pkgs.pkg-config ];
   # home.sessionVariables = {
   #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
