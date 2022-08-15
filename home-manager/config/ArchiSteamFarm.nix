@@ -11,8 +11,4 @@
   home.file.".config/archisteamfarm/config/Vanilla.json".source =
     config.lib.file.mkOutOfStoreSymlink
       nixosConfig.sops.templates.ArchiSteamFarm.path;
-
-  home.file.".config/archisteamfarm/config/Vanilla.maFile".source =
-    config.lib.file.mkOutOfStoreSymlink
-      nixosConfig.sops.templates."Vanilla_maFile".path;
 }

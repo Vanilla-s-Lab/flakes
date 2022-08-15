@@ -30,7 +30,6 @@ with inputs;
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
-    ./sops-config/Vanilla_maFile.nix
 
     ./security.nix
     ./steam.nix
