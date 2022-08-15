@@ -160,7 +160,16 @@ with inputs;
   '';
 
   environment.etc."ansible/hosts".text = ''
-    [azure]
-    root@20.24.195.187
+    all:
+      hosts:
+        azure:
+          ansible_host: 20.24.195.187
+          ansible_user: root
+
+        vagrant:
+          ansible_host: 127.0.0.1
+          ansible_user: vagrant
+          ansible_port: 2222
+          ansible_ssh_private_key_file: /home/vanilla/Works/VersionStatus/.vagrant/machines/default/virtualbox/private_key
   '';
 }
