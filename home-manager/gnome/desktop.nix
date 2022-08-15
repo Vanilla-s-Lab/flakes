@@ -87,6 +87,7 @@ let androidStudioPackages = lib.recurseIntoAttrs
         "clion.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
+        "nvim.desktop"
         "pycharm-professional.desktop"
         "rider.desktop"
         "webstorm.desktop"
