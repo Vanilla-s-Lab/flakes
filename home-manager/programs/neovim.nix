@@ -10,6 +10,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   ];
 
   programs.neovim.extraConfig = ''
+    " https://neovim.io/doc/user/options.html#'background'
+    set background=light
+
     " https://vi.stackexchange.com/questions/6194/why-do-cw-and-ce-do-the-same-thing
     set cpoptions-=_
   '';
