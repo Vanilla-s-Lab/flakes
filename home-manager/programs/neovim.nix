@@ -6,7 +6,11 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
   programs.neovim.plugins = with pkgs; [
     # https://github.com/NvChad/NvChad/blob/v1.0/lua/pluginList.lua#L243
-    nur.repos.m15a.vimExtraPlugins.dashboard-nvim
+    pkgs.vimPlugins.dashboard-nvim
+
+    pkgs.vimPlugins.rose-pine
+    pkgs.vimPlugins.lualine-nvim
+    pkgs.vimPlugins.nvim-web-devicons
   ];
 
   programs.neovim.extraConfig = ''
@@ -15,5 +19,19 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
     " https://vi.stackexchange.com/questions/6194/why-do-cw-and-ce-do-the-same-thing
     set cpoptions-=_
+
+    " https://github.com/rose-pine/neovim
+    lua << EOF
+      require('rose-pine').setup()
+      vim.cmd('colorscheme rose-pine')
+    EOF
+
+    " https://github.com/nvim-lualine/lualine.nvim
+    lua << END
+      -- https://github.com/rose-pine/neovim/wiki#supported-plugins
+      require('lualine').setup({
+        options = { theme = 'rose-pine' }
+      })
+    END
   '';
 }
