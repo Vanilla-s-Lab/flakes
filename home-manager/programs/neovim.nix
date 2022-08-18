@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixosConfig, config, ... }:
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   programs.neovim.enable = true;
@@ -39,4 +39,8 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
       })
     END
   '';
+
+  home.file.".config/github-copilot/hosts.json".source =
+    config.lib.file.mkOutOfStoreSymlink
+      nixosConfig.sops.templates.github-copilot.path;
 }
