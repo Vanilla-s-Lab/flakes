@@ -2,7 +2,7 @@
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   programs.neovim.enable = true;
-  # programs.neovim.package = pkgs.neovim-nightly;
+  programs.neovim.package = pkgs.neovim-nightly;
 
   programs.neovim.plugins = with pkgs; [
     # https://github.com/NvChad/NvChad/blob/v1.0/lua/pluginList.lua#L243

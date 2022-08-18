@@ -36,7 +36,7 @@
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
 
     # https://github.com/nix-community/neovim-nightly-overlay
-    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -47,7 +47,7 @@
       nixosConfig = let overlays = [
         nur.overlay
         rust-overlay.overlays.default
-        # neovim-nightly-overlay.overlay
+        neovim-nightly-overlay.overlay
       ]; in
         nixpkgs.lib.nixosSystem rec {
           inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
