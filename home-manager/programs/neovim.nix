@@ -24,6 +24,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     # https://nixos.wiki/wiki/Tree_sitters
     (pkgs.vimPlugins.nvim-treesitter.withPlugins
       (plugins: pkgs.tree-sitter.allGrammars))
+
+    pkgs.vimPlugins.indent-blankline-nvim
+    pkgs.vimPlugins.neoformat
   ];
 
   home.packages = [
@@ -39,6 +42,15 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
     " https://jdhao.github.io/2018/10/19/tmux_nvim_true_color/
     set termguicolors
+
+    " https://vim.fandom.com/wiki/Working_with_long_lines
+    set linebreak
+
+    " https://jdhao.github.io/2019/01/11/line_number_setting_nvim/
+    set number
+
+    " https://neovim.io/doc/user/options.html
+    set nowrap
 
   '' + ''
 
