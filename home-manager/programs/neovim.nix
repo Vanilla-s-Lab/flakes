@@ -27,6 +27,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
     pkgs.vimPlugins.indent-blankline-nvim
     pkgs.vimPlugins.neoformat
+
+    pkgs.vimPlugins.gitsigns-nvim
+    pkgs.vimPlugins.vim-fugitive
   ];
 
   home.packages = [
@@ -93,6 +96,13 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
         buftype_exclude = { "terminal" },
         filetype_exclude = { "dashboard" },
       }
+    EOF
+
+    " https://github.com/lewis6991/gitsigns.nvim
+    lua << EOF
+      require('gitsigns').setup({
+        current_line_blame = true
+      })
     EOF
   '';
 
