@@ -44,3 +44,8 @@ fetch.github = "rafaelmardojai/firefox-gnome-theme"
 ["rose-pine/kitty"]
 src.git = "https://github.com/rose-pine/kitty"
 fetch.git = "https://github.com/rose-pine/kitty"
+
+# https://github.com/github/copilot.vim
+["github/copilot.vim"]
+src.git = "https://github.com/github/copilot.vim"
+fetch.git = "https://github.com/github/copilot.vim"

@@ -1,4 +1,22 @@
 {
+    "\"github/copilot.vim\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"github/copilot.vim\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "554460008f18cbffecb9f1e5de58fec8410dc16f",
+            "sha256": "sha256-kkycy2AWyV8SaADBFAH4tXOu9GFdubRbMti1goCAkKU=",
+            "type": "git",
+            "url": "https://github.com/github/copilot.vim"
+        },
+        "version": "554460008f18cbffecb9f1e5de58fec8410dc16f"
+    },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
         "extract": null,

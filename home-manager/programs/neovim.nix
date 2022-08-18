@@ -11,6 +11,12 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     pkgs.vimPlugins.rose-pine
     pkgs.vimPlugins.lualine-nvim
     pkgs.vimPlugins.nvim-web-devicons
+
+    # https://nixos.wiki/wiki/Vim
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "${generated."\"github/copilot.vim\"".pname}";
+      src = "${generated."\"github/copilot.vim\"".src}";
+    })
   ];
 
   programs.neovim.extraConfig = ''
