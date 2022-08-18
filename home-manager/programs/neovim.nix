@@ -86,6 +86,14 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
         highlight = { enable = true }
       }
     EOF
+
+    " https://github.com/lukas-reineke/indent-blankline.nvim/issues/284
+    lua << EOF
+      require("indent_blankline").setup {
+        buftype_exclude = { "terminal" },
+        filetype_exclude = { "dashboard" },
+      }
+    EOF
   '';
 
   home.file.".config/github-copilot/hosts.json".source =
