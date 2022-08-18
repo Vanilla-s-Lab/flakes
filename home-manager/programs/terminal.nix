@@ -18,6 +18,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
       italic = { family = "Hack Nerd Font"; style = "Italic"; };
       size = 11.0;
     };
+
+    # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+    env = { TERM = "xterm-256color"; };
   };
 
   # https://github.com/fish-shell/fish-shell
