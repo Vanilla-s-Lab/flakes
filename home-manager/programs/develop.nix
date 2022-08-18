@@ -107,6 +107,9 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
 
     pkgs.ansible
     pkgs.nix-tree
+
+    pkgs.nmap
+    pkgs.metasploit
   ]; # ++ [ pkgs.pkg-config ];
   # home.sessionVariables = {
   #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
