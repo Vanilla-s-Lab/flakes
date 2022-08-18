@@ -19,6 +19,15 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     })
 
     pkgs.vimPlugins.bufferline-nvim
+
+    pkgs.vimPlugins.nvim-lspconfig
+    # https://nixos.wiki/wiki/Tree_sitters
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins
+      (plugins: pkgs.tree-sitter.allGrammars))
+  ];
+
+  home.packages = [
+    pkgs.rnix-lsp
   ];
 
   programs.neovim.extraConfig = ''
@@ -52,6 +61,18 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
       -- https://github.com/rose-pine/neovim/wiki#supported-plugins
       local highlights = require('rose-pine.plugins.bufferline')
       require('bufferline').setup({ highlights = highlights })
+    EOF
+
+    " https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    lua << EOF
+      require'lspconfig'.rnix.setup{}
+    EOF
+
+    " https://github.com/nvim-treesitter/nvim-treesitter/
+    lua << EOF
+      require'nvim-treesitter.configs'.setup {
+        highlight = { enable = true }
+      }
     EOF
   '';
 
