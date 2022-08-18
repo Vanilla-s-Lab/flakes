@@ -1,4 +1,22 @@
 {
+    "\"rose-pine/kitty\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"rose-pine/kitty\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "f9a0cbeec44f61d83331dec5a07441b8067bee11",
+            "sha256": "sha256-fZimTxjglj6bK0Y6mPuFlrpMJddRJC2fFW1eebe8dy0=",
+            "type": "git",
+            "url": "https://github.com/rose-pine/kitty"
+        },
+        "version": "f9a0cbeec44f61d83331dec5a07441b8067bee11"
+    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,

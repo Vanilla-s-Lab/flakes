@@ -39,3 +39,8 @@ fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"
 [firefox-gnome-theme]
 src.github_tag = "rafaelmardojai/firefox-gnome-theme"
 fetch.github = "rafaelmardojai/firefox-gnome-theme"
+
+# https://github.com/rose-pine/kitty
+["rose-pine/kitty"]
+src.git = "https://github.com/rose-pine/kitty"
+fetch.git = "https://github.com/rose-pine/kitty"

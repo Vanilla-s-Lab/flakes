@@ -90,4 +90,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+
+  programs.kitty.enable = true;
+  programs.kitty.extraConfig = "include rose-pine-dawn.conf";
+  home.file.".config/kitty/rose-pine-dawn.conf".source =
+    "${generated."\"rose-pine/kitty\"".src}/dist/rose-pine-dawn.conf";
 }
