@@ -20,6 +20,11 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     " https://vi.stackexchange.com/questions/6194/why-do-cw-and-ce-do-the-same-thing
     set cpoptions-=_
 
+    " https://jdhao.github.io/2018/10/19/tmux_nvim_true_color/
+    set termguicolors
+
+  '' + ''
+
     " https://github.com/rose-pine/neovim
     lua << EOF
       require('rose-pine').setup()
