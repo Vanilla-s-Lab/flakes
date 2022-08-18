@@ -17,6 +17,8 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
       name = "${generated."\"github/copilot.vim\"".pname}";
       src = "${generated."\"github/copilot.vim\"".src}";
     })
+
+    pkgs.vimPlugins.bufferline-nvim
   ];
 
   programs.neovim.extraConfig = ''
@@ -44,6 +46,13 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
         options = { theme = 'rose-pine' }
       })
     END
+
+    " https://github.com/akinsho/bufferline.nvim/
+    lua << EOF
+      -- https://github.com/rose-pine/neovim/wiki#supported-plugins
+      local highlights = require('rose-pine.plugins.bufferline')
+      require('bufferline').setup({ highlights = highlights })
+    EOF
   '';
 
   home.file.".config/github-copilot/hosts.json".source =
