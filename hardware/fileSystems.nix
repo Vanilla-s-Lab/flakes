@@ -43,4 +43,12 @@
   };
 
   boot.cleanTmpDir = true;
+
+  swapDevices = lib.singleton {
+    device = "/Repos/swapfile";
+    size = 1024 * 8; # 8 GB
+  };
+
+  # https://linuxize.com/post/create-a-linux-swap-file/
+  boot.kernel.sysctl."vm.swappiness" = 10;
 }
