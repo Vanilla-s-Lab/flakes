@@ -29,8 +29,18 @@
   fileSystems."/Repos" = {
     device = "/dev/disk/by-label/Repos";
     fsType = "ext4";
+    neededForBoot = true;
   };
 
   # https://github.com/NixOS/nixpkgs/pull/146497/files
   systemd.generators = { systemd-gpt-auto-generator = "/dev/null"; };
+
+  # https://superuser.com/questions/1271645/how-do-you-declare-a-bind-mount-in-nixos
+  fileSystems."/tmp" = {
+    device = "/Repos/fileSystems_tmp";
+    options = [ "bind" ];
+    neededForBoot = true;
+  };
+
+  boot.cleanTmpDir = true;
 }
