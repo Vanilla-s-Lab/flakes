@@ -11,6 +11,9 @@ with inputs;
   programs.command-not-found.dbPath =
     "${nix-channel}/programs.sqlite";
 
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
+
   imports = [
     ./users.nix
 
