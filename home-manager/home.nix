@@ -24,11 +24,14 @@
     ./gnome/mimeApps.nix
 
     ./config/fcitx5.nix
-    ./config/sops.nix
     ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
   ];
 
-  home.packages = [ pkgs.nixpkgs-fmt ];
+  home.packages = [
+    pkgs.nixpkgs-fmt
+    pkgs.sops
+  ];
+
   home.stateVersion = "21.11";
 }
