@@ -1,9 +1,9 @@
 keys:
-  - &vanilla age1qcw4ynnhxcy8rfvx7rcfelg44esxsq20ke649x0anmw03zts0vpqd2wuwj
-  - &nixos-rot age1wsm66wfr48tchca8g8q39002x2v3yc76t8zqvekh3h2h86fdfyyq05uy5t
+  - &vanilla 2649340CC909F821D25167143750028ED04FA42E
+  - &nixos-rot E3520A257213E7F48A3F5459C7108941F87E771F
 creation_rules:
   - path_regex: secrets/[^/]+\.yaml$
     key_groups:
-      - age:
+      - pgp:
           - *vanilla
           - *nixos-rot

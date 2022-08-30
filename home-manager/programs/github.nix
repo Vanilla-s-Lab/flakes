@@ -28,6 +28,9 @@
     });
 
     trust = "ultimate";
+  }] ++ [{
+    source = ../../nixos-rot.asc;
+    trust = "ultimate";
   }];
 
   # GPG agent, also enable sub SSH key.
