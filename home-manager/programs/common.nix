@@ -24,7 +24,8 @@
 
     # https://github.com/msojocs/bilibili-linux
     (pkgs.appimage-run.override {
-      extraPkgs = pkgs: [ pkgs.icu ];
+      extraPkgs = pkgs: [ pkgs.icu ]
+        ++ [ pkgs.libsecret ];
     })
   ];
 
