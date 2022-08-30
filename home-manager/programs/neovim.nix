@@ -35,6 +35,7 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
   home.packages = [
     pkgs.rnix-lsp
+    pkgs.terraform-ls
   ];
 
   programs.neovim.extraConfig = ''
@@ -82,6 +83,7 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     " https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     lua << EOF
       require'lspconfig'.rnix.setup{}
+      require'lspconfig'.terraformls.setup{}
     EOF
 
     " https://github.com/nvim-treesitter/nvim-treesitter/
