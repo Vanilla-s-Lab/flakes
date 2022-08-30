@@ -10,8 +10,8 @@
     # Settings - Search - OFF
     "org/gnome/desktop/search-providers".disable-external = true;
 
-    # Settings - Privacy - Location Services - ON
-    "org/gnome/system/location".enabled = true;
+    # Settings - Privacy - Location Services - OFF
+    "org/gnome/system/location".enabled = false;
     # Settings - Privacy - Camera - OFF
     "org/gnome/desktop/privacy".disable-camera = true;
     # Settings - Privacy - Microphone - OFF
