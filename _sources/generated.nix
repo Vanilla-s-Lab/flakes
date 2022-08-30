@@ -3,26 +3,26 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "554460008f18cbffecb9f1e5de58fec8410dc16f";
+    version = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "554460008f18cbffecb9f1e5de58fec8410dc16f";
+      rev = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-kkycy2AWyV8SaADBFAH4tXOu9GFdubRbMti1goCAkKU=";
+      sha256 = "sha256-hm/8q08aIVWc5thh31OVpVoksVrqKD+rSHbUTxzzHaU=";
     };
   };
   "\"rose-pine/kitty\"" = {
     pname = "\"rose-pine/kitty\"";
-    version = "f9a0cbeec44f61d83331dec5a07441b8067bee11";
+    version = "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef";
     src = fetchgit {
       url = "https://github.com/rose-pine/kitty";
-      rev = "f9a0cbeec44f61d83331dec5a07441b8067bee11";
+      rev = "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-fZimTxjglj6bK0Y6mPuFlrpMJddRJC2fFW1eebe8dy0=";
+      sha256 = "sha256-idqwpNC6hWIz5KtEGqL5C+KcUcKc9iPCstP5FQcZZ0I=";
     };
   };
   firefox-gnome-theme = {
