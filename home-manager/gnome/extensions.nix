@@ -128,8 +128,7 @@
 
     # OpenWeather - Locations - [ Location + Provider ]
     "org/gnome/shell/extensions/openweather".city =
-      "35.2791075,113.8452766>卫滨区, 新乡市, 河南省, 中国 >-2" + " && "
-      + "28.6851715,115.9572763>青山湖区, 南昌市, 江西省, 中国 >-2";
+      "30.6438936,104.0405084>武侯区, 成都市, 四川省, 中国 >0";
     # OpenWeather - Units - Temperature Unit - °C
     "org/gnome/shell/extensions/openweather".unit = "celsius";
     # OpenWeather - Layout - Position in Panel - Left, 5
