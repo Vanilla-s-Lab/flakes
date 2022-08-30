@@ -54,9 +54,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     " https://jdhao.github.io/2019/01/11/line_number_setting_nvim/
     set number
 
-    " https://neovim.io/doc/user/options.html
-    set nowrap
-
   '' + ''
 
     " https://github.com/rose-pine/neovim
