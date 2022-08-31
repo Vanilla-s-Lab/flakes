@@ -37,6 +37,18 @@
       sha256 = "sha256-G6HP99Z74IdaBCMJCfUmUZOvYzrPOH5aL0OZ5A1iezA=";
     };
   };
+  dumpyara = {
+    pname = "dumpyara";
+    version = "fa2152507c89ac661610e40541db04f2dc6f58da";
+    src = fetchgit {
+      url = "https://github.com/sebaubuntu-python/dumpyara";
+      rev = "fa2152507c89ac661610e40541db04f2dc6f58da";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-xi5j2kjIGyWj2s51nQR6TJKkKdiUqs+TJCZNS2efIrc=";
+    };
+  };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
     version = "v102";

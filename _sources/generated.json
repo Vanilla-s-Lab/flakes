@@ -53,6 +53,24 @@
         },
         "version": "75c70d9fa495801c2cf4c8654de4cb935477e2d7"
     },
+    "dumpyara": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "dumpyara",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "fa2152507c89ac661610e40541db04f2dc6f58da",
+            "sha256": "sha256-xi5j2kjIGyWj2s51nQR6TJKkKdiUqs+TJCZNS2efIrc=",
+            "type": "git",
+            "url": "https://github.com/sebaubuntu-python/dumpyara"
+        },
+        "version": "fa2152507c89ac661610e40541db04f2dc6f58da"
+    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,

@@ -57,3 +57,7 @@ fetch.github = "sebaubuntu-python/sebaubuntu_libs"
 [aospdtgen]
 src.git = "https://github.com/sebaubuntu-python/aospdtgen"
 fetch.git = "https://github.com/sebaubuntu-python/aospdtgen"
+
+[dumpyara]
+src.git = "https://github.com/sebaubuntu-python/dumpyara"
+fetch.git = "https://github.com/sebaubuntu-python/dumpyara"
