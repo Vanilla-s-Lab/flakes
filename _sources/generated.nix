@@ -105,4 +105,15 @@
       sha256 = "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=";
     };
   };
+  sebaubuntu_libs = {
+    pname = "sebaubuntu_libs";
+    version = "v1.2.0";
+    src = fetchFromGitHub ({
+      owner = "sebaubuntu-python";
+      repo = "sebaubuntu_libs";
+      rev = "v1.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-N8qvDyrSe3rXrpKBX1tEyckuXX2AC6XFGIoEz095PGg=";
+    });
+  };
 }

@@ -164,5 +164,24 @@
             "url": "https://github.com/rose-pine/alacritty"
         },
         "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
+    },
+    "sebaubuntu_libs": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "sebaubuntu_libs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sebaubuntu-python",
+            "repo": "sebaubuntu_libs",
+            "rev": "v1.2.0",
+            "sha256": "sha256-N8qvDyrSe3rXrpKBX1tEyckuXX2AC6XFGIoEz095PGg=",
+            "type": "github"
+        },
+        "version": "v1.2.0"
     }
 }
