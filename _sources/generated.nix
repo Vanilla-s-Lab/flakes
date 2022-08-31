@@ -25,6 +25,18 @@
       sha256 = "sha256-idqwpNC6hWIz5KtEGqL5C+KcUcKc9iPCstP5FQcZZ0I=";
     };
   };
+  aospdtgen = {
+    pname = "aospdtgen";
+    version = "75c70d9fa495801c2cf4c8654de4cb935477e2d7";
+    src = fetchgit {
+      url = "https://github.com/sebaubuntu-python/aospdtgen";
+      rev = "75c70d9fa495801c2cf4c8654de4cb935477e2d7";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-G6HP99Z74IdaBCMJCfUmUZOvYzrPOH5aL0OZ5A1iezA=";
+    };
+  };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
     version = "v102";

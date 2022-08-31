@@ -35,6 +35,24 @@
         },
         "version": "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef"
     },
+    "aospdtgen": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "aospdtgen",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "75c70d9fa495801c2cf4c8654de4cb935477e2d7",
+            "sha256": "sha256-G6HP99Z74IdaBCMJCfUmUZOvYzrPOH5aL0OZ5A1iezA=",
+            "type": "git",
+            "url": "https://github.com/sebaubuntu-python/aospdtgen"
+        },
+        "version": "75c70d9fa495801c2cf4c8654de4cb935477e2d7"
+    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,

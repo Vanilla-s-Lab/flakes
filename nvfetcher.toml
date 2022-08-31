@@ -53,3 +53,7 @@ fetch.git = "https://github.com/github/copilot.vim"
 [sebaubuntu_libs]
 src.github_tag = "sebaubuntu-python/sebaubuntu_libs"
 fetch.github = "sebaubuntu-python/sebaubuntu_libs"
+
+[aospdtgen]
+src.git = "https://github.com/sebaubuntu-python/aospdtgen"
+fetch.git = "https://github.com/sebaubuntu-python/aospdtgen"
