@@ -6,7 +6,7 @@ poetry2nix.mkPoetryApplication {
     url = "https://github.com/sebaubuntu-python/${src.pname}";
     rev = "${src.version}";
 
-    postFetch = "cd $out && patch < ${./certifi.patch}";
+    postFetch = "cd $out && patch < ${./requests.patch}";
     hash = "sha256-4SR1N0tI/nbgAoF3xMJd2xCYyR8nKLL4Q5jwn5yeIp0=";
   };
 }
