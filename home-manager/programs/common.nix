@@ -27,6 +27,9 @@
       extraPkgs = pkgs: [ pkgs.icu ]
         ++ [ pkgs.libsecret ];
     })
+
+    pkgs.unrar
+    pkgs.nodePackages.pxder
   ];
 
   home.file.".PlayOnLinux".source =
