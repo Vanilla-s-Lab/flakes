@@ -110,6 +110,10 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
 
     pkgs.nmap
     pkgs.metasploit
+
+    pkgs.jq
+    pkgs.file
+    pkgs.bcc
   ]; # ++ [ pkgs.pkg-config ];
   # home.sessionVariables = {
   #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
