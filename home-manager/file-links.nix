@@ -58,4 +58,8 @@
   home.file.".android".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/android/";
+
+  home.file."Music".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Music";
 }
