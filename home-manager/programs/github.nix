@@ -29,7 +29,7 @@
 
     trust = "ultimate";
   }] ++ [{
-    source = ../../nixos-rot.asc;
+    source = ../../secrets/nixos-rot.asc;
     trust = "ultimate";
   }];
 
