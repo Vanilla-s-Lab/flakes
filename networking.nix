@@ -13,4 +13,12 @@
   # services/x11/desktop-managers/gnome.nix
   services.avahi.enable = false; # [ 5353 ]
   services.geoclue2.enable = false; # Deps
+
+  services.samba.enable = true;
+  services.samba.openFirewall = true;
+
+  services.samba.shares = {
+    "Music" = { public = "yes"; path = "/persistent/Music"; };
+    "Videos" = { public = "yes"; path = "/persistent/Videos"; };
+  };
 }
