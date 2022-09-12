@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 {
   # https://nixos.wiki/wiki/Git
   programs.git.enable = true;
@@ -87,7 +87,13 @@
     init.defaultBranch = "master";
   };
 
-  home.packages = [ pkgs.difftastic ];
+  home.packages = [
+    pkgs.difftastic
+    pkgs.gh # GitHub CLI
+
+    # https://github.com/NixOS/nixpkgs/issues/170419#issuecomment-1190558745
+    (pkgs.callPackage "${inputs.nixpkgs-unstable}/pkgs/applications/version-management/github-desktop" { })
+  ];
 
   # https://difftastic.wilfred.me.uk/git.html
   programs.git.extraConfig."diff" = { tool = "difftastic"; };
