@@ -23,6 +23,9 @@
     "Public" = { public = "yes"; path = "/persistent/Public"; };
   };
 
+  # https://github.com/Ninlives/emerge/blob/master/impl/lego/service/samba.nix
+  services.samba.extraConfig = "map to guest = Bad User";
+
   services.samba-wsdd.enable = true;
   networking.firewall.allowedTCPPorts = [ 5357 ];
   networking.firewall.allowedUDPPorts = [ 3702 ];
