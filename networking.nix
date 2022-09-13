@@ -21,4 +21,8 @@
     "Music" = { public = "yes"; path = "/persistent/Music"; };
     "Videos" = { public = "yes"; path = "/persistent/Videos"; };
   };
+
+  services.samba-wsdd.enable = true;
+  networking.firewall.allowedTCPPorts = [ 5357 ];
+  networking.firewall.allowedUDPPorts = [ 3702 ];
 }
