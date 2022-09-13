@@ -114,10 +114,19 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
     pkgs.jq
     pkgs.file
     pkgs.bcc
+
+    pkgs.pmbootstrap
   ]; # ++ [ pkgs.pkg-config ];
   # home.sessionVariables = {
   #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   # };
+
+  home.file.".config/pmbootstrap.cfg".source =
+    pkgs.fetchurl {
+      url = "https://gist.githubusercontent.com/VergeDX/5a34b1475bcc7283dd6d4f504b8251ea"
+        + "/raw/c510625e1cc136e75027c8808615a02eb89682a6/pmbootstrap.cfg";
+      hash = "sha256-muvILHZ4jMNbSuOq/TmuI+1/9R2EQAKCGgsVo5RILD8=";
+    };
 
   home.file.".local/share/containers".source =
     config.lib.file.mkOutOfStoreSymlink
