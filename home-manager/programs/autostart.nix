@@ -45,12 +45,6 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/KotatogramDesktop";
 
-  home.activation."how-can-i-disable-my-webcam" = ''
-    echo 0 | sudo /run/current-system/sw/bin/tee \
-      /sys/bus/usb/devices/1-8/bConfigurationValue \
-      > /dev/null || true
-  '';
-
   home.file.".config/clash".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/clash";
