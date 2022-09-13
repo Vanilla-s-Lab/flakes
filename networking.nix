@@ -5,6 +5,19 @@ let mkPublic = folders: (builtins.listToAttrs
     value = {
       public = "yes";
       path = "/persistent/${x}";
+
+      # https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html
+      "dfree command" = (pkgs.writeTextFile {
+        name = "junk";
+
+        text = ''
+          #! /bin/sh
+
+          echo "${builtins.toString (514 * 1024 * 1024)} ${builtins.toString (114 * 1024 * 1024)}"
+        '';
+
+        executable = true;
+      });
     };
   }))); in
 {
