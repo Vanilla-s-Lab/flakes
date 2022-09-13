@@ -1,4 +1,12 @@
 { pkgs, lib, config, ... }:
+let mkPublic = folders: (builtins.listToAttrs
+  (pkgs.lib.lists.forEach folders (x: {
+    name = "${x}";
+    value = {
+      public = "yes";
+      path = "/persistent/${x}";
+    };
+  }))); in
 {
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
@@ -17,11 +25,8 @@
   services.samba.enable = true;
   services.samba.openFirewall = true;
 
-  services.samba.shares = {
-    "Music" = { public = "yes"; path = "/persistent/Music"; };
-    "Videos" = { public = "yes"; path = "/persistent/Videos"; };
-    "Public" = { public = "yes"; path = "/persistent/Public"; };
-  };
+  services.samba.shares = (mkPublic
+    [ "Music" "Videos" "Public" ]);
 
   # https://github.com/Ninlives/emerge/blob/master/impl/lego/service/samba.nix
   services.samba.extraConfig = "map to guest = Bad User";
