@@ -62,4 +62,8 @@
   home.file."Music".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Music";
+
+  home.file."Public".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Public";
 }

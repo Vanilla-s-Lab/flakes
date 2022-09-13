@@ -20,6 +20,7 @@
   services.samba.shares = {
     "Music" = { public = "yes"; path = "/persistent/Music"; };
     "Videos" = { public = "yes"; path = "/persistent/Videos"; };
+    "Public" = { public = "yes"; path = "/persistent/Public"; };
   };
 
   services.samba-wsdd.enable = true;
