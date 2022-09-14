@@ -51,6 +51,7 @@ let androidStudioPackages = lib.recurseIntoAttrs
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
         "wemeetapp.desktop"
+        "Zoom.desktop"
       ];
     };
 
