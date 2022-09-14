@@ -30,6 +30,7 @@ let androidStudioPackages = lib.recurseIntoAttrs
       "e644c5d3-83a7-463c-bbef-e0dbbea16076" # Virtualisation
       "216c8193-f990-444b-8882-ea9d773441ef" # Internet
       "337d3799-cc4d-47f5-a6ce-5943775f331e" # Document
+      "0a52de09-b4d8-462c-bf97-517e8bc27973" # Games
     ];
 
     "org/gnome/desktop/app-folders/folders/d3165349-919a-496a-acbb-7a59027f0f54" = {
@@ -122,6 +123,11 @@ let androidStudioPackages = lib.recurseIntoAttrs
     "org/gnome/desktop/app-folders/folders/337d3799-cc4d-47f5-a6ce-5943775f331e" = {
       name = "Document";
       apps = [ "org.gnome.Evince.desktop" "nixos-manual.desktop" ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/0a52de09-b4d8-462c-bf97-517e8bc27973" = {
+      name = "Games";
+      apps = [ "com.obsproject.Studio.desktop" "steam.desktop" ];
     };
   };
 
