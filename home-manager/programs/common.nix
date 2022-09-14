@@ -30,7 +30,6 @@
 
     pkgs.unrar
     pkgs.nodePackages.pxder
-    pkgs.zoom-us
   ];
 
   home.file.".PlayOnLinux".source =

@@ -171,6 +171,9 @@ let androidStudioPackages = lib.recurseIntoAttrs
     }))
 
     pkgs.gnome.gnome-disk-utility
+
+    pkgs.zoom-us
+    pkgs.qbittorrent
   ];
 
   home.file."Android".source =
