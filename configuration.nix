@@ -161,17 +161,4 @@ with inputs;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
-  environment.etc."ansible/ansible.cfg".text = ''
-    [defaults]
-    interpreter_python = auto_silent
-  '';
-
-  environment.etc."ansible/hosts".text = ''
-    all:
-      hosts:
-        azure:
-          ansible_host: 20.24.195.187
-          ansible_user: root
-  '';
 }

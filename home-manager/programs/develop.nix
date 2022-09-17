@@ -97,7 +97,6 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
     pkgs.smartmontools
     pkgs.pcstat
 
-    pkgs.ansible
     pkgs.nix-tree
 
     pkgs.nmap
