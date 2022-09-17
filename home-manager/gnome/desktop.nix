@@ -131,10 +131,6 @@ let androidStudioPackages = lib.recurseIntoAttrs
     };
   };
 
-  home.file.".vagrant.d".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/vagrant.d";
-
   home.file.".config/VirtualBox".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/VirtualBox";
@@ -164,11 +160,6 @@ let androidStudioPackages = lib.recurseIntoAttrs
     androidStudioPackages.stable
 
     pkgs.remmina
-    (pkgs.vagrant.overrideAttrs (old: {
-      installPhase = old.installPhase + ''
-        rm $out/bin/vagrant.orig
-      '';
-    }))
 
     pkgs.gnome.gnome-disk-utility
 

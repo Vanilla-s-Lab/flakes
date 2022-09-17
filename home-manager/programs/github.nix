@@ -71,18 +71,6 @@
     user = "root";
   };
 
-  programs.ssh.matchBlocks."vagrant" = {
-    host = "vagrant";
-    hostname = "127.0.0.1";
-    port = 2222;
-
-    user = "vagrant";
-    identityFile = [
-      "/home/vanilla/Works/VersionStatus/.vagrant/machines/default/virtualbox/private_key"
-    ];
-  };
-
-
   programs.git.extraConfig = {
     init.defaultBranch = "master";
   };
