@@ -5,15 +5,7 @@ let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium
   home.file.".cache/ms-playwright/chromium-1015/chrome-linux".source = "${playwright-chromium}/share/google/chrome";
 
   home.packages = with inputs; [
-    # (pkgs.python3.withPackages (p: with p; [ pygobject3 ]
-    #   ++ [ pip setuptools ] ++ [ mysql-connector XlsxWriter pandas ]
-    #   ++ [ requests faker ] ++ [ pillow ] ++ [ urllib3 grequests ]
-    #   ++ [ fastapi uvicorn pydantic ] ++ [ cryptography ] ++ [ openpyxl ]))
-
-    (pkgs.python3.withPackages
-      # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html
-      (p: with p; [ openpyxl mysql-connector ] ++ [ pip virtualenv setuptools ]
-        ++ [ pyqt5 ] ++ [ matplotlib numpy pytesseract ]))
+    pkgs.python3Full
 
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
