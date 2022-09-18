@@ -52,7 +52,6 @@ let androidStudioPackages = lib.recurseIntoAttrs
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
         "wemeetapp.desktop"
-        "Zoom.desktop"
       ];
     };
 
@@ -160,11 +159,7 @@ let androidStudioPackages = lib.recurseIntoAttrs
     androidStudioPackages.stable
 
     pkgs.remmina
-
     pkgs.gnome.gnome-disk-utility
-
-    pkgs.zoom-us
-    pkgs.qbittorrent
   ];
 
   home.file."Android".source =
