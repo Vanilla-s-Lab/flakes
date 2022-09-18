@@ -1,9 +1,5 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
-let playwright-chromium = pkgs.callPackage "${inputs.nixpkgs-playwright-chromium}/pkgs/development/web/playwright" { }; in
 {
-  home.sessionVariables."LD_LIBRARY_PATH" = "${pkgs.xorg.libX11}/lib:${pkgs.xorg.libXext}/lib:${pkgs.xorg.libxcb}/lib";
-  home.file.".cache/ms-playwright/chromium-1015/chrome-linux".source = "${playwright-chromium}/share/google/chrome";
-
   home.packages = with inputs; [
     pkgs.python3Full
 
