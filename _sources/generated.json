@@ -35,42 +35,6 @@
         },
         "version": "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef"
     },
-    "aospdtgen": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "aospdtgen",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "75c70d9fa495801c2cf4c8654de4cb935477e2d7",
-            "sha256": "sha256-G6HP99Z74IdaBCMJCfUmUZOvYzrPOH5aL0OZ5A1iezA=",
-            "type": "git",
-            "url": "https://github.com/sebaubuntu-python/aospdtgen"
-        },
-        "version": "75c70d9fa495801c2cf4c8654de4cb935477e2d7"
-    },
-    "dumpyara": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "dumpyara",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "fa2152507c89ac661610e40541db04f2dc6f58da",
-            "sha256": "sha256-xi5j2kjIGyWj2s51nQR6TJKkKdiUqs+TJCZNS2efIrc=",
-            "type": "git",
-            "url": "https://github.com/sebaubuntu-python/dumpyara"
-        },
-        "version": "fa2152507c89ac661610e40541db04f2dc6f58da"
-    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,
@@ -200,24 +164,5 @@
             "url": "https://github.com/rose-pine/alacritty"
         },
         "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
-    },
-    "sebaubuntu_libs": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "sebaubuntu_libs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "sebaubuntu-python",
-            "repo": "sebaubuntu_libs",
-            "rev": "v1.2.0",
-            "sha256": "sha256-N8qvDyrSe3rXrpKBX1tEyckuXX2AC6XFGIoEz095PGg=",
-            "type": "github"
-        },
-        "version": "v1.2.0"
     }
 }

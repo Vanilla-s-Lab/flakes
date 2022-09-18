@@ -25,30 +25,6 @@
       sha256 = "sha256-idqwpNC6hWIz5KtEGqL5C+KcUcKc9iPCstP5FQcZZ0I=";
     };
   };
-  aospdtgen = {
-    pname = "aospdtgen";
-    version = "75c70d9fa495801c2cf4c8654de4cb935477e2d7";
-    src = fetchgit {
-      url = "https://github.com/sebaubuntu-python/aospdtgen";
-      rev = "75c70d9fa495801c2cf4c8654de4cb935477e2d7";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-G6HP99Z74IdaBCMJCfUmUZOvYzrPOH5aL0OZ5A1iezA=";
-    };
-  };
-  dumpyara = {
-    pname = "dumpyara";
-    version = "fa2152507c89ac661610e40541db04f2dc6f58da";
-    src = fetchgit {
-      url = "https://github.com/sebaubuntu-python/dumpyara";
-      rev = "fa2152507c89ac661610e40541db04f2dc6f58da";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-xi5j2kjIGyWj2s51nQR6TJKkKdiUqs+TJCZNS2efIrc=";
-    };
-  };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
     version = "v102";
@@ -128,16 +104,5 @@
       leaveDotGit = false;
       sha256 = "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=";
     };
-  };
-  sebaubuntu_libs = {
-    pname = "sebaubuntu_libs";
-    version = "v1.2.0";
-    src = fetchFromGitHub ({
-      owner = "sebaubuntu-python";
-      repo = "sebaubuntu_libs";
-      rev = "v1.2.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-N8qvDyrSe3rXrpKBX1tEyckuXX2AC6XFGIoEz095PGg=";
-    });
   };
 }
