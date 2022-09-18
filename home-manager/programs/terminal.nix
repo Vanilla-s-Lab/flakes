@@ -21,6 +21,11 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 
     # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
     env = { TERM = "xterm-256color"; };
+
+    shell = {
+      program = "${pkgs.fish}/bin/fish";
+      args = [ "--login" ];
+    };
   };
 
   # https://github.com/fish-shell/fish-shell

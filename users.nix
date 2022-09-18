@@ -5,7 +5,6 @@ let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIW
   users.mutableUsers = false;
 
   # https://github.com/fish-shell/fish-shell
-  users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
 
   programs.adb.enable = true;
