@@ -5,8 +5,6 @@
 { config, pkgs, inputs, lib, system, pkgsUnstable, ... }:
 with inputs;
 {
-  systemd.services."plymouth-quit".enable = false;
-
   programs.command-not-found.enable = true;
   programs.command-not-found.dbPath =
     "${nix-channel}/programs.sqlite";

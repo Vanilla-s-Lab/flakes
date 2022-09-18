@@ -10,4 +10,7 @@
 
   systemd.coredump.enable = true;
   systemd.coredump.extraConfig = "Storage=none";
+
+  # nixos/modules/services/x11/display-managers/gdm.nix
+  systemd.services."plymouth-quit".enable = false;
 }
