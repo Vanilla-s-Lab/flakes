@@ -87,6 +87,7 @@ with inputs;
 
   # intel/ibt-17-16-1.sfi | rtl_nic/rtl8411-2.fw
   hardware.firmware = [ pkgsUnstable.linux-firmware ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821cu ];
 
   # Configure network proxy if necessary
   networking.proxy.default = "http://localhost:8889";
