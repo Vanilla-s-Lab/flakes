@@ -1,6 +1,12 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
 {
+  home.file.".local/share/Zeal".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/Zeal";
+
   home.packages = with inputs; [
+    pkgs.salt
+    pkgs.zeal
     pkgs.python3Full
 
     pkgs.jetbrains.pycharm-professional

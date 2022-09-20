@@ -121,7 +121,11 @@ let androidStudioPackages = lib.recurseIntoAttrs
 
     "org/gnome/desktop/app-folders/folders/337d3799-cc4d-47f5-a6ce-5943775f331e" = {
       name = "Document";
-      apps = [ "org.gnome.Evince.desktop" "nixos-manual.desktop" ];
+      apps = [
+        "org.gnome.Evince.desktop"
+        "nixos-manual.desktop"
+        "org.zealdocs.zeal.desktop"
+      ];
     };
 
     "org/gnome/desktop/app-folders/folders/0a52de09-b4d8-462c-bf97-517e8bc27973" = {
