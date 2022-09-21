@@ -51,9 +51,6 @@
     # pkgs.terraform-full
     pkgs.terraform
 
-    pkgs.azure-cli
-    pkgs.azure-storage-azcopy
-
     deploy-rs.defaultPackage."${system}"
 
     pkgs.mtr
@@ -124,10 +121,6 @@
   home.file.".local/share/containers".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/containers";
-
-  home.file.".azure".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/azure";
 
   home.file.".terraform.d".source =
     config.lib.file.mkOutOfStoreSymlink
