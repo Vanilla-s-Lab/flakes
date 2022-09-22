@@ -3,14 +3,14 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d";
+    version = "af9da6457790b651871b687b8f47d130cde083fc";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d";
+      rev = "af9da6457790b651871b687b8f47d130cde083fc";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-hm/8q08aIVWc5thh31OVpVoksVrqKD+rSHbUTxzzHaU=";
+      sha256 = "sha256-K3Qs9L9kM2AJtwY7FqoBRIthTpqdg0YRD28WfJjodrY=";
     };
   };
   "\"rose-pine/kitty\"" = {
