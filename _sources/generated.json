@@ -129,24 +129,6 @@
         },
         "version": "v4.0.6"
     },
-    "plugin-kubectl": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "plugin-kubectl",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8",
-            "sha256": "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=",
-            "type": "git",
-            "url": "https://github.com/blackjid/plugin-kubectl"
-        },
-        "version": "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8"
-    },
     "rose-pine": {
         "cargoLocks": null,
         "extract": null,

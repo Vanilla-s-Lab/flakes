@@ -27,7 +27,6 @@
     pkgs.patchelf
 
     pkgs.talosctl
-    pkgs.kubectl
 
     pkgs.jetbrains.datagrip
 
@@ -39,14 +38,10 @@
     pkgs.nodejs
     pkgs.nodePackages.npm
 
-    pkgs.kubectl-tree
-
     pkgs.dig
 
     # https://wiki.archlinux.org/title/default_applications#xdg-open
     pkgs.perlPackages.FileMimeInfo
-
-    pkgs.kubernetes-helm
 
     # pkgs.terraform-full
     pkgs.terraform
@@ -125,10 +120,6 @@
   home.file.".terraform.d".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/terraform.d";
-
-  programs.fish.interactiveShellInit = ''
-    kubectl completion fish | source
-  '';
 
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink

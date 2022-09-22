@@ -36,12 +36,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     "volume_67".body = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.67"; # GitLab - PipeWire - issues/976.
   };
 
-  # https://github.com/blackjid/plugin-kubectl
-  programs.fish.plugins = [
-    rec { name = "plugin-kubectl"; src = generated."${name}".src; }
-    # rec { name = "Boxfish"; src = generated."${name}".src; }
-  ];
-
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
     pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
@@ -64,11 +58,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   home.activation."fishPlugins.git" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
       ''fish -c "__git.init" || true'';
-
-  # https://github.com/blackjid/plugin-kubectl/blob/master/hooks/install.fish
-  home.activation."plugin-kubectl" =
-    lib.hm.dag.entryAfter [ "dconfSettings" ]
-      ''fish -c "__kubectl.init" || true'';
 
   # https://starship.rs/
   programs.starship.enable = true;

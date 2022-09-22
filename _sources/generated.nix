@@ -81,18 +81,6 @@
       sha256 = "sha256-jVbvJZ0/Tuor6d4t9Hv22h5MLf2bJasguNiFkVBLoqw=";
     });
   };
-  plugin-kubectl = {
-    pname = "plugin-kubectl";
-    version = "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8";
-    src = fetchgit {
-      url = "https://github.com/blackjid/plugin-kubectl";
-      rev = "dd8012f3ebfb3ceec4c693f3cc12e4c1397ac9c8";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-wLeWzPJz5AmcSprq5lIcR+3onjL7uIFCM2zj71pL2rs=";
-    };
-  };
   rose-pine = {
     pname = "rose-pine";
     version = "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a";
