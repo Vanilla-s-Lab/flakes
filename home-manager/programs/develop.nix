@@ -101,10 +101,7 @@
     pkgs.bcc
 
     pkgs.pmbootstrap
-  ]; # ++ [ pkgs.pkg-config ];
-  # home.sessionVariables = {
-  #   PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-  # };
+  ];
 
   home.file.".config/pmbootstrap.cfg".source =
     pkgs.fetchurl {
