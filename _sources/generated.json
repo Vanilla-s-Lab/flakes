@@ -17,6 +17,25 @@
         },
         "version": "af9da6457790b651871b687b8f47d130cde083fc"
     },
+    "\"longld/peda\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"longld/peda\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "longld",
+            "repo": "peda",
+            "rev": "v1.2",
+            "sha256": "sha256-vtNJ9WHCUtZmIn/IXwwtKrZx1i/az+gMmW6fLd67QYQ=",
+            "type": "github"
+        },
+        "version": "v1.2"
+    },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
         "extract": null,

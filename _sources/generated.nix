@@ -13,6 +13,17 @@
       sha256 = "sha256-K3Qs9L9kM2AJtwY7FqoBRIthTpqdg0YRD28WfJjodrY=";
     };
   };
+  "\"longld/peda\"" = {
+    pname = "\"longld/peda\"";
+    version = "v1.2";
+    src = fetchFromGitHub ({
+      owner = "longld";
+      repo = "peda";
+      rev = "v1.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-vtNJ9WHCUtZmIn/IXwwtKrZx1i/az+gMmW6fLd67QYQ=";
+    });
+  };
   "\"rose-pine/kitty\"" = {
     pname = "\"rose-pine/kitty\"";
     version = "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef";

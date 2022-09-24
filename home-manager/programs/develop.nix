@@ -1,8 +1,13 @@
 { pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
+let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Zeal";
+
+  home.file.".gdbinit".text = ''
+    source ${generated."\"longld/peda\"".src}/peda.py
+  '';
 
   home.packages = with inputs; [
     pkgs.salt

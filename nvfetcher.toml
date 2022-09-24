@@ -40,3 +40,8 @@ fetch.git = "https://github.com/rose-pine/kitty"
 src.git = "https://github.com/github/copilot.vim"
 fetch.git = "https://github.com/github/copilot.vim"
 
+# https://github.com/longld/peda
+["longld/peda"]
+src.github_tag = "longld/peda"
+fetch.github = "longld/peda"
+
