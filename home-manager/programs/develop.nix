@@ -9,6 +9,9 @@
     pkgs.zeal
     pkgs.python3Full
 
+    nixosConfig.boot.kernelPackages.perf
+    (pkgs.gdb.override { pythonSupport = true; })
+
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rider
@@ -98,7 +101,6 @@
 
     pkgs.jq
     pkgs.file
-    pkgs.bcc
 
     pkgs.pmbootstrap
   ];
