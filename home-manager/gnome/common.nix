@@ -64,6 +64,10 @@ let extensions = pkgs.runCommand "extensions" { } ''
   dconf.settings."org/flozz/nautilus-terminal".background-color = "#faf4ed";
   dconf.settings."org/flozz/nautilus-terminal".foreground-color = "#575279";
 
+  # https://github.com/flozz/nautilus-terminal#configuring
+  dconf.settings."org/flozz/nautilus-terminal".custom-command = "${pkgs.fish}/bin/fish";
+  dconf.settings."org/flozz/nautilus-terminal".use-custom-command = true;
+
   # https://github.com/nix-community/home-manager/blob/master/modules/lib/gvariant.nix # 9, ⑨!
   dconf.settings."org/flozz/nautilus-terminal".min-terminal-height = (lib.hm.gvariant.mkUint32 (5 + (2 * 2)));
   dconf.settings."org/flozz/nautilus-terminal".terminal-bottom = true;
