@@ -4,7 +4,6 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 
 let callPackage = pkgs.callPackage; in
 let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
-let nautilus-bluetooth = callPackage ../packages/nautilus-bluetooth.nix { }; in
 let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { }; in
 let nautilus-git = callPackage ../packages/nautilus-git.nix { }; in
 
@@ -13,9 +12,6 @@ let extensions = pkgs.runCommand "extensions" { } ''
 
   cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.la $out
   cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.so $out
-
-  cp ${nautilus-bluetooth}/*.la $out
-  cp ${nautilus-bluetooth}/*.so $out
 ''; in
 {
   home.packages = [

@@ -12,12 +12,6 @@ fetch.git = "https://github.com/rose-pine/alacritty"
 src.github_tag = "brunonova/nautilus-admin"
 fetch.github = "brunonova/nautilus-admin"
 
-# https://github.com/madmurphy/nautilus-bluetooth
-
-[nautilus-bluetooth]
-src.github_tag = "madmurphy/nautilus-bluetooth"
-fetch.github = "madmurphy/nautilus-bluetooth"
-
 # https://github.com/flozz/nautilus-terminal
 
 [nautilus-terminal]
