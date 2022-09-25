@@ -1,14 +1,5 @@
 { pkgs, config, inputs, lib, ... }:
 with pkgs; with inputs;
-
-let buildFHSUserEnvBubblewrap = callPackage
-  "${nixpkgs-unstable}/pkgs/build-support/build-fhs-userenv-bubblewrap"
-  { }; in
-
-let androidStudioPackages = lib.recurseIntoAttrs
-  (callPackage "${nixpkgs-unstable}/pkgs/applications/editors/android-studio" {
-    buildFHSUserEnv = buildFHSUserEnvBubblewrap;
-  }); in
 {
   dconf.settings = {
     "org/gnome/shell".favorite-apps = [
@@ -159,8 +150,7 @@ let androidStudioPackages = lib.recurseIntoAttrs
       "/persistent/dot/local/share/Google";
 
   home.packages = [
-    # pkgs.android-studio | 2021.2.1
-    androidStudioPackages.stable
+    pkgs.android-studio
 
     pkgs.remmina
     pkgs.gnome.gnome-disk-utility
