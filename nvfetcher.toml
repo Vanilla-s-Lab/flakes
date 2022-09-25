@@ -2,10 +2,6 @@
 src.git = "https://github.com/rose-pine/alacritty"
 fetch.git = "https://github.com/rose-pine/alacritty"
 
-# [Boxfish]
-# src.git = "https://github.com/MidAutumnMoon/Boxfish"
-# fetch.git = "https://github.com/MidAutumnMoon/Boxfish"
-
 # https://github.com/brunonova/nautilus-admin
 
 [nautilus-admin]

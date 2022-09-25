@@ -46,9 +46,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     pkgs.fd
     # https://github.com/BurntSushi/ripgrep
     pkgs.ripgrep
-
-    # https://github.com/MidAutumnMoon/Boxfish
-    # pkgs.bubblewrap
   ];
 
   home.file.".config/nushell/env.nu".text = "";
