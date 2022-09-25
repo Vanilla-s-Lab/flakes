@@ -41,3 +41,8 @@ fetch.git = "https://github.com/github/copilot.vim"
 src.github_tag = "longld/peda"
 fetch.github = "longld/peda"
 
+# https://github.com/wawa19933/fish-systemd
+["wawa19933/fish-systemd"]
+src.git = "https://github.com/wawa19933/fish-systemd"
+fetch.git = "https://github.com/wawa19933/fish-systemd"
+

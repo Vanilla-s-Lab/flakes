@@ -31,6 +31,12 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
 
+  # https://github.com/wawa19933/fish-systemd
+  programs.fish.plugins = pkgs.lib.singleton rec {
+    name = "fish-systemd";
+    src = generated."\"wawa19933/${name}\"".src;
+  };
+
   programs.fish.functions = {
     "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
     "volume_67".body = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.67"; # GitLab - PipeWire - issues/976.

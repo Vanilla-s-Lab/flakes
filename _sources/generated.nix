@@ -36,6 +36,18 @@
       sha256 = "sha256-idqwpNC6hWIz5KtEGqL5C+KcUcKc9iPCstP5FQcZZ0I=";
     };
   };
+  "\"wawa19933/fish-systemd\"" = {
+    pname = "\"wawa19933/fish-systemd\"";
+    version = "4e922a28ae183e0ddb28c35b8f1415d2c63f978d";
+    src = fetchgit {
+      url = "https://github.com/wawa19933/fish-systemd";
+      rev = "4e922a28ae183e0ddb28c35b8f1415d2c63f978d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-km6VgvYO1b3wnmpKrnJUaZUrQiIDl8NetECa33jbLbo=";
+    };
+  };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
     version = "v102";

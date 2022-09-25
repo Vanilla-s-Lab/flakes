@@ -54,6 +54,24 @@
         },
         "version": "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef"
     },
+    "\"wawa19933/fish-systemd\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"wawa19933/fish-systemd\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4e922a28ae183e0ddb28c35b8f1415d2c63f978d",
+            "sha256": "sha256-km6VgvYO1b3wnmpKrnJUaZUrQiIDl8NetECa33jbLbo=",
+            "type": "git",
+            "url": "https://github.com/wawa19933/fish-systemd"
+        },
+        "version": "4e922a28ae183e0ddb28c35b8f1415d2c63f978d"
+    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,
