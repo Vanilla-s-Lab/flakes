@@ -12,9 +12,6 @@ with inputs;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
-  # networking.firewall.allowedTCPPorts = [ 8889 ];
-  # networking.firewall.allowedUDPPorts = [ 8889 ];
-
   imports = [
     ./users.nix
 
