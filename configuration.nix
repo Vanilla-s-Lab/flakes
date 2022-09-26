@@ -38,6 +38,7 @@ with inputs;
     ./virtualisation.nix
 
     ./systemd.nix
+    ./common.nix
   ];
 
   environment.etc."nixos".source =
