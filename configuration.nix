@@ -156,12 +156,4 @@ with inputs;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
-  # https://atmoz.net/notes/2018-12-28-salt-ssh.html
-  environment.etc."salt/roster".text = ''
-    localhost:
-      host: localhost
-      user: vanilla
-      priv: agent-forwarding
-  '';
 }
