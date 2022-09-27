@@ -33,7 +33,18 @@ let generated = callPackage ../../_sources/generated.nix { }; in
 
   programs.firefox.enable = true;
   # https://www.mozilla.org/en-US/firefox/developer/
-  programs.firefox.package = pkgs.firefox-devedition-bin;
+  programs.firefox.package = (pkgs.firefox-devedition-bin.overrideAttrs (old: {
+    buildCommand = old.buildCommand + ''
+      cd $out/share/applications
+      cat firefox.desktop > firefox-developer-edition.desktop
+      rm firefox.desktop
+
+      # https://github.com/archlinux/svntogit-community/blob/packages/firefox-developer-edition/trunk/firefox-developer-edition.desktop
+      sed -i 's/^Icon=firefox/&-developer-edition/g' firefox-developer-edition.desktop
+      # https://stackoverflow.com/questions/4609949/what-does-1-in-sed-do
+      sed -i 's/^\(Name=Firefox\).*/\1 Developer Edition/g' firefox-developer-edition.desktop
+    '';
+  }));
 
   # https://nix-community.github.io/home-manager/options.html
   programs.firefox.profiles."dev-edition-default" = {

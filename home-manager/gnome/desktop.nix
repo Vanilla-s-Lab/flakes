@@ -104,7 +104,7 @@ with pkgs; with inputs;
       name = "Internet";
       apps = [
         "chromium-browser.desktop"
-        "firefox.desktop"
+        "firefox-developer-edition.desktop"
         "torbrowser.desktop"
         "org.wireshark.Wireshark.desktop"
       ];
