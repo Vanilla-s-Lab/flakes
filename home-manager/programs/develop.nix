@@ -54,8 +54,6 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     # pkgs.terraform-full
     pkgs.terraform
 
-    deploy-rs.defaultPackage."${system}"
-
     pkgs.mtr
     pkgs.traceroute
 
