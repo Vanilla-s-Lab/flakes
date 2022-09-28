@@ -33,5 +33,6 @@
     pkgs.sops
   ];
 
+  home.enableDebugInfo = true;
   home.stateVersion = "21.11";
 }
