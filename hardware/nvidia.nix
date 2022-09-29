@@ -36,7 +36,6 @@
   };
 
   hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs; [ mesa.drivers ]
-    ++ [ intel-media-driver vaapiIntel vaapiVdpau libvdpau-va-gl ];
-  hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ vaapiIntel ];
+  hardware.opengl.extraPackages = with pkgs;
+    [ intel-media-driver vaapiIntel vaapiVdpau libvdpau-va-gl ];
 }
