@@ -1,13 +1,15 @@
 { pkgs, config, inputs, system, ... }: with pkgs;
 let generated = callPackage ../../_sources/generated.nix { }; in
+
+let lst = [ "VaapiVideoEncoder" "VaapiVideoDecoder" ]; in
+let features = pkgs.lib.strings.concatStringsSep "," lst; in
 {
   programs.chromium.enable = true;
   programs.chromium.commandLineArgs =
     # https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
     [ "--ignore-gpu-blocklist" "--enable-gpu-rasterization" "--enable-zero-copy" ]
-    ++ [ "--disable-gpu-driver-bug-workarounds" ] # Telegram Chat with @Cyunrei.
     # https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
-    ++ [ "--enable-features=VaapiVideoDecoder" "--use-gl=desktop" ]
+    ++ [ "--enable-features=${features}" "--use-gl=desktop" ]
     ++ [ "--disable-features=MediaRouter" ]; # issues 1218418.
 
   home.packages = [
