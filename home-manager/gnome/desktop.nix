@@ -37,6 +37,7 @@ with pkgs; with inputs;
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
+        "gtk-qq.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
         "wine-wechat.desktop"
@@ -154,6 +155,8 @@ with pkgs; with inputs;
 
     pkgs.remmina
     pkgs.gnome.gnome-disk-utility
+
+    (pkgs.callPackage ../packages/gtk-qq.nix { })
   ];
 
   home.file."Android".source =

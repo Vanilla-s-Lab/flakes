@@ -17,6 +17,42 @@
         },
         "version": "af9da6457790b651871b687b8f47d130cde083fc"
     },
+    "\"gtk-qq-git\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"gtk-qq-git\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "add8196978be04101e3b3cb0e5f919b82bda42a3",
+            "sha256": "sha256-z4oiTEPX2omU5opYQi4CGwBNtKVOKYMe0rP9+x7+Y8Y=",
+            "type": "git",
+            "url": "https://aur.archlinux.org/gtk-qq-git.git"
+        },
+        "version": "add8196978be04101e3b3cb0e5f919b82bda42a3"
+    },
+    "\"lomirus/gtk-qq\"": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "\"lomirus/gtk-qq\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "d20335607a55a5e8e62c8c6d5023ef87e429f431",
+            "sha256": "sha256-UGUj2u58amxw3RunwdWIApa8utOw1E1t2MVaPIsvY1A=",
+            "type": "git",
+            "url": "https://github.com/lomirus/gtk-qq"
+        },
+        "version": "d20335607a55a5e8e62c8c6d5023ef87e429f431"
+    },
     "\"longld/peda\"": {
         "cargoLocks": null,
         "extract": null,
