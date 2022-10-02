@@ -4,6 +4,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     (x: { name = x; value = { disabled = false; }; })); in
 
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
+let linode-nix = "41168b3b53ba10e8df5293f393fbd81cf0067b9af89f4b4079520a3b8ad35b07"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -87,6 +88,9 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+
+  home.file."/home/vanilla/.local/share/direnv/allow/${linode-nix}".text =
+    "/persistent/Projects/linode-nix/.envrc";
 
   programs.kitty.enable = true;
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
