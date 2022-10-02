@@ -4,7 +4,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     (x: { name = x; value = { disabled = false; }; })); in
 
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
-let linode-nix = "41168b3b53ba10e8df5293f393fbd81cf0067b9af89f4b4079520a3b8ad35b07"; in
+let linode-nix = "20e4de94cfefef0f123055b7545bab882e10dc21574eea182d26a59aea208ad8"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
