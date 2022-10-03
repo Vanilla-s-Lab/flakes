@@ -33,6 +33,9 @@ with inputs;
     ./sops-config/chaoxing.nix
     ./sops-config/github-copilot.nix
 
+    ./sops-config/linode-nix.nix
+    ./sops-config/vultr-nix.nix
+
     ./security.nix
     ./steam.nix
     ./virtualisation.nix
