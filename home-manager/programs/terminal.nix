@@ -4,7 +4,7 @@ let enable_feature = feature_list: builtins.listToAttrs
     (x: { name = x; value = { disabled = false; }; })); in
 
 let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
-let linode-nix = "20e4de94cfefef0f123055b7545bab882e10dc21574eea182d26a59aea208ad8"; in
+let vultr-nix = "4ce231b2fb81d3bc53bcfbe883fb7322f541b72f3aed2e0e772d38a84dec92fc"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -89,8 +89,8 @@ let linode-nix = "20e4de94cfefef0f123055b7545bab882e10dc21574eea182d26a59aea208a
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
 
-  home.file."/home/vanilla/.local/share/direnv/allow/${linode-nix}".text =
-    "/persistent/Projects/linode-nix/.envrc";
+  home.file."/home/vanilla/.local/share/direnv/allow/${vultr-nix}".text =
+    "/persistent/Projects/vultr-nix/.envrc";
 
   programs.kitty.enable = true;
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
