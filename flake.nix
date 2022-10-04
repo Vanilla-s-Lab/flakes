@@ -50,7 +50,8 @@
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
             ++ [ nixos-cn.nixosModules.nixos-cn ]
-            ++ [ impermanence.nixosModules.impermanence ];
+            ++ [ impermanence.nixosModules.impermanence ]
+            ++ [{ home-manager.users."root" = import ./home-manager/root.nix; }];
         };
 
       pkgs = import nixpkgs { inherit system; };
