@@ -34,5 +34,5 @@
   ];
 
   home.enableDebugInfo = true;
-  home.stateVersion = "21.11";
+  home.stateVersion = "22.05";
 }
