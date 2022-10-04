@@ -54,12 +54,19 @@
     59.110.239.227 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPyR+72FJ0luNqUIs7EBV2wlCjOHkwOEbe5FuGP3Y3mur49YvCUYDFzzdSbqSRYQfSEPY8z02ojsJnbJ0EY6EyI=
     211.137.105.139 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILAGThb0UHRQkTnjTu6C0BBo1yQ1+hx00R5RcUBP1jnk
     192.168.5.1 ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAB6gHsv2elRunMrxhgAdbTQ2AlU/VWhnUUAFiXrymlc64PM4X6X/2LD1xbvUOKHiWRUVDq0NCn8ta/zQuAhA2XtIgCEji5uK1kjwnr0+mItSJC1XQwetERS0lZ5tpPaGRvJt/14IONaUQkK8hvlrI8M7eAzZsOa5FCU0fCGQdMnb16B+Q==
+    139.162.105.188 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAu9X9+vyonTmcl8opkodSnrpd5J5LmqK7iX5GcVSO3i
+    139.162.105.188 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1G4Ne7clQbDvEm/yxMMI87EZNpEOkf4nyivh3T0UPdZiZnK7Rr5HUgZ+RoaUWvOAGwzTQdjpeePULchKJ3okvNcX53RuapP9x21hkfLBSkrNShJNIi7n+TRSCaMfKRWgJ8zceR7NNRLXFY6pnQ2O9YnUR7LL5zfnaqf3IksSI+SzjP6Gc5WIM0mac4dkX1eNjtvj7nbeH5/2hQgGE7d0jGzslbPrsaRKU5fZPidOWAIcdqyjw/8t8UqR3jgt4MdBtlshBcxBRgvLXuWmpfFt89rsVS/atUnFbZ340yO2pnt/a2hKrjbv0ucMnOONA4PTJ6Xn9X9IVi1FsMn6F6bgz1k5buehQ9gVr4jy1uc5q1185sBP/GpVnAuDSsEbXSiRpwqjR6dHJYM7TOVi+Z1TQ7NaQqWPyesjLKK/ABbYC1R/XVa6niavjGJrUQNnmS+5ycNLZnOwtiAmUldF0MHy/K3u+Y0TI6cD6yjc2/9xqEcVvBgwRZl1ax0xXUDjfYdAkKfNsvokn0GXtBaNxIPe8YLYCnLbC/WjVgW9kL26b9+aeRp7jhWu5395XPfYIfggbTnmju9K+Xdj2mh/iRhjmvG45tRsouuTR3n+h4PCi380KEMstneGgQSnEq8clUeuRoxmsSMrnxTVD03Ek/+TrU3obbU/W4tX4aoKrcOMfFQ==
   '';
 
   # https://cms-sw.github.io/tutorial-proxy.html
   programs.ssh.matchBlocks."github.com" = {
     host = "github.com";
     user = "git";
+    proxyCommand = "nc -x localhost:1089 %h %p";
+  };
+
+  programs.ssh.matchBlocks."139.162.105.188" = {
+    host = "139.162.105.188";
     proxyCommand = "nc -x localhost:1089 %h %p";
   };
 
