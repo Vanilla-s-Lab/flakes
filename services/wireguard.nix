@@ -11,7 +11,10 @@
         {
           publicKey = "TZtiztF9yX/E4Eq6qMm/sX8dnRtDMWxAcssz7w7hGGs=";
           allowedIPs = [ "10.100.0.0/24" ];
-          endpoint = "139.162.105.188:51820";
+
+          # https://relay.nekoneko.cloud/
+          # endpoint = "139.162.105.188:51820";
+          endpoint = "221.131.165.89:45000";
 
           persistentKeepalive = 25;
         }
