@@ -1,8 +1,10 @@
 keys:
   - &vanilla 2649340CC909F821D25167143750028ED04FA42E
   - &nixos-rot E3520A257213E7F48A3F5459C7108941F87E771F
+
 creation_rules:
   - path_regex: secrets/[^/]+\.yaml$
+
     key_groups:
       - pgp:
           - *vanilla
