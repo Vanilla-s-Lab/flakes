@@ -68,7 +68,7 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   # https://starship.rs/config/
   programs.starship.settings = (enable_feature
     ([ "git_metrics" "kubernetes" "memory_usage" ]
-      ++ [ "shell" "status" /* "sudo" */ "time" ]));
+      ++ [ "shell" "status" "sudo" "time" ]));
 
   # https://github.com/ogham/exa
   programs.exa.enable = true;
