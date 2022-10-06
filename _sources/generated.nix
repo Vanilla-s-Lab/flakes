@@ -108,13 +108,13 @@
   };
   nautilus-terminal = {
     pname = "nautilus-terminal";
-    version = "v4.0.6";
+    version = "v4.1.0";
     src = fetchFromGitHub ({
       owner = "flozz";
       repo = "nautilus-terminal";
-      rev = "v4.0.6";
+      rev = "v4.1.0";
       fetchSubmodules = false;
-      sha256 = "sha256-jVbvJZ0/Tuor6d4t9Hv22h5MLf2bJasguNiFkVBLoqw=";
+      sha256 = "sha256-sOt43RPES+5gEC7XGVzeQyyolrsJnJfjMydhKRZ5qtM=";
     });
   };
   rose-pine = {
