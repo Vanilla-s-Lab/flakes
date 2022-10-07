@@ -13,12 +13,4 @@
   # services/x11/desktop-managers/gnome.nix
   services.avahi.enable = false; # [ 5353 ]
   services.geoclue2.enable = false; # Deps
-
-  networking.firewall = {
-    allowedUDPPorts = [ 51820 ];
-  };
-
-  networking.firewall.trustedInterfaces = [
-    "wg0"
-  ];
 }
