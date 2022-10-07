@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, config, lib, inputs, nixosConfig, ... }:
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
 
@@ -46,7 +46,18 @@ let extensions = pkgs.runCommand "extensions" { } ''
     pkgs.gnome.gnome-calendar
     pkgs.lollypop
     pkgs.gnome.totem
-    pkgs.gnome.eog
+
+    # https://github.com/NixOS/nixpkgs/pull/152312
+    (pkgs.gnome.eog.overrideAttrs (old:
+      let path = "${pkgs.nur.repos.cwyc.webp-pixbuf-loader}"
+        + "/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"; in
+      {
+        preFixup = old.preFixup + ''
+          gappsWrapperArgs+=(
+            --set GDK_PIXBUF_MODULE_FILE "${path}"
+          )
+        '';
+      }))
 
     pkgs.evince
     pkgs.thunderbird
