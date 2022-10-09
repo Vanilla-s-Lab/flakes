@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   programs.steam.enable = true;
-  programs.steam.remotePlay.openFirewall = true;
+  # programs.steam.remotePlay.openFirewall = true;
 
   nixpkgs.overlays = lib.singleton (self: super: {
     steam = super.steam.override {
