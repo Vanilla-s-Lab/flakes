@@ -127,6 +127,25 @@
         },
         "version": "v102"
     },
+    "gnome-shell-extension-sensory-perception": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "gnome-shell-extension-sensory-perception",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "HarlemSquirrel",
+            "repo": "gnome-shell-extension-sensory-perception",
+            "rev": "v18",
+            "sha256": "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=",
+            "type": "github"
+        },
+        "version": "v18"
+    },
     "nautilus-admin": {
         "cargoLocks": null,
         "extract": null,

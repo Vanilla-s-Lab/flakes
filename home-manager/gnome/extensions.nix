@@ -1,4 +1,5 @@
 { pkgs, config, lib, ... }:
+let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   home.packages = [
     pkgs.gnomeExtensions.arcmenu
@@ -17,13 +18,10 @@
 
     # https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception#compatibility=
     (pkgs.gnomeExtensions.sensory-perception.overrideAttrs (old: {
-      version = "v18";
-      src = pkgs.fetchgit {
-        url = "https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception";
-        rev = "v18";
-        sha256 = "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=";
-      };
+      version = "${generated."gnome-shell-extension-sensory-perception".src.rev}";
+      src = generated."gnome-shell-extension-sensory-perception".src;
     }))
+
     pkgs.lm_sensors
 
     pkgs.gnomeExtensions.simple-net-speed

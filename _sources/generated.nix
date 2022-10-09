@@ -83,6 +83,17 @@
       sha256 = "sha256-LwHDZV688YVkddgWVUIk07FUeT0Z+E+mETWmOZ7U73k=";
     });
   };
+  gnome-shell-extension-sensory-perception = {
+    pname = "gnome-shell-extension-sensory-perception";
+    version = "v18";
+    src = fetchFromGitHub ({
+      owner = "HarlemSquirrel";
+      repo = "gnome-shell-extension-sensory-perception";
+      rev = "v18";
+      fetchSubmodules = false;
+      sha256 = "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=";
+    });
+  };
   nautilus-admin = {
     pname = "nautilus-admin";
     version = "v1.1.9";

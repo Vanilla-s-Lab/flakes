@@ -56,3 +56,8 @@ fetch.git = "https://github.com/lomirus/gtk-qq"
 src.git = "https://aur.archlinux.org/gtk-qq-git.git"
 fetch.git = "https://aur.archlinux.org/gtk-qq-git.git"
 
+# https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception
+
+[gnome-shell-extension-sensory-perception]
+src.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
+fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
