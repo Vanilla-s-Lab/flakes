@@ -13,13 +13,6 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
       (generated.rose-pine.src
         + "/dist/rose-pine-dawn.yml");
 
-    font = {
-      normal = { family = "Hack Nerd Font"; style = "Regular"; };
-      bold = { family = "Hack Nerd Font"; style = "Bold"; };
-      italic = { family = "Hack Nerd Font"; style = "Italic"; };
-      size = 11.0;
-    };
-
     # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
     env = { TERM = "xterm-256color"; };
 

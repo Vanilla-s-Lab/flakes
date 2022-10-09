@@ -4,11 +4,12 @@
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
     pkgs.nur.repos.vanilla.Win10_LTSC_2021_fonts
     pkgs.nur.repos.vanilla.apple-fonts.SF-Compact
-  ] ++ [ pkgs.noto-fonts-cjk pkgs.twemoji-color-font ];
+  ] ++ [ pkgs.noto-fonts-cjk ];
 
   # https://github.com/nix-community/home-manager/issues/1118
   fonts.fontconfig.enable = lib.mkForce true;
 
+  # https://github.com/alacritty/alacritty/issues/153
   home.file.".fonts.conf".text = ''
     <?xml version="1.0"?>
     <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
@@ -28,6 +29,14 @@
           <family>Noto Sans Mono CJK TC</family>
           <family>Noto Sans Mono CJK JP</family>
         </prefer>
+      </alias>
+
+      <alias>
+        <family>monospace</family>
+        <prefer>
+          <family>Hack Nerd Font</family>
+          <family>Segoe UI Emoji</family>
+         </prefer>
       </alias>
     </fontconfig>
   '';

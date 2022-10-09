@@ -60,11 +60,11 @@ with inputs;
   # https://wiki.archlinux.org/title/sysctl
   boot.kernel.sysctl."kernel.sysrq" = 1;
   boot.kernel.sysctl."net.core.default_qdisc" = "fq";
-  boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr2";
+  boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr";
   # https://nixos.wiki/wiki/NTFS
   boot.supportedFilesystems = [ "ntfs" "apfs" ];
   # Required nvme kernel module to find disk.
-  boot.initrd.availableKernelModules = [ "nvme" "tcp_bbr2" ];
+  boot.initrd.availableKernelModules = [ "nvme" ];
 
   # Define your hostname.
   networking.hostName = "NixOS-RoT";
