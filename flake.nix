@@ -42,7 +42,7 @@
         rust-overlay.overlays.default
       ]; in
         nixpkgs.lib.nixosSystem rec {
-          inherit system; specialArgs = { inherit inputs self system pkgsUnstable; };
+          inherit system; specialArgs = { inherit inputs self pkgsUnstable; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
             ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
