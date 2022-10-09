@@ -45,7 +45,7 @@
           inherit system; specialArgs = { inherit inputs self pkgsUnstable; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system pkgsUnstable; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated pkgsUnstable; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
@@ -56,5 +56,7 @@
       pkgs = import nixpkgs { inherit system; };
       pkgsUnstable = import nixpkgs-unstable
         { inherit system; config.allowUnfree = true; };
+
+      generated = pkgs.callPackage ./_sources/generated.nix { };
     };
 }

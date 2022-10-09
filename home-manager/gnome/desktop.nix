@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, lib, ... }:
+{ pkgs, config, inputs, lib, generated, ... }:
 with pkgs; with inputs;
 {
   dconf.settings = {
@@ -38,6 +38,7 @@ with pkgs; with inputs;
       name = "Work";
       apps = [
         "gtk-qq.desktop"
+        "openfortigui.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
         "wine-wechat.desktop"
@@ -157,6 +158,7 @@ with pkgs; with inputs;
     pkgs.gnome.gnome-disk-utility
 
     (pkgs.callPackage ../packages/gtk-qq.nix { })
+    (pkgs.callPackage ../packages/openfortigui.nix { inherit generated; })
   ];
 
   home.file."Android".source =
