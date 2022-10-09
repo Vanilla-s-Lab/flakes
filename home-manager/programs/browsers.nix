@@ -1,5 +1,5 @@
-{ pkgs, config, inputs, system, ... }: with pkgs;
-let generated = callPackage ../../_sources/generated.nix { }; in
+{ pkgs, config, inputs, system, generated, ... }:
+with pkgs;
 
 let lst = [ "VaapiVideoEncoder" "VaapiVideoDecoder" ]; in
 let features = pkgs.lib.strings.concatStringsSep "," lst; in

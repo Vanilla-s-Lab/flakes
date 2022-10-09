@@ -17,9 +17,9 @@
 , sqlite
 , wrapGAppsHook4
 , pkgs
+, generated
 , ...
 }:
-let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 rustPlatform.buildRustPackage rec {
   pname = "gtk-qq";
   version = "v0.2.0";

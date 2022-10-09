@@ -1,5 +1,4 @@
-{ callPackage, python3Packages, lib, gnome, pango, harfbuzz, gdk-pixbuf, atk, vte, gtk3, glib, ... }:
-let generated = callPackage ../../_sources/generated.nix { }; in
+{ callPackage, python3Packages, lib, gnome, pango, harfbuzz, gdk-pixbuf, atk, vte, gtk3, glib, generated, ... }:
 python3Packages.buildPythonPackage rec {
   pname = generated.nautilus-terminal.pname;
   version = generated.nautilus-terminal.version;

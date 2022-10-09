@@ -1,5 +1,4 @@
-{ pkgs, nixosConfig, config, ... }:
-let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
+{ pkgs, nixosConfig, config, generated, ... }:
 {
   programs.neovim.enable = true;
   # programs.neovim.package = pkgs.neovim-nightly;

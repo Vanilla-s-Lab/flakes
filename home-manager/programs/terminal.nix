@@ -1,9 +1,8 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, generated, ... }:
 let enable_feature = feature_list: builtins.listToAttrs
   (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
     (x: { name = x; value = { disabled = false; }; })); in
 
-let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd7b"; in
 {
   # https://github.com/alacritty/alacritty

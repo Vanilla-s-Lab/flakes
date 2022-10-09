@@ -157,7 +157,7 @@ with pkgs; with inputs;
     pkgs.remmina
     pkgs.gnome.gnome-disk-utility
 
-    (pkgs.callPackage ../packages/gtk-qq.nix { })
+    (pkgs.callPackage ../packages/gtk-qq.nix { inherit generated; })
     (pkgs.callPackage ../packages/openfortigui.nix { inherit generated; })
   ];
 

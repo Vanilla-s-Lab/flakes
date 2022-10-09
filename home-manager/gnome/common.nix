@@ -1,11 +1,11 @@
-{ pkgs, config, lib, inputs, nixosConfig, ... }:
+{ pkgs, config, lib, inputs, nixosConfig, generated, ... }:
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
 
 let callPackage = pkgs.callPackage; in
-let nautilus-admin = callPackage ../packages/nautilus-admin.nix { }; in
-let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { }; in
-let nautilus-git = callPackage ../packages/nautilus-git.nix { }; in
+let nautilus-admin = callPackage ../packages/nautilus-admin.nix { inherit generated; }; in
+let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { inherit generated; }; in
+let nautilus-git = callPackage ../packages/nautilus-git.nix { inherit generated; }; in
 
 let extensions = pkgs.runCommand "extensions" { } ''
   mkdir -p $out

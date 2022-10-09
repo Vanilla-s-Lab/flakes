@@ -1,5 +1,4 @@
-{ callPackage, stdenv, meson, pkg-config, glib, ninja, python3, gtk3, ... }:
-let generated = callPackage ../../_sources/generated.nix { }; in
+{ callPackage, stdenv, meson, pkg-config, glib, ninja, python3, gtk3, generated, ... }:
 stdenv.mkDerivation rec {
   pname = generated.nautilus-git.pname;
   version = generated.nautilus-git.version;

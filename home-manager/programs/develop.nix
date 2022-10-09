@@ -1,5 +1,4 @@
-{ pkgs, config, inputs, system, lib, nixosConfig, ... }: with inputs;
-let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
+{ pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink

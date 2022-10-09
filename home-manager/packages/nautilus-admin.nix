@@ -1,5 +1,4 @@
-{ callPackage, stdenv, cmake, gettext, gnome, ... }:
-let generated = callPackage ../../_sources/generated.nix { }; in
+{ callPackage, stdenv, cmake, gettext, gnome, generated, ... }:
 stdenv.mkDerivation {
   pname = generated.nautilus-admin.pname;
   version = generated.nautilus-admin.version;

@@ -1,5 +1,4 @@
-{ pkgs, config, lib, ... }:
-let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
+{ pkgs, config, lib, generated, ... }:
 {
   home.packages = [
     pkgs.gnomeExtensions.arcmenu
