@@ -52,6 +52,8 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
     pkgs.fd
     # https://github.com/BurntSushi/ripgrep
     pkgs.ripgrep
+
+    pkgs.powerline
   ];
 
   home.file.".config/nushell/env.nu".text = "";
@@ -95,4 +97,10 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
   home.file.".config/kitty/rose-pine-dawn.conf".source =
     "${generated."\"rose-pine/kitty\"".src}/dist/rose-pine-dawn.conf";
+
+  programs.tmux.enable = true;
+  programs.tmux.shell = "${pkgs.fish}/bin/fish";
+
+  # https://powerline.readthedocs.io/en/latest/usage/other.html
+  home.file.".tmux.conf".text = ''source "${pkgs.powerline}/share/tmux/powerline.conf"'';
 }
