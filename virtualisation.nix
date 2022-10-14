@@ -31,4 +31,7 @@
   environment.systemPackages = [
     (pkgs.callPackage ./home-manager/packages/docker-lock.nix { })
   ];
+
+  virtualisation.libvirtd.qemu.ovmf.enable = true;
+  virtualisation.libvirtd.qemu.ovmf.package = pkgs.OVMFFull;
 }
