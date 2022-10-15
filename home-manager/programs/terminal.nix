@@ -112,9 +112,18 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   home.file.".config/powerline/colorschemes/rose-pine.json".text = builtins.toJSON {
     name = "rose-pine";
 
+    # https://github.com/powerline/powerline/blob/develop/powerline/config_files/themes/tmux/default.json
+    # https://powerline.readthedocs.io/en/master/configuration/segments.html#segments
     groups = {
       attached_clients = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
       background = { attrs = [ ]; bg = "gray0"; fg = "white"; };
+      "background:divider" = { attrs = [ ]; bg = "gray0"; fg = "gray5"; };
+      date = { attrs = [ ]; bg = "gray2"; fg = "gray8"; };
+      hostname = { attrs = [ "bold" ]; bg = "gray10"; fg = "black"; };
+      system_load = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
+      time = { attrs = [ "bold" ]; bg = "gray2"; fg = "gray10"; };
+      "time:divider" = { attrs = [ ]; bg = "gray2"; fg = "gray5"; };
+      uptime = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
     };
   };
 
