@@ -102,7 +102,10 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   programs.tmux.shell = "${pkgs.fish}/bin/fish";
 
   # https://powerline.readthedocs.io/en/latest/usage/other.html
-  home.file.".tmux.conf".text = ''source "${pkgs.powerline}/share/tmux/powerline.conf"'';
+  home.file.".tmux.conf".text = ''source "${pkgs.powerline}/share/tmux/powerline.conf"''
+    # https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
+    + "\n" + ''set -g default-terminal "tmux-256color"''
+    + "\n" + ''set -ag terminal-overrides ",xterm-256color:RGB"'';
 
   # https://powerline.readthedocs.io/en/latest/configuration/reference.html#config-colors-colors
   # https://github.com/powerline/powerline/blob/develop/powerline/config_files/colorschemes/tmux/default.json
@@ -135,5 +138,6 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   # https://github.com/powerline/powerline/blob/develop/powerline/config_files/config.json
   home.file.".config/powerline/config.json".text = builtins.toJSON {
     ext = { tmux = { colorscheme = "rose-pine"; }; };
+    common = { term_truecolor = true; };
   };
 }
