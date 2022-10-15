@@ -115,15 +115,19 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
     # https://github.com/powerline/powerline/blob/develop/powerline/config_files/themes/tmux/default.json
     # https://powerline.readthedocs.io/en/master/configuration/segments.html#segments
     groups = {
-      attached_clients = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
-      background = { attrs = [ ]; bg = "gray0"; fg = "white"; };
-      "background:divider" = { attrs = [ ]; bg = "gray0"; fg = "gray5"; };
-      date = { attrs = [ ]; bg = "gray2"; fg = "gray8"; };
-      hostname = { attrs = [ "bold" ]; bg = "gray10"; fg = "black"; };
-      system_load = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
-      time = { attrs = [ "bold" ]; bg = "gray2"; fg = "gray10"; };
-      "time:divider" = { attrs = [ ]; bg = "gray2"; fg = "gray5"; };
-      uptime = { attrs = [ ]; bg = "gray0"; fg = "gray8"; };
+      # normal: a: rose + base; ( gray10 + black )
+      hostname = { attrs = [ "bold" ]; bg = "rose"; fg = "base"; };
+      # normal: b: overlay + rose; ( gray2 + gray [ 8 | 10 | 5 ] )
+      date = { attrs = [ ]; bg = "overlay"; fg = "rose"; };
+      time = { attrs = [ "bold" ]; bg = "overlay"; fg = "rose"; };
+      "time:divider" = { attrs = [ ]; bg = "overlay"; fg = "rose"; };
+      # normal: c: base + text; ( gray0 + gray8 )
+      system_load = { attrs = [ ]; bg = "base"; fg = "text"; };
+      uptime = { attrs = [ ]; bg = "base"; fg = "text"; };
+
+      # background group, follows = "normal: c"
+      background = { attrs = [ ]; bg = "base"; fg = "text"; };
+      "background:divider" = { attrs = [ ]; bg = "base"; fg = "text"; };
     };
   };
 
@@ -148,5 +152,11 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   home.file.".config/powerline/config.json".text = builtins.toJSON {
     ext = { tmux = { colorscheme = "rose-pine"; }; };
     common = { term_truecolor = true; };
+  };
+
+  # https://github.com/rose-pine/neovim/blob/main/lua/rose-pine/palette.lua
+  home.file.".config/powerline/colors.json".text = builtins.toJSON {
+    colors = { rose = [ 252 "d7827e" ]; /* gray10 */ base = [ 16 "faf4ed" ]; /* black */ }
+      // { overlay = [ 236 "f2e9e1" ]; /* gray2 */ } // { text = [ 247 "575279" ]; /* gray8 */ };
   };
 }
