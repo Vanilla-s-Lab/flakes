@@ -13,30 +13,6 @@
       sha256 = "sha256-GmwR+S5sQnVUbVShP53jNpSKMZaoeh9Rf37v89wAJ3M=";
     };
   };
-  "\"gtk-qq-git\"" = {
-    pname = "\"gtk-qq-git\"";
-    version = "add8196978be04101e3b3cb0e5f919b82bda42a3";
-    src = fetchgit {
-      url = "https://aur.archlinux.org/gtk-qq-git.git";
-      rev = "add8196978be04101e3b3cb0e5f919b82bda42a3";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-z4oiTEPX2omU5opYQi4CGwBNtKVOKYMe0rP9+x7+Y8Y=";
-    };
-  };
-  "\"lomirus/gtk-qq\"" = {
-    pname = "\"lomirus/gtk-qq\"";
-    version = "d20335607a55a5e8e62c8c6d5023ef87e429f431";
-    src = fetchgit {
-      url = "https://github.com/lomirus/gtk-qq";
-      rev = "d20335607a55a5e8e62c8c6d5023ef87e429f431";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-UGUj2u58amxw3RunwdWIApa8utOw1E1t2MVaPIsvY1A=";
-    };
-  };
   "\"longld/peda\"" = {
     pname = "\"longld/peda\"";
     version = "v1.2";
