@@ -27,7 +27,6 @@ with inputs;
     ./services/udev.nix
     ./services/btrfs.nix
     ./services/smartdns.nix
-    ./services/tailscale.nix
 
     ./sops-config/sg_cli.nix
     ./sops-config/ArchiSteamFarm.nix
