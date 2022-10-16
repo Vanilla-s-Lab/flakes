@@ -117,10 +117,12 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
     groups = {
       # normal: a: rose + base; ( gray10 + black )
       hostname = { attrs = [ "bold" ]; bg = "rose"; fg = "base"; };
+
       # normal: b: overlay + rose; ( gray2 + gray [ 8 | 10 | 5 ] )
       date = { attrs = [ ]; bg = "overlay"; fg = "rose"; };
       time = { attrs = [ "bold" ]; bg = "overlay"; fg = "rose"; };
       "time:divider" = { attrs = [ ]; bg = "overlay"; fg = "rose"; };
+
       # normal: c: base + text; ( gray0 + gray8 )
       system_load = { attrs = [ ]; bg = "base"; fg = "text"; };
       uptime = { attrs = [ ]; bg = "base"; fg = "text"; };
