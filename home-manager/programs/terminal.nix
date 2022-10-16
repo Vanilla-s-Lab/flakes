@@ -137,16 +137,27 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   # `tmux -V`: tmux 3.2a; pkgs.powerline: Version: 2.8.2.
   home.file.".config/powerline/colorschemes/tmux/rose-pine.json".text = builtins.toJSON {
     groups = {
-      active_window_status = { attrs = [ ]; bg = "gray0"; fg = "darkblue"; };
+      # `normal: b & a` for session not active & active.
+      session = { attrs = [ "bold" ]; bg = "overlay"; fg = "rose"; };
+      "session:prefix" = { attrs = [ "bold" ]; bg = "rose"; fg = "base"; };
+
+      # `normal c` for window list background.
+      window = { attrs = [ ]; bg = "base"; fg = "text"; };
+
+      # `normal: a` for selected window.
+      "window:current" = { attrs = [ ]; bg = "rose"; fg = "base"; };
+      window_name = { attrs = [ "bold" ]; bg = "rose"; fg = "base"; };
+
+      # `normal: c` for unselected window.
+      "window:divider" = { attrs = [ ]; bg = "base"; fg = "text"; };
+      active_window_status = { attrs = [ ]; bg = "base"; fg = "text"; };
+      window_status = { attrs = [ ]; bg = "base"; fg = "text"; };
+
+      # `normal: c` for background window bell.
+      bell_status = { attrs = [ ]; bg = "base"; fg = "text"; };
+
+      # Deprecated in powerline 1.8 & 1.9...?
       activity_status = { attrs = [ ]; bg = "gray0"; fg = "yellow"; };
-      bell_status = { attrs = [ ]; bg = "gray0"; fg = "red"; };
-      session = { attrs = [ "bold" ]; bg = "gray90"; fg = "black"; };
-      "session:prefix" = { attrs = [ "bold" ]; bg = "darkblue"; fg = "gray90"; };
-      window = { attrs = [ ]; bg = "gray0"; fg = "gray6"; };
-      "window:current" = { attrs = [ ]; bg = "darkblue"; fg = "mediumcyan"; };
-      "window:divider" = { attrs = [ ]; bg = "gray0"; fg = "gray4"; };
-      window_name = { attrs = [ "bold" ]; bg = "darkblue"; fg = "white"; };
-      window_status = { attrs = [ ]; bg = "gray0"; fg = "gray70"; };
     };
   };
 
