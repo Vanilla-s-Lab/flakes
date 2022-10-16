@@ -26,10 +26,6 @@
     # https://github.com/serokell/deploy-rs
     deploy-rs.url = "github:serokell/deploy-rs";
     deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
-
-    # https://nixos.wiki/wiki/Rust
-    rust-overlay.url = "github:oxalica/rust-overlay";
-    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -39,7 +35,6 @@
       # https://github.com/nix-community/neovim-nightly-overlay
       nixosConfig = let overlays = [
         nur.overlay
-        rust-overlay.overlays.default
       ]; in
         nixpkgs.lib.nixosSystem rec {
           inherit system; specialArgs = { inherit inputs self pkgsUnstable; };
