@@ -7,6 +7,10 @@
     steam = super.steam.override {
       extraPkgs = pkgs: with pkgs; [
         nur.repos.vanilla.Win10_LTSC_2021_fonts
+
+        pkgs.openssl_3_0
+        pkgs.libadwaita
+        pkgs.gtk4
       ];
     };
   });
