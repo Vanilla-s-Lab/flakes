@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ lib, pkgs, inputs, config, nixosConfig, ... }:
 {
   # https://nixos.wiki/wiki/Git
   programs.git.enable = true;
@@ -92,4 +92,8 @@
 
   programs.git.extraConfig."pager" = { difftool = true; };
   programs.git.extraConfig."alias" = { dft = "difftool"; };
+
+  home.file.".config/nix/nix.conf".source =
+    config.lib.file.mkOutOfStoreSymlink
+      nixosConfig.sops.templates."nix.conf".path;
 }
