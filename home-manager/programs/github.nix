@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, config, nixosConfig, ... }:
+{ lib, pkgs, inputs, system, config, nixosConfig, ... }:
 {
   # https://nixos.wiki/wiki/Git
   programs.git.enable = true;
@@ -83,6 +83,7 @@
   home.packages = [
     pkgs.difftastic
     pkgs.gh # GitHub CLI
+    pkgs.nix-index
   ];
 
   # https://difftastic.wilfred.me.uk/git.html
@@ -96,4 +97,9 @@
   home.file.".config/nix/nix.conf".source =
     config.lib.file.mkOutOfStoreSymlink
       nixosConfig.sops.templates."nix.conf".path;
+  # https://github.com/Mic92/nix-index-database
+  home.file.".cache/nix-index/index-x86_64-linux".source =
+    inputs.nix-index-database.legacyPackages."${system}".database;
+  home.file.".cache/nix-index/files".source =
+    config.home.file.".cache/nix-index/index-x86_64-linux".source;
 }

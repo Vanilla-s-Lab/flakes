@@ -5,6 +5,7 @@
     nixpkgs-unstable.flake = false;
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.05/nixexprs.tar.xz";
+    nix-index-database.url = "github:Mic92/nix-index-database";
 
     home-manager.url = "github:nix-community/home-manager/release-22.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
