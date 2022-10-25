@@ -13,4 +13,7 @@
   # services/x11/desktop-managers/gnome.nix
   services.avahi.enable = false; # [ 5353 ]
   services.geoclue2.enable = false; # Deps
+
+  # Qv2ray - Preferences - Inbound Settings
+  # networking.firewall.allowedTCPPorts = [ 8889 ];
 }
