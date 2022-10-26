@@ -34,6 +34,7 @@ with inputs;
 
     ./sops-config/github-copilot.nix
     ./sops-config/access-tokens.nix
+    ./sops-config/gh_hosts.nix
 
     ./sops-config/linode-nix.nix
     ./sops-config/vultr-nix.nix

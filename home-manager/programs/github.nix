@@ -103,4 +103,8 @@
     inputs.nix-index-database.legacyPackages."${system}".database;
   home.file.".cache/nix-index/files".source =
     config.home.file.".cache/nix-index/index-x86_64-linux".source;
+
+  home.file.".config/gh/hosts.yml".source =
+    config.lib.file.mkOutOfStoreSymlink
+      nixosConfig.sops.templates."gh_hosts".path;
 }
