@@ -105,7 +105,9 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   home.file.".tmux.conf".text = ''source "${pkgs.powerline}/share/tmux/powerline.conf"''
     # https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
     + "\n" + ''set -g default-terminal "tmux-256color"''
-    + "\n" + ''set -ag terminal-overrides ",xterm-256color:RGB"'';
+    + "\n" + ''set -ag terminal-overrides ",xterm-256color:RGB"''
+    # https://superuser.com/questions/325110/how-to-turn-down-the-timeout-between-prefix-key-and-command-key-in-tmux
+    + "\n" + ''set -g repeat-time 0'';
 
   # https://powerline.readthedocs.io/en/latest/configuration/reference.html#config-colors-colors
   # https://github.com/powerline/powerline/blob/develop/powerline/config_files/colorschemes/tmux/default.json
