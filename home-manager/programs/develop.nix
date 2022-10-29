@@ -15,6 +15,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
+  home.file."${".local/share/JetBrains/PyCharm${pkgs.jetbrains.pycharm-professional.version}" +
+    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
+    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
+
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
