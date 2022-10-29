@@ -7,6 +7,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Zeal";
 
+  home.file."nltk_data".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/nltk_data";
+
   home.file.".gdbinit".text = ''
     source ${generated."\"longld/peda\"".src}/peda.py
   '';
