@@ -1,4 +1,5 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
+let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -7,6 +8,10 @@
   home.file.".gdbinit".text = ''
     source ${generated."\"longld/peda\"".src}/peda.py
   '';
+
+  home.file."${".local/share/JetBrains/IntelliJIdea${pkgs.jetbrains.idea-ultimate.version}" +
+    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
+    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
   home.packages = with inputs; [
     pkgs.salt
@@ -141,10 +146,6 @@
   home.file.".config/JetBrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/JetBrains";
-
-  home.file.".local/share/JetBrains".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/JetBrains";
 
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink
