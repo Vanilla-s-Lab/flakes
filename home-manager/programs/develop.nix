@@ -1,5 +1,7 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
+let grammaticommit = pkgs.callPackage ../packages/grammaticommit.nix { inherit generated; }; in
+let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -16,7 +18,10 @@ let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix {
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
-    pkgs.python3Full
+
+    grammaticommit
+    (pkgs.python3.withPackages
+      (p: with p; [ nltk termcolor pattern ]))
 
     (pkgs.callPackage ../packages/samloader.nix { inherit generated; })
 

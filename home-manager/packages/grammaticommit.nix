@@ -5,6 +5,7 @@ python3Packages.buildPythonPackage {
   version = generated."grammaticommit".version;
 
   src = generated."grammaticommit".src;
+  dontPatchShebangs = true;
 
   propagatedBuildInputs = [ pattern ] ++
     (with python3Packages; [ termcolor ]);
