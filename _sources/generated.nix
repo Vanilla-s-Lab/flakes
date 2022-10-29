@@ -70,6 +70,18 @@
       sha256 = "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=";
     });
   };
+  grammaticommit = {
+    pname = "grammaticommit";
+    version = "4a0be6fa2fbf4f3585ce1deeb8eef6928c6d4c79";
+    src = fetchgit {
+      url = "https://github.com/FdelMazo/grammaticommit";
+      rev = "4a0be6fa2fbf4f3585ce1deeb8eef6928c6d4c79";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-iftEaolZPIsArufhixbPd1YnhdLwYNFP3z9dtq9eWHQ=";
+    };
+  };
   nautilus-admin = {
     pname = "nautilus-admin";
     version = "v1.1.9";
