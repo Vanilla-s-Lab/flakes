@@ -82,7 +82,7 @@ let grammaticommit = pkgs.callPackage ../packages/grammaticommit.nix { inherit g
   };
 
   home.file.".gitconfig".text = (lib.generators.toINI { } {
-    core = { hooksPath = "${grammaticommit}/bin/grammaticommit"; };
+    core = { hooksPath = "${grammaticommit}/lib/python3.9/site-packages/grammaticommit"; };
   });
 
   home.packages = [
