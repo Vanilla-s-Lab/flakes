@@ -15,14 +15,6 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     source ${generated."\"longld/peda\"".src}/peda.py
   '';
 
-  home.file."${".local/share/JetBrains/IntelliJIdea${pkgs.jetbrains.idea-ultimate.version}" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
-  home.file."${".local/share/JetBrains/PyCharm${pkgs.jetbrains.pycharm-professional.version}" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
@@ -159,6 +151,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
   home.file.".config/JetBrains".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/JetBrains";
+
+  home.file.".local/share/JetBrains".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/JetBrains";
 
   home.file.".java/.userPrefs/jetbrains".source =
     config.lib.file.mkOutOfStoreSymlink

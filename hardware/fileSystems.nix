@@ -52,9 +52,4 @@
 
   # https://linuxize.com/post/create-a-linux-swap-file/
   boot.kernel.sysctl."vm.swappiness" = 10;
-
-  fileSystems."/home/vanilla/.local/share/JetBrains" = {
-    device = "/persistent/dot/local/share/JetBrains/";
-    options = [ "bind" ];
-  };
 }
