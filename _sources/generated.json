@@ -72,6 +72,25 @@
         },
         "version": "4e922a28ae183e0ddb28c35b8f1415d2c63f978d"
     },
+    "VVVVVV": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "VVVVVV",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "TerryCavanagh",
+            "repo": "VVVVVV",
+            "rev": "2.3.6",
+            "sha256": "sha256-sLNO4vkmlirsqJmCV9YWpyNnIiigU1KMls7rOgWgSmQ=",
+            "type": "github"
+        },
+        "version": "2.3.6"
+    },
     "firefox-gnome-theme": {
         "cargoLocks": null,
         "extract": null,

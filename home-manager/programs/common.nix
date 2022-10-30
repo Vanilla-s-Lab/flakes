@@ -1,8 +1,12 @@
-{ inputs, system, pkgs, config, ... }:
+{ inputs, system, pkgs, config, generated, ... }:
+let VVVVVV = pkgs.callPackage ../packages/VVVVVV.nix { inherit generated; }; in
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
+
     pkgs.obs-studio
+    VVVVVV
+
     pkgs.virt-manager
     pkgs.wpsoffice
 

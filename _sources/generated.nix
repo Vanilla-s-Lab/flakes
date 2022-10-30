@@ -48,6 +48,17 @@
       sha256 = "sha256-km6VgvYO1b3wnmpKrnJUaZUrQiIDl8NetECa33jbLbo=";
     };
   };
+  VVVVVV = {
+    pname = "VVVVVV";
+    version = "2.3.6";
+    src = fetchFromGitHub ({
+      owner = "TerryCavanagh";
+      repo = "VVVVVV";
+      rev = "2.3.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-sLNO4vkmlirsqJmCV9YWpyNnIiigU1KMls7rOgWgSmQ=";
+    });
+  };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
     version = "v105.1";

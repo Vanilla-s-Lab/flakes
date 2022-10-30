@@ -63,3 +63,8 @@ fetch.git = "https://github.com/samloader/samloader"
 [grammaticommit]
 src.git = "https://github.com/FdelMazo/grammaticommit"
 fetch.git = "https://github.com/FdelMazo/grammaticommit"
+
+# https://github.com/TerryCavanagh/VVVVVV
+[VVVVVV]
+src.github_tag = "TerryCavanagh/VVVVVV"
+fetch.github = "TerryCavanagh/VVVVVV"
