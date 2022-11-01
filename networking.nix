@@ -19,4 +19,7 @@
 
   # Qv2ray - Preferences - Inbound Settings
   # networking.firewall.allowedTCPPorts = [ 8889 ];
+
+  # `python3 -m http.server` for file transfer.
+  # networking.firewall.allowedTCPPorts = [ 8000 ];
 }
