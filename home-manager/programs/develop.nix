@@ -1,15 +1,10 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
-let grammaticommit = pkgs.callPackage ../packages/grammaticommit.nix { inherit generated; }; in
 let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Zeal";
-
-  home.file."nltk_data".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/nltk_data";
 
   home.file.".gdbinit".text = ''
     source ${generated."\"longld/peda\"".src}/peda.py
@@ -27,10 +22,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.salt
     pkgs.zeal
 
-    grammaticommit
-    (pkgs.python3.withPackages
-      (p: with p; [ nltk termcolor pattern ]))
-
+    pkgs.python3Full
     (pkgs.callPackage ../packages/samloader.nix { inherit generated; })
 
     nixosConfig.boot.kernelPackages.perf

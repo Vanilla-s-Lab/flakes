@@ -129,24 +129,6 @@
         },
         "version": "v18"
     },
-    "grammaticommit": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "grammaticommit",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "4a0be6fa2fbf4f3585ce1deeb8eef6928c6d4c79",
-            "sha256": "sha256-iftEaolZPIsArufhixbPd1YnhdLwYNFP3z9dtq9eWHQ=",
-            "type": "git",
-            "url": "https://github.com/FdelMazo/grammaticommit"
-        },
-        "version": "4a0be6fa2fbf4f3585ce1deeb8eef6928c6d4c79"
-    },
     "nautilus-admin": {
         "cargoLocks": null,
         "extract": null,

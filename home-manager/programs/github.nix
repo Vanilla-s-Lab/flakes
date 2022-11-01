@@ -1,5 +1,4 @@
-{ generated, lib, pkgs, inputs, system, config, nixosConfig, ... }:
-let grammaticommit = pkgs.callPackage ../packages/grammaticommit.nix { inherit generated; }; in
+{ lib, pkgs, inputs, system, config, nixosConfig, ... }:
 {
   # https://nixos.wiki/wiki/Git
   programs.git.enable = true;
@@ -80,10 +79,6 @@ let grammaticommit = pkgs.callPackage ../packages/grammaticommit.nix { inherit g
   programs.git.extraConfig = {
     init.defaultBranch = "master";
   };
-
-  home.file.".gitconfig".text = (lib.generators.toINI { } {
-    core = { hooksPath = "${grammaticommit}/lib/python3.9/site-packages/grammaticommit"; };
-  });
 
   home.packages = [
     pkgs.difftastic

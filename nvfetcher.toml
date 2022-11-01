@@ -58,12 +58,6 @@ fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 src.git = "https://github.com/samloader/samloader"
 fetch.git = "https://github.com/samloader/samloader"
 
-# https://github.com/FdelMazo/grammaticommit
-
-[grammaticommit]
-src.git = "https://github.com/FdelMazo/grammaticommit"
-fetch.git = "https://github.com/FdelMazo/grammaticommit"
-
 # https://github.com/TerryCavanagh/VVVVVV
 [VVVVVV]
 src.github_tag = "TerryCavanagh/VVVVVV"
