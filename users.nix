@@ -1,10 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }: with inputs;
 let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIWMmypVPlagNhUyshl9Kt.nklEB1ZMoSylU5.MrOLa/"; in
 {
   # https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
   users.mutableUsers = false;
 
-  programs.adb.enable = true;
+  # programs.adb.enable = true;
+  environment.systemPackages = [
+    (pkgs.callPackage "${nixpkgs-unstable}/pkgs/tools/misc/android-tools" { })
+  ];
+
   users.users."vanilla" = {
     isNormalUser = true;
     inherit hashedPassword;
