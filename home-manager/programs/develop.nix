@@ -24,6 +24,14 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 
   home.file.".cargo".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cargo";
 
+  home.file."${".local/share/JetBrains/WebStorm${pkgs.jetbrains.webstorm.version}" +
+    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
+    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
+
+  home.file.".npmrc".text = ''
+    registry=https://registry.npmmirror.com/
+  '';
+
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal

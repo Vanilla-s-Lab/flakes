@@ -3,6 +3,13 @@
   # services.zerotierone.enable = true;
   # services.zerotierone.joinNetworks = [ "" ];
 
+  systemd.tmpfiles.rules = [
+    "L /var/lib/zerotier-one - - - - /persistent/var/lib/zerotier-one"
+  ];
+
+  # networking.firewall.allowedTCPPorts = [ 17230 ];
+  # networking.firewall.allowedUDPPorts = [ 17230 ];
+
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
   users.users."vanilla".extraGroups = [ "wireshark" ];
