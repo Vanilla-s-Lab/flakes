@@ -54,6 +54,8 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.jetbrains.clion
 
     pkgs.rustup
+    pkgs.cargo-outdated
+
     pkgs.evcxr
     (lib.hiPrio pkgs.gcc)
     pkgs.bintools
