@@ -130,10 +130,6 @@ with pkgs; with inputs;
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/VirtualBox";
 
-  home.file."VirtualBox VMs".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/VirtualBox VMs";
-
   home.file.".cache/Google".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/cache/Google";
