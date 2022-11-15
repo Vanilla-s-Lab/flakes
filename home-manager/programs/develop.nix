@@ -34,6 +34,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     registry=https://registry.npmmirror.com/
   '';
 
+  home.file."${".local/share/JetBrains/Rider${pkgs.jetbrains.rider.version}" +
+    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
+    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
+
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
