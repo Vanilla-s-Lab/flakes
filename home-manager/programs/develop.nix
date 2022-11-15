@@ -6,7 +6,9 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Zeal";
 
+  # https://github.com/longld/peda/issues/108
   home.file.".gdbinit".text = ''
+    pset option autosave 'off'
     source ${generated."\"longld/peda\"".src}/peda.py
   '';
 
