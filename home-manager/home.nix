@@ -24,7 +24,6 @@
     ./gnome/mimeApps.nix
 
     ./config/fcitx5.nix
-    ./config/sg_cli.nix
     ./config/ArchiSteamFarm.nix
   ];
 
