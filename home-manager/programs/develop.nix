@@ -86,8 +86,6 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     # pkgs.terraform-full
     pkgs.terraform
 
-    deploy-rs.defaultPackage."${system}"
-
     pkgs.mtr
     pkgs.traceroute
 
