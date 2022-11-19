@@ -52,9 +52,3 @@ fetch.git = "https://github.com/wawa19933/fish-systemd"
 src.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 
-# https://github.com/samloader/samloader
-
-[samloader]
-src.git = "https://github.com/samloader/samloader"
-fetch.git = "https://github.com/samloader/samloader"
-

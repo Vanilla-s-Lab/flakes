@@ -183,23 +183,5 @@
             "url": "https://github.com/rose-pine/alacritty"
         },
         "version": "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a"
-    },
-    "samloader": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "samloader",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "b035aaca591fae11e74bfaa368cfe5fe5863758f",
-            "sha256": "sha256-5CnGcFURMN20q9udNRwkHnh98hp0J8J1fT4oCPP64Fs=",
-            "type": "git",
-            "url": "https://github.com/samloader/samloader"
-        },
-        "version": "b035aaca591fae11e74bfaa368cfe5fe5863758f"
     }
 }

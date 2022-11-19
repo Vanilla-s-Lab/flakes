@@ -43,7 +43,6 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.zeal
 
     pkgs.python3Full
-    (pkgs.callPackage ../packages/samloader.nix { inherit generated; })
 
     nixosConfig.boot.kernelPackages.perf
     (pkgs.gdb.override { pythonSupport = true; })

@@ -116,16 +116,4 @@
       sha256 = "sha256-fjzKxSXGv0yLmT+VAonRCxlqQldxrHWUQgsOugobFoU=";
     };
   };
-  samloader = {
-    pname = "samloader";
-    version = "b035aaca591fae11e74bfaa368cfe5fe5863758f";
-    src = fetchgit {
-      url = "https://github.com/samloader/samloader";
-      rev = "b035aaca591fae11e74bfaa368cfe5fe5863758f";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-5CnGcFURMN20q9udNRwkHnh98hp0J8J1fT4oCPP64Fs=";
-    };
-  };
 }
