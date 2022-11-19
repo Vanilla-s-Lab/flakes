@@ -1,11 +1,9 @@
 { inputs, system, pkgs, config, generated, ... }:
-let VVVVVV = pkgs.callPackage ../packages/VVVVVV.nix { inherit generated; }; in
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
 
     pkgs.obs-studio
-    VVVVVV
 
     pkgs.virt-manager
     pkgs.wpsoffice
@@ -23,6 +21,7 @@ let VVVVVV = pkgs.callPackage ../packages/VVVVVV.nix { inherit generated; }; in
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
 
+    pkgs.zip
     pkgs.unzip
     pkgs.p7zip
 
