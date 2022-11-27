@@ -71,11 +71,6 @@
     proxyCommand = "nc -x localhost:1089 %h %p";
   };
 
-  programs.ssh.matchBlocks."139.162.105.188" = {
-    host = "139.162.105.188"; # Via Clash.
-    proxyCommand = "nc -x localhost:7890 %h %p";
-  };
-
   programs.git.extraConfig = {
     init.defaultBranch = "master";
   };
