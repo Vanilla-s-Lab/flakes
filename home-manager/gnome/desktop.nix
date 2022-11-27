@@ -85,6 +85,7 @@ with pkgs; with inputs;
         "clion.desktop"
         "datagrip.desktop"
         "idea-ultimate.desktop"
+        "jd-gui.desktop"
         "nvim.desktop"
         "pycharm-professional.desktop"
         "rider.desktop"
@@ -148,6 +149,10 @@ with pkgs; with inputs;
 
   home.packages = [
     pkgs.android-studio
+
+    pkgs.apktool
+    pkgs.dex2jar
+    pkgs.jd-gui
 
     pkgs.remmina
     pkgs.gnome.gnome-disk-utility
