@@ -2,24 +2,6 @@
 src.git = "https://github.com/rose-pine/alacritty"
 fetch.git = "https://github.com/rose-pine/alacritty"
 
-# https://github.com/brunonova/nautilus-admin
-
-[nautilus-admin]
-src.github_tag = "brunonova/nautilus-admin"
-fetch.github = "brunonova/nautilus-admin"
-
-# https://github.com/flozz/nautilus-terminal
-
-[nautilus-terminal]
-src.github_tag = "flozz/nautilus-terminal"
-fetch.github = "flozz/nautilus-terminal"
-
-# https://github.com/bilelmoussaoui/nautilus-git/pull/45
-
-[nautilus-git]
-src.git = "https://github.com/bilelmoussaoui/nautilus-git"
-fetch.git = "https://github.com/bilelmoussaoui/nautilus-git"
-
 # https://github.com/rafaelmardojai/firefox-gnome-theme
 
 [firefox-gnome-theme]

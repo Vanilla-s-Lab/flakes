@@ -110,62 +110,6 @@
         },
         "version": "v18"
     },
-    "nautilus-admin": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "nautilus-admin",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "brunonova",
-            "repo": "nautilus-admin",
-            "rev": "v1.1.9",
-            "sha256": "sha256-aJhjV/sN9RPLttYoKADr9b9VqRW7zXKAHFDdz3Jp8n0=",
-            "type": "github"
-        },
-        "version": "v1.1.9"
-    },
-    "nautilus-git": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "nautilus-git",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "5389549b4bcde91cf8d691e61a4a28d3428ddb3c",
-            "sha256": "sha256-p6Txm8EsFjEULVLrsMqPKrDpZPny+4+k6QnMhG84oDw=",
-            "type": "git",
-            "url": "https://github.com/bilelmoussaoui/nautilus-git"
-        },
-        "version": "5389549b4bcde91cf8d691e61a4a28d3428ddb3c"
-    },
-    "nautilus-terminal": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "nautilus-terminal",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "flozz",
-            "repo": "nautilus-terminal",
-            "rev": "v4.1.0",
-            "sha256": "sha256-sOt43RPES+5gEC7XGVzeQyyolrsJnJfjMydhKRZ5qtM=",
-            "type": "github"
-        },
-        "version": "v4.1.0"
-    },
     "rose-pine": {
         "cargoLocks": null,
         "extract": null,

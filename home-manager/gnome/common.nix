@@ -1,43 +1,9 @@
 { pkgs, config, lib, inputs, nixosConfig, generated, ... }:
 # WeChat ID: My_Aim_Sucks
 let wxid = "wxid_2tafg8vy4onr22"; in
-
-let callPackage = pkgs.callPackage; in
-let nautilus-admin = callPackage ../packages/nautilus-admin.nix { inherit generated; }; in
-let nautilus-terminal = callPackage ../packages/nautilus-terminal.nix { inherit generated; }; in
-let nautilus-git = callPackage ../packages/nautilus-git.nix { inherit generated; }; in
-
-let extensions = pkgs.runCommand "extensions" { } ''
-  mkdir -p $out
-
-  cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.la $out
-  cp ${pkgs.gnome.nautilus-python}/lib/nautilus/extensions-3.0/*.so $out
-''; in
 {
   home.packages = [
-    # https://github.com/Stunkymonkey/nixos/blob/master/nixos/modules/nautilus.nix
-    (pkgs.gnome.nautilus.overrideAttrs (old: {
-      preFixup = old.preFixup + ''
-        gappsWrapperArgs+=(
-          --prefix NAUTILUS_EXTENSION_DIR : "${extensions}"
-
-          # https://github.com/GNOME/nautilus-python
-          --prefix XDG_DATA_DIRS : "${nautilus-admin}/usr/share"
-          --prefix XDG_DATA_DIRS : "${nautilus-terminal}/.local/share"
-          --prefix XDG_DATA_DIRS : "${nautilus-git}/share"
-
-          --prefix GI_TYPELIB_PATH : "${pkgs.vte}/lib/girepository-1.0"
-
-          # https://github.com/NixOS/nixpkgs/issues/64970
-          # https://github.com/NixOS/nixpkgs/pull/64627/commits
-          --prefix GI_TYPELIB_PATH : "${pkgs.gtksourceview}/lib/girepository-1.0"
-
-          # Otherwise, `nautilus` will fallback to use system Python.
-          --prefix PATH : "${pkgs.python3.withPackages (p: [ nautilus-terminal ])}/bin"
-        )
-      '';
-    }))
-
+    pkgs.gnome.nautilus
     pkgs.gnome.sushi
     pkgs.gnome.gedit
 
@@ -62,22 +28,6 @@ let extensions = pkgs.runCommand "extensions" { } ''
     pkgs.evince
     pkgs.thunderbird
   ];
-
-  # https://github.com/flozz/nautilus-terminal/tree/v4.0.4#configuring=
-  # @see `nautilus_terminal/nautilus_terminal.py`, Soft != clear.
-  dconf.settings."org/flozz/nautilus-terminal".auto-clean = "Soft";
-
-  # https://github.com/rose-pine/alacritty/blob/main/dist/rose-pine-dawn.yml
-  dconf.settings."org/flozz/nautilus-terminal".background-color = "#faf4ed";
-  dconf.settings."org/flozz/nautilus-terminal".foreground-color = "#575279";
-
-  # https://github.com/flozz/nautilus-terminal#configuring
-  dconf.settings."org/flozz/nautilus-terminal".custom-command = "${pkgs.fish}/bin/fish";
-  dconf.settings."org/flozz/nautilus-terminal".use-custom-command = true;
-
-  # https://github.com/nix-community/home-manager/blob/master/modules/lib/gvariant.nix # 9, ⑨!
-  dconf.settings."org/flozz/nautilus-terminal".min-terminal-height = (lib.hm.gvariant.mkUint32 (5 + (2 * 2)));
-  dconf.settings."org/flozz/nautilus-terminal".terminal-bottom = true;
 
   home.file.".thunderbird".source =
     config.lib.file.mkOutOfStoreSymlink

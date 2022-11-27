@@ -70,40 +70,6 @@
       sha256 = "sha256-WyMOMPHsLP0CiHpuhafxT1vEKTgEqPRoQAEMA17pFtU=";
     });
   };
-  nautilus-admin = {
-    pname = "nautilus-admin";
-    version = "v1.1.9";
-    src = fetchFromGitHub ({
-      owner = "brunonova";
-      repo = "nautilus-admin";
-      rev = "v1.1.9";
-      fetchSubmodules = false;
-      sha256 = "sha256-aJhjV/sN9RPLttYoKADr9b9VqRW7zXKAHFDdz3Jp8n0=";
-    });
-  };
-  nautilus-git = {
-    pname = "nautilus-git";
-    version = "5389549b4bcde91cf8d691e61a4a28d3428ddb3c";
-    src = fetchgit {
-      url = "https://github.com/bilelmoussaoui/nautilus-git";
-      rev = "5389549b4bcde91cf8d691e61a4a28d3428ddb3c";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-p6Txm8EsFjEULVLrsMqPKrDpZPny+4+k6QnMhG84oDw=";
-    };
-  };
-  nautilus-terminal = {
-    pname = "nautilus-terminal";
-    version = "v4.1.0";
-    src = fetchFromGitHub ({
-      owner = "flozz";
-      repo = "nautilus-terminal";
-      rev = "v4.1.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-sOt43RPES+5gEC7XGVzeQyyolrsJnJfjMydhKRZ5qtM=";
-    });
-  };
   rose-pine = {
     pname = "rose-pine";
     version = "7c3625f3d0f34359ba114e09b1ba3f3c1bed399a";
