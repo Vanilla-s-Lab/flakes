@@ -36,10 +36,10 @@
         nur.overlay
       ]; in
         nixpkgs.lib.nixosSystem rec {
-          inherit system; specialArgs = { inherit inputs self pkgsUnstable; };
+          inherit system; specialArgs = { inherit inputs self; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated pkgsUnstable; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated pkgsOld; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
@@ -48,9 +48,7 @@
         };
 
       pkgs = import nixpkgs { inherit system; };
-      pkgsUnstable = import nixpkgs-unstable
-        { inherit system; config.allowUnfree = true; };
-
       generated = pkgs.callPackage ./_sources/generated.nix { };
+      pkgsOld = import inputs.nixpkgs-old { inherit system; };
     };
 }
