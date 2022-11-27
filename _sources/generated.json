@@ -10,12 +10,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "8ba151a20bc1d7a5c72e592e51bfc925d5bbb837",
-            "sha256": "sha256-GmwR+S5sQnVUbVShP53jNpSKMZaoeh9Rf37v89wAJ3M=",
+            "rev": "5a411d19ce7334ab10ba12516743fc25dad363fa",
+            "sha256": "sha256-8O+7tzQQR5+QHLgXpL+KOISaVn6iOpdfQAQfHtyI4uw=",
             "type": "git",
             "url": "https://github.com/github/copilot.vim"
         },
-        "version": "8ba151a20bc1d7a5c72e592e51bfc925d5bbb837"
+        "version": "5a411d19ce7334ab10ba12516743fc25dad363fa"
     },
     "\"longld/peda\"": {
         "cargoLocks": null,
@@ -85,11 +85,11 @@
             "name": null,
             "owner": "rafaelmardojai",
             "repo": "firefox-gnome-theme",
-            "rev": "v105.1",
-            "sha256": "sha256-AG31kgd9F6DlsztFEUTJQUrQHwciwYR/rgFG1mMt8tQ=",
+            "rev": "v106",
+            "sha256": "sha256-10kQ44U1RSr+6M47U6JuhuteSWHMXFLL4g/oeFubhus=",
             "type": "github"
         },
-        "version": "v105.1"
+        "version": "v106"
     },
     "gnome-shell-extension-sensory-perception": {
         "cargoLocks": null,
