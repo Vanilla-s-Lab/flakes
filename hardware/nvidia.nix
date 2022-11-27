@@ -3,6 +3,9 @@
   # https://nixos.wiki/wiki/FAQ
   nixpkgs.config.allowUnfree = true;
 
+  # Thanks for @NickCao!
+  hardware.nvidia.open = true;
+
   # https://nixos.wiki/wiki/Nvidia
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
