@@ -1,0 +1,14 @@
+diff --git a/metadata.json b/metadata.json
+index dcedf6b..faf9cdc 100644
+--- a/metadata.json
++++ b/metadata.json
+@@ -6,7 +6,8 @@
+   "shell-version": [
+     "40",
+     "41",
+-    "42"
++    "42",
++    "43"
+   ],
+   "url": "https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception",
+   "uuid": "sensory-perception@HarlemSquirrel.github.io",

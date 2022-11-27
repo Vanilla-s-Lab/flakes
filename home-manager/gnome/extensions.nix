@@ -1,7 +1,16 @@
 { pkgs, config, lib, generated, ... }:
 {
   home.packages = [
-    pkgs.gnomeExtensions.arcmenu
+    (pkgs.gnomeExtensions.arcmenu.overrideAttrs (old: rec {
+      version = "39";
+
+      src = pkgs.fetchgit {
+        url = "https://gitlab.com/arcmenu/ArcMenu";
+        rev = "v${version}";
+        hash = "sha256-EPi3PL8ZVHRmbT6tZVR90pEzXndJbI+qFfUCQi3PsQk=";
+      };
+    }))
+
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
@@ -19,13 +28,37 @@
     (pkgs.gnomeExtensions.sensory-perception.overrideAttrs (old: {
       version = "${generated."gnome-shell-extension-sensory-perception".src.rev}";
       src = generated."gnome-shell-extension-sensory-perception".src;
+      patches = [ ./patches/sensory-perception.patch ];
     }))
 
     pkgs.lm_sensors
 
     pkgs.gnomeExtensions.simple-net-speed
-    pkgs.gnomeExtensions.sound-output-device-chooser
-    pkgs.gnomeExtensions.status-area-horizontal-spacing
+
+    # https://github.com/kgshank/gse-sound-output-device-chooser/issues/258
+    # pkgs.gnomeExtensions.sound-output-device-chooser.overrideAttrs
+
+    (pkgs.stdenvNoCC.mkDerivation rec {
+      pname = "status-area-horizontal-spacing";
+      version = "ff35586c";
+
+      src = pkgs.fetchgit {
+        url = "https://gitlab.com/p91paul/status-area-horizontal-spacing-gnome-shell-extension";
+        rev = "${version}8c48794bdd3d51d18657044d5af27d44";
+        hash = "sha256-zfMvEZ4upBCsllsQXbNuAjNpnpM3sj+S2p+3Er0n6u8=";
+      };
+
+      nativeBuildInputs = [
+        pkgs.unzip
+        pkgs.glib
+      ];
+
+      installPhase = ''
+        mkdir -p $out/share/gnome-shell/extensions
+        cp -r ${pname}@mathematical.coffee.gmail.com $_
+      '';
+    })
+
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
