@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, lib, generated, ... }:
+{ pkgs, config, inputs, lib, generated, pkgsOld, ... }:
 with pkgs; with inputs;
 {
   dconf.settings = {
@@ -154,7 +154,7 @@ with pkgs; with inputs;
     pkgs.dex2jar
     pkgs.jd-gui
 
-    pkgs.remmina
+    (pkgs.remmina.override { freerdp = pkgsOld.freerdp; })
     pkgs.gnome.gnome-disk-utility
 
     (pkgs.callPackage ../packages/openfortigui.nix { inherit generated; })
