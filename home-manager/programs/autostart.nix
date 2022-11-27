@@ -1,8 +1,11 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, config, inputs, system, ... }: with inputs;
 let albert_quite = pkgs.albert.overrideAttrs (old: {
   # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
   preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
 }); in
+
+let pkgs_old = import inputs.nixpkgs-old
+  { inherit system; }; in
 {
   home.packages = [
     pkgs.qv2ray
@@ -31,8 +34,12 @@ let albert_quite = pkgs.albert.overrideAttrs (old: {
   ];
 
   home.file.".config/qv2ray-vcore".source =
-    pkgs.runCommand "vcore" { } ''mkdir $out/ && \
-      ln -s ${pkgs.v2ray}/bin/v2ray $out/v2ray && ln -s ${pkgs.v2ray}/bin/v2ctl $out/v2ctl
+    pkgs.runCommand "vcore" { } ''
+      mkdir $out/
+
+      ln -s ${pkgs_old.v2ray}/bin/v2ray $out/v2ray
+      ln -s ${pkgs_old.v2ray}/bin/v2ctl $out/v2ctl
+
       ln -s ${pkgs.v2ray-geoip}/share/v2ray/geoip.dat $out/geoip.dat
       ln -s ${pkgs.v2ray-domain-list-community}/share/v2ray/geosite.dat $out/geosite.dat
     '';
