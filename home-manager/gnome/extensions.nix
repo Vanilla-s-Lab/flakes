@@ -126,7 +126,7 @@
     "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-icon-on = false;
 
     # Blur my shell - Panel - Panel blur - OFF
-    "org/gnome/shell/extensions/blur-my-shell".panel-blur = false;
+    "org/gnome/shell/extensions/blur-my-shell/panel".blur = false;
     # Blur my shell - Dash - Dash to Dock blur - OFF
     "org/gnome/shell/extensions/blur-my-shell".dash-to-dock-blur = false;
 
