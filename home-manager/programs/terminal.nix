@@ -62,7 +62,7 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   # https://github.com/jhillyerd/plugin-git
   home.activation."fishPlugins.git" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
-      ''fish -c "__git.init" || true'';
+      ''${pkgs.fish}/bin/fish -c "__git.init" || true'';
 
   # https://starship.rs/
   programs.starship.enable = true;
@@ -84,7 +84,7 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
 
   home.activation."rose_pine-dawn" =
     lib.hm.dag.entryAfter [ "dconfSettings" ]
-      ''fish -c "rose_pine dawn" > /dev/null || true'';
+      ''${pkgs.fish}/bin/fish -c "rose_pine dawn" > /dev/null || true'';
 
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
