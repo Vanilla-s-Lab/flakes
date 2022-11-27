@@ -62,8 +62,6 @@ with inputs;
   boot.kernel.sysctl."kernel.sysrq" = 1;
   boot.kernel.sysctl."net.core.default_qdisc" = "fq";
   boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr";
-  # https://nixos.wiki/wiki/NTFS
-  boot.supportedFilesystems = [ "ntfs" "apfs" ];
   # Required nvme kernel module to find disk.
   boot.initrd.availableKernelModules = [ "nvme" ];
 
@@ -161,5 +159,5 @@ with inputs;
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05"; # Did you read the comment?
+  system.stateVersion = "22.11"; # Did you read the comment?
 }

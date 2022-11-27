@@ -34,5 +34,5 @@ let pkgs_nixpkgs-fmt = pkgs.callPackage "${nixpkgs-old}/pkgs/tools/nix/nixpkgs-f
   ];
 
   home.enableDebugInfo = true;
-  home.stateVersion = "22.05";
+  home.stateVersion = "22.11";
 }

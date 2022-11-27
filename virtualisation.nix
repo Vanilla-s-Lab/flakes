@@ -33,5 +33,6 @@
   ];
 
   virtualisation.libvirtd.qemu.ovmf.enable = true;
-  virtualisation.libvirtd.qemu.ovmf.package = pkgs.OVMFFull;
+  virtualisation.libvirtd.qemu.ovmf.packages =
+    (lib.singleton pkgs.OVMFFull);
 }
