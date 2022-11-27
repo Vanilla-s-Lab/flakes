@@ -4,8 +4,10 @@ let albert_quite = pkgs.albert.overrideAttrs (old: {
   preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
 }); in
 
-let pkgs_old = import inputs.nixpkgs-old
-  { inherit system; }; in
+let
+  pkgs_old = import inputs.nixpkgs-old
+    { inherit system; };
+in
 {
   home.packages = [
     pkgs.qv2ray
