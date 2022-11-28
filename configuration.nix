@@ -70,8 +70,6 @@ with inputs;
 
   # Use NetworkManager, persist WiFi connections.
   networking.networkmanager.enable = true;
-  environment.etc."NetworkManager/system-connections".source =
-    "/persistent/etc/NetworkManager/system-connections";
 
   # https://nixos.wiki/wiki/Encrypted_DNS#Setting_nameservers
   networking.networkmanager.insertNameservers = [ "127.0.0.1" /* "::1" */ ]

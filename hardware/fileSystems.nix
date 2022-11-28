@@ -31,6 +31,12 @@
     fsType = "ext4";
   };
 
+  # https://superuser.com/questions/1271645/how-do-you-declare-a-bind-mount-in-nixos
+  fileSystems."/etc/NetworkManager/system-connections" = {
+    device = "/persistent/etc/NetworkManager/system-connections";
+    options = lib.singleton "bind";
+  };
+
   # https://github.com/NixOS/nixpkgs/pull/146497/files
   systemd.generators = { systemd-gpt-auto-generator = "/dev/null"; };
 
