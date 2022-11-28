@@ -30,6 +30,9 @@ in
 
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
+  programs.fish.shellInit = ''
+    any-nix-shell fish --info-right | source
+  '';
 
   # https://github.com/wawa19933/fish-systemd
   programs.fish.plugins = pkgs.lib.singleton rec {
