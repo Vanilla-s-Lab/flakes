@@ -45,7 +45,11 @@ in
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
     pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
-    pkgs.fishPlugins.pisces
+
+    # pkgs.fishPlugins.pisces
+    # https://github.com/laughedelic/pisces/issues/29
+    pkgs.fishPlugins.autopair-fish
+
     pkgs.any-nix-shell
 
     # https://github.com/sharkdp/fd
