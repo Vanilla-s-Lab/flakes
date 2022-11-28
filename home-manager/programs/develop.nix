@@ -85,9 +85,6 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     # https://wiki.archlinux.org/title/default_applications#xdg-open
     pkgs.perlPackages.FileMimeInfo
 
-    # pkgs.terraform-full
-    pkgs.terraform
-
     pkgs.mtr
     pkgs.traceroute
 
@@ -152,10 +149,6 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
   home.file.".local/share/containers".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/containers";
-
-  home.file.".terraform.d".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/terraform.d";
 
   home.file.".rustup".source =
     config.lib.file.mkOutOfStoreSymlink
