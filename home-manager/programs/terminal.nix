@@ -4,8 +4,6 @@ let
     (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
       (x: { name = x; value = { disabled = false; }; }));
 in
-
-let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd7b"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -91,9 +89,6 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
-
-  home.file."/home/vanilla/.local/share/direnv/allow/${linode-nix}".text =
-    "/persistent/Projects/linode-nix/.envrc";
 
   programs.kitty.enable = true;
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
