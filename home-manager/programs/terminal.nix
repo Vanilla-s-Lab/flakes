@@ -35,10 +35,17 @@ in
   '';
 
   # https://github.com/wawa19933/fish-systemd
-  programs.fish.plugins = pkgs.lib.singleton rec {
+  programs.fish.plugins = (lib.singleton rec {
     name = "fish-systemd";
     src = generated."\"wawa19933/${name}\"".src;
-  };
+  }) ++ (lib.singleton rec {
+    name = "plugin-bang-bang";
+    src = pkgs.fetchgit {
+      url = "https://github.com/oh-my-fish/${name}";
+      rev = "f969c61" + "8301163273d0a03d002614d9a81952c1e";
+      hash = "sha256-A8ydBX4LORk+nutjHurqNNWFmW6LIiBPQcxS3x4nbeQ=";
+    };
+  });
 
   programs.fish.functions = {
     "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
@@ -47,12 +54,7 @@ in
 
   home.packages = [
     pkgs.nur.repos.linyinfeng.fishPlugins.git
-    pkgs.nur.repos.linyinfeng.fishPlugins.bang-bang
-
-    # pkgs.fishPlugins.pisces
-    # https://github.com/laughedelic/pisces/issues/29
-    pkgs.fishPlugins.autopair-fish
-
+    pkgs.fishPlugins.pisces
     pkgs.any-nix-shell
 
     # https://github.com/sharkdp/fd
