@@ -35,9 +35,6 @@ with inputs;
     ./sops-config/access-tokens.nix
     ./sops-config/gh_hosts.nix
 
-    ./sops-config/linode-nix.nix
-    ./sops-config/vultr-nix.nix
-
     ./security.nix
     ./steam.nix
     ./virtualisation.nix
