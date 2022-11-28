@@ -47,13 +47,15 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     nixosConfig.boot.kernelPackages.perf
     (pkgs.gdb.override { pythonSupport = true; })
 
+    pkgs.tcpdump
+    pkgs.openssl
+
     pkgs.jetbrains.pycharm-professional
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rider
 
-    (lib.hiPrio pkgs.msbuild)
     pkgs.wine
-    (lib.lowPrio pkgs.mono)
+    pkgs.mono
     pkgs.dotnet-sdk
 
     pkgs.jetbrains.clion
