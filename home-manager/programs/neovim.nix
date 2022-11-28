@@ -53,6 +53,9 @@
     " https://jdhao.github.io/2019/01/11/line_number_setting_nvim/
     set number
 
+    " https://twitter.com/neovim/status/1548665836285591552
+    set mouse=
+
   '' + ''
 
     " https://github.com/rose-pine/neovim
