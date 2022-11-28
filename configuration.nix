@@ -24,7 +24,6 @@ with inputs;
 
     ./services/openssh.nix
     ./services/fail2ban.nix
-    ./services/udev.nix
     ./services/btrfs.nix
     ./services/smartdns.nix
 

@@ -44,9 +44,4 @@
   home.file.".config/monitors.xml".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/monitors.xml";
-
-  # https://wiki.archlinux.org/title/backlight
-  home.activation."backlight_set_to_60000" =
-    ("echo 60000 > /sys/class/backlight/intel_backlight/brightness"
-      + " " + "||" + " " + "true");
 }
