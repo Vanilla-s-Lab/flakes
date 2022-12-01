@@ -1,4 +1,4 @@
-{ pkgs, config, pkgsOld, ... }:
+{ pkgs, config, ... }:
 let albert_quite = pkgs.albert.overrideAttrs (old: {
   # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
   preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
@@ -10,6 +10,11 @@ let albert_quite = pkgs.albert.overrideAttrs (old: {
       name = "qv2ray";
       package = pkgs.qv2ray;
     })
+
+    pkgs.xray.assetsDrv
+    (pkgs.xray.overrideAttrs (old: {
+      postFixup = "";
+    }))
 
     albert_quite
     (pkgs.makeAutostartItem {
@@ -29,17 +34,6 @@ let albert_quite = pkgs.albert.overrideAttrs (old: {
       package = pkgs.nur.repos.linyinfeng.clash-for-windows;
     })
   ];
-
-  home.file.".config/qv2ray-vcore".source =
-    pkgs.runCommand "vcore" { } ''
-      mkdir $out/
-
-      ln -s ${pkgsOld.v2ray}/bin/v2ray $out/v2ray
-      ln -s ${pkgsOld.v2ray}/bin/v2ctl $out/v2ctl
-
-      ln -s ${pkgs.v2ray-geoip}/share/v2ray/geoip.dat $out/geoip.dat
-      ln -s ${pkgs.v2ray-domain-list-community}/share/v2ray/geosite.dat $out/geosite.dat
-    '';
 
   home.file.".config/qv2ray".source =
     config.lib.file.mkOutOfStoreSymlink
