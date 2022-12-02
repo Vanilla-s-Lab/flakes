@@ -19,4 +19,7 @@
 
   # `python3 -m http.server` for file transfer.
   # networking.firewall.allowedTCPPorts = [ 8000 ];
+
+  # https://nixos.org/manual/nixos/stable/release-notes.html#sec-release-22.11
+  services.nscd = { enable = true; enableNsncd = true; };
 }
