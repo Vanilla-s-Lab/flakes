@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, lib, generated, pkgsOld, ... }:
+{ pkgs, config, inputs, lib, generated, ... }:
 with pkgs; with inputs;
 {
   dconf.settings = {
@@ -153,7 +153,13 @@ with pkgs; with inputs;
     pkgs.dex2jar
     pkgs.jd-gui
 
-    (pkgs.remmina.override { freerdp = pkgsOld.freerdp; })
+    (pkgs.remmina.override {
+      # https://github.com/NixOS/nixpkgs/issues/203807
+      freerdp = (pkgs.freerdp.overrideAttrs (old: {
+        cmakeFlags = old.cmakeFlags ++ [ "-DWITH_VAAPI=OFF" ];
+      }));
+    })
+
     pkgs.gnome.gnome-disk-utility
   ];
 
