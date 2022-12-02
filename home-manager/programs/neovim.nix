@@ -1,7 +1,6 @@
 { pkgs, nixosConfig, config, generated, ... }:
 {
   programs.neovim.enable = true;
-  # programs.neovim.package = pkgs.neovim-nightly;
   home.sessionVariables = { EDITOR = "nvim"; };
 
   programs.neovim.plugins = with pkgs; [
@@ -34,6 +33,7 @@
 
   home.packages = [
     pkgs.rnix-lsp
+    pkgs.xclip
   ];
 
   programs.neovim.extraConfig = ''
