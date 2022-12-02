@@ -20,7 +20,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file."${".local/share/JetBrains/CLion${pkgs.jetbrains.clion.version}" +
+  home.file."${".local/share/JetBrains/CLion2022.2" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
