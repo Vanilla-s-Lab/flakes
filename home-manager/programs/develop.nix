@@ -7,9 +7,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
       "/persistent/dot/local/share/Zeal";
 
   # https://github.com/longld/peda/issues/108
+  # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html
   home.file.".gdbinit".text = ''
-    pset option autosave 'off'
     source ${generated."\"longld/peda\"".src}/peda.py
+    pset option autosave 'off'
   '';
 
   home.file."${".local/share/JetBrains/IntelliJIdea${pkgs.jetbrains.idea-ultimate.version}" +
