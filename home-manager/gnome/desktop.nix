@@ -37,6 +37,7 @@ with pkgs; with inputs;
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
+        "icalingua-plus-plus.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
         "wine-wechat.desktop"
@@ -161,7 +162,12 @@ with pkgs; with inputs;
     })
 
     pkgs.gnome.gnome-disk-utility
+    pkgs.nur.repos.linyinfeng.icalingua-plus-plus
   ];
+
+  home.file.".config/icalingua".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/icalingua";
 
   home.file."Android".source =
     config.lib.file.mkOutOfStoreSymlink
