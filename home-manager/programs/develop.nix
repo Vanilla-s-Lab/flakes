@@ -44,6 +44,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.zeal
 
     pkgs.python3Full
+    pkgs.ansible
 
     nixosConfig.boot.kernelPackages.perf
     (pkgs.gdb.override { pythonSupport = true; })
@@ -82,6 +83,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.nodePackages.npm
 
     pkgs.dig
+    pkgs.dogdns
 
     # https://wiki.archlinux.org/title/default_applications#xdg-open
     pkgs.perlPackages.FileMimeInfo
