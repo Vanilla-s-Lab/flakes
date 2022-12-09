@@ -39,6 +39,9 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
+  home.file.".wrangler".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/wrangler";
+  home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
+
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
@@ -81,6 +84,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 
     pkgs.nodejs
     pkgs.nodePackages.npm
+    pkgs.nodePackages.wrangler
 
     pkgs.dig
     pkgs.dogdns
