@@ -27,7 +27,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 
   home.file.".cargo".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cargo";
 
-  home.file."${".local/share/JetBrains/WebStorm${pkgs.jetbrains.webstorm.version}" +
+  home.file."${".local/share/JetBrains/WebStorm2022.2" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
