@@ -32,7 +32,8 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
   home.file.".npmrc".text = ''
-    registry=https://registry.npmmirror.com/
+    proxy=http://127.0.0.1:8889/
+    https-proxy=http://127.0.0.1:8889/
   '';
 
   home.file."${".local/share/JetBrains/Rider${pkgs.jetbrains.rider.version}" +
@@ -85,6 +86,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pkgs.nodejs
     pkgs.nodePackages.npm
     pkgs.nodePackages.wrangler
+    pkgs.nodePackages.npm-check-updates
 
     pkgs.dig
     pkgs.dogdns
