@@ -13,7 +13,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
     pset option autosave 'off'
   '';
 
-  home.file."${".local/share/JetBrains/IntelliJIdea${pkgs.jetbrains.idea-ultimate.version}" +
+  home.file."${".local/share/JetBrains/IntelliJIdea2022.2" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
