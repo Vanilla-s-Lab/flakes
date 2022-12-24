@@ -3,14 +3,14 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "5a411d19ce7334ab10ba12516743fc25dad363fa";
+    version = "324ec9eb69e20971b58340d0096c3caac7bc2089";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "5a411d19ce7334ab10ba12516743fc25dad363fa";
+      rev = "324ec9eb69e20971b58340d0096c3caac7bc2089";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-8O+7tzQQR5+QHLgXpL+KOISaVn6iOpdfQAQfHtyI4uw=";
+      sha256 = "sha256-b3c/EQmObPKnT5pBbhAbAySGt2E+1UC0Zqm2vJJiv/4=";
     };
   };
   "\"longld/peda\"" = {
@@ -50,13 +50,13 @@
   };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
-    version = "v106";
+    version = "v108.1";
     src = fetchFromGitHub ({
       owner = "rafaelmardojai";
       repo = "firefox-gnome-theme";
-      rev = "v106";
+      rev = "v108.1";
       fetchSubmodules = false;
-      sha256 = "sha256-10kQ44U1RSr+6M47U6JuhuteSWHMXFLL4g/oeFubhus=";
+      sha256 = "sha256-1nGpcIG2OLwVi9Y93rJGZXCjJM9mSHHta+6WeqEjZng=";
     });
   };
   gnome-shell-extension-sensory-perception = {
