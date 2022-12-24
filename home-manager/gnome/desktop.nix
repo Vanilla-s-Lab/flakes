@@ -150,9 +150,7 @@ with pkgs; with inputs;
   home.packages = [
     pkgs.android-studio
 
-    # https://github.com/NixOS/nixpkgs/pull/206184
-    # pkgs.apktool
-
+    pkgs.apktool
     pkgs.dex2jar
     pkgs.jd-gui
 
