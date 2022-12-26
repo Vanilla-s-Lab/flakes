@@ -123,7 +123,11 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
 
     "org/gnome/desktop/app-folders/folders/0a52de09-b4d8-462c-bf97-517e8bc27973" = {
       name = "Games";
-      apps = [ "com.obsproject.Studio.desktop" "steam.desktop" ];
+      apps = [
+        "com.obsproject.Studio.desktop"
+        "steam.desktop"
+        "org.yuzu_emu.yuzu.desktop"
+      ];
     };
   };
 
@@ -165,7 +169,19 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.linyinfeng.icalingua-plus-plus
-  ];
+  ] ++ [ pkgs.yuzu-early-access ];
+
+  home.file.".cache/yuzu".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/cache/yuzu";
+
+  home.file.".config/yuzu".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/yuzu";
+
+  home.file.".local/share/yuzu".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/yuzu";
 
   home.file.".config/icalingua".source =
     config.lib.file.mkOutOfStoreSymlink
