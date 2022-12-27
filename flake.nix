@@ -7,6 +7,7 @@
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.11/nixexprs.tar.xz";
     nix-index-database.url = "github:Mic92/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
     # https://github.com/nix-community/home-manager/pull/3405
     home-manager.url = "github:NickCao/home-manager";
