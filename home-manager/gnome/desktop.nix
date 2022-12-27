@@ -125,6 +125,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
       name = "Games";
       apps = [
         "com.obsproject.Studio.desktop"
+        "ryujinx.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
       ];
@@ -169,7 +170,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.linyinfeng.icalingua-plus-plus
-  ] ++ [ pkgs.yuzu-early-access ];
+  ] ++ [ pkgs.yuzu pkgs.ryujinx ];
 
   home.file.".cache/yuzu".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -182,6 +183,10 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
   home.file.".local/share/yuzu".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/yuzu";
+
+  home.file.".config/Ryujinx/".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/Ryujinx";
 
   home.file.".config/icalingua".source =
     config.lib.file.mkOutOfStoreSymlink
