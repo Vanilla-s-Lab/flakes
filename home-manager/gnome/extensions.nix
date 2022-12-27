@@ -1,16 +1,7 @@
 { pkgs, config, lib, generated, ... }:
 {
   home.packages = [
-    (pkgs.gnomeExtensions.arcmenu.overrideAttrs (old: rec {
-      version = "39";
-
-      src = pkgs.fetchgit {
-        url = "https://gitlab.com/arcmenu/ArcMenu";
-        rev = "v${version}";
-        hash = "sha256-EPi3PL8ZVHRmbT6tZVR90pEzXndJbI+qFfUCQi3PsQk=";
-      };
-    }))
-
+    pkgs.gnomeExtensions.arcmenu
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
@@ -107,6 +98,8 @@
       "scroll-workspaces@gfxmonk.net"
     ];
 
+    # General - General Settings - ArcMenu Hotkey - OFF
+    "org/gnome/shell/extensions/arcmenu".enable-menu-hotkey = false;
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
     "org/gnome/shell/extensions/arcmenu".menu-button-appearance = "Icon_Text";
     # Button Appearance - Menu Button Appearance - Text - "    Vanilla"
