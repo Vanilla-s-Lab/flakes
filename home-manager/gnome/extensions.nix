@@ -95,7 +95,7 @@
       "gnome-shell-screenshot@ttll.de"
       "sensory-perception@HarlemSquirrel.github.io"
       "simplenetspeed@biji.extension"
-      "sound-output-device-chooser@kgshank.net"
+      # "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
