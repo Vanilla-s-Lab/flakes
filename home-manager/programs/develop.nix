@@ -42,6 +42,7 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 
   home.file.".wrangler".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/wrangler";
   home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
+  home.file.".terraform.d".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/terraform.d";
 
   home.packages = with inputs; [
     pkgs.salt
@@ -85,7 +86,10 @@ let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 
     pkgs.nodejs
     pkgs.nodePackages.npm
+
     pkgs.nodePackages.wrangler
+    pkgs.terraform
+
     pkgs.nodePackages.npm-check-updates
 
     pkgs.dig
