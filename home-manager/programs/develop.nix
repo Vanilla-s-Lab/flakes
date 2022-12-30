@@ -157,6 +157,10 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.pmbootstrap
   ];
 
+  home.file.".ghtop_token".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/run/secrets/ghtop_token/token";
+
   home.file.".config/pmbootstrap.cfg".source =
     pkgs.fetchurl {
       url = "https://gist.githubusercontent.com/VergeDX/5a34b1475bcc7283dd6d4f504b8251ea"
