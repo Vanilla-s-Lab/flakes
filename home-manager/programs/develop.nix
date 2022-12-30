@@ -1,6 +1,5 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
-let pattern = pkgs.callPackage ../packages/pattern.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
