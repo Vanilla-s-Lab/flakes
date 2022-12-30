@@ -1,5 +1,6 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
+let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -99,6 +100,7 @@ let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix {
 
     pkgs.mtr
     pkgs.traceroute
+    pkgs_besttrace
 
     pkgs.whois
     pkgs.curl
