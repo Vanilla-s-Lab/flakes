@@ -1,6 +1,7 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
+let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 {
   home.file.".local/share/Zeal".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -104,6 +105,9 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
 
     pkgs.whois
     pkgs.curl
+
+    pkgs.htop
+    pkgs_ghtop
 
     pkgs.powertop
     (pkgs.hwloc.override {
