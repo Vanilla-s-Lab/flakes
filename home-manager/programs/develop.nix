@@ -49,7 +49,9 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.salt
     pkgs.zeal
 
-    pkgs.python3Full
+    (pkgs.python3.withPackages
+      (p: with p; [ requests ]))
+
     pkgs.ansible
 
     nixosConfig.boot.kernelPackages.perf
