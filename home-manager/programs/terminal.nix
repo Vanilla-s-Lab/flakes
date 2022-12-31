@@ -4,6 +4,10 @@ let
     (lib.lists.forEach feature_list # https://nixos.org/manual/nix/stable/expressions/builtins.html
       (x: { name = x; value = { disabled = false; }; }));
 in
+
+let joycond-cemuhook =
+  "aa81791e2135cffc0686390003ef9e1915dfdd1fec3eaef15e27a1509e622403";
+in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -98,6 +102,9 @@ in
   # https://github.com/nix-community/nix-direnv
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+
+  home.file.".local/share/direnv/allow/${joycond-cemuhook}".text =
+    "/persistent/Downloads/Temp/joycond-cemuhook/.envrc";
 
   programs.kitty.enable = true;
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
