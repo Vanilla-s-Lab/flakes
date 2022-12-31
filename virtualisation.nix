@@ -26,7 +26,7 @@
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "vanilla" ];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = [
     (pkgs.callPackage ./home-manager/packages/docker-lock.nix { })
