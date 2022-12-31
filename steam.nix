@@ -21,4 +21,7 @@
 
   # https://github.com/joaorb64/joycond-cemuhook
   services.joycond.enable = true;
+
+  # https://github.com/VergeDX/joycond-cemuhook
+  boot.initrd.kernelModules = [ "hid_nintendo" ];
 }
