@@ -7,6 +7,9 @@
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  # Credit: @NickCao <3
+  # hardware.nvidia.open = true;
+
   # Remove NVIDIA X Server Settings app.
   hardware.nvidia.nvidiaSettings = false;
 
