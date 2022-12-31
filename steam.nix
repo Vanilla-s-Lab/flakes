@@ -18,4 +18,7 @@
   boot.kernel.sysctl = {
     "dev.i915.perf_stream_paranoid" = 0;
   };
+
+  # https://github.com/joaorb64/joycond-cemuhook
+  services.joycond.enable = true;
 }
