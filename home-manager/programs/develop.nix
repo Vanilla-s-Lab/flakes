@@ -86,6 +86,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.podman-compose
 
     pkgs.jetbrains.webstorm
+    pkgs.jetbrains.gateway
 
     pkgs.nodejs
     pkgs.nodePackages.npm

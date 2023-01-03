@@ -85,6 +85,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
         "android-studio.desktop"
         "clion.desktop"
         "datagrip.desktop"
+        "gateway.desktop"
         "idea-ultimate.desktop"
         "jd-gui.desktop"
         "nvim.desktop"
