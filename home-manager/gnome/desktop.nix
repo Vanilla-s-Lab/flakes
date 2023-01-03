@@ -44,6 +44,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
         "wemeetapp.desktop"
+        "wemeetapp-force-x11.desktop"
       ];
     };
 
