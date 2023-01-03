@@ -45,6 +45,11 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
   home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
   home.file.".terraform.d".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/terraform.d";
 
+  programs.ssh.matchBlocks."linode-nix" = {
+    host = "172.105.209.227";
+    proxyCommand = "nc -x localhost:1089 %h %p";
+  };
+
   home.packages = with inputs; [
     pkgs.salt
     pkgs.zeal
@@ -93,6 +98,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 
     pkgs.nodePackages.wrangler
     pkgs.terraform
+    pkgs.deploy-rs
 
     pkgs.nodePackages.npm-check-updates
 
