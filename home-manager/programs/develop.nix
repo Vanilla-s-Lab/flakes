@@ -44,6 +44,24 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
+  home.file."${".local/share/JetBrains/GoLand2022.2" +
+    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
+    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
+
+  home.file."go".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/go";
+
+  home.file.".terraformrc".text = ''
+    provider_installation {
+      dev_overrides {
+        "hashicorp.com/edu/transfer_sh" = "/home/vanilla/go/bin"
+      }
+
+      direct {}
+    }
+  '';
+
   home.file.".wrangler".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/wrangler";
   home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
   home.file.".terraform.d".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/terraform.d";
@@ -95,6 +113,9 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 
     pkgs.jetbrains.webstorm
     pkgs.jetbrains.gateway
+
+    pkgs.jetbrains.goland
+    pkgs.go
 
     pkgs.nodejs
     pkgs.nodePackages.npm

@@ -86,6 +86,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
         "clion.desktop"
         "datagrip.desktop"
         "gateway.desktop"
+        "goland.desktop"
         "idea-ultimate.desktop"
         "jd-gui.desktop"
         "nvim.desktop"
