@@ -56,7 +56,7 @@
 
     172.105.209.227 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDe5cPbPPogAJe22Ru7I5Q4hjwYy7eZaKXhlrTArXuHv7av8k26uNpxvKDfkXzn9Vumk57D6jVHJgStx2VxDN1QyiL7zzNyj+KZQJ3LhkXwOJ/uxGGXr1kxfokx5lXEfwbZMxACm8Q027jkhKF5QnOkuaIBM6eqhFRltbjhzhPRUCPl242b2bcKY6lJlCm+u+r2JqzA7ATBP/vTHuDx8fXR/R4oUaSI1eLxsGQFp9aBME1piTHeDmQA0VCns0+GdKHrW12gh3RvcKKwIQQk53pthPKCfVrCoMdBn+MEQgqSfyZucqaYdFaJ7lQ3UYvkh6AVhqSX31Bs8jl4L4mv+m/x+3pp+D0/0x/vwBkQFATLLfVGyantaCtMqYEp3rie4Lz6bPapVRo1/kpA2SZZ/XLIOa/iLOGNqzR3Ecc4t1+K8V0TkQ1piozGhq9p3BCFxIxHniuw6+qHZl7NrSXyK3MKkOlbgJXJCZ0J70mAniUNU04uhXjGEb13Gu2v6OC488MdkbEmDfgiKTKCb2Y5oG6E7SsKdcZWoQ/H5i02P4HMlGYtJHrCVTwR4WosgE3ycyteAmSMZjbY2dxielKV6bvY8caGRNyaMRxxfARmKoZ8X6KNoV86JRoly/88bx+YdDgNgkwANFunPMmzb+YSiPi5J+SS/3JiBCGPlc2ciYJo6w==
     172.105.209.227 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFtNQbUdceH12b4yb/oZ9+okDxHQ8aCgpDCVmN9a9avU
-  '';
+  '' + "eu.nixbuild.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM";
 
   # https://cms-sw.github.io/tutorial-proxy.html
   programs.ssh.matchBlocks."github.com" = {
