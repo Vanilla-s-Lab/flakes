@@ -55,7 +55,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
   home.file.".terraformrc".text = ''
     provider_installation {
       dev_overrides {
-        "hashicorp.com/edu/transfer_sh" = "/home/vanilla/go/bin"
+        "hashicorp.com/edu/transfer-sh" = "/home/vanilla/go/bin"
       }
 
       direct {}
