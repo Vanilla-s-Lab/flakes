@@ -37,6 +37,8 @@ with inputs;
     ./sops-config/ghtop_token.nix
     ./sops-config/linode-nix.nix
 
+    ./sops-config/docker.nix
+
     ./security.nix
     ./steam.nix
     ./virtualisation.nix
