@@ -73,7 +73,17 @@
     pkgs.difftastic
     pkgs.gh # GitHub CLI
     pkgs.nix-index
+
+    # https://docs.nixbuild.net/configuration/
+    pkgs.rlwrap
   ];
+
+  # https://docs.nixbuild.net/getting-started/
+  programs.ssh.matchBlocks."nixbuild" = {
+    host = "eu.nixbuild.net";
+    extraOptions."PubkeyAcceptedKeyTypes" = "ssh-ed25519";
+    identityFile = "/home/vanilla/.ssh/id_ed25519";
+  };
 
   # https://difftastic.wilfred.me.uk/git.html
   programs.git.extraConfig."diff" = { tool = "difftastic"; };
