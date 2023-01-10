@@ -37,6 +37,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
+        "balena-etcher-electron.desktop"
         "icalingua-plus-plus.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
@@ -173,7 +174,7 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.linyinfeng.icalingua-plus-plus
-  ] ++ [ pkgs.yuzu pkgs.ryujinx ];
+  ] ++ [ pkgs.yuzu pkgs.ryujinx ] ++ [ pkgs.etcher ];
 
   home.file.".cache/yuzu".source =
     config.lib.file.mkOutOfStoreSymlink

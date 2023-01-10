@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: with inputs;
+{ pkgs, inputs, lib, ... }: with inputs;
 let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIWMmypVPlagNhUyshl9Kt.nklEB1ZMoSylU5.MrOLa/"; in
 {
   # https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
@@ -14,4 +14,7 @@ let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIW
 
     uid = 1000;
   };
+
+  nixpkgs.config.permittedInsecurePackages =
+    lib.singleton "electron-12.2.3";
 }
