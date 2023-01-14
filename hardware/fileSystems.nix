@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   fileSystems = {
-    "/" = { fsType = "tmpfs"; options = [ "defaults" "size=50%" "mode=755" ]; };
+    "/" = { fsType = "tmpfs"; options = [ "defaults" "size=75%" "mode=755" ]; };
     "/boot" = { device = "/dev/disk/by-uuid/2F71-8FE8"; fsType = "vfat"; };
   };
 
@@ -39,6 +39,12 @@
 
   # https://github.com/NixOS/nixpkgs/pull/146497/files
   systemd.generators = { systemd-gpt-auto-generator = "/dev/null"; };
+
+  # https://btrfs.readthedocs.io/en/latest/Swapfile.html
+  swapDevices = lib.singleton {
+    device = "/persistent/swapfile";
+    size = 1024 * 8; # = 8, GB.
+  };
 
   # https://github.com/nix-community/impermanence
   programs.fuse.userAllowOther = true;
