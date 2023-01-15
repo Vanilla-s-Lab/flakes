@@ -1,5 +1,4 @@
-{ pkgs, config, inputs, lib, generated, ... }: with pkgs; with inputs;
-let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
+{ pkgs, config, lib, generated, ... }:
 {
   dconf.settings = {
     "org/gnome/shell".favorite-apps = [
@@ -158,8 +157,6 @@ let pkgs_bcdown = pkgs.callPackage ../packages/bcdown.nix { }; in
 
   home.packages = [
     pkgs.android-studio
-
-    pkgs_bcdown
 
     pkgs.apktool
     pkgs.dex2jar
