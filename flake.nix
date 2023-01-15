@@ -23,6 +23,9 @@
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
     "icebox-nix/netkit.nix".flake = false;
+
+    # https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
+    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -42,7 +45,8 @@
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
             ++ [ nixos-cn.nixosModules.nixos-cn ]
-            ++ [ impermanence.nixosModules.impermanence ];
+            ++ [ impermanence.nixosModules.impermanence ]
+            ++ [ lanzaboote.nixosModules.lanzaboote ];
         };
 
       pkgs = import nixpkgs { inherit system; };

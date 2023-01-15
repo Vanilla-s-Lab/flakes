@@ -50,8 +50,18 @@ with inputs;
   environment.etc."nixos".source =
     "/persistent/Projects/flakes";
 
+  environment.etc."secureboot".source =
+    "/persistent/etc/secureboot";
+
+  boot.bootspec.enable = true;
+  environment.systemPackages = [ pkgs.sbctl ];
+
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
+
+  boot.lanzaboote.enable = true;
+  boot.lanzaboote.pkiBundle = "/etc/secureboot";
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   # https://nixos.wiki/wiki/Linux_kernel
