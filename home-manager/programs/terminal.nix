@@ -34,8 +34,9 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
 
   # https://github.com/fish-shell/fish-shell
   programs.fish.enable = true;
-  programs.fish.shellInit = ''
+  programs.fish.interactiveShellInit = ''
     any-nix-shell fish --info-right | source
+    __git.destroy || true && __git.init
   '';
 
   # https://github.com/wawa19933/fish-systemd
@@ -71,11 +72,6 @@ let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd
 
   home.file.".config/nushell/env.nu".text = "";
   home.file.".config/nushell/config.nu".text = "";
-
-  # https://github.com/jhillyerd/plugin-git
-  home.activation."fishPlugins.git" =
-    lib.hm.dag.entryAfter [ "dconfSettings" ]
-      ''${pkgs.fish}/bin/fish -c "__git.init" || true'';
 
   # https://starship.rs/
   programs.starship.enable = true;
