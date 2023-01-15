@@ -5,6 +5,13 @@ let
     preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
   });
 in
+
+let
+  pkgs_QvPlugin-Trojan = pkgs.callPackage
+    ../packages/QvPlugin-Trojan.nix
+    { };
+in
+
 {
   home.packages = [
     pkgs.qv2ray
@@ -12,6 +19,8 @@ in
       name = "qv2ray";
       package = pkgs.qv2ray;
     })
+
+    pkgs_QvPlugin-Trojan
 
     pkgs.xray.assetsDrv
     (pkgs.xray.overrideAttrs (old: {
