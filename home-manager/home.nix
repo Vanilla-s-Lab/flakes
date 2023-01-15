@@ -1,5 +1,4 @@
-{ pkgs, inputs, ... }: with inputs;
-let pkgs_nixpkgs-fmt = pkgs.callPackage "${nixpkgs-old}/pkgs/tools/nix/nixpkgs-fmt" { }; in
+{ pkgs, ... }: with inputs;
 {
   imports = [
     ./programs/browsers.nix
@@ -29,7 +28,7 @@ let pkgs_nixpkgs-fmt = pkgs.callPackage "${nixpkgs-old}/pkgs/tools/nix/nixpkgs-f
   ];
 
   home.packages = [
-    pkgs_nixpkgs-fmt
+    pkgs.nixpkgs-fmt
     pkgs.sops
   ];
 

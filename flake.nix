@@ -1,16 +1,12 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
-    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-22.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.flake = false;
 
     nix-channel.url = "https://channels.nixos.org/nixos-22.11/nixexprs.tar.xz";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    # https://github.com/nix-community/home-manager/pull/3405
-    home-manager.url = "github:NickCao/home-manager";
+    home-manager.url = "github:nix-community/home-manager/release-22.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nur.url = "github:nix-community/NUR";
@@ -40,7 +36,7 @@
           inherit system; specialArgs = { inherit inputs self; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated pkgsOld; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
@@ -50,6 +46,5 @@
 
       pkgs = import nixpkgs { inherit system; };
       generated = pkgs.callPackage ./_sources/generated.nix { };
-      pkgsOld = import inputs.nixpkgs-old { inherit system; };
     };
 }
