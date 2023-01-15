@@ -162,12 +162,7 @@
     pkgs.dex2jar
     pkgs.jd-gui
 
-    (pkgs.remmina.override {
-      # https://github.com/NixOS/nixpkgs/issues/203807
-      freerdp = (pkgs.freerdp.overrideAttrs (old: {
-        cmakeFlags = old.cmakeFlags ++ [ "-DWITH_VAAPI=OFF" ];
-      }));
-    })
+    pkgs.remmina
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.linyinfeng.icalingua-plus-plus
