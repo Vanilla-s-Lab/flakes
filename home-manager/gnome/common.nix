@@ -15,8 +15,10 @@ let wxid = "wxid_2tafg8vy4onr22"; in
 
     # https://github.com/NixOS/nixpkgs/pull/152312
     (pkgs.gnome.eog.overrideAttrs (old:
-      let path = "${pkgs.nur.repos.cwyc.webp-pixbuf-loader}"
-        + "/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"; in
+      let
+        path = "${pkgs.nur.repos.cwyc.webp-pixbuf-loader}"
+          + "/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache";
+      in
       {
         preFixup = old.preFixup + ''
           gappsWrapperArgs+=(

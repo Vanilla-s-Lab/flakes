@@ -33,9 +33,7 @@
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       # https://github.com/nix-community/neovim-nightly-overlay
-      nixosConfig = let overlays = [
-        nur.overlay
-      ]; in
+      nixosConfig = let overlays = [ nur.overlay ]; in
         nixpkgs.lib.nixosSystem rec {
           inherit system; specialArgs = { inherit inputs self; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]

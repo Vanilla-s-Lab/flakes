@@ -3,20 +3,25 @@
 let pname = "github-copilot-intellij"; in
 let version = "1.1.37.2188"; in
 
-let src = fetchurl {
-  url = "https://plugins.jetbrains.com/files/17718/261753/${pname}-${version}.zip";
-  hash = "sha256-3DIj3in47y18GWje26w68YYQUyT8di0sIrvAOjBySS8=";
-}; in
+let
+  src = fetchurl {
+    url = "https://plugins.jetbrains.com/files/17718/261753/${pname}-${version}.zip";
+    hash = "sha256-3DIj3in47y18GWje26w68YYQUyT8di0sIrvAOjBySS8=";
+  };
+in
 
 let name = "copilot-agent-linux"; in
-let binary = runCommand "unzip-src" { } ''
-  mkdir -p $out/bin
 
-  # https://unix.stackexchange.com/questions/14120
-  ${unzip}/bin/unzip -p ${src} ${pname}/copilot-agent/bin/${name} > $_/${name}
+let
+  binary = runCommand "unzip-src" { } ''
+    mkdir -p $out/bin
 
-  chmod +x $out/bin/${name}
-''; in
+    # https://unix.stackexchange.com/questions/14120
+    ${unzip}/bin/unzip -p ${src} ${pname}/copilot-agent/bin/${name} > $_/${name}
+
+    chmod +x $out/bin/${name}
+  '';
+in
 
 # https://github.com/community/community/discussions/17898
 buildFHSUserEnv {

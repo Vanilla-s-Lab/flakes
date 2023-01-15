@@ -1,8 +1,10 @@
 { pkgs, config, ... }:
-let albert_quite = pkgs.albert.overrideAttrs (old: {
-  # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
-  preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
-}); in
+let
+  albert_quite = pkgs.albert.overrideAttrs (old: {
+    # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
+    preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
+  });
+in
 {
   home.packages = [
     pkgs.qv2ray

@@ -1,7 +1,9 @@
 { pkgs, inputs, ... }:
-let chinalist = pkgs.callPackage
-  ''${inputs."icebox-nix/netkit.nix"}/pkgs/data/chinalist/''
-  { format = "smartdns"; server = ""; }; in
+let
+  chinalist = pkgs.callPackage
+    ''${inputs."icebox-nix/netkit.nix"}/pkgs/data/chinalist/''
+    { format = "smartdns"; server = ""; };
+in
 {
   services.smartdns.enable = true;
   services.smartdns.settings = {
