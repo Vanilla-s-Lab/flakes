@@ -1,12 +1,13 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    # https://github.com/NixOS/nixpkgs/pull/196738
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nix-channel.url = "https://channels.nixos.org/nixos-22.11/nixexprs.tar.xz";
+    nix-channel.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    home-manager.url = "github:nix-community/home-manager/release-22.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nur.url = "github:nix-community/NUR";
