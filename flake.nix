@@ -27,6 +27,8 @@
 
     # https://github.com/nix-community/nix-vscode-extensions#with-flakes
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    # https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
+    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -44,7 +46,8 @@
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
-            ++ [ impermanence.nixosModules.impermanence ];
+            ++ [ impermanence.nixosModules.impermanence ]
+            ++ [ lanzaboote.nixosModules.lanzaboote ];
         };
 
       pkgs = import nixpkgs { inherit system; };
