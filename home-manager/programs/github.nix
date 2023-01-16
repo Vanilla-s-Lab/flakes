@@ -31,6 +31,9 @@
   }] ++ [{
     source = ../../secrets/nixos-rot.asc;
     trust = "ultimate";
+  }] ++ [{
+    source = ../../secrets/nixos-linode.asc;
+    trust = "ultimate";
   }];
 
   # GPG agent, also enable sub SSH key.
