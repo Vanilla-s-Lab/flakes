@@ -32,10 +32,9 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file.".npmrc".text = ''
-    proxy=http://127.0.0.1:8889/
-    https-proxy=http://127.0.0.1:8889/
-  '';
+  home.file.".npmrc".source =
+    config.lib.file.mkOutOfStoreSymlink
+      nixosConfig.sops.templates.dot-npmrc.path;
 
   home.file."${".local/share/JetBrains/Rider${pkgs.jetbrains.rider.version}" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =

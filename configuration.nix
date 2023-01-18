@@ -38,6 +38,7 @@ with inputs;
     ./sops-config/linode-nix.nix
 
     ./sops-config/docker.nix
+    ./sops-config/dot-npmrc.nix
 
     ./security.nix
     ./steam.nix
