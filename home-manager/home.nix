@@ -1,4 +1,4 @@
-{ pkgs, ... }: with inputs;
+{ pkgs, ... }:
 {
   imports = [
     ./programs/browsers.nix
