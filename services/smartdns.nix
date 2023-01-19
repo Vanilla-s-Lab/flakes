@@ -6,9 +6,14 @@ let
 in
 {
   services.smartdns.enable = true;
-  services.smartdns.settings = {
+  services.smartdns.settings = rec {
     bind = "127.0.0.1:53";
-    server = [ "114.114.114.114" "114.114.115.115" ];
+    bind-tcp = "${bind}";
+
+    server = [
+      "114.114.114.114"
+      "114.114.115.115"
+    ];
 
     conf-file = [
       "${chinalist}/accelerated-domains.china.smartdns.conf"
