@@ -62,7 +62,15 @@
 
     172.16.3.4 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILYZDo9eXAfilg+ghMFfb5mYN19GFrHb4ONbZWbAJb+Q
     172.16.3.4 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCuE1yo24oo8GtUFimMgvIdL5Y5PSVTVtuXKKvlAsLBVBlF5Hv0fn0cK0h+jH6F3AnNZbl/M93OU42wAiakh5ZYuc+Igd5cmKx9LxoLfuYjPn+wlqKjzo4+wVfmeHwJ0DEMbX6mVQ1ExyOpV0EQq8gXZtvfx2pK7gTUNGGPu/e58DWJsJcV6ZTiRJJ9pP2ot7tdTRmi5P29jQKPhdQjZnD+6enDce0jQkTV9FdXZ+WFdcvczpoO44Az9kAL9G0vEik+9FYL3inc62ASlNEYZ1SP4C+9AZ67RqlAaGUeyGddYh4sGnS49bL0I78eF9uclS+AmUYo9tVb4X1/faVGXmc6ucwmGGLGQLhvf/pqvB6sbQ6AzBK2SM2poKSVj3N6afMGrB9hGv72kKqul3lMAZsiJ7Sj8J8kXQsYJ2gIipST9sNgFq4/RYYsPp2rNJIjB3deoM3GEoa86JlXgZqwIqQ8pLLM6N6S+JS9SsIDXe6Ecljh/yNQ+4OqkQ4JS2vKmN7Er7+WlXhehMl6G81s0vTggUNBXpEW8JmK/dAGpWt2wK/B/s3kE4Id9//eddGlrCVl3zEisy8xutURmoY76AWMQuAZefz6jPZJqB9z4hiQ//ClGmW542pXzi/5aRtd+3TSjJDO4gC0tgrWDTy3P+bFExvj9+2rGAW1mC5FSECAZw==
-  '' + "eu.nixbuild.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM";
+  '' + "eu.nixbuild.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM" + ''
+    192.168.6.78 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGnjCAGXq6AJkQXMTqTXe99iP1ICtvCgVtmvVU2qmWcD
+    192.168.6.78 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMjZx23Sh8zgO3gN3CtHh0AWF/LXJ6/d3QPFBOm8FEQNcfZvQ7kiecsqjnSbwaCHKQ4s7V6KBFDHjpra6bBCpmg=
+  '';
+
+  programs.ssh.matchBlocks."192.168.6.78" = {
+    host = "192.168.6.78";
+    proxyCommand = "nc -x localhost:1080 %h %p";
+  };
 
   # https://cms-sw.github.io/tutorial-proxy.html
   programs.ssh.matchBlocks."github.com" = {
