@@ -14,11 +14,11 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pset option autosave 'off'
   '';
 
-  home.file."${".local/share/JetBrains/IntelliJIdea2022.2" +
+  home.file."${".local/share/JetBrains/IntelliJIdea2022.3" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file."${".local/share/JetBrains/PyCharm${pkgs.jetbrains.pycharm-professional.version}" +
+  home.file."${".local/share/JetBrains/PyCharm2022.3" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
@@ -28,7 +28,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 
   home.file.".cargo".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cargo";
 
-  home.file."${".local/share/JetBrains/WebStorm2022.2" +
+  home.file."${".local/share/JetBrains/WebStorm2022.3" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
