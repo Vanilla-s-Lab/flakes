@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services.openssh.enable = true;
   services.openssh.openFirewall = false;
+
+  services.openssh.listenAddresses =
+    lib.singleton { addr = "127.0.0.1"; port = 22; };
 
   services.openssh.hostKeys = [
     {
