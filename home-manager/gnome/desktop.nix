@@ -168,7 +168,7 @@
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.linyinfeng.icalingua-plus-plus
-  ] ++ [ pkgs.yuzu pkgs.ryujinx ] ++ [ pkgs.etcher ];
+  ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ] ++ [ pkgs.etcher ];
 
   home.file.".cache/yuzu".source =
     config.lib.file.mkOutOfStoreSymlink
