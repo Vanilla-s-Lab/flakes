@@ -37,7 +37,6 @@
       name = "Work";
       apps = [
         "balena-etcher-electron.desktop"
-        "icalingua-plus-plus.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
         "wine-wechat.desktop"
@@ -167,8 +166,13 @@
     pkgs.remmina
 
     pkgs.gnome.gnome-disk-utility
-    pkgs.nur.repos.linyinfeng.icalingua-plus-plus
+    pkgs.nur.repos.xddxdd.qq
   ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ] ++ [ pkgs.etcher ];
+
+
+  home.file.".config/QQ".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/QQ";
 
   home.file.".cache/yuzu".source =
     config.lib.file.mkOutOfStoreSymlink
@@ -185,10 +189,6 @@
   home.file.".config/Ryujinx/".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/Ryujinx";
-
-  home.file.".config/icalingua".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/icalingua";
 
   home.file."Android".source =
     config.lib.file.mkOutOfStoreSymlink
