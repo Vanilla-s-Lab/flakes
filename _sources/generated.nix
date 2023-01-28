@@ -3,16 +3,16 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "324ec9eb69e20971b58340d0096c3caac7bc2089";
+    version = "8c8416488ef21483dd5d2922ea194c05e9a3baaf";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "324ec9eb69e20971b58340d0096c3caac7bc2089";
+      rev = "8c8416488ef21483dd5d2922ea194c05e9a3baaf";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-b3c/EQmObPKnT5pBbhAbAySGt2E+1UC0Zqm2vJJiv/4=";
+      sha256 = "sha256-ao8o5j8o+n04sxFI+suVS6x1aecBnACjK99sjiUR+iM=";
     };
-    date = "2022-12-19";
+    date = "2023-01-18";
   };
   "\"longld/peda\"" = {
     pname = "\"longld/peda\"";
@@ -27,16 +27,16 @@
   };
   "\"rose-pine/kitty\"" = {
     pname = "\"rose-pine/kitty\"";
-    version = "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef";
+    version = "8c52fff43b394a6a7e687bc525ac4dfd2334894a";
     src = fetchgit {
       url = "https://github.com/rose-pine/kitty";
-      rev = "4dd9bbe6f838e61f0ef7e9ab9625adda34e129ef";
+      rev = "8c52fff43b394a6a7e687bc525ac4dfd2334894a";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-idqwpNC6hWIz5KtEGqL5C+KcUcKc9iPCstP5FQcZZ0I=";
+      sha256 = "sha256-C9kDjbIsyIrW47ZPJ8CWcOjk9jwoQrHxsjTRAPo6Bjc=";
     };
-    date = "2022-08-24";
+    date = "2023-01-26";
   };
   "\"wawa19933/fish-systemd\"" = {
     pname = "\"wawa19933/fish-systemd\"";
