@@ -157,7 +157,12 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/Google";
 
+  home.file.".local/share/TeamSpeak 3".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/local/share/TeamSpeak 3";
+
   home.packages = [
+    pkgs.teamspeak_client
     pkgs.android-studio
 
     pkgs.apktool
