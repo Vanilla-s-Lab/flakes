@@ -39,6 +39,7 @@
         "balena-etcher-electron.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
+        "qq.desktop"
         "wine-wechat.desktop"
         "wine-wechat-cfg.desktop"
         "wine-wechat-dir.desktop"
