@@ -22,7 +22,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file."${".local/share/JetBrains/CLion2022.2" +
+  home.file."${".local/share/JetBrains/CLion2022.3" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
