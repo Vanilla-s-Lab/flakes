@@ -128,11 +128,15 @@
       name = "Games";
       apps = [
         "com.obsproject.Studio.desktop"
+        "mpv.desktop"
         "ryujinx.desktop"
         "scrcpy.desktop"
         "scrcpy-console.desktop"
         "steam.desktop"
+        "syncplay.desktop"
+        "syncplay-server.desktop"
         "org.yuzu_emu.yuzu.desktop"
+        "umpv.desktop"
       ];
     };
   };
@@ -162,6 +166,9 @@
       "/persistent/dot/local/share/TeamSpeak 3";
 
   home.packages = [
+    pkgs.syncplay
+    pkgs.mpv
+
     pkgs.teamspeak_client
     pkgs.android-studio
 
