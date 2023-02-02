@@ -22,10 +22,8 @@ in
 
     pkgs_QvPlugin-Trojan
 
-    pkgs.xray.assetsDrv
-    (pkgs.xray.overrideAttrs (old: {
-      postFixup = "";
-    }))
+    pkgs.v2ray
+    pkgs.v2ray.assetsDrv
 
     albert_quite
     (pkgs.makeAutostartItem {
