@@ -99,8 +99,11 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.cargo-outdated
 
     pkgs.evcxr
-    (lib.hiPrio pkgs.gcc)
-    pkgs.bintools
+
+    pkgs.gcc
+    pkgs.cmake
+
+    # pkgs.bintools
     pkgs.patchelf
 
     pkgs.talosctl
