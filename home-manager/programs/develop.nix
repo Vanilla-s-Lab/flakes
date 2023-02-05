@@ -75,7 +75,7 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.zeal
 
     (pkgs.python3.withPackages
-      (p: with p; [ requests ]))
+      (p: with p; [ setuptools pip ]))
 
     pkgs.ansible
 
