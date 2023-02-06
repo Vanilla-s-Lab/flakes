@@ -3,16 +3,16 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "8c8416488ef21483dd5d2922ea194c05e9a3baaf";
+    version = "c7d166ebda265370f38cec374e33f02eeec2f857";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "8c8416488ef21483dd5d2922ea194c05e9a3baaf";
+      rev = "c7d166ebda265370f38cec374e33f02eeec2f857";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-ao8o5j8o+n04sxFI+suVS6x1aecBnACjK99sjiUR+iM=";
+      sha256 = "sha256-Mo7SKK0FvjFpIncMr0WI/cl+9+6NCfZ+Y/wlprQwWMg=";
     };
-    date = "2023-01-18";
+    date = "2023-02-01";
   };
   "\"longld/peda\"" = {
     pname = "\"longld/peda\"";
