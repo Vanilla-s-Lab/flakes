@@ -25,6 +25,17 @@
       sha256 = "sha256-vtNJ9WHCUtZmIn/IXwwtKrZx1i/az+gMmW6fLd67QYQ=";
     });
   };
+  "\"qzed/pbpctrl\"" = {
+    pname = "\"qzed/pbpctrl\"";
+    version = "v0.1.1";
+    src = fetchFromGitHub ({
+      owner = "qzed";
+      repo = "pbpctrl";
+      rev = "v0.1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-1tbD/1nYz3fDLOcUUOjLRxm/Jph1E9Zzc3euClL9ttg=";
+    });
+  };
   "\"rose-pine/kitty\"" = {
     pname = "\"rose-pine/kitty\"";
     version = "8c52fff43b394a6a7e687bc525ac4dfd2334894a";

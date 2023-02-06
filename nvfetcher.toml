@@ -34,3 +34,6 @@ fetch.git = "https://github.com/wawa19933/fish-systemd"
 src.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 
+["qzed/pbpctrl"]
+src.github_tag = "qzed/pbpctrl"
+fetch.github = "qzed/pbpctrl"
