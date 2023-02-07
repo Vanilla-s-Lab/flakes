@@ -8,6 +8,15 @@
     ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
 
+  # https://nanikgolang.netlify.app/post/runsc/
+  virtualisation.docker.daemon.settings = {
+    runtimes = {
+      runsc = {
+        path = "${pkgs.gvisor}/bin/runsc";
+      };
+    };
+  };
+
   systemd.tmpfiles.rules = [
     "L /var/lib/docker - - - - /persistent/var/lib/docker"
   ];
