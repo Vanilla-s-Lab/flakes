@@ -120,7 +120,6 @@
       apps = [
         "org.gnome.Evince.desktop"
         "nixos-manual.desktop"
-        "org.zealdocs.zeal.desktop"
       ];
     };
 

@@ -3,10 +3,6 @@ let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix {
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
 let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 {
-  home.file.".local/share/Zeal".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/Zeal";
-
   # https://github.com/longld/peda/issues/108
   # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html
   home.file.".gdbinit".text = ''
@@ -77,7 +73,6 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 
   home.packages = with inputs; [
     pkgs.salt
-    pkgs.zeal
 
     (pkgs.python3.withPackages
       (p: with p; [ setuptools pip ]))
