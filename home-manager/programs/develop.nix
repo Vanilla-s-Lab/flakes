@@ -47,16 +47,6 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/go";
 
-  home.file.".terraformrc".text = ''
-    provider_installation {
-      dev_overrides {
-        "hashicorp.com/edu/transfer-sh" = "/home/vanilla/go/bin"
-      }
-
-      direct {}
-    }
-  '';
-
   home.file.".wrangler".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/wrangler";
   home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
   home.file.".terraform.d".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/terraform.d";
