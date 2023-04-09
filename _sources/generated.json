@@ -38,26 +38,6 @@
         },
         "version": "v1.2"
     },
-    "\"qzed/pbpctrl\"": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "\"qzed/pbpctrl\"",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "qzed",
-            "repo": "pbpctrl",
-            "rev": "v0.1.1",
-            "sha256": "sha256-1tbD/1nYz3fDLOcUUOjLRxm/Jph1E9Zzc3euClL9ttg=",
-            "type": "github"
-        },
-        "version": "v0.1.1"
-    },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
         "date": "2023-01-26",
