@@ -4,7 +4,7 @@
     ../secrets/dot-npmrc.yaml;
 
   sops.templates."dot-npmrc".owner = "vanilla";
-  # sops.templates.gh_hosts.group = "users";
+  # sops.templates."dot-npmrc".group = "users";
 
   sops.templates."dot-npmrc".content = ''
     proxy=http://127.0.0.1:8889/

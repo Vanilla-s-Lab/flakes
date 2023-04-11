@@ -4,7 +4,7 @@
     ../secrets/gh_hosts.yaml;
 
   sops.templates."gh_hosts".owner = "vanilla";
-  # sops.templates.gh_hosts.group = "users";
+  # sops.templates."gh_hosts".group = "users";
 
   sops.templates."gh_hosts".content = ''
     github.com:
