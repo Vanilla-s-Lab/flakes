@@ -35,7 +35,6 @@ with inputs;
     ./sops-config/gh_hosts.nix
 
     ./sops-config/ghtop_token.nix
-    ./sops-config/linode-nix.nix
     ./sops-config/alicloud.nix
 
     ./sops-config/docker.nix
