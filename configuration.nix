@@ -5,6 +5,15 @@
 { config, pkgs, inputs, lib, system, pkgsUnstable, ... }:
 with inputs;
 {
+  nixpkgs.overlays = lib.singleton (self: super: {
+    tracker-miners = super.tracker-miners.overrideAttrs (old: {
+      patches = lib.singleton (pkgs.fetchurl {
+        url = "https://gitlab.gnome.org/GNOME/tracker-miners/-/merge_requests/274.diff";
+        hash = "sha256-mQW22S1NxGdWPpxaV8w/ozssz5EYxFGrjuUGii32SrE=";
+      });
+    });
+  });
+
   programs.command-not-found.enable = true;
   programs.command-not-found.dbPath =
     "${nix-channel}/programs.sqlite";
