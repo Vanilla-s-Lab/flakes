@@ -1,7 +1,7 @@
 {
     "\"github/copilot.vim\"": {
         "cargoLocks": null,
-        "date": "2023-02-01",
+        "date": "2023-03-27",
         "extract": null,
         "name": "\"github/copilot.vim\"",
         "passthru": null,
@@ -11,12 +11,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "c7d166ebda265370f38cec374e33f02eeec2f857",
-            "sha256": "sha256-Mo7SKK0FvjFpIncMr0WI/cl+9+6NCfZ+Y/wlprQwWMg=",
+            "rev": "b6e5624351ba735e25eb8864d7d22819aad00606",
+            "sha256": "sha256-EA9SNPRIIBG9eoV299h+5/AcF/NJYS8izsurLEW31bc=",
             "type": "git",
             "url": "https://github.com/github/copilot.vim"
         },
-        "version": "c7d166ebda265370f38cec374e33f02eeec2f857"
+        "version": "b6e5624351ba735e25eb8864d7d22819aad00606"
     },
     "\"longld/peda\"": {
         "cargoLocks": null,
@@ -40,7 +40,7 @@
     },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
-        "date": "2023-01-26",
+        "date": "2023-03-23",
         "extract": null,
         "name": "\"rose-pine/kitty\"",
         "passthru": null,
@@ -50,12 +50,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "8c52fff43b394a6a7e687bc525ac4dfd2334894a",
-            "sha256": "sha256-C9kDjbIsyIrW47ZPJ8CWcOjk9jwoQrHxsjTRAPo6Bjc=",
+            "rev": "a7f05dae78a563367e6200bf41d5d869a9bb4bdd",
+            "sha256": "sha256-PPMngY53waqKGeurUp8vaht008Kx8u6Sy+0siPBM79A=",
             "type": "git",
             "url": "https://github.com/rose-pine/kitty"
         },
-        "version": "8c52fff43b394a6a7e687bc525ac4dfd2334894a"
+        "version": "a7f05dae78a563367e6200bf41d5d869a9bb4bdd"
     },
     "\"wawa19933/fish-systemd\"": {
         "cargoLocks": null,
@@ -90,11 +90,11 @@
             "name": null,
             "owner": "rafaelmardojai",
             "repo": "firefox-gnome-theme",
-            "rev": "v108.1",
-            "sha256": "sha256-1nGpcIG2OLwVi9Y93rJGZXCjJM9mSHHta+6WeqEjZng=",
+            "rev": "v111",
+            "sha256": "sha256-QWRd9kpBbX6x/kH5NAxa2Eo68L9yw0RiarxPXVt1Xtw=",
             "type": "github"
         },
-        "version": "v108.1"
+        "version": "v111"
     },
     "gnome-shell-extension-sensory-perception": {
         "cargoLocks": null,

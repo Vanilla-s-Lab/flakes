@@ -3,16 +3,16 @@
 {
   "\"github/copilot.vim\"" = {
     pname = "\"github/copilot.vim\"";
-    version = "c7d166ebda265370f38cec374e33f02eeec2f857";
+    version = "b6e5624351ba735e25eb8864d7d22819aad00606";
     src = fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "c7d166ebda265370f38cec374e33f02eeec2f857";
+      rev = "b6e5624351ba735e25eb8864d7d22819aad00606";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-Mo7SKK0FvjFpIncMr0WI/cl+9+6NCfZ+Y/wlprQwWMg=";
+      sha256 = "sha256-EA9SNPRIIBG9eoV299h+5/AcF/NJYS8izsurLEW31bc=";
     };
-    date = "2023-02-01";
+    date = "2023-03-27";
   };
   "\"longld/peda\"" = {
     pname = "\"longld/peda\"";
@@ -27,16 +27,16 @@
   };
   "\"rose-pine/kitty\"" = {
     pname = "\"rose-pine/kitty\"";
-    version = "8c52fff43b394a6a7e687bc525ac4dfd2334894a";
+    version = "a7f05dae78a563367e6200bf41d5d869a9bb4bdd";
     src = fetchgit {
       url = "https://github.com/rose-pine/kitty";
-      rev = "8c52fff43b394a6a7e687bc525ac4dfd2334894a";
+      rev = "a7f05dae78a563367e6200bf41d5d869a9bb4bdd";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-C9kDjbIsyIrW47ZPJ8CWcOjk9jwoQrHxsjTRAPo6Bjc=";
+      sha256 = "sha256-PPMngY53waqKGeurUp8vaht008Kx8u6Sy+0siPBM79A=";
     };
-    date = "2023-01-26";
+    date = "2023-03-23";
   };
   "\"wawa19933/fish-systemd\"" = {
     pname = "\"wawa19933/fish-systemd\"";
@@ -53,13 +53,13 @@
   };
   firefox-gnome-theme = {
     pname = "firefox-gnome-theme";
-    version = "v108.1";
+    version = "v111";
     src = fetchFromGitHub ({
       owner = "rafaelmardojai";
       repo = "firefox-gnome-theme";
-      rev = "v108.1";
+      rev = "v111";
       fetchSubmodules = false;
-      sha256 = "sha256-1nGpcIG2OLwVi9Y93rJGZXCjJM9mSHHta+6WeqEjZng=";
+      sha256 = "sha256-QWRd9kpBbX6x/kH5NAxa2Eo68L9yw0RiarxPXVt1Xtw=";
     });
   };
   gnome-shell-extension-sensory-perception = {
