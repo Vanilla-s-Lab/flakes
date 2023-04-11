@@ -2,6 +2,7 @@
   inputs = {
     # https://github.com/NixOS/nixpkgs/pull/196738
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    rust-overlay.url = "github:oxalica/rust-overlay";
 
     nix-channel.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     nix-index-database.url = "github:Mic92/nix-index-database";
@@ -33,7 +34,7 @@
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       # https://github.com/nix-community/neovim-nightly-overlay
-      nixosConfig = let overlays = [ nur.overlay ]; in
+      nixosConfig = let overlays = [ nur.overlay rust-overlay.overlays.default ]; in
         nixpkgs.lib.nixosSystem rec {
           inherit system; specialArgs = { inherit inputs self; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
