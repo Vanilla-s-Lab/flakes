@@ -1,10 +1,10 @@
 {
   inputs = {
     # https://github.com/NixOS/nixpkgs/pull/196738
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     rust-overlay.url = "github:oxalica/rust-overlay";
 
-    nix-channel.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
+    nix-channel.url = "https://channels.nixos.org/nixos-22.11/nixexprs.tar.xz";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -24,9 +24,6 @@
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
     "icebox-nix/netkit.nix".flake = false;
-
-    # https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
-    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -44,8 +41,7 @@
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
             ++ [ nixos-cn.nixosModules.nixos-cn ]
-            ++ [ impermanence.nixosModules.impermanence ]
-            ++ [ lanzaboote.nixosModules.lanzaboote ];
+            ++ [ impermanence.nixosModules.impermanence ];
         };
 
       pkgs = import nixpkgs { inherit system; };
