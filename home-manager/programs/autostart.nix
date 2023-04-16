@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 let
   albert_quite = pkgs.albert.overrideAttrs (old: {
     # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
@@ -6,18 +6,14 @@ let
   });
 in
 
-let
-  pkgs_QvPlugin-Trojan = pkgs.callPackage
-    ../packages/QvPlugin-Trojan.nix
-    { };
-in
-
+let pkgs_QvPlugin-Trojan = pkgs.callPackage ../packages/QvPlugin-Trojan.nix { }; in
+let pkgs_qv2ray = pkgs.libsForQt5.callPackage "${inputs.nixos-unstable}/pkgs/applications/networking/qv2ray" { }; in
 {
   home.packages = [
-    pkgs.qv2ray
+    pkgs_qv2ray
     (pkgs.makeAutostartItem {
       name = "qv2ray";
-      package = pkgs.qv2ray;
+      package = pkgs_qv2ray;
     })
 
     pkgs_QvPlugin-Trojan
