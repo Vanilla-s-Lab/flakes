@@ -8,13 +8,9 @@
     ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
 
-  # https://nanikgolang.netlify.app/post/runsc/
+  # https://docs.docker.com/build/buildkit/
   virtualisation.docker.daemon.settings = {
-    runtimes = {
-      runsc = {
-        path = "${pkgs.gvisor}/bin/runsc";
-      };
-    };
+    "features" = { "buildkit" = true; };
   };
 
   systemd.tmpfiles.rules = [
