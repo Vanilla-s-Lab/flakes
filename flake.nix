@@ -42,7 +42,6 @@
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
-            ++ [ nixos-cn.nixosModules.nixos-cn ]
             ++ [ impermanence.nixosModules.impermanence ];
         };
 
