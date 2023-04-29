@@ -62,6 +62,7 @@
     common\AcceptedEULA=true
     plugins\kstartpage\redpoint_skincenter=false
     common\system_check\no_necessary_symbol_fonts=false
+    common\do_not_detect_file_association_while_startup=true
 
     [UnixUpdateInfo]
     UserRejectUpdateVersion=11.1.0.11664
