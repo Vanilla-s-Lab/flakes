@@ -2,6 +2,9 @@
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
 let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
+
+let pkgsUnstable = import nixos-unstable { inherit system; }; in
+let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
 {
   # https://github.com/longld/peda/issues/108
   # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html
@@ -93,7 +96,10 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
     pkgs.mono
     pkgs.dotnet-sdk
 
-    pkgs.jetbrains.clion
+    # pkgs.jetbrains.clion
+    (pkgs.jetbrains.clion.override {
+      jdk = pkgsUnstable_jetbrains_jdk;
+    })
 
     pkgs.rustup
     pkgs.cargo-outdated
