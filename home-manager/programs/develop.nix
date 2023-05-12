@@ -64,6 +64,10 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/mc";
 
+  home.file.".fly/config.yml".source =
+    config.lib.file.mkOutOfStoreSymlink
+      nixosConfig.sops.templates."config.yml".path;
+
   home.packages = with inputs; [
     pkgs.salt
 
