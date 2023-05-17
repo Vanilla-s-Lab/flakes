@@ -1,7 +1,6 @@
 {
     "\"github/copilot.vim\"": {
         "cargoLocks": null,
-        "date": "2023-03-27",
         "extract": null,
         "name": "\"github/copilot.vim\"",
         "passthru": null,
@@ -11,16 +10,15 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b6e5624351ba735e25eb8864d7d22819aad00606",
-            "sha256": "sha256-EA9SNPRIIBG9eoV299h+5/AcF/NJYS8izsurLEW31bc=",
+            "rev": "1358e8e45ecedc53daf971924a0541ddf6224faf",
+            "sha256": "sha256-6xIOngHzmBrgNfl0JI5dUkRLGlq2Tf+HsUj5gha/Ppw=",
             "type": "git",
             "url": "https://github.com/github/copilot.vim"
         },
-        "version": "b6e5624351ba735e25eb8864d7d22819aad00606"
+        "version": "1358e8e45ecedc53daf971924a0541ddf6224faf"
     },
     "\"longld/peda\"": {
         "cargoLocks": null,
-        "date": null,
         "extract": null,
         "name": "\"longld/peda\"",
         "passthru": null,
@@ -40,7 +38,6 @@
     },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
-        "date": "2023-03-23",
         "extract": null,
         "name": "\"rose-pine/kitty\"",
         "passthru": null,
@@ -59,7 +56,6 @@
     },
     "\"wawa19933/fish-systemd\"": {
         "cargoLocks": null,
-        "date": "2021-08-05",
         "extract": null,
         "name": "\"wawa19933/fish-systemd\"",
         "passthru": null,
@@ -78,7 +74,6 @@
     },
     "firefox-gnome-theme": {
         "cargoLocks": null,
-        "date": null,
         "extract": null,
         "name": "firefox-gnome-theme",
         "passthru": null,
@@ -90,15 +85,14 @@
             "name": null,
             "owner": "rafaelmardojai",
             "repo": "firefox-gnome-theme",
-            "rev": "v111",
-            "sha256": "sha256-QWRd9kpBbX6x/kH5NAxa2Eo68L9yw0RiarxPXVt1Xtw=",
+            "rev": "v113",
+            "sha256": "sha256-c1TTeZUVI4FPSTGJPBucELnzYr96IF+g++9js3eJvm8=",
             "type": "github"
         },
-        "version": "v111"
+        "version": "v113"
     },
     "gnome-shell-extension-sensory-perception": {
         "cargoLocks": null,
-        "date": null,
         "extract": null,
         "name": "gnome-shell-extension-sensory-perception",
         "passthru": null,
@@ -118,7 +112,6 @@
     },
     "rose-pine": {
         "cargoLocks": null,
-        "date": "2022-04-30",
         "extract": null,
         "name": "rose-pine",
         "passthru": null,
