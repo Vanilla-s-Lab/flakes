@@ -28,6 +28,8 @@
 
   # https://nixos.wiki/wiki/Podman
   virtualisation.podman.enable = true;
+  virtualisation.containers.containersConf.settings =
+    { engine.helper_binaries_dir = [ "${pkgs.netavark}/bin" ]; };
 
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox.host.enable = true;
