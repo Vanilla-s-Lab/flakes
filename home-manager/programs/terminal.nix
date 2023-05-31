@@ -59,6 +59,10 @@ let ariel-tf = "13d969eac201336200d564ca12ead9290ababc1a5c17a075bf8f9a9ce972ed47
   };
 
   home.packages = [
+    pkgs.screen
+    pkgs.minicom
+    pkgs.bat
+
     pkgs.nur.repos.linyinfeng.fishPlugins.git
     pkgs.fishPlugins.pisces
     pkgs.any-nix-shell
