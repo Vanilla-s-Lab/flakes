@@ -9,6 +9,7 @@ let joycond-cemuhook = "aa81791e2135cffc0686390003ef9e1915dfdd1fec3eaef15e27a150
 let vergedx.github.io = "17d04d213ad790e501d099ad8e68229f2f2c4bdcd92b3eeadd1a30a9e425166c"; in
 let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd7b"; in
 let ariel-tf = "13d969eac201336200d564ca12ead9290ababc1a5c17a075bf8f9a9ce972ed47"; in
+let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -112,6 +113,8 @@ let ariel-tf = "13d969eac201336200d564ca12ead9290ababc1a5c17a075bf8f9a9ce972ed47
     "/persistent/Projects/linode-nix/.envrc";
   home.file.".local/share/direnv/allow/${ariel-tf}".text =
     "/persistent/Works/ariel-tf/.envrc";
+  home.file.".local/share/direnv/allow/${SMSBoom}".text =
+    "/persistent/Downloads/Temp/SMSBoom";
 
   programs.kitty.enable = true;
   programs.kitty.extraConfig = "include rose-pine-dawn.conf";
