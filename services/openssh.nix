@@ -19,9 +19,10 @@
   ];
 
   # Only allow pubkeys login.
-  services.openssh.permitRootLogin = "no";
-  services.openssh.passwordAuthentication = false;
-  services.openssh.kbdInteractiveAuthentication = false;
+
+  services.openssh.settings.PermitRootLogin = "no";
+  services.openssh.settings.PasswordAuthentication = false;
+  services.openssh.settings.KbdInteractiveAuthentication = false;
 
   programs.ssh.knownHostsFiles = pkgs.lib.singleton (pkgs.writeText "localhost.keys" ''
     localhost ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIzKaLzzMh2MvYRcDSvkyB7YXGNIP3IlBUda9ODxd2PX
