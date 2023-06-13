@@ -10,6 +10,9 @@
     # Settings - Search - OFF
     "org/gnome/desktop/search-providers".disable-external = true;
 
+    # Settings - Workspaces - Dynamic workspaces
+    "org/gnome/mutter".dynamic-workspaces = true;
+
     # Settings - Privacy - Location Services - OFF
     "org/gnome/system/location".enabled = false;
     # Settings - Privacy - Microphone - OFF
