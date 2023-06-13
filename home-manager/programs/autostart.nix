@@ -48,6 +48,10 @@ let pkgs_qv2ray = pkgs.libsForQt5.callPackage "${inputs.nixos-unstable}/pkgs/app
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/albert";
 
+  home.file.".config/albert.conf".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/dot/config/albert.conf";
+
   home.file.".local/share/KotatogramDesktop".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/KotatogramDesktop";
