@@ -5,6 +5,11 @@
 { config, pkgs, inputs, lib, system, pkgsUnstable, ... }:
 with inputs;
 {
+  # https://github.com/NixOS/nixpkgs/pull/234359
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1u"
+  ];
+
   nixpkgs.overlays = lib.singleton (self: super: {
     tracker-miners = super.tracker-miners.overrideAttrs (old: {
       patches = lib.singleton (pkgs.fetchurl {
