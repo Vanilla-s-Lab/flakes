@@ -75,6 +75,7 @@ with inputs;
   boot.kernelPackages = pkgs.linuxPackages_zen;
   # https://bugzilla.kernel.org/show_bug.cgi?id=203637
   hardware.cpu.intel.updateMicrocode = true;
+  hardware.cpu.amd.updateMicrocode = true;
 
   # https://wiki.archlinux.org/title/sysctl
   boot.kernel.sysctl."kernel.sysrq" = 1;
