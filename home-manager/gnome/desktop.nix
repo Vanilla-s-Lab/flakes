@@ -92,6 +92,7 @@
         "nvim.desktop"
         "pycharm-professional.desktop"
         "rider.desktop"
+        "ruby-mine.desktop"
         "webstorm.desktop"
       ];
     };

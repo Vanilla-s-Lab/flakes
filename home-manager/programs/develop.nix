@@ -109,6 +109,9 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     pkgs.openssl
 
     pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.ruby-mine
+    pkgs.ruby
+
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rider
 
