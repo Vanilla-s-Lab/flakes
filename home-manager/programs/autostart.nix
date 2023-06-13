@@ -5,18 +5,13 @@ let
     preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
   });
 in
-
-let pkgs_QvPlugin-Trojan = pkgs.callPackage ../packages/QvPlugin-Trojan.nix { }; in
-let pkgs_qv2ray = pkgs.libsForQt5.callPackage "${inputs.nixos-unstable}/pkgs/applications/networking/qv2ray" { }; in
 {
   home.packages = [
-    pkgs_qv2ray
+    pkgs.qv2ray
     (pkgs.makeAutostartItem {
       name = "qv2ray";
-      package = pkgs_qv2ray;
+      package = pkgs.qv2ray;
     })
-
-    pkgs_QvPlugin-Trojan
 
     pkgs.v2ray
     pkgs.v2ray.assetsDrv

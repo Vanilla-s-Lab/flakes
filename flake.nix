@@ -1,9 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    # https://github.com/NixOS/nixpkgs/pull/196738
-    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
     rust-overlay.url = "github:oxalica/rust-overlay";
 
     nix-channel.url = "https://channels.nixos.org/nixos-23.05/nixexprs.tar.xz";
