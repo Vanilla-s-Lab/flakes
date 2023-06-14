@@ -110,10 +110,12 @@
       apps = [
         "chromium-browser.desktop"
         "firefox-devedition.desktop"
+        "mpv.desktop"
         "syncplay.desktop"
         "syncplay-server.desktop"
         "torbrowser.desktop"
         "org.wireshark.Wireshark.desktop"
+        "umpv.desktop"
       ];
     };
 
@@ -130,13 +132,11 @@
       name = "Games";
       apps = [
         "com.obsproject.Studio.desktop"
-        "mpv.desktop"
         "Ryujinx.desktop"
         "samrewritten.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "osu.desktop"
-        "umpv.desktop"
       ];
     };
   };
