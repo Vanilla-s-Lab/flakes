@@ -110,6 +110,8 @@
       apps = [
         "chromium-browser.desktop"
         "firefox-devedition.desktop"
+        "syncplay.desktop"
+        "syncplay-server.desktop"
         "torbrowser.desktop"
         "org.wireshark.Wireshark.desktop"
       ];
@@ -132,8 +134,6 @@
         "scrcpy.desktop"
         "scrcpy-console.desktop"
         "steam.desktop"
-        "syncplay.desktop"
-        "syncplay-server.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "umpv.desktop"
       ];
