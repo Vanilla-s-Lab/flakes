@@ -1,4 +1,24 @@
 {
+    "\"daniruiz/flat-remix-gnome\"": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "\"daniruiz/flat-remix-gnome\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "daniruiz",
+            "repo": "flat-remix-gnome",
+            "rev": "20230606",
+            "sha256": "sha256-NnCRWADyAOR5yyOjB18zSQov+5FfKhhCSkDXBAL80wo=",
+            "type": "github"
+        },
+        "version": "20230606"
+    },
     "\"github/copilot.vim\"": {
         "cargoLocks": null,
         "date": "2023-04-28",
@@ -56,6 +76,26 @@
             "url": "https://github.com/rose-pine/kitty"
         },
         "version": "a7f05dae78a563367e6200bf41d5d869a9bb4bdd"
+    },
+    "\"vinceliuice/Layan-gtk-theme\"": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "\"vinceliuice/Layan-gtk-theme\"",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vinceliuice",
+            "repo": "Layan-gtk-theme",
+            "rev": "2023-05-23",
+            "sha256": "sha256-R8QxDMOXzDIfioAvvescLAu6NjJQ9zhf/niQTXZr+yA=",
+            "type": "github"
+        },
+        "version": "2023-05-23"
     },
     "\"wawa19933/fish-systemd\"": {
         "cargoLocks": null,

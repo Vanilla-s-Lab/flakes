@@ -1,12 +1,21 @@
 { pkgs, ... }:
+let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
 {
   home.packages = [
     pkgs.gnome.gnome-tweaks
 
-    pkgs.layan-gtk-theme
+    (pkgs.layan-gtk-theme.overrideAttrs (old: {
+      version = generated."\"vinceliuice/Layan-gtk-theme\"".src.rev;
+      src = generated."\"vinceliuice/Layan-gtk-theme\"".src;
+    }))
+
     pkgs.breeze-gtk
     pkgs.tela-icon-theme
-    pkgs.flat-remix-gnome
+
+    (pkgs.flat-remix-gnome.overrideAttrs (old: {
+      version = generated."\"daniruiz/flat-remix-gnome\"".src.rev;
+      src = generated."\"daniruiz/flat-remix-gnome\"".src;
+    }))
   ];
 
   dconf.settings = {
@@ -17,7 +26,7 @@
     "org/gnome/desktop/sound".allow-volume-above-100-percent = true;
 
     # Appearance - Themes - Applications | Cursor | Icons | Shell
-    "org/gnome/desktop/interface".gtk-theme = "Layan-light-solid";
+    "org/gnome/desktop/interface".gtk-theme = "Layan-Light-Solid";
     "org/gnome/desktop/interface".cursor-theme = "breeze_cursors";
     "org/gnome/desktop/interface".icon-theme = "Tela-pink";
 

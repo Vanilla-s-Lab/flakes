@@ -34,3 +34,13 @@ fetch.git = "https://github.com/wawa19933/fish-systemd"
 src.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 
+# For GNOME 44
+
+["vinceliuice/Layan-gtk-theme"]
+src.github_tag = "vinceliuice/Layan-gtk-theme"
+fetch.github = "vinceliuice/Layan-gtk-theme"
+
+["daniruiz/flat-remix-gnome"]
+src.github_tag = "daniruiz/flat-remix-gnome"
+fetch.github = "daniruiz/flat-remix-gnome"
+
