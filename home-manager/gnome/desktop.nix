@@ -131,6 +131,7 @@
         "com.obsproject.Studio.desktop"
         "mpv.desktop"
         "Ryujinx.desktop"
+        "samrewritten.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "umpv.desktop"
@@ -163,6 +164,8 @@
       "/persistent/dot/local/share/TeamSpeak 3";
 
   home.packages = [
+    pkgs.nur.repos.xeals.samrewritten
+
     pkgs.syncplay
     pkgs.mpv
 
