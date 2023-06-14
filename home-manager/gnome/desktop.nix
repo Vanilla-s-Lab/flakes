@@ -135,6 +135,7 @@
         "Ryujinx.desktop"
         "samrewritten.desktop"
         "steam.desktop"
+        "OpenTabletDriver.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "osu.desktop"
       ];
