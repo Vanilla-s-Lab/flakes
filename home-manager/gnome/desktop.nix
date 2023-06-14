@@ -122,6 +122,7 @@
       apps = [
         "org.gnome.Evince.desktop"
         "nixos-manual.desktop"
+        "xdvi.desktop"
       ];
     };
 
