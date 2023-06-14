@@ -34,13 +34,11 @@ let features = pkgs.lib.strings.concatStringsSep "," lst; in
   programs.firefox.package = (pkgs.firefox-devedition-bin.overrideAttrs (old: {
     buildCommand = old.buildCommand + ''
       cd $out/share/applications
-      cat firefox.desktop > firefox-developer-edition.desktop
-      rm firefox.desktop
 
       # https://github.com/archlinux/svntogit-community/blob/packages/firefox-developer-edition/trunk/firefox-developer-edition.desktop
-      sed -i 's/^Icon=firefox/&-developer-edition/g' firefox-developer-edition.desktop
+      sed -i 's/^Icon=firefox/&-developer-edition/g' firefox-devedition.desktop
       # https://stackoverflow.com/questions/4609949/what-does-1-in-sed-do
-      sed -i 's/^\(Name=Firefox\).*/\1 Developer Edition/g' firefox-developer-edition.desktop
+      sed -i 's/^\(Name=Firefox\).*/\1 Developer Edition/g' firefox-devedition.desktop
     '';
   }));
 
