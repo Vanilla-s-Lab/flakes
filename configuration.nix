@@ -32,6 +32,7 @@ with inputs;
     ./hardware/bluetooth.nix
     ./hardware/nvidia.nix
     ./hardware/fileSystems.nix
+    ./hardware/wacom.nix
 
     ./networking.nix
     ./nix.nix
