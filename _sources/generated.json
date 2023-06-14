@@ -1,6 +1,7 @@
 {
     "\"github/copilot.vim\"": {
         "cargoLocks": null,
+        "date": "2023-04-28",
         "extract": null,
         "name": "\"github/copilot.vim\"",
         "passthru": null,
@@ -19,6 +20,7 @@
     },
     "\"longld/peda\"": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "\"longld/peda\"",
         "passthru": null,
@@ -38,6 +40,7 @@
     },
     "\"rose-pine/kitty\"": {
         "cargoLocks": null,
+        "date": "2023-03-23",
         "extract": null,
         "name": "\"rose-pine/kitty\"",
         "passthru": null,
@@ -56,6 +59,7 @@
     },
     "\"wawa19933/fish-systemd\"": {
         "cargoLocks": null,
+        "date": "2021-08-05",
         "extract": null,
         "name": "\"wawa19933/fish-systemd\"",
         "passthru": null,
@@ -74,6 +78,7 @@
     },
     "firefox-gnome-theme": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "firefox-gnome-theme",
         "passthru": null,
@@ -85,14 +90,15 @@
             "name": null,
             "owner": "rafaelmardojai",
             "repo": "firefox-gnome-theme",
-            "rev": "v113",
-            "sha256": "sha256-c1TTeZUVI4FPSTGJPBucELnzYr96IF+g++9js3eJvm8=",
+            "rev": "v114",
+            "sha256": "sha256-o53fws/jwhLfxiYfTyYpKSGi61d5LHzGgSCkt3DNGRI=",
             "type": "github"
         },
-        "version": "v113"
+        "version": "v114"
     },
     "gnome-shell-extension-sensory-perception": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "gnome-shell-extension-sensory-perception",
         "passthru": null,
@@ -112,6 +118,7 @@
     },
     "rose-pine": {
         "cargoLocks": null,
+        "date": "2022-04-30",
         "extract": null,
         "name": "rose-pine",
         "passthru": null,
