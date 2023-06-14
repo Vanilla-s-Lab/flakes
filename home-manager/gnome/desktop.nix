@@ -36,7 +36,6 @@
     "org/gnome/desktop/app-folders/folders/4e0291de-0741-434f-94ef-75ff8dc5ef2c" = {
       name = "Work";
       apps = [
-        "balena-etcher-electron.desktop"
         "org.gnome.DiskUtility.desktop"
         "org.remmina.Remmina.desktop"
         "qq.desktop"
@@ -180,7 +179,7 @@
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.xddxdd.qq
-  ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ] ++ [ pkgs.etcher ];
+  ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ];
 
 
   home.file.".config/QQ".source =
