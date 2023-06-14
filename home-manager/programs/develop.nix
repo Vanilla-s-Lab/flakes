@@ -6,6 +6,8 @@ let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 let pkgsUnstable = import nixos-unstable { inherit system; }; in
 let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
 {
+  programs.go.enable = true;
+
   # https://github.com/longld/peda/issues/108
   # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html
   home.file.".gdbinit".text = ''
@@ -146,7 +148,6 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     pkgs.jetbrains.gateway
 
     pkgs.jetbrains.goland
-    pkgs.go
 
     pkgs.nodejs
     pkgs.nodePackages.npm
