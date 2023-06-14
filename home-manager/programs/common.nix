@@ -14,8 +14,6 @@
     pkgs.pciutils
     pkgs.usbutils
 
-    pkgs.scrcpy
-
     pkgs.playonlinux
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese

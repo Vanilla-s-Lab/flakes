@@ -131,8 +131,6 @@
         "com.obsproject.Studio.desktop"
         "mpv.desktop"
         "ryujinx.desktop"
-        "scrcpy.desktop"
-        "scrcpy-console.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "umpv.desktop"
