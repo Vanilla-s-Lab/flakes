@@ -5,7 +5,8 @@ let lst = [ "VaapiVideoEncoder" "VaapiVideoDecoder" ]; in
 let features = pkgs.lib.strings.concatStringsSep "," lst; in
 {
   programs.chromium.enable = true;
-  programs.chromium.commandLineArgs = [ ];
+  # https://bugs.chromium.org/p/chromium/issues/detail?id=1036659
+  programs.chromium.commandLineArgs = [ "--disable-features=MediaRouter" ];
 
   home.packages = [
     pkgs.tor-browser-bundle-bin
