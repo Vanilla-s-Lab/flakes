@@ -172,7 +172,6 @@
     pkgs.syncplay
     pkgs.mpv
 
-    pkgs.teamspeak_client
     pkgs.android-studio
 
     pkgs.apktool
