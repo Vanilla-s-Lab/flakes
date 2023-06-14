@@ -134,6 +134,7 @@
         "samrewritten.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
+        "osu.desktop"
         "umpv.desktop"
       ];
     };
@@ -164,6 +165,7 @@
       "/persistent/dot/local/share/TeamSpeak 3";
 
   home.packages = [
+    pkgs.osu-lazer
     pkgs.nur.repos.xeals.samrewritten
 
     pkgs.syncplay
