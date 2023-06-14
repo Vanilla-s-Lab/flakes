@@ -130,7 +130,7 @@
       apps = [
         "com.obsproject.Studio.desktop"
         "mpv.desktop"
-        "ryujinx.desktop"
+        "Ryujinx.desktop"
         "steam.desktop"
         "org.yuzu_emu.yuzu.desktop"
         "umpv.desktop"
