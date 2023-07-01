@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
 
     nix-channel.url = "https://channels.nixos.org/nixos-23.05/nixexprs.tar.xz";
@@ -36,7 +37,7 @@
           inherit system; specialArgs = { inherit inputs self; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated nixos-unstable; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]

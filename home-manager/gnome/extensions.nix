@@ -1,10 +1,11 @@
-{ pkgs, config, lib, generated, ... }:
+{ pkgs, config, lib, generated, nixos-unstable, system, ... }:
+let pkgsUnstable = import nixos-unstable { inherit system; }; in
 {
   home.packages = [
     pkgs.gnomeExtensions.arcmenu
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
-    pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
+    pkgsUnstable.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.kimpanel
@@ -12,7 +13,7 @@
     pkgs.gnomeExtensions.openweather
     pkgs.gnomeExtensions.runcat
 
-    pkgs.gnomeExtensions.screenshot-tool
+    pkgsUnstable.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot
 
     pkgs.gnomeExtensions.sensory-perception
@@ -25,12 +26,12 @@
 
     (pkgs.stdenvNoCC.mkDerivation rec {
       pname = "status-area-horizontal-spacing";
-      version = "ff35586c";
+      version = "2.8.2";
 
       src = pkgs.fetchgit {
         url = "https://gitlab.com/p91paul/status-area-horizontal-spacing-gnome-shell-extension";
-        rev = "${version}8c48794bdd3d51d18657044d5af27d44";
-        hash = "sha256-zfMvEZ4upBCsllsQXbNuAjNpnpM3sj+S2p+3Er0n6u8=";
+        rev = "${version}";
+        hash = "sha256-ASRMw1i1tdYTr98ShmRoeS8+OMQuYGs1YKFPqHt/mPo=";
       };
 
       nativeBuildInputs = [
@@ -52,7 +53,7 @@
 
     pkgs.gnomeExtensions.clipboard-indicator
     # https://extensions.gnome.org/extension/943/workspace-scroll/
-    pkgs.gnomeExtensions.top-panel-workspace-scroll
+    pkgsUnstable.gnomeExtensions.top-panel-workspace-scroll
   ];
 
   dconf.settings = {
