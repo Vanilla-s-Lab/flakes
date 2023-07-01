@@ -15,13 +15,7 @@
     pkgs.gnomeExtensions.screenshot-tool
     pkgs.gnome.gnome-screenshot
 
-    # https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception#compatibility=
-    (pkgs.gnomeExtensions.sensory-perception.overrideAttrs (old: {
-      version = "${generated."gnome-shell-extension-sensory-perception".src.rev}";
-      src = generated."gnome-shell-extension-sensory-perception".src;
-      patches = [ ./patches/sensory-perception.patch ];
-    }))
-
+    pkgs.gnomeExtensions.sensory-perception
     pkgs.lm_sensors
 
     pkgs.gnomeExtensions.simple-net-speed
