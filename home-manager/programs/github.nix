@@ -85,6 +85,13 @@
     10.0.99.30 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFqA2cr7lCKgELtPjk+h5vXeVSv5zzOQYhle8T9l5iefxP+objpw3kq8StmlwchnkRI1Kes8jekQEKHwfOV3MHA=
   '';
 
+  programs.ssh.matchBlocks."10.0.99.1" = {
+    host = "10.0.99.1";
+    extraOptions = {
+      "HostKeyAlgorithms" = "ssh-rsa";
+    };
+  };
+
   programs.ssh.matchBlocks."192.168.6.78" = {
     host = "192.168.6.78";
     proxyCommand = "nc -x localhost:1080 %h %p";
