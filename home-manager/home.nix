@@ -10,6 +10,7 @@
     ./programs/common.nix
     ./programs/develop.nix
     ./programs/neovim.nix
+    ./programs/vscode.nix
 
     ./file-links.nix
     ./fonts.nix
