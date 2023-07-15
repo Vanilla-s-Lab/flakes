@@ -1,12 +1,12 @@
 { buildFHSUserEnv, fetchurl, runCommand, unzip, ... }:
 
 let pname = "github-copilot-intellij"; in
-let version = "1.2.8.2631"; in
+let version = "1.2.13.2776"; in
 
 let
   src = fetchurl {
-    url = "https://plugins.jetbrains.com/files/17718/341846/${pname}-${version}.zip";
-    hash = "sha256-0nnSMdx9Vb2WyNHreOJMP15K1+AII/kCEAOiFK5Mhik=";
+    url = "https://plugins.jetbrains.com/files/17718/360520/${pname}-${version}.zip";
+    hash = "sha256-aNqKWVuBoN+mUGdAeqMrOUezWItzGU798bdca83HOr8=";
   };
 in
 
