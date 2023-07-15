@@ -102,6 +102,9 @@
         "virtualbox.desktop"
         "playonlinux.desktop"
         "virt-manager.desktop"
+        "vmware-netcfg.desktop"
+        "vmware-player.desktop"
+        "vmware-workstation.desktop"
       ];
     };
 

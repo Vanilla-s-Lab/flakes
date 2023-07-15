@@ -37,6 +37,13 @@
   users.extraGroups.vboxusers.members = [ "vanilla" ];
   # virtualisation.virtualbox.host.enableExtensionPack = true;
 
+  # https://nixos.wiki/wiki/VMware
+  virtualisation.vmware.host.enable = true;
+  virtualisation.vmware.host.extraConfig = ''
+    mks.gl.allowUnsupportedDrivers = "TRUE"
+    mks.vk.allowUnsupportedDevices = "TRUE"
+  '';
+
   environment.systemPackages = [
     (pkgs.callPackage ./home-manager/packages/docker-lock.nix { })
   ];
