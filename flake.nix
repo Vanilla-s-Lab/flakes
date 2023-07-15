@@ -25,6 +25,9 @@
     # https://github.com/icebox-nix/netkit.nix/blob/master/pkgs/data/chinalist/default.nix
     "icebox-nix/netkit.nix".url = "github:icebox-nix/netkit.nix";
     "icebox-nix/netkit.nix".flake = false;
+
+    # https://github.com/nix-community/nix-vscode-extensions#with-flakes
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { self, ... }@inputs: with inputs;
@@ -38,6 +41,7 @@
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
             ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated nixos-unstable; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit nix-vscode-extensions; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
