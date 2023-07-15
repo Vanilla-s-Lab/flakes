@@ -5,6 +5,7 @@
   virtualisation.libvirtd.qemu.swtpm.enable = true;
 
   users.users."vanilla".extraGroups = [ "libvirtd" ]
+    ++ [ "podman" ] # https://nixos.wiki/wiki/Podman
     ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
 
