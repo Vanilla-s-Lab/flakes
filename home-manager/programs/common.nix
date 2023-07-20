@@ -5,7 +5,6 @@
 
     pkgs.obs-studio
 
-    pkgs.virt-manager
     pkgs.wpsoffice
 
     pkgs.nur.repos.linyinfeng.wemeet
@@ -13,8 +12,6 @@
     # ls[usb|pci].
     pkgs.pciutils
     pkgs.usbutils
-
-    pkgs.playonlinux
 
     # https://github.com/dyweb/Deedy-Resume-for-Chinese
     pkgs.texlive.combined.scheme-full
@@ -33,10 +30,6 @@
     pkgs.nodePackages.pxder
   ];
 
-  home.file.".PlayOnLinux".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/PlayOnLinux";
-
   home.file.".config/obs-studio".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/obs-studio";
@@ -48,12 +41,6 @@
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
   # programs.mangohud.enableSessionWide = true;
-
-  # https://nixos.wiki/wiki/Virt-manager
-  dconf.settings."org/virt-manager/virt-manager/connections" = {
-    autoconnect = [ "qemu:///system" ];
-    uris = [ "qemu:///system" ];
-  };
 
   home.file.".config/Kingsoft/Office.conf".text = ''
     [6.0]

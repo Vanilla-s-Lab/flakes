@@ -1,12 +1,10 @@
 { pkgs, inputs, lib, ... }:
 {
-  # https://nixos.wiki/wiki/Virt-manager
-  virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemu.swtpm.enable = true;
+  # https://nixos.wiki/wiki/Podman
+  users.users."vanilla".extraGroups =
+    [ "podman" "docker" ];
 
-  users.users."vanilla".extraGroups = [ "libvirtd" ]
-    ++ [ "podman" ] # https://nixos.wiki/wiki/Podman
-    ++ [ "docker" ]; # https://nixos.wiki/wiki/Docker
+  # https://nixos.wiki/wiki/Docker
   virtualisation.docker.enable = true;
 
   # https://docs.docker.com/build/buildkit/
@@ -18,11 +16,6 @@
     "L /var/lib/docker - - - - /persistent/var/lib/docker"
   ];
 
-  # The default KVM virtual storage location.
-  environment.persistence."/persistent" = {
-    directories = [ "/var/lib/libvirt" ];
-  };
-
   # Support running binary of armv7l architecture.
   boot.binfmt.emulatedSystems = [ "armv7l-linux" "aarch64-linux" ]
     ++ [ "riscv32-linux" "riscv64-linux" ];
@@ -32,23 +25,7 @@
   virtualisation.containers.containersConf.settings =
     { engine.helper_binaries_dir = [ "${pkgs.netavark}/bin" ]; };
 
-  # https://nixos.wiki/wiki/VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "vanilla" ];
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-
-  # https://nixos.wiki/wiki/VMware
-  virtualisation.vmware.host.enable = true;
-  virtualisation.vmware.host.extraConfig = ''
-    mks.gl.allowUnsupportedDrivers = "TRUE"
-    mks.vk.allowUnsupportedDevices = "TRUE"
-  '';
-
   environment.systemPackages = [
     (pkgs.callPackage ./home-manager/packages/docker-lock.nix { })
   ];
-
-  virtualisation.libvirtd.qemu.ovmf.enable = true;
-  virtualisation.libvirtd.qemu.ovmf.packages =
-    (lib.singleton pkgs.OVMFFull);
 }

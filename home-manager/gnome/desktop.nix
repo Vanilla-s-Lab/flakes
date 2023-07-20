@@ -17,7 +17,6 @@
       "f31c95a8-8ed5-43d0-b849-c02b87cf6f2c" # Terminal
       "046ad3d2-1480-422d-89a4-f8bd19324788" # Autostart
       "22647c69-a025-4142-ace6-9ea9a0cbdca1" # IDEs
-      "e644c5d3-83a7-463c-bbef-e0dbbea16076" # Virtualisation
       "216c8193-f990-444b-8882-ea9d773441ef" # Internet
       "337d3799-cc4d-47f5-a6ce-5943775f331e" # Document
       "0a52de09-b4d8-462c-bf97-517e8bc27973" # Games
@@ -96,18 +95,6 @@
       ];
     };
 
-    "org/gnome/desktop/app-folders/folders/e644c5d3-83a7-463c-bbef-e0dbbea16076" = {
-      name = "Virtualisation";
-      apps = [
-        "virtualbox.desktop"
-        "playonlinux.desktop"
-        "virt-manager.desktop"
-        "vmware-netcfg.desktop"
-        "vmware-player.desktop"
-        "vmware-workstation.desktop"
-      ];
-    };
-
     "org/gnome/desktop/app-folders/folders/216c8193-f990-444b-8882-ea9d773441ef" = {
       name = "Internet";
       apps = [
@@ -144,10 +131,6 @@
       ];
     };
   };
-
-  home.file.".config/VirtualBox".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/VirtualBox";
 
   home.file.".cache/Google".source =
     config.lib.file.mkOutOfStoreSymlink
