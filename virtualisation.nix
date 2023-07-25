@@ -2,10 +2,10 @@
 {
   # https://nixos.wiki/wiki/Podman
   users.users."vanilla".extraGroups =
-    [ "podman" "docker" ];
+    [ "podman" /* "docker" */ ];
 
   # https://nixos.wiki/wiki/Docker
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 
   # https://docs.docker.com/build/buildkit/
   virtualisation.docker.daemon.settings = {
@@ -22,8 +22,7 @@
 
   # https://nixos.wiki/wiki/Podman
   virtualisation.podman.enable = true;
-  virtualisation.containers.containersConf.settings =
-    { engine.helper_binaries_dir = [ "${pkgs.netavark}/bin" ]; };
+  virtualisation.podman.dockerSocket.enable = true;
 
   environment.systemPackages = [
     (pkgs.callPackage ./home-manager/packages/docker-lock.nix { })
