@@ -117,9 +117,9 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
     "/persistent/Downloads/Temp/SMSBoom";
 
   programs.kitty.enable = true;
-  programs.kitty.extraConfig = "include rose-pine-dawn.conf";
-  home.file.".config/kitty/rose-pine-dawn.conf".source =
-    "${generated."\"rose-pine/kitty\"".src}/dist/rose-pine-dawn.conf";
+
+  # https://github.com/kovidgoyal/kitty-themes/tree/master/themes
+  programs.kitty.theme = "Rosé Pine Dawn";
 
   programs.tmux.enable = true;
   programs.tmux.shell = "${pkgs.fish}/bin/fish";
