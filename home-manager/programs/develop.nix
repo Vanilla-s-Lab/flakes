@@ -218,6 +218,10 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
 
     pkgs.jq
     pkgs.file
+
+    pkgs.aircrack-ng
+    pkgs.wirelesstools
+    pkgs.hcxtools
   ];
 
   home.file.".ghtop_token".source =

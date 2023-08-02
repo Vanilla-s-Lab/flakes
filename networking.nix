@@ -30,4 +30,7 @@
 
   # https://nixos.org/manual/nixos/stable/release-notes.html#sec-release-22.11
   services.nscd = { enable = true; enableNsncd = true; };
+
+  # https://www.aircrack-ng.org/doku.php?id=airmon-ng
+  networking.networkmanager.unmanaged = [ "wlp0s20f0u1" ];
 }
