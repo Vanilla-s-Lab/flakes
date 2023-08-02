@@ -15,21 +15,21 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     pset option autosave 'off'
   '';
 
-  home.file."${".local/share/JetBrains/IntelliJIdea2022.3" +
+  home.file."${".local/share/JetBrains/IntelliJIdea2023.1" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file."${".local/share/JetBrains/PyCharm2022.3" +
+  home.file."${".local/share/JetBrains/PyCharm2023.1" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
-  home.file."${".local/share/JetBrains/CLion2022.3" +
+  home.file."${".local/share/JetBrains/CLion2023.1" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
   home.file.".cargo".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cargo";
 
-  home.file."${".local/share/JetBrains/WebStorm2022.3" +
+  home.file."${".local/share/JetBrains/WebStorm2022.2" +
     "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
     "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
