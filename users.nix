@@ -5,6 +5,10 @@ let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIW
   users.mutableUsers = false;
 
   programs.adb.enable = true;
+
+  services.udev.enable = true;
+  services.udev.packages = [ pkgs.android-udev-rules ];
+
   users.users."vanilla" = {
     isNormalUser = true;
     inherit hashedPassword;
