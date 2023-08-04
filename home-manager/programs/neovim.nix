@@ -21,8 +21,7 @@
 
     pkgs.vimPlugins.nvim-lspconfig
     # https://nixos.wiki/wiki/Tree_sitters
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins
-      (plugins: pkgs.tree-sitter.allGrammars))
+    pkgs.vimPlugins.nvim-treesitter.withAllGrammars
 
     pkgs.vimPlugins.indent-blankline-nvim
     pkgs.vimPlugins.neoformat
