@@ -1,13 +1,5 @@
 { pkgs, lib, config, ... }:
 {
-  # services.zerotierone.enable = true;
-  # services.zerotierone.joinNetworks = [ "db64858fed46cec4" ];
-
-  systemd.tmpfiles.rules = [
-    "L /var/lib/zerotier-one - - - - /persistent/var/lib/zerotier-one"
-  ];
-
-
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
   users.users."vanilla".extraGroups = [ "wireshark" ];
