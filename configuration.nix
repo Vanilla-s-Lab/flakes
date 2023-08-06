@@ -7,7 +7,7 @@ with inputs;
 {
   # https://github.com/NixOS/nixpkgs/pull/234359
   nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1u"
+    "openssl-1.1.1v"
   ];
 
   programs.command-not-found.enable = true;
