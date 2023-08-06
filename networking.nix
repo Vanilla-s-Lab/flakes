@@ -1,5 +1,12 @@
 { pkgs, lib, config, ... }:
 {
+  services.tailscale.enable = true;
+  # services.tailscale.interfaceName = "userspace-networking";
+
+  environment.persistence."/persistent" = {
+    directories = [ "/var/lib/tailscale" ];
+  };
+
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
   users.users."vanilla".extraGroups = [ "wireshark" ];
