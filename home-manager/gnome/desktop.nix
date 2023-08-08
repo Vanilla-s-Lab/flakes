@@ -82,6 +82,7 @@
       apps = [
         "android-studio.desktop"
         "clion.desktop"
+        "codium.desktop"
         "datagrip.desktop"
         "gateway.desktop"
         "goland.desktop"
