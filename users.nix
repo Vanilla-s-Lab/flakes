@@ -18,7 +18,4 @@ let hashedPassword = "$6$NixOS/RoT$eo8dkH7eCxYFh/YkSOzDp7lIG1iQZm5MY2L5IPRh/1YIW
 
     uid = 1000;
   };
-
-  nixpkgs.config.permittedInsecurePackages =
-    lib.singleton "electron-12.2.3";
 }
