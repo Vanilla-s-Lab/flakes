@@ -5,8 +5,6 @@
 
     pkgs.obs-studio
 
-    pkgs.wpsoffice
-
     pkgs.nur.repos.linyinfeng.wemeet
 
     # ls[usb|pci].
@@ -41,20 +39,4 @@
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
   # programs.mangohud.enableSessionWide = true;
-
-  home.file.".config/Kingsoft/Office.conf".text = ''
-    [6.0]
-    common\AcceptedEULA=true
-    plugins\kstartpage\redpoint_skincenter=false
-    common\system_check\no_necessary_symbol_fonts=false
-    common\do_not_detect_file_association_while_startup=true
-
-    [UnixUpdateInfo]
-    UserRejectUpdateVersion=11.1.0.11664
-  '';
-
-  home.file.".local/share/Kingsoft/office6/skins/default/histroy.ini".text = ''
-    [wpsoffice]
-    lastSkin=2019white
-  '';
 }
