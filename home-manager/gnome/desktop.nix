@@ -160,6 +160,24 @@
     pkgs.nur.repos.xddxdd.qq
   ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ];
 
+  # https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md
+  home.file.".config/mpv/shaders".source = config.lib.file.mkOutOfStoreSymlink "/persistent/Templates/Anime4K_v4.0/";
+
+  home.file.".config/mpv/input.conf".source = pkgs.fetchurl {
+    # url = "https://raw.githubusercontent.com/bloc97/Anime4K/master/md/Template/GLSL_Mac_Linux_Low-end/input.conf";
+    # hash = "sha256-1m36i1vMTL0kAHtGFgqZzkqB8G0IRt/YnU+PwuqF/70=";
+
+    url = "https://raw.githubusercontent.com/bloc97/Anime4K/master/md/Template/GLSL_Mac_Linux_High-end/input.conf";
+    hash = "sha256-ichZCEAKO6LIJhHlRl0zskofyoe00xzNqEOaICc3w74=";
+  };
+
+  home.file.".config/mpv/mpv.conf".source = pkgs.fetchurl {
+    # url = "https://raw.githubusercontent.com/bloc97/Anime4K/master/md/Template/GLSL_Mac_Linux_Low-end/mpv.conf";
+    # hash = "sha256-Q8nXI2V7q3wjVbh0YnWshs9kWuI68lnRSTaV4RW31oI=";
+
+    url = "https://raw.githubusercontent.com/bloc97/Anime4K/master/md/Template/GLSL_Mac_Linux_High-end/mpv.conf";
+    hash = "sha256-W+pZ5dx2u/KicxErifXjeYHC6ZUWbhYwiMdCEiQ98bc=";
+  };
 
   home.file.".config/QQ".source =
     config.lib.file.mkOutOfStoreSymlink
