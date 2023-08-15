@@ -62,4 +62,12 @@
   home.file."Public".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/Public";
+
+  home.file."Desktop".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Desktop";
+
+  home.file."Templates".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "/persistent/Templates";
 }
