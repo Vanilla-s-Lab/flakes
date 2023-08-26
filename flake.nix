@@ -37,7 +37,7 @@
       # https://github.com/nix-community/neovim-nightly-overlay
       nixosConfig = let overlays = [ nur.overlay rust-overlay.overlays.default ]; in
         nixpkgs.lib.nixosSystem rec {
-          inherit system; specialArgs = { inherit inputs self; };
+          inherit system; specialArgs = { inherit inputs self nixos-unstable system; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
             ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated nixos-unstable; }; }]

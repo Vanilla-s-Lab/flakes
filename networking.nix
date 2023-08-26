@@ -1,6 +1,8 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, nixos-unstable, system, ... }:
+let pkgsUnstable = import nixos-unstable { inherit system; }; in
 {
   services.tailscale.enable = true;
+  services.tailscale.package = pkgsUnstable.tailscale;
   # services.tailscale.interfaceName = "userspace-networking";
 
   environment.persistence."/persistent" = {
