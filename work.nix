@@ -1,5 +1,9 @@
 { lib, ... }:
 {
+  # services.prometheus.enable = true;
+  # services.grafana.enable = true;
+  services.grafana.settings = { };
+
   # services.elasticsearch.enable = true;
   services.elasticsearch.extraConf = ''
     # https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html
@@ -30,7 +34,4 @@
       encryptionKey = "min-32-byte-long-NEW-encryption-key";
     };
   };
-
-  # services.grafana.enable = true;
-  services.grafana.settings = { };
 }
