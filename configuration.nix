@@ -53,7 +53,6 @@ with inputs;
 
     ./systemd.nix
     ./common.nix
-    ./work.nix
   ];
 
   environment.etc."nixos".source =
