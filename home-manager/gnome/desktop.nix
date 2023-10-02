@@ -88,7 +88,7 @@
       name = "Internet";
       apps = [
         "chromium-browser.desktop"
-        "firefox-devedition.desktop"
+        "firefox-developer-edition.desktop"
         "mpv.desktop"
         "syncplay.desktop"
         "syncplay-server.desktop"

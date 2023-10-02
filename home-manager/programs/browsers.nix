@@ -37,9 +37,9 @@ let features = pkgs.lib.strings.concatStringsSep "," lst; in
       cd $out/share/applications
 
       # https://github.com/archlinux/svntogit-community/blob/packages/firefox-developer-edition/trunk/firefox-developer-edition.desktop
-      sed -i 's/^Icon=firefox/&-developer-edition/g' firefox-devedition.desktop
+      sed -i 's/^Icon=firefox/&-developer-edition/g' firefox-developer-edition.desktop
       # https://stackoverflow.com/questions/4609949/what-does-1-in-sed-do
-      sed -i 's/^\(Name=Firefox\).*/\1 Developer Edition/g' firefox-devedition.desktop
+      sed -i 's/^\(Name=Firefox\).*/\1 Developer Edition/g' firefox-developer-edition.desktop
     '';
   }));
 
