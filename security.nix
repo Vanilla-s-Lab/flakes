@@ -17,4 +17,9 @@
     # Default, pass or key.
     control = "sufficient";
   };
+
+  # https://github.com/nfc-tools/libnfc/blob/master/libnfc.conf.sample
+  environment.etc."nfc/libnfc.conf".text = ''
+    device.connstring = "pn532_uart:/dev/ttyUSB0"
+  '';
 }
