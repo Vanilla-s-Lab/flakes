@@ -99,14 +99,9 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     "org/gnome/shell/extensions/arcmenu".menu-button-appearance = "Icon_Text";
     # Button Appearance - Menu Button Appearance - Text - "    Vanilla"
     "org/gnome/shell/extensions/arcmenu".custom-menu-button-text = "    Vanilla";
-    # Button Appearance - Icon Appearance - Icon - Browse Icons - Custom Icon
-    "org/gnome/shell/extensions/arcmenu".menu-button-icon = "Custom_Icon";
-    "org/gnome/shell/extensions/arcmenu".custom-menu-button-icon =
-      builtins.toString (pkgs.fetchurl {
-        url = "https://raw.githubusercontent.com" +
-          "/NixOS/nixos-artwork/master/logo/white.svg";
-        hash = "sha256-Ed2l6i2wi/YTcWCq23bspH/t3RYp6AodykpXF1Zgccw=";
-      });
+    # Button Appearance - Icon Appearance - Icon - Browse Icons - Distro Icons - Arch
+    "org/gnome/shell/extensions/arcmenu".menu-button-icon = "Distro_Icon";
+    "org/gnome/shell/extensions/arcmenu".distro-icon = 6;
 
     # Bluetooth Quick Connect - Show battery value (restart required) - ON
     "org/gnome/shell/extensions/bluetooth-quick-connect".show-battery-value-on = true;
