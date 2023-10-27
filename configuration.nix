@@ -44,7 +44,6 @@ with inputs;
     ./sops-config/ghtop_token.nix
     ./sops-config/alicloud.nix
 
-    ./sops-config/docker.nix
     ./sops-config/dot-npmrc.nix
 
     ./security.nix

@@ -136,8 +136,4 @@
   home.file.".config/gh/hosts.yml".source =
     config.lib.file.mkOutOfStoreSymlink
       nixosConfig.sops.templates."gh_hosts".path;
-
-  home.file.".docker/config.json".source =
-    config.lib.file.mkOutOfStoreSymlink
-      nixosConfig.sops.templates."docker".path;
 }
