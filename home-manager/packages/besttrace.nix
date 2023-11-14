@@ -5,7 +5,7 @@ stdenvNoCC.mkDerivation rec {
 
   src = fetchurl {
     url = "https://cdn.ipip.net/17mon/${pname}4linux.zip";
-    hash = "sha256-b3WcCchCSVZsR8WrKyAB9YGzIhUJucqGBua4C+3Mquc=";
+    hash = "sha256-QMoZ8FhYu+KBylyH7cwwYSymPycFUxW5mbrhEVA3OcA=";
   };
 
   nativeBuildInputs = [
