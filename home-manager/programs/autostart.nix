@@ -27,12 +27,6 @@ in
       name = "kotatogramdesktop";
       package = pkgs.kotatogram-desktop;
     })
-
-    pkgs.nur.repos.linyinfeng.clash-for-windows
-    (pkgs.makeAutostartItem {
-      name = "clash-for-windows";
-      package = pkgs.nur.repos.linyinfeng.clash-for-windows;
-    })
   ];
 
   home.file.".config/qv2ray".source =
@@ -50,12 +44,4 @@ in
   home.file.".local/share/KotatogramDesktop".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/KotatogramDesktop";
-
-  home.file.".config/clash".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/clash";
-
-  home.file.".config/clash_win".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/clash_win";
 }
