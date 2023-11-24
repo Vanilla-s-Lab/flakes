@@ -11,12 +11,6 @@
     pkgs.vimPlugins.lualine-nvim
     pkgs.vimPlugins.nvim-web-devicons
 
-    # https://nixos.wiki/wiki/Vim
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "${generated."\"github/copilot.vim\"".pname}";
-      src = "${generated."\"github/copilot.vim\"".src}";
-    })
-
     pkgs.vimPlugins.bufferline-nvim
 
     pkgs.vimPlugins.nvim-lspconfig
@@ -104,8 +98,4 @@
       })
     EOF
   '';
-
-  home.file.".config/github-copilot/hosts.json".source =
-    config.lib.file.mkOutOfStoreSymlink
-      nixosConfig.sops.templates.github-copilot.path;
 }

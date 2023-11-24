@@ -19,25 +19,6 @@
         },
         "version": "20230606"
     },
-    "\"github/copilot.vim\"": {
-        "cargoLocks": null,
-        "date": "2023-04-28",
-        "extract": null,
-        "name": "\"github/copilot.vim\"",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "1358e8e45ecedc53daf971924a0541ddf6224faf",
-            "sha256": "sha256-6xIOngHzmBrgNfl0JI5dUkRLGlq2Tf+HsUj5gha/Ppw=",
-            "type": "git",
-            "url": "https://github.com/github/copilot.vim"
-        },
-        "version": "1358e8e45ecedc53daf971924a0541ddf6224faf"
-    },
     "\"longld/peda\"": {
         "cargoLocks": null,
         "date": null,

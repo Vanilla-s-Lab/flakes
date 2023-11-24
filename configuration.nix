@@ -36,7 +36,6 @@ with inputs;
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
 
-    ./sops-config/github-copilot.nix
     ./sops-config/access-tokens.nix
     ./sops-config/access_tokens.nix
     ./sops-config/gh_hosts.nix
