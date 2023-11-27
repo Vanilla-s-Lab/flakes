@@ -79,6 +79,25 @@
         },
         "version": "v1.2"
     },
+    "oh-my-fish_plugin-bang-bang": {
+        "cargoLocks": null,
+        "date": "2023-07-23",
+        "extract": null,
+        "name": "oh-my-fish_plugin-bang-bang",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ec991b80ba7d4dda7a962167b036efc5c2d79419",
+            "sha256": "sha256-oPPCtFN2DPuM//c48SXb4TrFRjJtccg0YPXcAo0Lxq0=",
+            "type": "git",
+            "url": "https://github.com/oh-my-fish/plugin-bang-bang"
+        },
+        "version": "ec991b80ba7d4dda7a962167b036efc5c2d79419"
+    },
     "rose-pine_kitty": {
         "cargoLocks": null,
         "date": "2023-09-01",

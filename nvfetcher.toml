@@ -14,6 +14,11 @@ fetch.git = "https://github.com/rose-pine/kitty"
 src.github_tag = "longld/peda"
 fetch.github = "longld/peda"
 
+# https://github.com/oh-my-fish/plugin-bang-bang
+[oh-my-fish_plugin-bang-bang]
+src.git = "https://github.com/oh-my-fish/plugin-bang-bang"
+fetch.git = "https://github.com/oh-my-fish/plugin-bang-bang"
+
 # https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception
 
 [gnome-shell-extension-sensory-perception]
