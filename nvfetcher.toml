@@ -9,22 +9,17 @@ src.github_tag = "rafaelmardojai/firefox-gnome-theme"
 fetch.github = "rafaelmardojai/firefox-gnome-theme"
 
 # https://github.com/rose-pine/kitty
-["rose-pine/kitty"]
+[rose-pine_kitty]
 src.git = "https://github.com/rose-pine/kitty"
 fetch.git = "https://github.com/rose-pine/kitty"
 
-# https://github.com/github/copilot.vim
-["github/copilot.vim"]
-src.git = "https://github.com/github/copilot.vim"
-fetch.git = "https://github.com/github/copilot.vim"
-
 # https://github.com/longld/peda
-["longld/peda"]
+[longld_peda]
 src.github_tag = "longld/peda"
 fetch.github = "longld/peda"
 
 # https://github.com/wawa19933/fish-systemd
-["wawa19933/fish-systemd"]
+[wawa19933_fish-systemd]
 src.git = "https://github.com/wawa19933/fish-systemd"
 fetch.git = "https://github.com/wawa19933/fish-systemd"
 
@@ -36,11 +31,11 @@ fetch.github = "HarlemSquirrel/gnome-shell-extension-sensory-perception"
 
 # For GNOME 44
 
-["vinceliuice/Layan-gtk-theme"]
+[vinceliuice_Layan-gtk-theme]
 src.github_tag = "vinceliuice/Layan-gtk-theme"
 fetch.github = "vinceliuice/Layan-gtk-theme"
 
-["daniruiz/flat-remix-gnome"]
+[daniruiz_flat-remix-gnome]
 src.github_tag = "daniruiz/flat-remix-gnome"
 fetch.github = "daniruiz/flat-remix-gnome"
 
