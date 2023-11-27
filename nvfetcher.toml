@@ -1,7 +1,3 @@
-[rose-pine]
-src.git = "https://github.com/rose-pine/alacritty"
-fetch.git = "https://github.com/rose-pine/alacritty"
-
 # https://github.com/rafaelmardojai/firefox-gnome-theme
 
 [firefox-gnome-theme]

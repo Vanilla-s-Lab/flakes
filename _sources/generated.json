@@ -79,25 +79,6 @@
         },
         "version": "v1.2"
     },
-    "rose-pine": {
-        "cargoLocks": null,
-        "date": "2023-07-13",
-        "extract": null,
-        "name": "rose-pine",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "3c3e36eb5225b0eb6f1aa989f9d9e783a5b47a83",
-            "sha256": "sha256-LU8H4e5bzCevaabDgVmbWoiVq7iJ4C1VfQrWGpRwLq0=",
-            "type": "git",
-            "url": "https://github.com/rose-pine/alacritty"
-        },
-        "version": "3c3e36eb5225b0eb6f1aa989f9d9e783a5b47a83"
-    },
     "rose-pine_kitty": {
         "cargoLocks": null,
         "date": "2023-09-01",

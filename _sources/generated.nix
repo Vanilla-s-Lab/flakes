@@ -45,19 +45,6 @@
       sha256 = "sha256-vtNJ9WHCUtZmIn/IXwwtKrZx1i/az+gMmW6fLd67QYQ=";
     });
   };
-  rose-pine = {
-    pname = "rose-pine";
-    version = "3c3e36eb5225b0eb6f1aa989f9d9e783a5b47a83";
-    src = fetchgit {
-      url = "https://github.com/rose-pine/alacritty";
-      rev = "3c3e36eb5225b0eb6f1aa989f9d9e783a5b47a83";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-LU8H4e5bzCevaabDgVmbWoiVq7iJ4C1VfQrWGpRwLq0=";
-    };
-    date = "2023-07-13";
-  };
   rose-pine_kitty = {
     pname = "rose-pine_kitty";
     version = "788bf1bf1a688dff9bbacbd9e516d83ac7dbd216";

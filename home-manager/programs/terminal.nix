@@ -14,9 +14,10 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
   programs.alacritty.settings = {
-    import = lib.singleton
-      (generated.rose-pine.src
-        + "/dist/rose-pine-dawn.yml");
+    import = lib.singleton (pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/rose-pine/alacritty/7c3625f3d0f34359ba114e09b1ba3f3c1bed399a/dist/rose-pine-dawn.yml";
+      hash = "sha256-uMEw4WNbyoDFUWE0Znic7hwZo3FrdkecI4JcFJLynQQ=";
+    });
 
     font = {
       normal = { family = "Hack Nerd Font"; style = "Regular"; };
