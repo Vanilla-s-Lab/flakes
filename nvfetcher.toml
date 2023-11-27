@@ -14,11 +14,6 @@ fetch.git = "https://github.com/rose-pine/kitty"
 src.github_tag = "longld/peda"
 fetch.github = "longld/peda"
 
-# https://github.com/wawa19933/fish-systemd
-[wawa19933_fish-systemd]
-src.git = "https://github.com/wawa19933/fish-systemd"
-fetch.git = "https://github.com/wawa19933/fish-systemd"
-
 # https://github.com/HarlemSquirrel/gnome-shell-extension-sensory-perception
 
 [gnome-shell-extension-sensory-perception]

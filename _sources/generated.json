@@ -117,24 +117,5 @@
             "type": "github"
         },
         "version": "2023-05-23"
-    },
-    "wawa19933_fish-systemd": {
-        "cargoLocks": null,
-        "date": "2021-08-05",
-        "extract": null,
-        "name": "wawa19933_fish-systemd",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "4e922a28ae183e0ddb28c35b8f1415d2c63f978d",
-            "sha256": "sha256-km6VgvYO1b3wnmpKrnJUaZUrQiIDl8NetECa33jbLbo=",
-            "type": "git",
-            "url": "https://github.com/wawa19933/fish-systemd"
-        },
-        "version": "4e922a28ae183e0ddb28c35b8f1415d2c63f978d"
     }
 }

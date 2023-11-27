@@ -69,17 +69,4 @@
       sha256 = "sha256-R8QxDMOXzDIfioAvvescLAu6NjJQ9zhf/niQTXZr+yA=";
     });
   };
-  wawa19933_fish-systemd = {
-    pname = "wawa19933_fish-systemd";
-    version = "4e922a28ae183e0ddb28c35b8f1415d2c63f978d";
-    src = fetchgit {
-      url = "https://github.com/wawa19933/fish-systemd";
-      rev = "4e922a28ae183e0ddb28c35b8f1415d2c63f978d";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-km6VgvYO1b3wnmpKrnJUaZUrQiIDl8NetECa33jbLbo=";
-    };
-    date = "2021-08-05";
-  };
 }

@@ -42,18 +42,14 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
     __git.destroy || true && __git.init
   '';
 
-  # https://github.com/wawa19933/fish-systemd
-  programs.fish.plugins = (lib.singleton rec {
-    name = "fish-systemd";
-    src = generated."wawa19933_${name}".src;
-  }) ++ (lib.singleton rec {
+  programs.fish.plugins = lib.singleton rec {
     name = "plugin-bang-bang";
     src = pkgs.fetchgit {
       url = "https://github.com/oh-my-fish/${name}";
       rev = "f969c61" + "8301163273d0a03d002614d9a81952c1e";
       hash = "sha256-A8ydBX4LORk+nutjHurqNNWFmW6LIiBPQcxS3x4nbeQ=";
     };
-  });
+  };
 
   programs.fish.functions = {
     "no_proxy".body = "set -e all_proxy ftp_proxy https_proxy http_proxy no_proxy rsync_proxy";
