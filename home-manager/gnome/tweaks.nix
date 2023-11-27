@@ -5,16 +5,16 @@ let generated = pkgs.callPackage ../../_sources/generated.nix { }; in
     pkgs.gnome.gnome-tweaks
 
     (pkgs.layan-gtk-theme.overrideAttrs (old: {
-      version = generated."\"vinceliuice/Layan-gtk-theme\"".src.rev;
-      src = generated."\"vinceliuice/Layan-gtk-theme\"".src;
+      version = generated."vinceliuice_Layan-gtk-theme".src.rev;
+      src = generated."vinceliuice_Layan-gtk-theme".src;
     }))
 
     pkgs.breeze-gtk
     pkgs.tela-icon-theme
 
     (pkgs.flat-remix-gnome.overrideAttrs (old: {
-      version = generated."\"daniruiz/flat-remix-gnome\"".src.rev;
-      src = generated."\"daniruiz/flat-remix-gnome\"".src;
+      version = generated."daniruiz_flat-remix-gnome".src.rev;
+      src = generated."daniruiz_flat-remix-gnome".src;
     }))
   ];
 

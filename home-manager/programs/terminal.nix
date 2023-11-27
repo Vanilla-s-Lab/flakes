@@ -44,7 +44,7 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
   # https://github.com/wawa19933/fish-systemd
   programs.fish.plugins = (lib.singleton rec {
     name = "fish-systemd";
-    src = generated."\"wawa19933/${name}\"".src;
+    src = generated."wawa19933_${name}".src;
   }) ++ (lib.singleton rec {
     name = "plugin-bang-bang";
     src = pkgs.fetchgit {

@@ -11,7 +11,7 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
   # https://github.com/longld/peda/issues/108
   # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html
   home.file.".gdbinit".text = ''
-    source ${generated."\"longld/peda\"".src}/peda.py
+    source ${generated."longld_peda".src}/peda.py
     pset option autosave 'off'
   '';
 
