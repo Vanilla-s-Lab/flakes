@@ -2,7 +2,22 @@
 let pkgsUnstable = import nixos-unstable { inherit system; }; in
 {
   home.packages = [
-    pkgs.gnomeExtensions.arcmenu
+    (pkgs.gnomeExtensions.arcmenu.overrideAttrs (old: rec {
+      version = "52";
+
+      src = pkgs.fetchgit {
+        url = "https://gitlab.com/arcmenu/ArcMenu.git";
+        rev = "v${version}";
+        hash = "sha256-nZRdNkS4JfSwtqQsROKa1+eqcgwMQwVsqgeWVPpZIi0=";
+      };
+
+      # https://github.com/NixOS/nixpkgs/pull/270142/files
+      patches = lib.singleton (pkgs.substituteAll {
+        src = ./patches/fix_gmenu.patch;
+        gmenu_path = "${pkgs.gnome-menus}/lib/girepository-1.0";
+      });
+    }))
+
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
     pkgsUnstable.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
@@ -93,6 +108,8 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
       "scroll-workspaces@gfxmonk.net"
     ];
 
+    # General - Panel Display Options - Show Activities Button - ON
+    "org/gnome/shell/extensions/arcmenu".show-activities-button = true;
     # General - General Settings - ArcMenu Hotkey - OFF
     "org/gnome/shell/extensions/arcmenu".enable-menu-hotkey = false;
     # Button Appearance - Menu Button Appearance - Appearance - Icon and Text
