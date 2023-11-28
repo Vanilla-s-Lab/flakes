@@ -40,7 +40,6 @@ with inputs;
     ./sops-config/access_tokens.nix
     ./sops-config/gh_hosts.nix
 
-    ./sops-config/ghtop_token.nix
     ./sops-config/alicloud.nix
 
     ./sops-config/dot-npmrc.nix

@@ -1,7 +1,6 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
-let pkgs_ghtop = pkgs.callPackage ../packages/ghtop.nix { }; in
 
 let pkgsUnstable = import nixos-unstable { inherit system; }; in
 let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
@@ -172,7 +171,6 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     pkgs.curl
 
     pkgs.htop
-    pkgs_ghtop
 
     pkgs.powertop
     (pkgs.hwloc.override {
@@ -223,10 +221,6 @@ let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
     pkgs.wirelesstools
     pkgs.hcxtools
   ];
-
-  home.file.".ghtop_token".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/run/secrets/ghtop_token/token";
 
   home.file.".local/share/containers".source =
     config.lib.file.mkOutOfStoreSymlink
