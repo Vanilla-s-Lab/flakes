@@ -64,7 +64,19 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
 
-    pkgs.gnomeExtensions.gtile
+    (pkgs.gnomeExtensions.gtile.overrideAttrs (old: rec {
+      version = "54";
+
+      src = pkgs.fetchurl {
+        url = "https://github.com/gTile/gTile/releases/download/V${version}/gtile.dist.tgz";
+        hash = "sha256-xKvT2NS81tSjlNM0QquthijNOmWYkPFKqYrsod8c2rE=";
+      };
+
+      unpackPhase = ''
+        mkdir gTile@vibou && cd $_
+        tar -xf $src .
+      '';
+    }))
 
     pkgs.gnomeExtensions.clipboard-indicator
     # https://extensions.gnome.org/extension/943/workspace-scroll/
