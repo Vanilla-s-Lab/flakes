@@ -1,19 +1,11 @@
 { lib, pkgs, ... }:
 {
   programs.steam.enable = true;
-  # programs.steam.remotePlay.openFirewall = true;
-
-  nixpkgs.overlays = lib.singleton (self: super: {
-    steam = super.steam.override {
-      extraPkgs = pkgs: with pkgs; [
-        nur.repos.vanilla.Win10_LTSC_2021_fonts
-
-        pkgs.openssl_3_0
-        pkgs.libadwaita
-        pkgs.gtk4
-      ];
-    };
-  });
+  programs.steam.package = pkgs.steam.override {
+    extraPkgs = pkgs: with pkgs; [
+      nur.repos.vanilla.Win10_LTSC_2021_fonts
+    ];
+  };
 
   boot.kernel.sysctl = {
     "dev.i915.perf_stream_paranoid" = 0;
