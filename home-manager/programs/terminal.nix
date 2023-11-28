@@ -81,8 +81,8 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
       ++ [ "shell" "status" /* "sudo" */ "time" ]));
 
   # https://github.com/ogham/exa
-  programs.exa.enable = true;
-  programs.exa.enableAliases = true;
+  programs.eza.enable = true;
+  programs.eza.enableAliases = true;
 
   # https://github.com/rose-pine/fish
   home.file.".config/fish/functions/rose_pine.fish".source =
