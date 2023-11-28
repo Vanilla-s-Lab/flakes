@@ -25,7 +25,25 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.kimpanel
     pkgs.gnomeExtensions.lock-keys
-    pkgs.gnomeExtensions.openweather
+
+    # https://gitlab.com/skrewball/openweather/-/issues/81
+    (pkgs.gnomeExtensions.openweather.overrideAttrs (old: {
+      src = pkgs.fetchgit {
+        url = "https://github.com/toppk/gnome-shell-extension-openweather.git";
+        rev = "9117377" + "4684eb554a8c6249f9c1e012dc58fd668";
+        hash = "sha256-F9SiuZZye89T8TBdSCqetUkiIygRuprviU04xQZz1ns=";
+      };
+
+      buildPhase = ''
+        make _build
+      '';
+
+      installPhase = ''
+        mkdir -p $out/share/gnome-shell/extensions/openweather-extension@jenslody.de
+        cp -r _build/* $_
+      '';
+    }))
+
     pkgs.gnomeExtensions.runcat
 
     pkgsUnstable.gnomeExtensions.screenshot-tool
