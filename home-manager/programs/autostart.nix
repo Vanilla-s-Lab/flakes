@@ -1,10 +1,4 @@
 { pkgs, config, inputs, ... }:
-let
-  albert_quite = pkgs.albert.overrideAttrs (old: {
-    # https://github.com/albertlauncher/albert/issues/758#issuecomment-509468503
-    preFixup = "qtWrapperArgs+=(--set QT_LOGGING_RULES '*.debug=false;*.info=false')";
-  });
-in
 {
   home.packages = [
     pkgs.qv2ray
@@ -16,10 +10,10 @@ in
     pkgs.v2ray
     pkgs.v2ray.assetsDrv
 
-    albert_quite
+    pkgs.albert
     (pkgs.makeAutostartItem {
       name = "albert";
-      package = albert_quite;
+      package = pkgs.albert;
     })
 
     pkgs.kotatogram-desktop
