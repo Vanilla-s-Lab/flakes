@@ -35,6 +35,11 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/albert.conf";
 
+  home.file.".cache/albert/albert.state".text = ''
+    [General]
+    last_used_version=0.22.14
+  '';
+
   home.file.".local/share/KotatogramDesktop".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/local/share/KotatogramDesktop";
