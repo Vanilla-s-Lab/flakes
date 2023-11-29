@@ -200,6 +200,9 @@
     # OpenWeather - Fix refresh weather issues after reboot.
     "org/gnome/shell/extensions/openweather".actual-city = 1;
 
+    # RunCat Settings - Displaying Items = Character and percentage.
+    "org/gnome/shell/extensions/runcat".displaying-items = "character-and-percentage";
+
     # Screenshot Tool - Auto-Copy to Clipboard - Image Data
     "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
 
