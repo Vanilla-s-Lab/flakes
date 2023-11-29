@@ -1,5 +1,4 @@
-{ pkgs, config, lib, generated, nixos-unstable, system, ... }:
-let pkgsUnstable = import nixos-unstable { inherit system; }; in
+{ pkgs, config, lib, generated, system, ... }:
 {
   home.packages = [
     (pkgs.gnomeExtensions.arcmenu.overrideAttrs (old: rec {
@@ -20,7 +19,7 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
 
     pkgs.gnomeExtensions.bluetooth-quick-connect
     pkgs.gnomeExtensions.blur-my-shell
-    pkgsUnstable.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
+    pkgs.gnomeExtensions.bring-out-submenu-of-power-offlogout-button
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.espresso
     pkgs.gnomeExtensions.kimpanel
@@ -101,8 +100,6 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     }))
 
     pkgs.gnomeExtensions.clipboard-indicator
-    # https://extensions.gnome.org/extension/943/workspace-scroll/
-    pkgsUnstable.gnomeExtensions.top-panel-workspace-scroll
   ];
 
   dconf.settings = {
@@ -139,7 +136,6 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
       "gTile@vibou"
 
       "clipboard-indicator@tudmotu.com"
-      "scroll-workspaces@gfxmonk.net"
     ];
 
     # General - Panel Display Options - Show Activities Button - ON
