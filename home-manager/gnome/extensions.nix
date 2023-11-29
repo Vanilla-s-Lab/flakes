@@ -46,7 +46,15 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
 
     pkgs.gnomeExtensions.runcat
 
-    pkgsUnstable.gnomeExtensions.screenshot-tool
+    (pkgs.gnomeExtensions.screenshot-tool.overrideAttrs (old: {
+      src = pkgs.fetchurl {
+        url = "https://choum.net/JA/gnome-shell-screenshot@ttll.de.zip";
+        hash = "sha256-lGkh9FtQ09YQRFlRmWy7o0b34mKidKpfhllj8Kz0mE4=";
+      };
+
+      buildInputs = [ pkgs.unzip ];
+    }))
+
     pkgs.gnome.gnome-screenshot
 
     pkgs.gnomeExtensions.sensory-perception
