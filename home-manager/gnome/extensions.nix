@@ -213,6 +213,8 @@
     "org/gnome/shell/extensions/unite".extend-left-box = false;
     # Unite - General - Auto focus new windows - OFF
     "org/gnome/shell/extensions/unite".autofocus-windows = false;
+    # Unite - General - Hide activities button - Never
+    "org/gnome/shell/extensions/unite".hide-activities-button = "never";
     # Unite - General - Hide window titlebars - Never
     "org/gnome/shell/extensions/unite".hide-window-titlebars = "never";
     # Unite - General - Show window title in app menu - Never
@@ -221,6 +223,8 @@
     "org/gnome/shell/extensions/unite".show-window-buttons = "never";
     # Unite - General - Notification messages position - Center
     "org/gnome/shell/extensions/unite".notifications-position = "center";
+    # Unite - Appearance - Use text in activities button - OFF
+    "org/gnome/shell/extensions/unite".use-activities-text = false;
     # Unite - Appearance - Hide app menu application icon - OFF
     "org/gnome/shell/extensions/unite".hide-app-menu-icon = false;
     # Unite - Appearance - Reduce top bar items spacing - OFF
