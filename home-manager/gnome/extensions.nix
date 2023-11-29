@@ -57,9 +57,6 @@
     pkgs.gnome.gnome-screenshot
     pkgs.gnomeExtensions.pinguxnetlabel
 
-    # https://github.com/kgshank/gse-sound-output-device-chooser/issues/258
-    # pkgs.gnomeExtensions.sound-output-device-chooser.overrideAttrs
-
     (pkgs.gnomeExtensions.status-area-horizontal-spacing.overrideAttrs (old: rec {
       version = "3.0";
 
@@ -122,7 +119,6 @@
       "runcat@kolesnikov.se"
       "gnome-shell-screenshot@ttll.de"
       "pinguXnetLabel@pinguX.aTa"
-      # "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
@@ -196,11 +192,6 @@
 
     # Screenshot Tool - Auto-Copy to Clipboard - Image Data
     "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
-
-    # Sound IO Device Chooser - General Settings - Display audio profiles for selection - OFF
-    "org/gnome/shell/extensions/sound-output-device-chooser".show-profiles = false;
-    # Sound IO Device Chooser - Icons - Icon Theme - None
-    "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
 
     # Status Area Horizontal Spacing - Horizontal Padding.
     "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 5;
