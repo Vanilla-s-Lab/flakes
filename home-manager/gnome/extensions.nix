@@ -55,10 +55,6 @@
     }))
 
     pkgs.gnome.gnome-screenshot
-
-    pkgs.gnomeExtensions.sensory-perception
-    pkgs.lm_sensors
-
     pkgs.gnomeExtensions.pinguxnetlabel
 
     # https://github.com/kgshank/gse-sound-output-device-chooser/issues/258
@@ -125,7 +121,6 @@
       "openweather-extension@jenslody.de"
       "runcat@kolesnikov.se"
       "gnome-shell-screenshot@ttll.de"
-      "sensory-perception@HarlemSquirrel.github.io"
       "pinguXnetLabel@pinguX.aTa"
       # "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
@@ -201,11 +196,6 @@
 
     # Screenshot Tool - Auto-Copy to Clipboard - Image Data
     "org/gnome/shell/extensions/screenshot".clipboard-action = "set-image-data";
-
-    # Sensory Perception - Display decimal value
-    "org/gnome/shell/extensions/sensory-perception".display-decimal-value = true;
-    # Sensory Perception - Sensor in panel - Package id 0
-    "org/gnome/shell/extensions/sensory-perception".main-sensor = "Package id 0";
 
     # Sound IO Device Chooser - General Settings - Display audio profiles for selection - OFF
     "org/gnome/shell/extensions/sound-output-device-chooser".show-profiles = false;
