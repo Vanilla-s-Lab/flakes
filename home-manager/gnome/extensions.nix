@@ -65,26 +65,22 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     # https://github.com/kgshank/gse-sound-output-device-chooser/issues/258
     # pkgs.gnomeExtensions.sound-output-device-chooser.overrideAttrs
 
-    (pkgs.stdenvNoCC.mkDerivation rec {
-      pname = "status-area-horizontal-spacing";
-      version = "2.8.2";
+    (pkgs.gnomeExtensions.status-area-horizontal-spacing.overrideAttrs (old: rec {
+      version = "3.0";
 
       src = pkgs.fetchgit {
         url = "https://gitlab.com/p91paul/status-area-horizontal-spacing-gnome-shell-extension";
-        rev = "${version}";
-        hash = "sha256-ASRMw1i1tdYTr98ShmRoeS8+OMQuYGs1YKFPqHt/mPo=";
+        rev = "v${version}";
+        hash = "sha256-+z+cYr//8SLQfaQHufCbJlkTWaenoyTVMezNU8ZgIVo=";
       };
 
-      nativeBuildInputs = [
-        pkgs.unzip
-        pkgs.glib
-      ];
+      buildPhase = "make";
 
       installPhase = ''
         mkdir -p $out/share/gnome-shell/extensions
-        cp -r ${pname}@mathematical.coffee.gmail.com $_
+        cp -r status-area-horizontal-spacing@mathematical.coffee.gmail.com $_
       '';
-    })
+    }))
 
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
@@ -220,8 +216,8 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     # Sound IO Device Chooser - Icons - Icon Theme - None
     "org/gnome/shell/extensions/sound-output-device-chooser".icon-theme = "none";
 
-    # Status Area Horizontal Spacing - Right key * (?) times. # More compact now.
-    "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 1 + 1;
+    # Status Area Horizontal Spacing - Horizontal Padding.
+    "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 5;
 
     # Unite - General - Expand top bar left box - OFF
     "org/gnome/shell/extensions/unite".extend-left-box = false;
