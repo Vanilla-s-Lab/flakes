@@ -60,7 +60,7 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     pkgs.gnomeExtensions.sensory-perception
     pkgs.lm_sensors
 
-    pkgs.gnomeExtensions.simple-net-speed
+    pkgs.gnomeExtensions.pinguxnetlabel
 
     # https://github.com/kgshank/gse-sound-output-device-chooser/issues/258
     # pkgs.gnomeExtensions.sound-output-device-chooser.overrideAttrs
@@ -133,7 +133,7 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
       "runcat@kolesnikov.se"
       "gnome-shell-screenshot@ttll.de"
       "sensory-perception@HarlemSquirrel.github.io"
-      "simplenetspeed@biji.extension"
+      "pinguXnetLabel@pinguX.aTa"
       # "sound-output-device-chooser@kgshank.net"
       "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
       "unite@hardpixel.eu"
@@ -214,9 +214,6 @@ let pkgsUnstable = import nixos-unstable { inherit system; }; in
     "org/gnome/shell/extensions/sensory-perception".display-decimal-value = true;
     # Sensory Perception - Sensor in panel - Package id 0
     "org/gnome/shell/extensions/sensory-perception".main-sensor = "Package id 0";
-
-    # Simple net speed - [ click once to show B/s ]
-    "org/gnome/shell/extensions/simplenetspeed".mode = 1;
 
     # Sound IO Device Chooser - General Settings - Display audio profiles for selection - OFF
     "org/gnome/shell/extensions/sound-output-device-chooser".show-profiles = false;
