@@ -56,28 +56,8 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/mc";
 
-  home.file.".fly/config.yml".source =
-    config.lib.file.mkOutOfStoreSymlink
-      nixosConfig.sops.templates."config.yml".path;
-
   home.packages = with inputs; [
     pkgs.salt
-
-    # https://github.com/NixOS/nixpkgs/pull/231418
-    # https://github.com/NixOS/nixpkgs/issues/86349
-    (pkgs.flyctl.override {
-      buildGoModule = args: pkgs.buildGoModule.override { go = pkgs.go_1_20; } (args // rec {
-        version = "0.1.2";
-        src = pkgs.fetchFromGitHub {
-          owner = "superfly";
-          repo = "flyctl";
-          rev = "v${version}";
-          hash = "sha256-0nassGiVjBb/KLMwj/DWSDdW/ymkIJSfoA6fdLyq8YE=";
-        };
-
-        vendorSha256 = "sha256-w/8cCtu+SKhooutKt810pnbGR1a3hWHjhNmzLVU0Zxk=";
-      });
-    })
 
     (pkgs.python3.withPackages
       (p: with p; [ setuptools pip ]))
