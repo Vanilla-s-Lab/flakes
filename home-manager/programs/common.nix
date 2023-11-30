@@ -2,6 +2,7 @@
 {
   home.packages = with inputs; [
     nixos-cn.legacyPackages."${system}".wine-wechat
+    pkgs.nur.repos.ataraxiasjel.proton-ge
 
     pkgs.obs-studio
 
@@ -39,4 +40,7 @@
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
   # programs.mangohud.enableSessionWide = true;
+
+  home.file.".steam/root/compatibilitytools.d/proton-ge".source =
+    "${pkgs.nur.repos.ataraxiasjel.proton-ge}/bin";
 }
