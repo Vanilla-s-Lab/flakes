@@ -52,12 +52,6 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
   home.file.".config/.wrangler/".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/config/dot/wrangler";
   home.file.".terraform.d".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/terraform.d";
 
-  programs.ssh.matchBlocks."linode-nix" = {
-    host = "172.105.209.227";
-    proxyCommand = "nc -x localhost:1089 %h %p";
-  };
-
-
   home.file.".mc".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/mc";
