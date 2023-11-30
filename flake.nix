@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
 
     nix-channel.url = "https://channels.nixos.org/nixos-23.11/nixexprs.tar.xz";
@@ -37,10 +36,10 @@
       # https://github.com/nix-community/neovim-nightly-overlay
       nixosConfig = let overlays = [ nur.overlay rust-overlay.overlays.default ]; in
         nixpkgs.lib.nixosSystem rec {
-          inherit system; specialArgs = { inherit inputs self nixos-unstable system; };
+          inherit system; specialArgs = { inherit inputs self system; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
-            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated nixos-unstable; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated; }; }]
             ++ [{ home-manager.extraSpecialArgs = { inherit nix-vscode-extensions; }; }]
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]

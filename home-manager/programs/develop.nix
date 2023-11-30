@@ -1,9 +1,6 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
 let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
-
-let pkgsUnstable = import nixos-unstable { inherit system; }; in
-let pkgsUnstable_jetbrains_jdk = pkgsUnstable.jetbrains.jdk; in
 {
   programs.go.enable = true;
 
