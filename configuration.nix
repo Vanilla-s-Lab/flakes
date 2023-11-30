@@ -5,6 +5,9 @@
 { config, pkgs, inputs, lib, system, ... }:
 with inputs;
 {
+  # https://nixos.wiki/wiki/NTFS
+  boot.supportedFilesystems = [ "ntfs" ];
+
   programs.command-not-found.enable = true;
   programs.command-not-found.dbPath =
     "${nix-channel}/programs.sqlite";
