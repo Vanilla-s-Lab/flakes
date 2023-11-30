@@ -37,8 +37,6 @@ with inputs;
     ./sops-config/access-tokens.nix
     ./sops-config/gh_hosts.nix
 
-    ./sops-config/alicloud.nix
-
     ./sops-config/dot-npmrc.nix
 
     ./security.nix
