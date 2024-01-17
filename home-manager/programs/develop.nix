@@ -91,10 +91,7 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
     pkgs.mono
     pkgs.dotnet-sdk
 
-    # pkgs.jetbrains.clion
-    (pkgs.jetbrains.clion.override {
-      jdk = pkgsUnstable_jetbrains_jdk;
-    })
+    pkgs.jetbrains.clion
 
     pkgs.rustup
     pkgs.cargo-outdated
