@@ -62,15 +62,6 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
     (pkgs.python3.withPackages
       (p: with p; [ setuptools pip ]))
 
-    (pkgs.s3fs.overrideAttrs (old: {
-      version = "unstable-2023-02-08";
-      src = pkgs.fetchgit {
-        url = "https://github.com/s3fs-fuse/s3fs-fuse.git";
-        rev = "d1388ff446b74e82483f8a09b1d576cd958d4d64";
-        hash = "sha256-3oQ3zSDsjmOiCqKuA6LJMAyIX07zF3ZJdkJPHqAOuN0=";
-      };
-    }))
-
     pkgs.minio-client
     pkgs.ansible
 
