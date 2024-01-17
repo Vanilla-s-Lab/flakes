@@ -1,7 +1,8 @@
 { inputs, system, pkgs, config, generated, ... }:
 {
   home.packages = with inputs; [
-    nixos-cn.legacyPackages."${system}".wine-wechat
+    pkgs.nur.repos.xddxdd.wine-wechat
+
     pkgs.nur.repos.ataraxiasjel.proton-ge
 
     pkgs.obs-studio
@@ -33,9 +34,9 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/obs-studio";
 
-  home.file.".local/lib/wine-wechat".source =
+  home.file.".local/share/wine-wechat".source =
     config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/lib/wine-wechat";
+      "/persistent/dot/local/share/wine-wechat";
 
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
