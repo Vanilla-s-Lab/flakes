@@ -59,8 +59,8 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
   home.packages = with inputs; [
     pkgs.salt
 
-    (pkgs.python3.withPackages
-      (p: with p; [ setuptools pip ]))
+    pkgs.python3
+    pkgs.poetry
 
     pkgs.minio-client
     pkgs.ansible
