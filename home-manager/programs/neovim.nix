@@ -83,14 +83,6 @@
       }
     EOF
 
-    " https://github.com/lukas-reineke/indent-blankline.nvim/issues/284
-    lua << EOF
-      require("indent_blankline").setup {
-        buftype_exclude = { "terminal" },
-        filetype_exclude = { "dashboard" },
-      }
-    EOF
-
     " https://github.com/lewis6991/gitsigns.nvim
     lua << EOF
       require('gitsigns').setup({
