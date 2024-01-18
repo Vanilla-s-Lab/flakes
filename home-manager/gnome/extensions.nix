@@ -74,17 +74,7 @@
       '';
     }))
 
-    (pkgs.gnomeExtensions.unite.overrideAttrs (old: {
-      version = "77";
-
-      src = pkgs.fetchurl {
-        url = "https://github.com/hardpixel/unite-shell/releases/download/v77/unite-shell-v77.zip";
-        hash = "sha256-Am80rBgKFuZRkH95K7nFPteyEF0+BNes93JiaIBCmdM=";
-      };
-
-      buildInputs = [ pkgs.unzip ];
-    }))
-
+    pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
 
