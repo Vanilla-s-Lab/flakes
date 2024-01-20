@@ -71,6 +71,8 @@
     "192.168.6.78".proxyCommand = "nc -x localhost:1080 %h %p";
     # https://cms-sw.github.io/tutorial-proxy.html
     "github.com".proxyCommand = "nc -x localhost:1089 %h %p";
+    # https://dev.s-ul.net/domeori/aqua/-/tree/master
+    "dev.s-ul.net".proxyCommand = "nc -x localhost:1089 %h %p";
   };
 
   programs.git.extraConfig = {
