@@ -4,9 +4,6 @@
   nix.package = pkgs.nixFlakes;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # https://nixos.org/manual/nix/unstable/command-ref/conf-file.html
-  nix.settings.keep-going = true;
-
   programs.git.enable = true;
   # https://stackoverflow.com/questions/71876704
   programs.git.config = {
