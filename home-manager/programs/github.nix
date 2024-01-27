@@ -43,11 +43,17 @@
 
   # Trust GitHub server in known_hosts.
   programs.ssh.enable = true;
+
   # https://github.blog/2021-09-01-improving-git-protocol-security-github/
   home.file.".ssh/known_hosts".text = ''
     github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
     github.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCj7ndNxQowgcQnjshcLrqPEiiphnt+VTTvDP6mHBL9j1aNUkY4Ue1gvwnGLVlOhGeYrnZaMgRK6+PKCUXaDbC7qtbW8gIkhL7aGCsOr/C56SJMy/BCZfxd1nWzAOxSDPgVsmerOBYfNqltV9/hWCqBywINIR+5dIg6JTJ72pcEpEjcYgXkE2YEFXV1JHnsKgbLWNlhScqb2UmyRkQyytRLtL+38TGxkxCflmO+5Z8CSSNY7GidjMIZ7Q4zMjA2n1nGrlTDkzwDCsw+wqFPGQA179cnfGWOWRVruj16z6XyvxvjJwbz0wQZ75XK5tKSb7FNyeIEs4TT4jk+S4dhPeAUC5y+bDYirYgM4GC7uEnztnZyaVWQ7B381AK4Qdrwt51ZqExKbQpTUNn+EjqoTwvqNj4kqx5QUCI0ThS/YkOxJCXmPUWZbhjpCg56i+2aB6CmK2JGhn57K5mj0MNdBXA4/WnwH6XoPWJzK5Nyu2zB3nAZp+S5hpQs+p1vN1/wsjk=
     github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
+    dev.s-ul.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILcwrkikeL2BaAt9NbrXNYhSM9Vk06TixMJ8fX4Kqe25
+    dev.s-ul.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC63GF4oSjSsQDqoogRK90LESuMx/UJA2hBJg+TjtnBnExWqdcWX9+a7T9qSMwZ4LTVVuUtdmGTzf4hT9nVWWCJrOHhjYc1YCZVh1tMhiUqBriMKbyIkXgbdfratuetUecnsvGFX9u8I6YkQVbrIj/+skNVxE7Qj8nvvAQ9Eb8OwNiu4KOD9Q4CI8ALD0Q+7GlZLRtBSxi+78QKy6Tca7bvGNfHdXIEYnbRkJ5L1A7leTzgP37d2JlZ6QLLGsg1lllHTkU6hGRoYHKOKtfrFXPqr0TNdDgeGa7xO0O8YtdXRD+JqF9eVLuOx4NE2FY5ksUZZe6R03kUg1OhCOlfOFnx
+    dev.s-ul.net ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAYZAHS2GngrGxjskgEQIz+SyC2Q2DdJ8J+ZtTwZErz8Ng/u0kYWQqYH7JVf2ZDgNR7fBdU5GBvxg137K9MlPnw=
+    git.tendokyu.moe ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDVpuTdn2fCrwrdUAc8THYjUAersJSexlwcjHIkIVf7zoHV6kVBDeSLsZpDYtYMFl8RIua43lo8JH6goF5+eYEgyP7+faKzsGVNh6fb5Z5AGwAHWkALqwz1sfLkYrA+FKcRU/FoSsKaNgUIMdT1O+MTeHK6K1cjAXgW0F0uaLPipNA+NBX0BYXQICfWs00HwCnQXViYyAL3q8uFImZ1Fz092kbpqkF6+QpIQOGffiVHrrVPfH1iK93VlZvWjDm0H/SYKPVD40YsfOx0XQ7oOTZfmvrfqI9RdM1GVHqaBaPL01I07+erfWs0GNSC/wRURLHq5Juosj6FdCaAj8cr34egyRr1p/8UFq68FgfJY3E2SiH0G1G42FBemZXX1PptFaujtRKEM7cgZYjp0ERMUvclMRaf4XBJo+qaXSdsBgJ39Tyozlb6H/qJaWduMQHm5rxPGYlLIJk/5GI6dH8BnYpqmtVJQQY6p3CIr/tUd7HchcWNjzEpo00HlIOxDR4G6HevtEb09OZEb93KVWIOg7KGLVqvdBQsdVM0MZzN11yrC87kW1ObQsgVLc00ca8CrRG6fPCRgucQqJbtWAhbirwdJSDuIE4ZMhDw309YOFPZDoYBV7IfukueJkKCf72VpGFrdxRDnPrNJsyPkvpHFgfpXJ34eWwOKRaRMhrTjSp+2w==
+
     59.110.239.227 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPtqICDau0S0ytx6RaGd+FYdLoNuvAfYwnOCm1L6eU6V
     59.110.239.227 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPyR+72FJ0luNqUIs7EBV2wlCjOHkwOEbe5FuGP3Y3mur49YvCUYDFzzdSbqSRYQfSEPY8z02ojsJnbJ0EY6EyI=
 
@@ -73,6 +79,8 @@
     "github.com".proxyCommand = "nc -x localhost:1089 %h %p";
     # https://dev.s-ul.net/domeori/aqua/-/tree/master
     "dev.s-ul.net".proxyCommand = "nc -x localhost:1089 %h %p";
+    # https://gitea.tendokyu.moe/Hay1tsme/artemis/src/branch/master
+    "git.tendokyu.moe".proxyCommand = "nc -x localhost:1089 %h %p";
   };
 
   programs.git.extraConfig = {
