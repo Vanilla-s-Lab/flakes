@@ -59,7 +59,17 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
   home.packages = with inputs; [
     pkgs.salt
 
-    pkgs.python3
+    # https://nixos.wiki/wiki/Python
+    (pkgs.python3.withPackages (ps: with ps; [
+      setuptools
+      pip
+
+      elasticsearch
+      elastic-transport
+      peewee
+      pymysql
+    ]))
+
     pkgs.poetry
 
     pkgs.minio-client
