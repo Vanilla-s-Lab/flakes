@@ -15,6 +15,10 @@ with inputs;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "electron-11.5.0"
+  # ];
+
   imports = [
     ./users.nix
 
