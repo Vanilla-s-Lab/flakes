@@ -10,6 +10,7 @@ let vergedx.github.io = "17d04d213ad790e501d099ad8e68229f2f2c4bdcd92b3eeadd1a30a
 let linode-nix = "8384794718e7179aa44ad91cd794e62ef2e99c9abd45b05bfd83b9c2e4a9fd7b"; in
 let ariel-tf = "13d969eac201336200d564ca12ead9290ababc1a5c17a075bf8f9a9ce972ed47"; in
 let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"; in
+let flakes = "d20d15a2bbb53ab9d5d8e3bae59a3b8f4bc95620266878db2a2756ac5f7a1819"; in
 {
   # https://github.com/alacritty/alacritty
   programs.alacritty.enable = true;
@@ -99,16 +100,12 @@ let SMSBoom = "a71b33f5974c3c82496b402a1e816c3dda0b0b9afd6b6c38835ec54d107a3c79"
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
 
-  home.file.".local/share/direnv/allow/${joycond-cemuhook}".text =
-    "/persistent/Downloads/Temp/joycond-cemuhook/.envrc";
-  home.file.".local/share/direnv/allow/${vergedx.github.io}".text =
-    "/Repos/vergedx.github.io/.envrc";
-  home.file.".local/share/direnv/allow/${linode-nix}".text =
-    "/persistent/Projects/linode-nix/.envrc";
-  home.file.".local/share/direnv/allow/${ariel-tf}".text =
-    "/persistent/Works/ariel-tf/.envrc";
-  home.file.".local/share/direnv/allow/${SMSBoom}".text =
-    "/persistent/Downloads/Temp/SMSBoom";
+  home.file.".local/share/direnv/allow/${joycond-cemuhook}".text = "/persistent/Downloads/Temp/joycond-cemuhook/.envrc";
+  home.file.".local/share/direnv/allow/${vergedx.github.io}".text = "/Repos/vergedx.github.io/.envrc";
+  home.file.".local/share/direnv/allow/${linode-nix}".text = "/persistent/Projects/linode-nix/.envrc";
+  home.file.".local/share/direnv/allow/${ariel-tf}".text = "/persistent/Works/ariel-tf/.envrc";
+  home.file.".local/share/direnv/allow/${SMSBoom}".text = "/persistent/Downloads/Temp/SMSBoom";
+  home.file.".local/share/direnv/allow/${flakes}".text = "/Games/maimai/flakes/.envrc";
 
   programs.kitty.enable = true;
 
