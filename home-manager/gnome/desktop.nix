@@ -158,6 +158,7 @@
 
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.xddxdd.qq
+    # pkgs.nur.repos.xddxdd.baidunetdisk
   ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ];
 
   # https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md
