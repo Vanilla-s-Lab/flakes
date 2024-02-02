@@ -77,21 +77,6 @@
     pkgs.gnomeExtensions.unite
     pkgs.gnomeExtensions.vitals
     pkgs.gnomeExtensions.window-is-ready-remover
-
-    (pkgs.gnomeExtensions.gtile.overrideAttrs (old: rec {
-      version = "54";
-
-      src = pkgs.fetchurl {
-        url = "https://github.com/gTile/gTile/releases/download/V${version}/gtile.dist.tgz";
-        hash = "sha256-xKvT2NS81tSjlNM0QquthijNOmWYkPFKqYrsod8c2rE=";
-      };
-
-      unpackPhase = ''
-        mkdir gTile@vibou && cd $_
-        tar -xf $src .
-      '';
-    }))
-
     pkgs.gnomeExtensions.clipboard-indicator
   ];
 
@@ -123,9 +108,6 @@
       "unite@hardpixel.eu"
       "Vitals@CoreCoding.com"
       "windowIsReady_Remover@nunofarruca@gmail.com"
-
-      "gTile@vibou"
-
       "clipboard-indicator@tudmotu.com"
     ];
 
