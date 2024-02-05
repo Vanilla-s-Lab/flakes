@@ -1,9 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    rust-overlay.url = "github:oxalica/rust-overlay";
-
     nix-channel.url = "https://channels.nixos.org/nixos-23.11/nixexprs.tar.xz";
+
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -36,7 +35,7 @@
     rec {
       nixosConfigurations."NixOS-RoT" = nixosConfig;
       # https://github.com/nix-community/neovim-nightly-overlay
-      nixosConfig = let overlays = [ nur.overlay rust-overlay.overlays.default ]; in
+      nixosConfig = let overlays = [ nur.overlay ]; in
         nixpkgs.lib.nixosSystem rec {
           inherit system; specialArgs = { inherit inputs self system; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
