@@ -1,5 +1,4 @@
 { pkgs, config, inputs, system, lib, nixosConfig, generated, ... }: with inputs;
-let copilot-agent-linux = pkgs.callPackage ../packages/copilot-agent-linux.nix { }; in
 let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
 {
   programs.go.enable = true;
@@ -11,38 +10,10 @@ let pkgs_besttrace = pkgs.callPackage ../packages/besttrace.nix { }; in
     pset option autosave 'off'
   '';
 
-  home.file."${".local/share/JetBrains/IntelliJIdea2023.1" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
-  home.file."${".local/share/JetBrains/PyCharm2023.1" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
-  home.file."${".local/share/JetBrains/CLion2023.1" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
-  home.file.".cargo".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cargo";
-
-  home.file."${".local/share/JetBrains/WebStorm2022.2" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
   home.file.".npmrc".source =
     config.lib.file.mkOutOfStoreSymlink
       nixosConfig.sops.templates.dot-npmrc.path;
-
-  home.file."${".local/share/JetBrains/Rider${pkgs.jetbrains.rider.version}" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-  home.file."${".local/share/JetBrains/DataGrip2022.2" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
-
-  home.file."${".local/share/JetBrains/GoLand2022.2" +
-    "/${copilot-agent-linux.pname}/copilot-agent/bin/${copilot-agent-linux.name}"}".source =
-    "${copilot-agent-linux}/bin/${copilot-agent-linux.name}";
 
   home.file."go".source =
     config.lib.file.mkOutOfStoreSymlink
