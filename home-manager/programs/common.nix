@@ -2,11 +2,7 @@
 {
   home.packages = with inputs; [
     pkgs.nur.repos.xddxdd.wine-wechat
-
-    pkgs.nur.repos.ataraxiasjel.proton-ge
-
     pkgs.obs-studio
-
     pkgs.nur.repos.linyinfeng.wemeet
 
     # ls[usb|pci].
@@ -41,7 +37,4 @@
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
   # programs.mangohud.enableSessionWide = true;
-
-  home.file.".steam/root/compatibilitytools.d/proton-ge".source =
-    "${pkgs.nur.repos.ataraxiasjel.proton-ge}/bin";
 }
