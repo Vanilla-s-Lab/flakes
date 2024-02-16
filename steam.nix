@@ -1,11 +1,7 @@
 { lib, pkgs, ... }:
 {
   programs.steam.enable = true;
-  programs.steam.package = pkgs.steam.override {
-    extraPkgs = pkgs: with pkgs; [
-      nur.repos.vanilla.Win10_LTSC_2021_fonts
-    ];
-  };
+  programs.steam.package = pkgs.steam;
 
   boot.kernel.sysctl = {
     "dev.i915.perf_stream_paranoid" = 0;
