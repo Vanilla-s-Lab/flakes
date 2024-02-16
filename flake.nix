@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nix-channel.url = "https://channels.nixos.org/nixos-23.11/nixexprs.tar.xz";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -40,8 +41,11 @@
           inherit system; specialArgs = { inherit inputs self system; };
           modules = [ ./configuration.nix home-manager.nixosModules.home-manager ]
             ++ [{ home-manager.users."vanilla" = import ./home-manager/home.nix; }]
+
             ++ [{ home-manager.extraSpecialArgs = { inherit inputs system generated; }; }]
             ++ [{ home-manager.extraSpecialArgs = { inherit nix-vscode-extensions; }; }]
+            ++ [{ home-manager.extraSpecialArgs = { inherit pkgsUnstable; }; }]
+
             ++ [{ home-manager.useGlobalPkgs = true; }]
             ++ [{ nixpkgs.overlays = overlays; }]
             ++ [ sops-nix.nixosModules.sops ]
@@ -51,5 +55,6 @@
 
       pkgs = import nixpkgs { inherit system; };
       generated = pkgs.callPackage ./_sources/generated.nix { };
+      pkgsUnstable = import nixpkgs-unstable { inherit system; };
     };
 }

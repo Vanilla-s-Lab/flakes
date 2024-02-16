@@ -1,7 +1,8 @@
-{ pkgs, nix-vscode-extensions, system, ... }:
+{ pkgs, pkgsUnstable, nix-vscode-extensions, system, ... }:
 {
   programs.vscode.enable = true;
-  programs.vscode.package = pkgs.vscodium;
+  programs.vscode.package =
+    pkgsUnstable.vscodium;
 
   programs.vscode.extensions = with nix-vscode-extensions; [
     extensions."${system}".vscode-marketplace.piousdeer.adwaita-theme
