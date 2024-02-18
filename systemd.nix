@@ -13,4 +13,7 @@
 
   # nixos/modules/services/x11/display-managers/gdm.nix
   systemd.services."plymouth-quit".enable = false;
+
+  # https://archlinux.org/news/making-dbus-broker-our-default-d-bus-daemon/
+  services.dbus.implementation = "broker";
 }
