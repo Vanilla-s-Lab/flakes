@@ -1,7 +1,7 @@
-{ pkgs, lib, config, system, ... }:
+{ pkgs, pkgsUnstable, lib, config, system, ... }:
 {
   services.tailscale.enable = true;
-  services.tailscale.package = pkgs.tailscale;
+  services.tailscale.package = pkgsUnstable.tailscale;
   # services.tailscale.interfaceName = "userspace-networking";
 
   environment.persistence."/persistent" = {
