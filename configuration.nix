@@ -35,9 +35,6 @@ with inputs;
     ./services/btrfs.nix
     ./services/smartdns.nix
 
-    # https://nixos.wiki/wiki/NFS
-    # ./services/nfs.nix
-
     ./sops-config/ArchiSteamFarm.nix
     ./sops-config/chaoxing.nix
 
