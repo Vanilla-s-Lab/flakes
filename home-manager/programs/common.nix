@@ -30,9 +30,8 @@
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/obs-studio";
 
-  home.file.".local/share/wine-wechat".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/wine-wechat";
+  home.file.".local/share/wine-wechat".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/local/share/wine-wechat";
+  home.file.".cache/winetricks".source = config.lib.file.mkOutOfStoreSymlink "/persistent/dot/cache/winetricks";
 
   # https://github.com/flightlessmango/MangoHud
   programs.mangohud.enable = true;
