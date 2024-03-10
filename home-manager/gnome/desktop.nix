@@ -111,11 +111,9 @@
       name = "Games";
       apps = [
         "com.obsproject.Studio.desktop"
-        "Ryujinx.desktop"
         "samrewritten.desktop"
         "steam.desktop"
         "OpenTabletDriver.desktop"
-        "org.yuzu_emu.yuzu.desktop"
         "osu.desktop"
       ];
     };
@@ -159,7 +157,7 @@
     pkgs.gnome.gnome-disk-utility
     pkgs.nur.repos.xddxdd.qq
     # pkgs.nur.repos.xddxdd.baidunetdisk
-  ] ++ [ pkgs.yuzu-ea pkgs.ryujinx ];
+  ];
 
   # https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md
   home.file.".config/mpv/shaders".source = config.lib.file.mkOutOfStoreSymlink "/persistent/Templates/Anime4K_v4.0/";
@@ -183,22 +181,6 @@
   home.file.".config/QQ".source =
     config.lib.file.mkOutOfStoreSymlink
       "/persistent/dot/config/QQ";
-
-  home.file.".cache/yuzu".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/cache/yuzu";
-
-  home.file.".config/yuzu".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/yuzu";
-
-  home.file.".local/share/yuzu".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/local/share/yuzu";
-
-  home.file.".config/Ryujinx/".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "/persistent/dot/config/Ryujinx";
 
   home.file."Android".source =
     config.lib.file.mkOutOfStoreSymlink
