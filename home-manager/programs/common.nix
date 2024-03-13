@@ -1,8 +1,8 @@
-{ inputs, system, pkgs, pkgsUnstable, config, generated, ... }:
+{ inputs, system, pkgs, config, generated, ... }:
 {
   home.packages = with inputs; [
     pkgs.nur.repos.xddxdd.wine-wechat
-    pkgsUnstable.obs-studio
+    pkgs.obs-studio
     pkgs.nur.repos.linyinfeng.wemeet
 
     # ls[usb|pci].
